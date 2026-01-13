@@ -4,7 +4,7 @@ teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do you write a lesson using Markdown and `{sandpaper}`?
 
@@ -21,8 +21,8 @@ exercises: 2 # exercise time in minutes
 
 This is a lesson created via The Carpentries Workbench. It is written in
 [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
+[R Markdown][r-markdown] for dynamic files that can render code into output.
+Please refer to the [Introduction to The Carpentries
 Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
 
 What you need to know is that there are three sections required for a valid
@@ -42,7 +42,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -52,20 +52,19 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
 
 :::::::::::::::::::::::::::::::::
 
-
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
@@ -79,6 +78,7 @@ You can use standard markdown for static figures with the following syntax:
 `![optional caption that appears below the figure](figure url){alt='alt text for
 accessibility purposes'}`
 
+<!-- markdownlint-disable-next-line line-length -->
 ![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -86,12 +86,11 @@ accessibility purposes'}`
 Callout sections can highlight information.
 
 They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
+but are also used in some lessons to present "asides":
 content that is not central to the narrative of the lesson,
 e.g. by providing the answer to a commonly-asked question.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 ## Math
 
@@ -102,7 +101,7 @@ dynamic reports with {knitr}, so we now use mathjax to describe this:
 
 Cool, right?
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `.md` files for episodes when you want static content
 - Use `.Rmd` files for episodes when you need to generate output
