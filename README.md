@@ -1,84 +1,38 @@
-# The Carpentries Workbench Template Markdown Lesson
+# Digital Research Sustainability
 
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench]. 
+This is a lesson implemented using [The Carpentries Workbench].
 
-## Note about lesson life cycle stage
-Although the `config.yaml` states the life cycle stage as pre-alpha, **the template is stable and ready to use**. The life cycle stage is preset to `"pre-alpha"` as this setting is appropriate for new lessons initialised using the template.
+[The Carpentries Workbench]: https://github.com/carpentries/workbench-docker
 
-## Create a new repository from this template
+## Development
 
-To use this template to start a new lesson repository, 
-make sure you're logged into Github.   
-Visit https://github.com/carpentries/workbench-template-md/generate
-and follow the instructions.
-Checking the 'Include all branches' option will save some time waiting for the first website build
-when your new repository is initialised.
+A dockerised setup is provided for lesson development.
 
-If you have any questions, contact [@tobyhodges](https://github.com/tobyhodges)
+Run `docker compose up` to start the development server. After a few moments the site
+will be accessible at <http://127.0.0.1:4321>. As you save changes to files in the
+repository the development server will automatically detect these and rebuild the site
+content. You will need to refresh your browser to see the updated content.
 
-## Configure a new lesson
+### Content
 
-Follow the steps below to
-complete the initial configuration of a new lesson repository built from this template:
+The [The Carpentries Workbench] uses Pandoc-flavoured markdown. This is covered in
+detail in [Introduction to The Carpentries Workbench: Episode 2].
 
-1. **Make sure GitHub Pages is activated:**
-   navigate to _Settings_,
-   select _Pages_ from the left sidebar,
-   and make sure that `gh-pages` is selected as the branch to build from.
-   If no `gh-pages` branch is available, check the _Actions_ tab to see if the first
-   website build workflows are still running.
-   If they're not running yet, you may need to manually enable them via the _Actions_ tab.
-   The branch should become available when those have completed.
-1. **Adjust the `config.yaml` file:**
-   this file contains global parameters for your lesson site.
-   Individual fields within the file are documented with comments (beginning with `#`)
-   At minimum, you should adjust all the fields marked 'FIXME':
-   - `title`
-   - `created`
-   - `keywords`
-   - `life_cycle` (the default, _pre-alpha_, is the appropriate for brand new lessons)
-   - `contact`
-1. **Annotate the repository** with site URL and topic tags:
-   navigate back to the repository landing page and
-   click on the gear wheel/cog icon (similar to ⚙️) 
-   at the top-right of the _About_ box.
-   Check the "Use your GitHub Pages website" option,
-   and [add some keywords and other annotations to describe your lesson](https://cdh.carpentries.org/the-carpentries-incubator.html#topic-tags)
-   in the _Topics_ field.
-   At minimum, these should include:
-   - `lesson`
-   - the life cycle of the lesson (e.g. `pre-alpha`)
-   - the human language the lesson is written in (e.g. `deutsch`)
-1. **Adjust the 
-   `CITATION.cff`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `LICENSE.md` files**
-   as appropriate for your project.
-   -  `CITATION.cff`:
-      this file contains information that people can use to cite your lesson,
-      for example if they publish their own work based on it.
-      You should [update the CFF][cff-sandpaper-docs] now to include information about your lesson,
-      and remember to return to it periodically, keeping it updated as your
-      author list grows and other details become available or need to change.
-      The [Citation File Format home page][cff-home] gives more information about the format,
-      and the [`cffinit` webtool][cffinit] can be used to create new and update existing CFF files.
-   -  `CODE_OF_CONDUCT.md`: 
-      if you are using this template for a project outside The Carpentries,
-      you should adjust this file to describe 
-      who should be contacted with Code of Conduct reports,
-      and how those reports will be handled.
-   -  `CONTRIBUTING.md`:
-      depending on the current state and maturity of your project,
-      the contents of the template Contributing Guide may not be appropriate.
-      You should adjust the file to help guide contributors on how best
-      to get involved and make an impact on your lesson.
-   -  `LICENSE.md`:
-      in line with the terms of the CC-BY license,
-      you should ensure that the copyright information 
-      provided in the license file is accurate for your project.
-1. **Update this README with 
-   [relevant information about your lesson](https://carpentries.github.io/lesson-development-training/collaborating-newcomers.html#readme)**
-   and delete this section.
+[Introduction to The Carpentries Workbench: Episode 2]: https://carpentries.github.io/sandpaper-docs/episodes.html
 
-[cff-home]: https://citation-file-format.github.io/
-[cff-sandpaper-docs]:  https://carpentries.github.io/sandpaper-docs/editing.html#making-your-lesson-citable
-[cffinit]: https://citation-file-format.github.io/cff-initializer-javascript/
-[workbench]: https://carpentries.github.io/sandpaper-docs/
+### Linting
+
+A pre-commit hook for [markdownlint-cli] is used to enforce consistent style and formatting.
+
+There is one known issue as markdownlint does not support the [link_attributes] markdown
+extension. This primarily comes up when specifying the alt text for images. It manifests
+as markdownlint erroneously applying a line length check when it should not. In this
+case the error has to be explicitly ignored, e.g.:
+
+```markdown
+<!-- markdownlint-disable-next-line line-length -->
+![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+```
+
+[markdownlint-cli]: https://github.com/igorshubovych/markdownlint-cli
+[link_attributes]: https://pandoc.org/MANUAL.html#extension-link_attributes
