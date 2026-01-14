@@ -8,14 +8,13 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-# 
-# This option supports custom types so lessons can be branded
-# and themed with your own logo and alt-text (see `carpentry_description`)
-# See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
+# Note that you can also use a custom carpentry type. For more info,
+# see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
 carpentry: 'incubator'
 
-# Alt-text description of the lesson.
-carpentry_description: 'Lesson Description'
+# Custom carpentry description
+# This will be used as the alt text for the logo
+# carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
 title: 'Digital Research Sustainability'
@@ -30,7 +29,7 @@ keywords: 'sustainability'
 # possible values: pre-alpha, alpha, beta, stable
 life_cycle: 'pre-alpha'
 
-# License of the lesson
+# License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
@@ -67,6 +66,7 @@ contact: 'ict-rse-team@imperial.ac.uk'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- case-study-1.md
 
 # Information for Learners
 learners: 
@@ -82,4 +82,4 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-
+carpentry_description: Lesson Description
