@@ -1,6 +1,6 @@
 ---
 title: "Why sustainable digital research matters"
-teaching: 15 # teaching time in minutes
+teaching: 20 # teaching time in minutes
 exercises: 0 # exercise time in minutes
 ---
 
@@ -20,6 +20,8 @@ exercises: 0 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## The context of net zero goals
+
+(For global context, use the [Online MUSE calculator](https://museenergysimulator.co.uk/))
 
 TBC
 
