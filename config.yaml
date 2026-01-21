@@ -50,9 +50,9 @@ contact: 'ict-rse-team@imperial.ac.uk'
 #
 # Example -------------
 #
-episodes:
-- introduction.md
-- case-study-2.md
+# episodes:
+# - introduction.md
+# - first-steps.md
 #
 # learners:
 # - setup.md
@@ -64,7 +64,9 @@ episodes:
 # - one-learner.md
 # - another-learner.md
 
-
+# Order of episodes in your lesson
+episodes: 
+- introduction.md
 
 # Information for Learners
 learners: 
@@ -79,5 +81,4 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-
 
