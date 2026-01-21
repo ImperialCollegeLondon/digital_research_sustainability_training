@@ -50,9 +50,9 @@ contact: 'ict-rse-team@imperial.ac.uk'
 #
 # Example -------------
 #
-# episodes:
-# - introduction.md
-# - first-steps.md
+episodes:
+- introduction.md
+- case-study-2.md
 #
 # learners:
 # - setup.md
@@ -64,9 +64,7 @@ contact: 'ict-rse-team@imperial.ac.uk'
 # - one-learner.md
 # - another-learner.md
 
-# Order of episodes in your lesson
-episodes: 
-- introduction.md
+
 
 # Information for Learners
 learners: 
