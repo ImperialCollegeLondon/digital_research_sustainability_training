@@ -32,15 +32,79 @@ has been a big success and has been widely adopted. She has heard from some user
 that they are using it on increasingly large datasets that leads to demanding
 memory requirements and slow performance.
 
-### Scope 2 Emissions Sources
+Celia is concerned about the environmental impact of her software package.
+She wants to assess the carbon emissions associated with both the development
+and usage of her package and identify ways to reduce these emissions.
+
+The GHG protocol divides emissions into three scopes (Reference: [GHG protocol](https://learn.greensoftware.foundation/measurement#the-ghg-protocol)):
+
+- **Scope 1**: Direct emissions from operations owned or controlled by the
+   reporting organisation, such as on-site fuel combustion or fleet vehicles.
+
+- **Scope 2**: Indirect emissions related to emission generation of
+   purchased energy, such as heat and electricity.
+
+- **Scope 3**: Other indirect emissions from all the other activities you are
+   engaged in. Including all emissions from an organisation's supply chain,
+   business travel for employees, and the electricity customers may
+   consume when using your product.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+Inline instructor notes can help inform instructors of timing challenges
+associated with the lessons. They appear in the "Instructor View"
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 1: Identify Scope 2 Emissions
+
+Refer to the definition of Scope 2 emmissions above and identify which
+of the following activities during the research process would be
+classified as Scope 2 emission source?
 
 - Emissions from electricity usage of the hardware used for software development.
+- Emissions from travel to attend a conference for presenting research findings.
+- Emissions from the use of cloud computing services for data analysis.
+- Emissions from heating the office where the researcher works.
 
-### Scope 3 Emissions Sources
+:::::::::::::::::::::::: solution
+
+Option 1: Is correct. Scope 2 emissions are indirect emissions related to
+purchased energy, such as electricity usage of hardware.
+Option 2: Is incorrect. Emissions from travel are classified as Scope 3 emissions.
+Option 3: Is incorrect. Emissions from cloud computing services are classified
+as Scope 3 emissions.
+Option 4: Is correct. Emissions from heating the office are classified as
+Scope 2 emissions.
+
+:::::::::::::::::::::::::::::::::
+
+## Challenge 2: Identify Scope 3 Emissions
+
+Refer to the definition of Scope 3 emmissions above and identify which
+of the following activities during the research process would be
+classified as Scope 3 emission source?
 
 - Embedded emissions from hardware used for software development.
 - Use of services such as GitHub Actions and AI Coding agents.
-- Electricity usage of computational resources running the code.
+- Electricity usage when users of the package run the code.
+- Electricity usage of the researcher's office for lighting and heating.
+
+:::::::::::::::::::::::: solution
+
+Option 1: Is correct. Embedded emissions from hardware are classified as
+Scope 3 emissions.
+Option 2: Is correct. Use of services such as GitHub Actions and AI Coding
+agents are classified as Scope 3 emissions.
+Option 3: Is correct. Electricity usage when users run the code are classified
+as Scope 3 emissions.
+Option 4: Is incorrect. Emissions from office lighting and heating are classified
+as Scope 2 emissions.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 Celia should assess the balance of emissions involved in development of the code
 base versus its usage. She should look at how to estimate these then focus her
@@ -52,42 +116,6 @@ Depending on the outcome she should look at measures such as:
 - Optimising the code base to reduce the computational resources and runtime of its use.
 - Producing documentation for users to help them make the most efficient use possible of
 her code.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution
-
-## Output
-
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Figures
 
