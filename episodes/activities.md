@@ -1,6 +1,6 @@
 ---
 title: "Digital research activities with sustainability issues"
-teaching: 15 # teaching time in minutes
+teaching: 20 # teaching time in minutes
 exercises: 0 # exercise time in minutes
 ---
 
