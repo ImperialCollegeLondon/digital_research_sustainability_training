@@ -1,7 +1,7 @@
 ---
 title: 'Case Study: Researcher'
-teaching: 10
-exercises: 2
+teaching: 20
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -52,13 +52,6 @@ The GHG protocol divides emissions into three scopes (Reference: [GHG protocol](
 Celia should assess the balance of emissions involved in development of the code
 base versus its usage. She should look at how to estimate these then focus her
 emission reduction measures appropriately.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -125,22 +118,6 @@ to reduce these emissions.
 - Producing documentation for users to help them make the most efficient use possible of
 her code.
 - Reducing the use of services such as GitHub Actions.
-
-## Figures
-
-You can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
