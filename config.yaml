@@ -67,9 +67,6 @@ contact: 'ict-rse-team@imperial.ac.uk'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
-- why.md
-- carbon.md
-- activities.md
 
 # Information for Learners
 learners: 
