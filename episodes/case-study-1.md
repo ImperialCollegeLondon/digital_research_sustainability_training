@@ -49,6 +49,10 @@ The GHG protocol divides emissions into three scopes (Reference: [GHG protocol](
    business travel for employees, and the electricity customers may
    consume when using your product.
 
+Celia should assess the balance of emissions involved in development of the code
+base versus its usage. She should look at how to estimate these then focus her
+emission reduction measures appropriately.
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 Inline instructor notes can help inform instructors of timing challenges
@@ -106,16 +110,21 @@ as Scope 2 emissions.
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Celia should assess the balance of emissions involved in development of the code
-base versus its usage. She should look at how to estimate these then focus her
-emission reduction measures appropriately.
+## Suggested Approach
 
-Depending on the outcome she should look at measures such as:
+After Celia has identified the Scope 2 and Scope 3 emissions sources associated
+with the development and usage of her software package, she could take some measures
+to reduce these emissions.
 
-- Reducing the use of services such as GitHub Actions.
+### Reducing Scope 2 emissions
+
 - Optimising the code base to reduce the computational resources and runtime of its use.
+
+### Reducing Scope 3 emissions
+
 - Producing documentation for users to help them make the most efficient use possible of
 her code.
+- Reducing the use of services such as GitHub Actions.
 
 ## Figures
 
