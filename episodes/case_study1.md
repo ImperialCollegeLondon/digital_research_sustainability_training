@@ -6,39 +6,33 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What tools and resources could help estimate emissions associated
-   with software development and usage in the given scenario?
-- What emission reduction measures would you suggest based on an
-   assessment of the emissions sources in the given scenario?
+- What are the sustainability considerations related to research software development?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand how to identify Scope 2 and Scope 3 emissions sources
-  associated with software development and usage.
-- Suggest appropriate emission reduction measures
-   based on an assessment of emissions sources.
-- Identify tools and resources to help estimate emissions
-   associated with software development and usage.
+- Introduce a representative research case study relating to research software development.
+- Explore ways to measure and estimate carbon emissions from research software development.
+- Explore ways to reduce the carbon emissions associated with a given workload.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Scenario
 
-Celia is a researcher. Two years ago, she developed and released a Python package
-with a novel data analysis technique relevant to her research area. The package
-has been a big success and has been widely adopted. She has heard from some users
-that they are using it on increasingly large datasets that leads to demanding
-memory requirements and slow performance.
+Celia is a researcher in a research institute. Two years ago, she developed and released
+a Python package with a novel data analysis technique relevant to her research area. She
+had the chance to travel internationally for conducting a workshop based on her package
+at a conference. The package has been a big success and has been widely adopted. However,
+she has heard from some users that they are using it on increasingly large datasets that
+leads to demanding memory requirements and slow performance.
 
 Celia is concerned about the environmental impact of her software package.
 She wants to assess the carbon emissions associated with both the development
 and usage of her package and identify ways to reduce these emissions.
 
-Celia should assess the balance of emissions involved in development of the code
-base versus its usage. She should look at how to estimate these then focus her
-emission reduction measures appropriately.
+To begin with, Celia identifies the sources of carbon emissions associated with her work
+and categorises them under the GHG protocol.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -55,12 +49,12 @@ classified as Scope 2 emission source?
 
 :::::::::::::::::::::::: solution
 
-1. Correct. Scope 2 emissions are indirect emissions related to
+1. **Correct**. Scope 2 emissions are indirect emissions related to
 purchased energy, such as electricity usage of hardware.
-2. Incorrect. Emissions from travel are classified as Scope 3 emissions.
-3. Incorrect. Emissions from cloud computing services are classified
+2. **Incorrect**. Emissions from travel are classified as Scope 3 emissions.
+3. **Incorrect**. Emissions from cloud computing services are classified
 as Scope 3 emissions.
-4. Correct. Emissions from heating the office are classified as
+4. **Correct**. Emissions from heating the office are classified as
 Scope 2 emissions.
 
 :::::::::::::::::::::::::::::::::
@@ -78,17 +72,21 @@ classified as Scope 3 emission source?
 
 :::::::::::::::::::::::: solution
 
-1. Correct. Embedded emissions from hardware are classified as
+1. **Correct**. Embedded emissions from hardware are classified as
 Scope 3 emissions.
-2. Correct. Use of services such as GitHub Actions and AI Coding
+2. **Correct**. Use of services such as GitHub Actions and AI Coding
 agents are classified as Scope 3 emissions.
-3. Correct. Electricity usage when users run the code are classified
+3. **Correct**. Electricity usage when users run the code are classified
 as Scope 3 emissions.
-4. Incorrect. Emissions from office lighting and heating are classified
+4. **Incorrect**. Emissions from office lighting and heating are classified
 as Scope 2 emissions.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+Celia should assess the balance of emissions involved in development of the code
+base versus its usage. She should look at how to estimate these then focus her
+emission reduction measures appropriately.
 
 ## Suggested Approach
 
@@ -108,9 +106,8 @@ her code.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Identify tools and resources to help estimate emissions
-  associated with software development and usage.
-- Identify Scope 2 and Scope 3 emissions sources associated with software
-  development and usage.
+- Research software development can have significant environmental impacts.
+- Measuring and estimating carbon emissions from research software development
+  is important for identifying areas for improvement.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
