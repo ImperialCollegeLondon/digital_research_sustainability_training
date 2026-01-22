@@ -44,19 +44,29 @@ Hugh has access to a number of different HPC facilities he can make use of:
 
 Hugh also access to several high powered desktops in the group lab.
 
-## Emissions Sources
-
 To better understand the emissions related with his work Hugh categorises his activities
 under the GHG protocol.
 
-### Scope 2
+::::::::::::::::::::::::::::::::::::: challenge
+
+What Scope 2 emissions under the GHG protocol can you identity from Hugh's work?
+
+:::::::::::::::::::::::: solution
 
 - Emissions from electricity usage associated with simulation workloads.
 - Emissions from electricity usage associated with data analysis and visualisation
   workflows.
 
-### Scope 3
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+What Scope 3 emissions under the GHG protocol can you identity from Hugh's work?
+
+:::::::::::::::::::::::: solution
 
 - Proportional embedded emissions from HPC facilities.
 - Embedded emissions of lab desktop machines.
 - Embedded emissions from data storage devices used to store research data.
+
+:::::::::::::::::::::::::::::::::
