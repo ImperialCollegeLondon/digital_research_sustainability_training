@@ -58,6 +58,9 @@ as Scope 3 emissions.
 Scope 2 emissions.
 
 :::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 2: Identify Scope 3 Emissions
 
