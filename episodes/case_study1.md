@@ -36,19 +36,6 @@ Celia is concerned about the environmental impact of her software package.
 She wants to assess the carbon emissions associated with both the development
 and usage of her package and identify ways to reduce these emissions.
 
-The GHG protocol divides emissions into three scopes (Reference: [GHG protocol](https://learn.greensoftware.foundation/measurement#the-ghg-protocol)):
-
-- **Scope 1**: Direct emissions from operations owned or controlled by the
-   reporting organisation, such as on-site fuel combustion or fleet vehicles.
-
-- **Scope 2**: Indirect emissions related to emission generation of
-   purchased energy, such as heat and electricity.
-
-- **Scope 3**: Other indirect emissions from all the other activities you are
-   engaged in. Including all emissions from an organisation's supply chain,
-   business travel for employees, and the electricity customers may
-   consume when using your product.
-
 Celia should assess the balance of emissions involved in development of the code
 base versus its usage. She should look at how to estimate these then focus her
 emission reduction measures appropriately.
@@ -57,7 +44,7 @@ emission reduction measures appropriately.
 
 ## Challenge 1: Identify Scope 2 Emissions
 
-Refer to the definition of Scope 2 emmissions above and identify which
+Refer to the definition of Scope 2 emmissions and identify which
 of the following activities during the research process would be
 classified as Scope 2 emission source?
 
@@ -80,7 +67,7 @@ Scope 2 emissions.
 
 ## Challenge 2: Identify Scope 3 Emissions
 
-Refer to the definition of Scope 3 emmissions above and identify which
+Refer to the definition of Scope 3 emmissions and identify which
 of the following activities during the research process would be
 classified as Scope 3 emission source?
 
