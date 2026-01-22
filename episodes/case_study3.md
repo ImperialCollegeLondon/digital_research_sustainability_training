@@ -49,6 +49,8 @@ under the GHG protocol.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
+## Identify Scope 2 Emissions
+
 What Scope 2 emissions under the GHG protocol can you identity from Hugh's work?
 
 :::::::::::::::::::::::: solution
@@ -59,7 +61,11 @@ What Scope 2 emissions under the GHG protocol can you identity from Hugh's work?
 
 :::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge
+
+## Identify Scope 3 Emissions
 
 What Scope 3 emissions under the GHG protocol can you identity from Hugh's work?
 
@@ -70,3 +76,5 @@ What Scope 3 emissions under the GHG protocol can you identity from Hugh's work?
 - Embedded emissions from data storage devices used to store research data.
 
 :::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
