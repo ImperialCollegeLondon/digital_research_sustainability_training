@@ -14,7 +14,7 @@ exercises: 10 # exercise time in minutes
 
 - Introduce a representative research case study relating to High Peformance Computing.
 - Explore ways to measure and estimate carbon emissions from High Performance Computing
-  clustesr.
+  clusters.
 - Explore ways to reduce the carbon emissions associated with a given workload.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
