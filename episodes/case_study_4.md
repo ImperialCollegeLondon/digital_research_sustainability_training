@@ -1,62 +1,43 @@
 ---
-title: "Case Study 3 - HPC User"
+title: "Case Study 4 - Heterogeneous Computing User"
 teaching: 20 # teaching time in minutes
 exercises: 10 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are the sustainability considerations related to High Performance Computing?
+- What are the sustainability considerations related to using heterogeneous computing architectures,including graphical processing units (GPU), tensor cores and other alternative hardware?
+- What are the practical implications for their use in machine learning and general single instruction multiple data (SIMD) computations?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Introduce a representative research case study relating to High Peformance Computing.
-- Explore ways to measure and estimate carbon emissions from High Performance Computing
-  clustesr.
-- Explore ways to reduce the carbon emissions associated with a given workload.
+- Introduce a representative research case study relating to heterogeneous Computing, where GPUs are used to train and deplioy a deep leaning artificial neural network (ANN) application.
+- Discuss some general guidelines for estimating your carbon impact using GPU hardware.
+- Consider strategies for reducing carbon impact without sacrificing the benefits of using this class of hardware in machine learning applications.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-Hugh is a computational chemist in a research group whose work requires high fidelity
-simulations of the dynamic behaviour of atomistic systems. His work requires
-computational resources far beyond that of a single machine so he makes use of a number
-of High Performance Computing facilities.
+Miguel is an MLOps engineer embedded in an applied computationsl neuroscience department, whose applications make heavy use of heterogeneous compute hardware such as GPUs and neuromorphic processors. While the use of GPUs and other exotic hardware is crucial for demanding SIMD tasks, he is mindful that his particular domain of work is disproportionately carbon-intensive.
 
-Hugh is working on several different research questions that requires the use of
-different simulation softwares. Choice of which software to use is usually driven by
-existing research data and the capabilities of different codes. Whilst he often makes
-use of software that has been pre-installed by system administrators, he sometimes has
-to compile packages himself. The data produced by his simulation work ranges from the
-10s of gigabyte scale to low terabytes.
+His primary responsibilities include the deployment of cutting edge deep learning models and neuromphic simulations to dedicated performant hardware, and periodically maintaining these models to add features and prevent model drift. The sheer size of the models, and the vast amounts of data used to train them, mean that any procedure he performs must be carefully planned in advance, as mistakes are both financially and environmentally expensive.
 
-In addition to simulation work, Hugh carries out data analysis and creates
-visualisations.
+To do his work, Miguel has access to a bank of top-of-the-line NVIDIA GPUs in his institution's HPC cluster, but also works on various GPU-equipped workstations throughout the department. Furthermore, larger jobs are offloaded to a dedicated external GPU cluster. 
 
-Hugh has access to a number of different HPC facilities he can make use of:
+## Pre-Job Analysis
 
-- a general purpose institutional cluster offering a mix of CPUs and older GPU models.
-- a dedicated cluster providing access to modern Nvidia GPUs operating in Wales.
-- a cluster based on a novel CPU architecture.
+- Determine FLOPS and memory requirements of the job
+- How does this scale with layer width and dataset size?
+- What is the granularity of your parameter sweep?
 
-Hugh also access to several high powered desktops in the group lab.
+## Digital Waste Reduction
 
-## Emissions Sources
-
-To better understand the emissions related with his work Hugh categorises his activities
-under the GHG protocol.
-
-### Scope 2
-
-- Emissions from electricity usage associated with simulation workloads.
-- Emissions from electricity usage associated with data analysis and visualisation
-  workflows.
-
-### Scope 3
-
-- Proportional embedded emissions from HPC facilities.
-- Embedded emissions of lab desktop machines.
-- Embedded emissions from data storage devices used to store research data.
+- Is a new model necessary, or can an existing model be adapted?
+- Does it need to be trained from scratch, or can transfer learning be used?
+- Does the entire model need adjustment, or only part of it?
+- Can training end early on convergence?
+- Contingency planning, such as training checkpoints and backups
+- Curation of artifacts, to reduce duplicate runs
