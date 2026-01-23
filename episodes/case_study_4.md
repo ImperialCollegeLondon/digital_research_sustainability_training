@@ -25,7 +25,7 @@ Miguel is an MLOps engineer embedded in an applied computationsl neuroscience de
 
 His primary responsibilities include the deployment of cutting edge deep learning models and neuromphic simulations to dedicated performant hardware, and periodically maintaining these models to add features and prevent model drift. The sheer size of the models, and the vast amounts of data used to train them, mean that any procedure he performs must be carefully planned in advance, as mistakes are both financially and environmentally expensive.
 
-To do his work, Miguel has access to a bank of top-of-the-line NVIDIA GPUs in his institution's HPC cluster, but also works on various GPU-equipped workstations throughout the department. Furthermore, larger jobs are offloaded to a dedicated external GPU cluster. 
+To do his work, Miguel has access to a bank of top-of-the-line NVIDIA GPUs in his institution's HPC cluster, but also works on various GPU-equipped workstations throughout the department. Furthermore, larger jobs are offloaded to a dedicated external GPU cluster.
 
 ## Pre-Job Analysis
 
