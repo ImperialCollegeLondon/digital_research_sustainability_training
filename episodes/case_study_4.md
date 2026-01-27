@@ -57,5 +57,5 @@ external GPU cluster.
 - Does it need to be trained from scratch, or can transfer learning be used?
 - Does the entire model need adjustment, or only part of it?
 - Can training end early on convergence?
-- Contingency planning, such as training checkpoints and backups
+- What contingency plans are in place (training checkpoints, data backups, ...)?
 - Curation of artifacts, to reduce duplicate runs
