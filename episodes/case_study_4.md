@@ -34,7 +34,7 @@ crucial for demanding SIMD tasks, he is mindful that his particular domain of wo
 disproportionately carbon-intensive.
 
 His primary responsibilities include the deployment of cutting edge deep learning models
-and neuromphic simulations to dedicated performant hardware, and periodically
+and neuromorphic simulations to dedicated performant hardware, and periodically
 maintaining these models to add features and prevent model drift. The sheer size of the
 models, and the vast amounts of data used to train them, mean that any procedure he
 performs must be carefully planned in advance, as mistakes are both financially and
