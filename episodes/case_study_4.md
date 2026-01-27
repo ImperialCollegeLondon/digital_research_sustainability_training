@@ -40,7 +40,7 @@ models, and the vast amounts of data used to train them, mean that any procedure
 performs must be carefully planned in advance, as mistakes are both financially and
 environmentally expensive.
 
-To do his work, Miguel has access to a bank of top-of-the-line NVIDIA GPUs in his
+To do his work, Miguel has access to a bank of top-of-the-line GPUs in his
 institution's HPC cluster, but also works on various GPU-equipped workstations
 throughout the department. Furthermore, larger jobs are offloaded to a dedicated
 external GPU cluster.
