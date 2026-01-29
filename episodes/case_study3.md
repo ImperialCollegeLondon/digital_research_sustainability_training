@@ -39,7 +39,7 @@ visualisations.
 Hugh has access to a number of different HPC facilities he can make use of:
 
 - a general purpose institutional cluster offering a mix of CPUs and older GPU models.
-- a dedicated cluster providing access to modern Nvidia GPUs operating in Wales.
+- a dedicated cluster providing access to state-of-the-art GPUs operating in Wales.
 - a cluster based on a novel CPU architecture.
 
 To better understand the emissions related with his work Hugh categorises his activities
