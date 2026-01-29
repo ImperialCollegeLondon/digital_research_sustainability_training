@@ -42,8 +42,6 @@ Hugh has access to a number of different HPC facilities he can make use of:
 - a dedicated cluster providing access to modern Nvidia GPUs operating in Wales.
 - a cluster based on a novel CPU architecture.
 
-Hugh also access to several high powered desktops in the group lab.
-
 To better understand the emissions related with his work Hugh categorises his activities
 under the GHG protocol.
 
@@ -72,7 +70,6 @@ What Scope 3 emissions under the GHG protocol can you identity from Hugh's work?
 :::::::::::::::::::::::: solution
 
 - Proportional embedded emissions from HPC facilities.
-- Embedded emissions of lab desktop machines.
 - Embedded emissions from data storage devices used to store research data.
 
 :::::::::::::::::::::::::::::::::
