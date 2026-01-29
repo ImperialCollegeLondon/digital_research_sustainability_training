@@ -1,5 +1,5 @@
 ---
-title: "Case Study 4 - Heterogeneous Computing User"
+title: "Case Study 4 - GPU Computing User"
 teaching: 20 # teaching time in minutes
 exercises: 10 # exercise time in minutes
 ---
