@@ -27,11 +27,12 @@ exercises: 10 # exercise time in minutes
 
 ## Introduction
 
-Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an applied computational neuroscience
-department, whose applications make heavy use of heterogeneous compute hardware such as
-GPUs and neuromorphic processors. While the use of GPUs and other exotic hardware is
-crucial for demanding SIMD tasks, he is mindful that his particular domain of work is
-disproportionately carbon-intensive.
+Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an
+applied computational neuroscience department, whose applications make heavy use of
+heterogeneous compute hardware such as GPUs and neuromorphic processors. While the use
+of GPUs and other exotic hardware is crucial for demanding [single instruction multiple
+data (SIMD)](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) tasks, he
+is mindful that his domain of work is often disproportionately carbon-intensive.
 
 His primary responsibilities include the deployment of cutting edge deep learning models
 and neuromorphic simulations to dedicated performant hardware, and periodically
