@@ -59,4 +59,4 @@ external GPU cluster.
 - Does the entire model need adjustment, or only part of it?
 - Can training end early on convergence?
 - What contingency plans are in place (training checkpoints, data backups, ...)?
-- Curation of artifacts, to reduce duplicate runs
+- Can artifacts be better curated, to reduce duplicate runs?
