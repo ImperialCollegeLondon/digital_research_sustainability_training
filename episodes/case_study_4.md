@@ -27,7 +27,7 @@ exercises: 10 # exercise time in minutes
 
 ## Introduction
 
-Miguel is an MLOps engineer embedded in an applied computationsl neuroscience
+Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an applied computational neuroscience
 department, whose applications make heavy use of heterogeneous compute hardware such as
 GPUs and neuromorphic processors. While the use of GPUs and other exotic hardware is
 crucial for demanding SIMD tasks, he is mindful that his particular domain of work is
