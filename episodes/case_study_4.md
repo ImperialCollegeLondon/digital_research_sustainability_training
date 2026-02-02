@@ -17,7 +17,7 @@ exercises: 10 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Introduce a representative research case study relating to heterogeneous Computing,
-  where GPUs are used to train and deplioy a deep leaning artificial neural network
+  where GPUs are used to train and deploy a deep leaning artificial neural network
   (ANN) application.
 - Discuss some general guidelines for estimating your carbon impact using GPU hardware.
 - Consider strategies for reducing carbon impact without sacrificing the benefits of
