@@ -20,7 +20,7 @@ exercises: 10
 
 ## Scenario
 
-Celia is a researcher in a research institute. Two years ago, she developed and released
+Celia is a researcher in a university. Two years ago, she developed and released
 a Python package with a novel data analysis technique relevant to her research area. She
 had the chance to travel internationally for conducting a workshop based on her package
 at a conference. The package has been a big success and has been widely adopted. However,
