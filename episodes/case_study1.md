@@ -38,24 +38,11 @@ and categorises them under the GHG protocol.
 
 ## Challenge 1: Identify Scope 2 Emissions
 
-Refer to the definition of Scope 2 emmissions and identify which
-of the following activities during the research process would be
-classified as Scope 2 emission source?
-
-1. Emissions from electricity usage of the hardware used for software development.
-2. Emissions from travel to attend a conference for presenting research findings.
-3. Emissions from the use of cloud computing services for data analysis.
-4. Emissions from heating the office where the researcher works.
+What Scope 2 emissions under the GHG protocol can you identity from Celia's work?
 
 :::::::::::::::::::::::: solution
 
-1. **Correct**. Scope 2 emissions are indirect emissions related to
-purchased energy, such as electricity usage of hardware.
-2. **Incorrect**. Emissions from travel are classified as Scope 3 emissions.
-3. **Incorrect**. Emissions from cloud computing services are classified
-as Scope 3 emissions.
-4. **Correct**. Emissions from heating the office are classified as
-Scope 2 emissions.
+- Emissions from electricity usage of the hardware used for software development.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -64,25 +51,13 @@ Scope 2 emissions.
 
 ## Challenge 2: Identify Scope 3 Emissions
 
-Refer to the definition of Scope 3 emmissions and identify which
-of the following activities during the research process would be
-classified as Scope 3 emission source?
-
-1. Embedded emissions from hardware used for software development.
-2. Use of services such as GitHub Actions and AI Coding agents.
-3. Electricity usage when users of the package run the code.
-4. Electricity usage of the researcher's office for lighting and heating.
+What Scope 3 emissions under the GHG protocol can you identity from Celia's work?
 
 :::::::::::::::::::::::: solution
 
-1. **Correct**. Embedded emissions from hardware are classified as
-Scope 3 emissions.
-2. **Correct**. Use of services such as GitHub Actions and AI Coding
-agents are classified as Scope 3 emissions.
-3. **Correct**. Electricity usage when users run the code are classified
-as Scope 3 emissions.
-4. **Incorrect**. Emissions from office lighting and heating are classified
-as Scope 2 emissions.
+- Embedded emissions from hardware used for software development.
+- Use of services such as GitHub Actions and AI Coding agents.
+- Electricity usage when users of the package run the code.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
