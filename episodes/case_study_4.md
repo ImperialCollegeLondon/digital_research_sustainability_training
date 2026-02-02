@@ -101,7 +101,7 @@ model's carbon footprint, with minimal effect on its accuracy?
 - Use transfer learning (we are still working with cats, after all).
 - Don't adjust the whole model (we only need a new bounding box head).
 - Quit early once converged (faster in transfer learning).
-- Reduce model complexity with regularisation. This allows us to...
+- Use sparsity-promoting regularisation techniques. This allows us to...
 - Prune weak/redundant neurons/channels, creating a leaner model.
 - Any others you notice?
 
