@@ -85,15 +85,15 @@ carbon emissions resulting from the following activities?
 
 ## Challenge 2: Identify Wasteful Computing
 
-We are tasked with adding new functionality to a very resource-hungry deep learning
+Miguel is tasked with adding new functionality to a very resource-hungry deep learning
 model deployed in the cloud. Currently the model performs simple detection of cats in
-images, but we want to augment the model to produce bounding boxes. The width of the
+images, but Miguel wants to augment the model to produce bounding boxes. The width of the
 layers is very large, with many convolutional channels each. The model is highly trained
 with vast quantities of animal images, and is already quite competent at feline-based
 image processing. The training script is quite crude, and simply passes through the
 entire dataset through for 100 epochs.
 
-Given these requirements, can you spot any changes we can make to help bring down the
+Given these requirements, what changes can Miguel make to help bring down the
 model's carbon footprint, with minimal effect on its accuracy?
 
 :::::::::::::::::::::::: solution
