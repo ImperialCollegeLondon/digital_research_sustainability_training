@@ -20,9 +20,7 @@ exercises: 0 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## In the office or at home
-
-### Laptops and workstations
+## Laptops and workstations
 
 Everyone in research uses a laptop, desktop PC or workstation to do their work, even if
 they are not involved in coding or running simulations. Browsing the web or checking the
@@ -38,7 +36,7 @@ but how to estimate them and reduce them is very different.
 
 The following aspects should be considered:
 
-#### Embodied emissions
+### Embodied emissions
 
 Embodied carbon emissions **do not change** once the machine is in your hands: they only
 depend on the manufacturing and transport process. However,
@@ -81,7 +79,7 @@ total, i.e. 160 kg CO$_2$e.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-#### What are the embodied carbon emissions of your computer?
+### What are the embodied carbon emissions of your computer?
 
 Find the model of the computer you are using right now to do this course and try to find
 out its embodied carbon emissions. The links below from some manufacturers might be
@@ -93,7 +91,7 @@ just replace the battery for a new one instead of replacing the whole laptop?
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-#### Product Carbon Footprint of different manufacturers
+### Product Carbon Footprint of different manufacturers
 
 - [HP](https://h20195.www2.hp.com/v2/library.aspx#doctype-95&country-us&sortorder-popular&teasers-off&isRetired-false&isRHParentNode-false&titleCheck-false)
 - [Lenovo](https://compliance.lenovo.com/content/esg-document-library/en/esg.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FdocumentType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.7_values=PCF%20Sheets&layout=card&p.offset=0&p.limit=24)
