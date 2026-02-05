@@ -245,7 +245,79 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="01_why.html">1. Why sustainable digital research matters</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02_carbon.html">2. Energy, power and carbon</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03_activities.html">3. Digital research activities with sustainability issues</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04_case_study1.html">4. Case Study 1 - Researcher</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05_case_study2.html">5. Case Study 2 - Lab Scientist doing computational work</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06_case_study3.html">6. Case Study 3 - HPC User</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07_case_study4.html">7. Case Study 4 - GPU Computing User</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -309,12 +381,12 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-01_why"><p>Content from <a href="01_why.html">Why sustainable digital research matters</a></p>
 <hr>
-<p>Last updated on 2026-01-13 |
+<p>Last updated on 2026-02-05 |
 
-        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/01_why.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -326,8 +398,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What are the “net zero” goals?</li>
+<li>What is digital research?</li>
+<li>Why is minimising “carbon to science” important?</li>
 </ul>
 </div>
 </div>
@@ -337,95 +410,308 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Explain the big picture for reducing carbon emissions</li>
+<li>Explain how that applies to digital research</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="the-context-of-net-zero-goals">The context of net zero goals<a class="anchor" aria-label="anchor" href="#the-context-of-net-zero-goals"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
-<div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p>(For global context, use the <a href="https://museenergysimulator.co.uk/" class="external-link">Online MUSE
+calculator</a>)</p>
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="the-role-of-digital-research">The role of digital research<a class="anchor" aria-label="anchor" href="#the-role-of-digital-research"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="minimising-carbon-to-science">Minimising carbon to science<a class="anchor" aria-label="anchor" href="#minimising-carbon-to-science"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Once upon a time, in a research intensive university…</p>
+<p>TBC - Eye-opening scenario on producing carbon in digital
+research</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-9888/" class="external-link">The
+UK’s plans and progress to reach net zero by 2050</a></li>
+<li><a href="https://www.un.org/en/climatechange/net-zero-coalition" class="external-link">For
+a livable climate: Net-zero commitments must be backed by credible
+action</a></li>
+<li><a href="https://www.researchprofessionalnews.com/rr-news-uk-views-of-the-uk-2025-april-it-s-time-to-decarbonise-digital-research/" class="external-link">It’s
+time to decarbonise digital research</a></li>
+</ul>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ --></section></section><section id="aio-02_carbon"><p>Content from <a href="02_carbon.html">Energy, power and carbon</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/02_carbon.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is energy?</li>
+<li>What is power?</li>
+<li>How power and energy relate to carbon emissions?</li>
+<li>What other sources of carbon involve digital research?</li>
+<li>How do we calculate carbon emissions?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain what energy and power are</li>
+<li>Explain how energy is produced</li>
+<li>Explain what low-carbon energy sources are and how they
+opperate</li>
+<li>Explain what embeded carbon is</li>
+<li>Use the greenhouse gas (GHG) protocol to estimate carbon
+emissions</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+</div>
+<p>(This episode will be heavy on pointing to the <a href="https://learn.greensoftware.foundation/" class="external-link">Green software
+practitioner course</a> sections)</p>
+<section><h2 class="section-heading" id="energy-and-power">Energy and power<a class="anchor" aria-label="anchor" href="#energy-and-power"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="energy-sources-and-carbon-emissions">Energy sources and carbon emissions<a class="anchor" aria-label="anchor" href="#energy-sources-and-carbon-emissions"></a>
+</h2>
+<hr class="half-width">
+<p>(Can we embed plots from <a href="https://grid.iamkate.com/" class="external-link">National
+Grid: Live</a> here? Or point people to the <a href="https://museenergysimulator.co.uk/" class="external-link">Online MUSE
+calculator</a>)</p>
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="embedded-carbon-and-carbon-awareness">Embedded carbon and carbon awareness<a class="anchor" aria-label="anchor" href="#embedded-carbon-and-carbon-awareness"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="the-greenhouse-gass-ghg-protocol-and-how-to-use-it">The greenhouse gass (GHG) protocol and how to use it<a class="anchor" aria-label="anchor" href="#the-greenhouse-gass-ghg-protocol-and-how-to-use-it"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+<div id="according-to-the-ghg-protocol-what-are-the-carbon-emissions-of" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="according-to-the-ghg-protocol-what-are-the-carbon-emissions-of" class="callout-inner">
+<h3 class="callout-title">According to the GHG protocol, what are the
+carbon emissions of…?</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<ul>
+<li>Using a laptop in the office for coding 4h a day, 5 days a week. No
+calculations run.</li>
+<li>Brewing 5 cups of coffee per day, at home, 5 days a week.</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>No idea. We need to do it.</p>
+</div>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What digital research activities can have sustainability
+issues?</li>
+<li>What activities consume more energy?</li>
+<li>What activities consume more power?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Identify digital research activities</li>
+<li>Describe which aspects of them could be problematic from the
+sustainability perspective</li>
+<li>Identify if those aspects are related to power or energy usage</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<section><h2 class="section-heading" id="in-the-office-or-at-home">In the office or at home<a class="anchor" aria-label="anchor" href="#in-the-office-or-at-home"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="in-the-lab">In the lab<a class="anchor" aria-label="anchor" href="#in-the-lab"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+</section><section><h2 class="section-heading" id="in-the-cloud-or-datacenter">In the cloud or datacenter<a class="anchor" aria-label="anchor" href="#in-the-cloud-or-datacenter"></a>
+</h2>
+<hr class="half-width">
+<p>TBC</p>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-04_case_study1"><p>Content from <a href="04_case_study1.html">Case Study 1 - Researcher</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/04_case_study1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What are the sustainability considerations related to research
+software development?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce a representative research case study relating to research
+software development.</li>
+<li>Explore ways to measure and estimate carbon emissions from research
+software development.</li>
+<li>Explore ways to reduce the carbon emissions associated with a given
+workload.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
+</h2>
+<hr class="half-width">
+<p>Celia is a researcher in a university. Two years ago, she developed
+and released a Python package with a novel data analysis technique
+relevant to her research area. She had the chance to travel
+internationally for conducting a workshop based on her package at a
+conference. The package has been a big success and has been widely
+adopted. However, she has heard from some users that they are using it
+on increasingly large datasets that leads to demanding memory
+requirements and slow performance.</p>
+<p>Celia is concerned about the environmental impact of her software
+package. She wants to assess the carbon emissions associated with both
+the development and usage of her package and identify ways to reduce
+these emissions.</p>
+<p>To begin with, Celia identifies the sources of carbon emissions
+associated with her work and categorises them under the GHG
+protocol.</p>
+<div id="challenge-1-identify-scope-2-emissions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
+<div id="challenge-1-identify-scope-2-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify Scope 2 Emissions</h3>
 <div class="callout-content">
-
+<p>What Scope 2 emissions under the GHG protocol can you identity from
+Celia’s work?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Emissions from electricity usage of the hardware used for software
+development.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-identify-scope-3-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-identify-scope-3-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Identify Scope 3 Emissions</h3>
+<div class="callout-content">
+<p>What Scope 3 emissions under the GHG protocol can you identity from
+Celia’s work?</p>
 </div>
 </div>
 </div>
@@ -436,43 +722,40 @@ challenge blocks?</h3>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<ul>
+<li>Embedded emissions from hardware used for software development.</li>
+<li>Use of services such as GitHub Actions and AI Coding agents.</li>
+<li>Electricity usage when users of the package run the code.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<p>Celia should assess the balance of emissions involved in development
+of the code base versus its usage. She should look at how to estimate
+these then focus her emission reduction measures appropriately.</p>
+</section><section><h2 class="section-heading" id="suggested-approach">Suggested Approach<a class="anchor" aria-label="anchor" href="#suggested-approach"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<!-- markdownlint-disable-next-line line-length -->
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<p>After Celia has identified the Scope 2 and Scope 3 emissions sources
+associated with the development and usage of her software package, she
+could take some measures to reduce these emissions.</p>
+<div class="section level3">
+<h3 id="reducing-scope-2-emissions">Reducing Scope 2 emissions<a class="anchor" aria-label="anchor" href="#reducing-scope-2-emissions"></a>
+</h3>
+<ul>
+<li>Optimising the code base to reduce the computational resources and
+runtime of its use.</li>
+</ul>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<div class="section level3">
+<h3 id="reducing-scope-3-emissions">Reducing Scope 3 emissions<a class="anchor" aria-label="anchor" href="#reducing-scope-3-emissions"></a>
+</h3>
+<ul>
+<li>Producing documentation for users to help them make the most
+efficient use possible of her code.</li>
+<li>Reducing the use of services such as GitHub Actions.</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -481,15 +764,537 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Research software development can have significant environmental
+impacts.</li>
+<li>Measuring and estimating carbon emissions from research software
+development is important for identifying areas for improvement.</li>
 </ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</section></section><section id="aio-05_case_study2"><p>Content from <a href="05_case_study2.html">Case Study 2 - Lab Scientist doing computational work</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/05_case_study2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 14 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How does the increasing use of AI tools affect carbon foorprint and
+energy efficiency?</li>
+<li>How does relying on old hardware prevent a modern research lab from
+being energy efficient?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce a representative case study relating to carbon emissions
+in typical lab workflows</li>
+<li>Understand how relying on older equipment affects the sustainability
+of scientific work</li>
+<li>Identify practical ways to reduce the hidden carbon footprint of
+daily research tasks</li>
+<li>Identify tools and resources to help estimate emissions associated
+with daily computational research tasks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
+</h2>
+<hr class="half-width">
+<p>Emma is a researcher in a Biology lab and was tasked with analysing
+genomic sequencing data. While she is an expert in molecular biology,
+her computational and statistics background is limited. Due to the type
+and volume of data generated in the lab, she chose to write custom
+Python scripts to analyse the data.</p>
+<p>Emma’s set up:</p>
+<ul>
+<li>Personal laptop: modern and energy efficient laptop (2 years old),
+which she uses for email and paper writing.</li>
+<li>Lab Desktop: a 10 year old Desktop station, with an outdated version
+of Linux. Her lab’s sequencing equipment is hard-coded to interface only
+with this specific OS version.</li>
+</ul>
+<p>Emma’s Workflow:</p>
+<ul>
+<li>To write her Python scripts, she uses cloud-based LLMs.</li>
+<li>She backs her data on a general-purpose cloud provider.</li>
+<li>She runs her scripts on the Lab Desktop station and scripts often
+take 12-16 hours to run. Sometimes Emma leaves the Desktop running 24/7
+even over the weekends, so the scripts could finish running.</li>
+</ul>
+<div id="challenge-1-identify-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-identify-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify Emissions</h3>
+<div class="callout-content">
+<p>Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:</p>
+<ul>
+<li>The electricity powering the Lab Desktop</li>
+<li>The manufacturing of Emmas’s personal laptop</li>
+<li>The energy used by the AI/LLM provider to answer Emma’s prompts</li>
+<li>The energy used by cloud-storage provider to store Emma’s backup
+data</li>
+<li>Software licence for a proprietary analysis software</li>
+<li>The external monitors used with the Lab Desktop</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>The electricity powering the Lab Desktop (<strong>Scope
+2</strong>)</li>
+<li>The manufacturing of Emmas’s personal laptop (<strong>Scope
+3</strong>)</li>
+<li>The energy used by the AI/LLM provider to answer Emma’s prompts
+(<strong>Scope 3</strong>)</li>
+<li>The energy used by cloud-storage provider to store Emma’s backup
+data (<strong>Scope 3</strong>)</li>
+<li>Software licence for a proprietary analysis software (<strong>Scope
+3</strong>)</li>
+<li>The external monitors used with the Lab Desktop (<strong>Scope
+2</strong>)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-local-vs-cloud-ai-trade-offs" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-local-vs-cloud-ai-trade-offs" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Local vs cloud AI trade-offs</h3>
+<div class="callout-content">
+<p>Emma has come up with several options to do her workflow:</p>
+<ul>
+<li>Option 1: She spends several days writing the code herself, testing
+it on the old Lab Desktop</li>
+<li>Option 2: She uses cloud-hosted LLMs to write the code in 2 hours
+but in order to do that she sends at least 50 large prompts to the
+LLM</li>
+<li>Option 3: To speed up her work and save money, Emma can download a
+local LLM to run directly on the lab Desktop (the Desktop lacks a
+GPU).</li>
+</ul>
+<p>Which option do you think creates the least amount of emissions? Does
+the answer change if the lab Desktop or AI/cloud providers are powered
+by renewable energy?</p>
+<p>Can you think of other options Emma might have?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Other options:</p>
+<ul>
+<li>replace the legacy Lab Desktop</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-3-hidden-sources-of-carbon-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-3-hidden-sources-of-carbon-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 3: Hidden sources of carbon
+emissions</h3>
+<div class="callout-content">
+<p>Identify the habits or technical setups that are wasting energy
+without adding scientific value in Emma’s current workflow.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<ul>
+<li>data storage</li>
+<li>leaving the Desktop on</li>
+<li>inneficient code generated by the an LLM</li>
+<li>old equipment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-4-steps-to-reduce-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-4-steps-to-reduce-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 4: Steps to reduce emissions</h3>
+<div class="callout-content">
+<p>Identify steps that Emma could take to reduce her carbon
+footprint.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<ul>
+<li>code optimisation</li>
+<li>use of HPC resources</li>
+<li>data cleanup (e.g. delete data after 60 days if not accessed)</li>
+<li>reduce Lab Desktop idle time (e.g. configure the Desktop to sleep or
+hybernate after the script finishes)</li>
+<li>schedule scripts to run when the electricity grid is the
+cleanest</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-06_case_study3"><p>Content from <a href="06_case_study3.html">Case Study 3 - HPC User</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/06_case_study3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What are the sustainability considerations related to High
+Performance Computing?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce a representative research case study relating to High
+Peformance Computing.</li>
+<li>Explore ways to measure and estimate carbon emissions from High
+Performance Computing clusters.</li>
+<li>Explore ways to reduce the carbon emissions associated with a given
+workload.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Hugh is a computational chemist in a research group whose work
+requires high fidelity simulations of the dynamic behaviour of atomistic
+systems. His work requires computational resources far beyond that of a
+single machine so he makes use of a number of High Performance Computing
+facilities.</p>
+<p>Hugh is working on several different research questions that requires
+the use of different simulation softwares. Choice of which software to
+use is usually driven by existing research data and the capabilities of
+different codes. Whilst he often makes use of software that has been
+pre-installed by system administrators, he sometimes has to compile
+packages himself. The data produced by his simulation work ranges from
+the 10s of gigabyte scale to low terabytes.</p>
+<p>In addition to simulation work, Hugh carries out data analysis and
+creates visualisations.</p>
+<p>Hugh has access to a number of different HPC facilities he can make
+use of:</p>
+<ul>
+<li>a general purpose institutional cluster offering a mix of CPUs and
+older GPU models.</li>
+<li>a dedicated cluster providing access to state-of-the-art GPUs
+operating in Wales.</li>
+<li>a cluster based on a novel CPU architecture.</li>
+</ul>
+<p>To better understand the emissions related with his work Hugh
+categorises his activities under the GHG protocol.</p>
+<div id="identify-scope-2-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="identify-scope-2-emissions" class="callout-inner">
+<h3 class="callout-title">Identify Scope 2 Emissions</h3>
+<div class="callout-content">
+<p>What Scope 2 emissions under the GHG protocol can you identity from
+Hugh’s work?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>Emissions from electricity usage associated with simulation
+workloads.</li>
+<li>Emissions from electricity usage associated with data analysis and
+visualisation workflows.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="identify-scope-3-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="identify-scope-3-emissions" class="callout-inner">
+<h3 class="callout-title">Identify Scope 3 Emissions</h3>
+<div class="callout-content">
+<p>What Scope 3 emissions under the GHG protocol can you identity from
+Hugh’s work?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ul>
+<li>Proportional embedded emissions from HPC facilities.</li>
+<li>Embedded emissions from data storage devices used to store research
+data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-07_case_study4"><p>Content from <a href="07_case_study4.html">Case Study 4 - GPU Computing User</a></p>
+<hr>
+<p>Last updated on 2026-02-05 |
+
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/07_case_study4.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What are the sustainability considerations related to using
+heterogeneous computing architectures, including graphical processing
+units (GPU), tensor cores and other alternative hardware?</li>
+<li>What are the practical implications for their use in machine
+learning and general single instruction multiple data (SIMD)
+computations?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Introduce a representative research case study relating to
+heterogeneous Computing, where GPUs are used to train and deploy a deep
+leaning artificial neural network (ANN) application.</li>
+<li>Discuss some general guidelines for estimating your carbon impact
+using GPU hardware.</li>
+<li>Consider strategies for reducing carbon impact without sacrificing
+the benefits of using this class of hardware in machine learning
+applications.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a>
+</h2>
+<hr class="half-width">
+<p>Miguel is an <a href="https://en.wikipedia.org/wiki/MLOps" class="external-link">MLOps</a>
+engineer embedded in an applied computational neuroscience department,
+whose applications make heavy use of heterogeneous compute hardware such
+as GPUs and neuromorphic processors. While the use of GPUs and other
+exotic hardware is crucial for demanding <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data" class="external-link">single
+instruction multiple data (SIMD)</a> tasks, he is mindful that his
+domain of work is often disproportionately carbon-intensive.</p>
+<p>His primary responsibilities include the deployment of cutting edge
+deep learning models and neuromorphic simulations to dedicated
+performant hardware, and periodically maintaining these models to add
+features and prevent model drift. The sheer size of the models, and the
+vast amounts of data used to train them, mean that any procedure he
+performs must be carefully planned in advance, as mistakes are both
+financially and environmentally expensive.</p>
+<p>To do his work, Miguel has access to a bank of top-of-the-line GPUs
+in his institution’s HPC cluster, but also works on various GPU-equipped
+workstations throughout the department. Furthermore, larger jobs are
+offloaded to a dedicated external GPU cluster.</p>
+<div id="challenge-1-identify-carbon-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-identify-carbon-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify Carbon Emissions</h3>
+<div class="callout-content">
+<p>Using the definitions of Scopes 1, 2 and 3 carbon emissions, how
+would you classify the carbon emissions resulting from the following
+activities?</p>
+<ol style="list-style-type: decimal">
+<li>Training a new model on the HPC cluster</li>
+<li>Updating workstation GPUs and disposing retired units</li>
+<li>Data backup and curation</li>
+<li>Deploying and using a new model in the cloud</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li><strong>Scope 2</strong></li>
+<li><strong>Scope 3</strong></li>
+<li>
+<strong>Scope 2</strong> (and <strong>Scope 3</strong> when on-site
+backups are required)</li>
+<li><strong>Scope 2</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="digital-waste-reduction">Digital Waste Reduction<a class="anchor" aria-label="anchor" href="#digital-waste-reduction"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Is a new model necessary, or can an existing model be adapted?</li>
+<li>Does it need to be trained from scratch, or can transfer learning be
+used?</li>
+<li>Does the entire model need adjustment, or only part of it?</li>
+<li>What are the FLOPS and memory requirements of the job?</li>
+<li>How does this scale with layer width and dataset size?</li>
+<li>What is the granularity of your parameter sweep?</li>
+<li>Can training end early on convergence?</li>
+<li>What contingency plans are in place (training checkpoints, data
+backups, …)?</li>
+<li>Can artifacts be better curated, to reduce duplicate runs?</li>
+</ul>
+<div id="challenge-2-identify-wasteful-computing" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-identify-wasteful-computing" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Identify Wasteful Computing</h3>
+<div class="callout-content">
+<p>Miguel is tasked with adding new functionality to a very
+resource-hungry deep learning model deployed in the cloud. Currently the
+model performs simple detection of cats in images, but Miguel wants to
+augment the model to produce bounding boxes. The width of the layers is
+very large, with many convolutional channels each. The model is highly
+trained with vast quantities of animal images, and is already quite
+competent at feline-based image processing. The training script is quite
+crude, and simply passes through the entire dataset through for 100
+epochs.</p>
+<p>Given these requirements, what changes can Miguel make to help bring
+down the model’s carbon footprint, with minimal effect on its
+accuracy?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<ul>
+<li>Use transfer learning (we are still working with cats, after
+all).</li>
+<li>Don’t adjust the whole model (we only need a new bounding box
+head).</li>
+<li>Quit early once converged (faster in transfer learning).</li>
+<li>Use sparsity-inducing regularisation techniques. This allows us
+to…</li>
+<li>Prune weak/redundant neurons/channels, creating a leaner model.</li>
+<li>Any others you notice?</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -547,8 +1352,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-04",
-  "datePublished": "2026-02-04"
+  "dateModified": "2026-02-05",
+  "datePublished": "2026-02-05"
 }
 
   </script><script>
