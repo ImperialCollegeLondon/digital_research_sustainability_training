@@ -132,7 +132,7 @@ cloud computing)
 - Location to retrieve the energy mix of the location
 - Real usage factor of the CPU
 - Power Usage Efficiency (PUE) of the local data centre (if applicable)
-- Any multiplicative factor to use 
+- Any multiplicative factor to use
 
 ### Reducing Scope 2 emissions
 
