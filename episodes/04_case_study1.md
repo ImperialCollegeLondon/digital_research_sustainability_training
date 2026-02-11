@@ -118,6 +118,22 @@ After Celia has identified the emissions sources associated
 with the development and usage of her software package, she takes some measures
 to reduce these emissions.
 
+To compute the carbon footprint of her software package, she uses the [Green Algorithms
+Calculator](https://calculator.green-algorithms.org/). For the same, she has to record
+the following information:
+
+- Runtime of package in hours and minutes
+- Types of cores used (CPU, GPU, or both)
+- Number of cores used
+- Model used
+- Memory available in GB
+- Platform used for the software development (e.g. local server, personal computer,
+cloud computing)
+- Location to retrieve the energy mix of the location
+- Real usage factor of the CPU
+- Power Usage Efficiency (PUE) of the local data centre (if applicable)
+- Any multiplicative factor to use 
+
 ### Reducing Scope 2 emissions
 
 - Optimising the code base to reduce the computational resources and runtime of its use.
