@@ -79,13 +79,13 @@ GitHub Actions for continuous integration and testing. At present, there are aro
 5 workflows that run on GitHub Actions, and they run around 10 times a day.
 She makes a list of these workflows and their runtimes:
 
-| Workflow Name | Runtime (seconds) |
-|---------------|-------------------|
-| docs          | 10               |
-| check-links   | 8                |
-| upgrade-dependencies  | 6                |
-| auto-merge    | 20               |
-| ci            | 5                |
+| Workflow Name       | Runtime (seconds) |
+|---------------------|-------------------|
+| docs                | 10                |
+| check-links         | 8                 |
+| upgrade-dependencies| 6                 |
+| auto-merge          | 20                |
+| ci                  | 5                 |
 
 - Celia uses AI coding agents to create inline documentation for her code. She
 estimates that she spends around 2 hours a week using these agents.
@@ -132,7 +132,7 @@ cloud computing)
 - Location to retrieve the energy mix of the location
 - Real usage factor of the CPU
 - Power Usage Efficiency (PUE) of the local data centre (if applicable)
-- Any multiplicative factor to use 
+- Any multiplicative factor to use
 
 ### Reducing Scope 2 emissions
 
