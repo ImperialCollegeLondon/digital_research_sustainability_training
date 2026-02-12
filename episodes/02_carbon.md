@@ -28,9 +28,51 @@ exercises: 10 # exercise time in minutes
 
 ## Energy and power
 
-- Energy = useful work - J or kwh.
-- Power is a rate at which energy is consumed - watt -> joules/second.
-- Kettle at 1kw for 1 hour -> 1kwh. 200watt for 5 hours = 1kwh.
+Energy is a physical property that can be used to do work. This can be lifting a weight,
+pushing a piston or even running a computation on a computer. The SI unit of energy is
+the Joule (J) but commonly the kilowatt-hour (kWh) is also used.
+
+Power is a rate at which energy is consumed i.e., how much energy is used in a given
+amount of time. The SI unit of power is the watt (W) however kilowatts (kW) are commonly
+used as well.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Joules, kilowatts and kilowatt-hours
+
+The units used for power and energy can be confusing, particularly kilowatt-hours as a
+unit of energy. A useful relation bear in mind is that $1 W = 1 J/s$. By multipling
+watts by another unit of time we recover units of energy with a scaling factor.
+
+Kilowatt-hours are commonly used because they tend to work out nicely for everyday
+situations, e.g. a kettle may have a power rating of 1 kW so running it for an hour
+gives 1 kWh of energy used.
+
+:::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Praticing units of power and energy
+
+Which of the below are not equal to 1 kWh.
+
+- A - 200 W consumed for 12 minutes.
+- B - 1000 J
+- C - 3,600,000 J
+- D - 5000 W consumed for 12 minutes.
+
+:::::::::::::::::::::::: solution
+
+## Answers
+
+- A - 0.2 kW x 0.2 hours = 0.04 kWh
+- B - 1000 J = 0.00027 kWh
+- C - 3,600,000 J = 1 kWh
+- D - 5 kW x 0.2 hours = 1 kWh
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Energy sources and carbon emissions
 
