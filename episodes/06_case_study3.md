@@ -109,8 +109,8 @@ Hugh considers each of the emissions sources in turn.
 | Cluster | Workload | Total CPU-hours | Notes |
 |---|---|---:|---|
 | Cluster 1 | Simulation Code 1 | 9000 | Self-compiled |
-| | Simulation Code 2 | 14,000 | |
-| | Simulation Code 3 | 12,000 | |
+| | Simulation Code 2 | 6,000 | |
+| | Simulation Code 3 | 4,000 | |
 | Cluster 2 | Simulation Code 1 | 12,000 | Self-compiled |
 | | Simulation Code 2 | 8,000 | |
 | | Simulation Code 3 | 15,000 | |
