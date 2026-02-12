@@ -107,7 +107,7 @@ Hugh considers each of the emissions sources in turn.
   total cpu-hours spent on different clusters and the different codes used on each one.
 
 | Cluster | Workload | Total CPU-hours | Notes |
-|---|---|---:|---|
+| --- | --- | ---: | --- |
 | Cluster 1 | Simulation Code 1 | 9000 | Self-compiled |
 | | Simulation Code 2 | 6,000 | |
 | | Simulation Code 3 | 4,000 | |
@@ -148,7 +148,8 @@ Actions he can take (to be expanded):
   changing some compiler flags and linking a better optimised library.
 
 - Compare code performance on different systems - Hugh identifies that Simulation Code 1
-  is 20% faster on cluster 2 with the same number of CPU cores. Codes 2 and 3 don't show much difference. Hugh shifts to prioritising running Simulation Code 1 on Cluster 2.
+  is 20% faster on cluster 2 with the same number of CPU cores. Codes 2 and 3 don't show
+  much difference. Hugh shifts to prioritising running Simulation Code 1 on Cluster 2.
 
 - Optimise workloads - parallel execution has diminishing returns as more resources are
   applied to the same size problem. Hugh adopts the practice of carrying out performance
@@ -166,4 +167,5 @@ Other actions:
   small improvements.
 
 - Hugh contacts the team maintaining Cluster 1 highlighting the utility of tools to
-  measure carbon intensity data. The team promise to explore how they can add some more functionality to Cluster 1.
+  measure carbon intensity data. The team promise to explore how they can add some more
+  functionality to Cluster 1.
