@@ -28,22 +28,42 @@ exercises: 10 # exercise time in minutes
 
 ## Energy and power
 
-TBC
+- Energy = useful work - J or kwh.
+- Power is a rate at which energy is consumed - watt -> joules/second.
+- Kettle at 1kw for 1 hour -> 1kwh. 200watt for 5 hours = 1kwh.
 
 ## Energy sources and carbon emissions
 
-(Can we embed plots from [National Grid: Live] here?
-Or point people to the [Online MUSE calculator])
+- Energy has to come from somewhere - primarily either burning a fuel directly or an
+  electrical grid.
+- By the nature of digital research we're primarily concerned with electricity.
+- Electricity generation is typically a national infrastructure though there may be corner
+  cases such as small scale backup generators.
+- An electricity grid is constantly trying to match demand with production.
+- Different methods of electricity generation release different amounts of carbon per
+  kwh - carbon intensity.
+- Different methods of electricity generation have different properties - e.g. solar
+  relies on the sun shining, gas can quickly respond to demand.
+- Using a plot of grid demand and carbon intensity of a typical UK day explain
+  the core dynamics at play, i.e. what drives demand and supply and how that interacts
+  with the carbon intensity of different sources.
+- Forecasts of carbon intensity are available.
+- Links to some UK based resources.
 
-TBC
+## Embodied carbon and carbon awareness
 
-## Embedded carbon and carbon awareness
-
-TBC
+- Embodied carbon covers emissions from the extraction of raw materials, creation,
+  transportion and disposal of a product.
+- Breakdown of the embodied emissions of a laptop.
 
 ## The greenhouse gass (GHG) protocol and how to use it
 
-TBC
+- A framework for greenhouse gas accounting.
+- Built to help organisations understand and start to measure the sources of their
+  emissions.
+- Holistic - considers both the direct and indirect sources of emissions.
+- Explanation of scopes.
+- Example application.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -63,5 +83,3 @@ No idea. We need to do it.
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 [Green software practitioner course]: https://learn.greensoftware.foundation/
-[National Grid: Live]: https://grid.iamkate.com/
-[Online MUSE calculator]: https://museenergysimulator.co.uk/
