@@ -38,14 +38,13 @@ performs must be carefully planned in advance, as mistakes are costly.
 
 His primary responsibilities are:
 
-- deploying cutting edge deep learning models to dedicated hardware
-- the curation and storing of large datasets
-- periodic maintainance of models to add features and prevent model drift
+- The deployment of cutting edge deep learning models
+- The curation and storing of large datasets
+- Periodic maintainance of models to add features and prevent model drift
 
-To do his work, Miguel has access to a bank of top-of-the-line GPUs in his institution's
-HPC cluster, but also maintains various GPU-equipped workstations and fileservers
-throughout the department. The largest jobs are offloaded to a dedicated cloud GPU
-cluster.
+To do his work, Miguel alos purchases and maintains top-of-the-line GPU and fileservers,
+whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
+cloud GPU cluster, and datasets are periodically backed up in the cloud.
 
 Miguel is tasked with adding new functionality to a resource-hungry model deployed in
 the cloud. Currently the model performs simple detection of cats in images, but Miguel
@@ -57,22 +56,31 @@ dataset through for 100 epochs.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Identify Carbon Emissions
+## Identify Scope 2 Emissions
 
-Using the definitions of Scopes 1, 2 and 3 carbon emissions, how would you classify the
-carbon emissions resulting from the following activities?
-
-1. Training a new model on the HPC cluster
-2. Updating workstation GPUs and disposing retired units
-3. Data backup and curation
-4. Deploying and using a new model in the cloud
+What Scope 2 emissions under the GHG protocol can you identity from Miguel's work?
 
 :::::::::::::::::::::::: solution
 
-1. **Scope 2**
-2. **Scope 3**
-3. **Scope 2** (and **Scope 3** when on-site backups are required)
-4. **Scope 2**
+- Training a model on the local workstations
+- Training and deploying a model to the cloud
+- Running local dataset backup servers
+- Dataset cloud backups
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Identify Scope 3 Emissions
+
+What Scope 3 emissions under the GHG protocol can you identity from Miguel's work?
+
+:::::::::::::::::::::::: solution
+
+- Updating GPUs and fileserver hardware
+- Disposal of retired hardware
 
 :::::::::::::::::::::::::::::::::
 
