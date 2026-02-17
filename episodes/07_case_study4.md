@@ -84,19 +84,30 @@ What Scope 3 emissions under the GHG protocol can you identity from Miguel's wor
 
 ## Collecting Information
 
-Miguel takes a look at the model provided to him, and immediately notices that it is
-very large for its intended purpose, with many convolutional channels per layer. He
-realises that his workstation's GPUs may not have enough memory to train the model
-effectively in its current form.
+Miguel finds that the model was highly trained with vast quantities of real animal
+images, and is already quite competent at feline-based image processing. The training
+script is very crude, however, and simply passes through the entire dataset through
+for 100 epochs of stochastic gradient descent (SGD).
 
-The model is highly trained with vast quantities of real animal images, and is already
-quite competent at feline-based image processing. The training script is very crude,
-and simply passes through the entire dataset through for 100 epochs.
+He takes a look at the model's architecture, and notices that it is very large for its
+stated purpose, with many channels per convolutional layer, and very wide fully
+connected layers in the head. He realises that his workstation's GPUs may not have
+enough memory to train the model effectively in its current form, and begins to
+consider his options.
 
-- Look at carbon footprint of a new GPU
-- Is the latest and greatest GPU necessary, or is an older model fine?
-- Newer GPU doesn't mean faster and more energy efficient
-- Nvidia GPU carbon data figure
+The first option is familiar to Miguel: offload the work to a cloud GPU compute
+provider. He browses them, in turn, and is able to find the hardware configuration for
+most of them from datasheets and documentation. Knowing that FLOPs/Watt is a poor
+surrogate for total power usage in deep learning, he consults public datasets measuring
+whole-system power usage during inference, such as the
+[MLPerf Power](https://mlcommons.org/benchmarks/inference-datacenter/) dataset. He is
+able to find the hardware configuration of an acceptible provider, and notes that
+`Samples/Joule := (Samples/s)/(Watts) = 9.89`.
+
+Alongside this, he considers a second option: whilst his personal workstation's GPU is
+far from cutting-edge, it is by no means obsolete. He knows from experience that newer
+does not automatically mean greener, and keeps in mind during pre-job analysis, looking
+for oppurtunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 
@@ -109,10 +120,6 @@ and simply passes through the entire dataset through for 100 epochs.
 - whole system measurement needed (MLPerf Power)
 
 ## Taking Action
-
-## Digital and Electronic Waste Reduction
-
-## Get More for Less
 
 - Is a new model necessary, or can an existing model be adapted?
 - Does it need to be trained from scratch, or can transfer learning be used?
