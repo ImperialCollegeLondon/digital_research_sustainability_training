@@ -56,20 +56,27 @@ ones:
 - Carbon Intensity - A measure of the kgCO2e emitted per kWh of energy.
 - Dispatchability - How easily or quickly generation can be scaled up in response to
   demand.
+- Predictability - How easy it is to predict the amount of generation available.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
 The below provides a quick summary of how different energy sources compare on their key
 properties:
 
-| Energy source | Cost | Carbon intensity | Dispatchability |
-| --- | --- | --- | --- |
-| Gas | Medium | Medium | High |
-| Solar | Low | Low | Low |
-| Wind | Low | Low | Low |
-| Nuclear | High | Low | Medium |
+| Energy source | Cost | Carbon intensity | Dispatchability | Predictability |
+| --- | --- | --- | --- | --- |
+| Gas | Medium | Medium | High | High |
+| Solar | Low | Low | Low | Low |
+| Wind | Low | Low | Low | Low |
+| Nuclear | High | Low | Medium | High |
+| Hydro | Variable | Low | Low | High |
 
 ::::::::::::::::::::::::::::::::::::::::::::
+
+While solar and wind are very good in terms of cost and carbon intensity, they are
+unable to respond effectively to changes to demand. Gas, and to some extent, nuclear,
+while less appealing otherwise, can respond to these quick changes and hence complement
+green sources.
 
 The energy sources used by the grid will change on an hourly timescale and some sources
 such as wind and solar can be subject to seasonal and climate effects. The relative cost
@@ -141,6 +148,21 @@ For the UK there are publically available forecasts for the carbon intensity ava
 at <https://carbonintensity.org.uk>.
 
 ::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::: callout
+
+## Data sources
+
+The above graphs were generated from publicly available data provided by the [National
+Energy System Operator]. Data was sourced from the [UK Carbon Intensity API] and the
+[NESO Data Portal]. The scripts used to generate the graphs available on GitHub in [ImperialCollegeLondon/digital_research_sustainability_visualisations].
+
+::::::::::::::::::::::::::::::::::
+
+[National Energy System Operator]: https://www.neso.energy/
+[UK Carbon Intensity API]: https://carbonintensity.org.uk/
+[NESO Data Portal]: https://www.neso.energy/data-portal
+[ImperialCollegeLondon/digital_research_sustainability_visualisations]: https://github.com/ImperialCollegeLondon/digital_research_sustainability_visualisations
 
 ## Embodied carbon and carbon awareness
 
