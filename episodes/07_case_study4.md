@@ -42,17 +42,13 @@ His primary responsibilities are:
 - The curation and storing of large datasets
 - Periodic maintainance of models to add features and prevent model drift
 
-To do his work, Miguel alos purchases and maintains top-of-the-line GPU and fileservers,
+To do his work, Miguel also purchases and maintains top-of-the-line GPU and fileservers,
 whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
 cloud GPU cluster, and datasets are periodically backed up in the cloud.
 
 Miguel is tasked with adding new functionality to a resource-hungry model deployed in
 the cloud. Currently the model performs simple detection of cats in images, but Miguel
-needs to augment the model to produce bounding boxes. The width of the layers is very
-large, with many convolutional channels each. The model is highly trained with vast
-quantities of animal images, and is already quite competent at feline-based image
-processing. The training script is quite crude, and simply passes through the entire
-dataset through for 100 epochs.
+needs to augment the model to produce bounding boxes.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -86,25 +82,35 @@ What Scope 3 emissions under the GHG protocol can you identity from Miguel's wor
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Digital and Electronic Waste Reduction
+## Collecting Information
+
+Miguel takes a look at the model provided to him, and immediately notices that it is
+very large for its intended purpose, with many convolutional channels per layer. He
+realises that his workstation's GPUs may not have enough memory to train the model
+effectively in its current form.
+
+The model is highly trained with vast quantities of real animal images, and is already
+quite competent at feline-based image processing. The training script is very crude,
+and simply passes through the entire dataset through for 100 epochs.
+
+- Look at carbon footprint of a new GPU
+- Is the latest and greatest GPU necessary, or is an older model fine?
+- Newer GPU doesn't mean faster and more energy efficient
+- Nvidia GPU carbon data figure
+
+## Analysis
 
 - What are the FLOPs and memory requirements of the job?
-- Can floating point precision be reduced?
 - How does this scale with layer width and dataset size?
+- Can floating point precision be reduced?
 
-- Is the latest and greatest GPU necessary, or is an older model fine?
+- FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
+- but can't predict carbon usage alone
+- whole system measurement needed (MLPerf Power)
 
-Newer GPU doesn't mean faster and more energy efficient
+## Taking Action
 
-Nvidia GPU carbon data figure
-
-FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
-
-but can't predict carbon usage alone
-
-whole system measurement needed (MLPerf Power)
-
-## Challenge 2: Identify Wasteful Computing
+## Digital and Electronic Waste Reduction
 
 ## Get More for Less
 
@@ -119,7 +125,7 @@ whole system measurement needed (MLPerf Power)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: Identify Wasteful Computing
+## Identify Wasteful Computing
 
 Given these requirements, what changes can Miguel make to help bring down the
 model's carbon footprint, with minimal effect on its accuracy?
