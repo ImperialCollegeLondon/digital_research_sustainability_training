@@ -41,7 +41,7 @@ used as well.
 ## Joules, kilowatts and kilowatt-hours
 
 The units used for power and energy can be confusing, particularly kilowatt-hours as a
-unit of energy. A useful relation bear in mind is that $1 W = 1 J/s$. By multipling
+unit of energy. A useful relation to bear in mind is that $1 W = 1 J/s$. By multipling
 watts by another unit of time we recover units of energy with a scaling factor.
 
 Kilowatt-hours are commonly used because they tend to work out nicely for everyday
