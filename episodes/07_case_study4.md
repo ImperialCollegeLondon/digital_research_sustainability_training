@@ -102,7 +102,7 @@ surrogate for total power usage in deep learning, he consults public datasets me
 whole-system power usage during inference, such as the
 [MLPerf Power](https://mlcommons.org/benchmarks/inference-datacenter/) dataset. He is
 able to find the hardware configuration of an acceptible provider, and notes that
-`Samples/Joule := (Samples/s)/(Watts) = 9.89`.
+`Samples/Joule = (Samples/s)/(Watts) ≈ 9.89`.
 
 Alongside this, he considers a second option: whilst his personal workstation's GPU is
 far from cutting-edge, it is by no means obsolete. He knows from experience that newer
@@ -111,10 +111,14 @@ for oppurtunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 
-- What are the FLOPs and memory requirements of the job?
-- How does this scale with layer width and dataset size?
-- Can floating point precision be reduced?
+For the next step, Miguel begins to quantify the computational resources required to
+modify the model. Starting with memory requirements, he makes a rough ballpark estimate,
+based on
 
+- What are the memory requirements of the job?
+- How does this scale with layer width and dataset size?
+
+- What are the FLOPs requirements of the job?
 - FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
 - but can't predict carbon usage alone
 - whole system measurement needed (MLPerf Power)
@@ -127,6 +131,7 @@ for oppurtunities to make the model lean enough to run on his GPU.
 
 - What is the granularity of your parameter sweep?
 - Can training end early on convergence?
+- Can floating point precision be reduced?
 
 - What contingency plans are in place (training checkpoints, data backups, ...)?
 
