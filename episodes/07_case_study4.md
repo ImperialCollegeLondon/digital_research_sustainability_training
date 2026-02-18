@@ -100,7 +100,7 @@ provider. He browses them, in turn, and is able to find the hardware configurati
 most of them from datasheets and documentation. Knowing that FLOPs/Watt is a poor
 surrogate for total power usage in deep learning, he consults public datasets measuring
 whole-system power usage during inference, such as the
-[MLPerf Power](https://mlcommons.org/benchmarks/inference-datacenter/) dataset. He is
+[MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) dataset. He is
 able to find the hardware configuration of an acceptible provider, and notes that
 `Samples/Joule = (Samples/s)/(Watts) ≈ 9.89`.
 
@@ -112,16 +112,19 @@ for oppurtunities to make the model lean enough to run on his GPU.
 ## Analysis
 
 For the next step, Miguel begins to quantify the computational resources required to
-modify the model. Starting with memory requirements, he makes a rough estimate based on
-the following heuristics:
+modify the model. He makes a rough total memory estimate; with the number of trainable
+parameters `P`, the sum of all layer sizes `N`, the batch size `M`, a constant `j`
+depending on the chosen optimiser, a constant `k` depending on the unit model, and
+bytes per number as `b`, he reserves memory (in bytes) for:
 
-- Trainable parameters `W`, using `p_W`-byte floats: `size(W) * p_W`
-- Gradients for `W`, using `p_g`-byte floats: `size(W) * p_g`
-- Activation variables `X`, using `p_X`-byte floats: `B * size(X) * k`
+- Parameters: `P * b`
+- Parameter gradients: `P * b`
+- Optimiser state: `P * j * b`
+- Activations: `M * N * k * b`
+- An extra 20% for ML frameworks usage
 
-- How does this scale with layer width and dataset size?
-
-If the model were smaller, he could also have confirmed this estimate in a quick dry-run.
+With this estimation framework, he is able to know (before submitting the job) roughly
+how much GPU memory will be required as, for exxample, batch size and layer width scale.
 
 - What are the FLOPs requirements of the job?
 - FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
@@ -132,11 +135,9 @@ If the model were smaller, he could also have confirmed this estimate in a quick
 - Does it need to be trained from scratch, or can transfer learning be used?
 - Does the entire model need adjustment, or only part of it?
 
-- What is the granularity of your parameter sweep?
 - Can training end early on convergence?
-- Can floating point precision be reduced?
-
 - What contingency plans are in place (training checkpoints, data backups, ...)?
+- Can floating point precision be reduced?
 
 ## Taking Action
 
