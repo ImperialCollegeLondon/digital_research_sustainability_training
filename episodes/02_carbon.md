@@ -76,19 +76,19 @@ holistic and covers both direct and indirect emission sources.
 
 The GHG protocol breaks down emissions into three categories called scopes:
 
-- Scope 1 are direct emissions. These come from activities that directly emit carbon
+- **Scope 1** are direct emissions. These come from activities that directly emit carbon
   such as burning fuel. This would cover fuel used in a vehicle or an on-site heating
   system or electricity generation.
 
-- Scope 2 are indirect emissions. These come activities that consume energy produced
+- **Scope 2** are indirect emissions. These come activities that consume energy produced
   elsewhere. This is primarily the emissions associated with electricity generation
-  covered in detail above..
+  covered in detail above.
 
-- Scope 3 are "Value chain emissions". These come from everything upstream i.e.,
+- **Scope 3** are "Value chain emissions". These come from everything upstream i.e.,
   requirements you need to carry out research activities and everything downstream i.e.,
-  emissions associated with the use of your research outputs even by others. Upstream
-  emissions includes things like the embodied emissions of hardware whilst
-  downstream emissions might include use of software or data you've created.
+  emissions associated with the use of your research outputs, even by others. Upstream
+  emissions includes things like the embodied emissions of hardware whilst downstream
+  emissions might include use of software or data you've created.
 
 The GHG protocol is most often applied to businesses, countries or cities but it can be
 applied at any scale including an individual or research group. It's easy to get hung up
