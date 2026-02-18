@@ -60,8 +60,8 @@ include:
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-The table below provides a quick summary of how different energy sources compare on their key
-properties:
+The table below provides a quick summary of how different energy sources compare on
+their key properties:
 
 | Energy source | Cost | Carbon intensity | Dispatchability | Predictability |
 | --- | --- | --- | --- | --- |
