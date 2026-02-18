@@ -112,18 +112,21 @@ for oppurtunities to make the model lean enough to run on his GPU.
 ## Analysis
 
 For the next step, Miguel begins to quantify the computational resources required to
-modify the model. Starting with memory requirements, he makes a rough ballpark estimate,
-based on
+modify the model. Starting with memory requirements, he makes a rough estimate based on
+the following heuristics:
 
-- What are the memory requirements of the job?
+- Trainable parameters `W`, using `p_W`-byte floats: `size(W) * p_W`
+- Gradients for `W`, using `p_g`-byte floats: `size(W) * p_g`
+- Activation variables `X`, using `p_X`-byte floats: `B * size(X) * k`
+
 - How does this scale with layer width and dataset size?
+
+If the model were smaller, he could also have confirmed this estimate in a quick dry-run.
 
 - What are the FLOPs requirements of the job?
 - FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
 - but can't predict carbon usage alone
 - whole system measurement needed (MLPerf Power)
-
-## Taking Action
 
 - Is a new model necessary, or can an existing model be adapted?
 - Does it need to be trained from scratch, or can transfer learning be used?
@@ -134,6 +137,8 @@ based on
 - Can floating point precision be reduced?
 
 - What contingency plans are in place (training checkpoints, data backups, ...)?
+
+## Taking Action
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
