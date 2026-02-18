@@ -38,7 +38,7 @@ Energy famously cannot be created or destroyed but the energy used for research
 activities has to come from somewhere. In practice the majority of energy used for
 digital research comes from a national electricity grid so this will be our focus.
 
-The elecrical grid serves to transport energy from electricity generators to end users.
+The electrical grid serves to transport energy from electricity generators to end users.
 Economies of scale tend to mean that electricity generation is a large scale activity.
 The electrical energy supplied to the grid comes from a variety of different sources.
 This can be fossil fuels like coal and gas or green energy sources like solar and wind.
@@ -49,8 +49,8 @@ responds to increases in demand by purchasing additional electricity from suppli
 
 ### Energy Mix and Carbon Intensity
 
-Different methods of electricity generation have different properties. Some important
-ones:
+Different methods of electricity generation have different properties. Some of the important
+include:
 
 - Cost - The cost of generating each kWh of energy.
 - Carbon Intensity - A measure of the kgCO2e emitted per kWh of energy.
@@ -60,7 +60,7 @@ ones:
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-The below provides a quick summary of how different energy sources compare on their key
+The table below provides a quick summary of how different energy sources compare on their key
 properties:
 
 | Energy source | Cost | Carbon intensity | Dispatchability | Predictability |
@@ -91,7 +91,7 @@ for a time period.
 The following graphs show a typical UK day in 2026.
 
 <!-- markdownlint-disable-next-line line-length -->
-![Electricity demand, energy mix and carbon intensity of the UK power grid on 12/01/2026](fig/demand-mix-intensity.png){alt="Three graphs showing the relationship between the electricity demand, energy mix and carbon intensity of the UK power grid over the course of a day."}
+![Electricity demand, energy mix and carbon intensity of the UK power grid as on 12/01/2026](fig/demand-mix-intensity.png){alt="Three graphs showing the relationship between the electricity demand, energy mix and carbon intensity of the UK power grid over the course of a day."}
 
 The following dynamics are at play:
 
@@ -124,7 +124,7 @@ The following dynamics are at play:
   the day - a factor of two in the above example. A simple strategy to reduce the
   emissions from digital research is therefore to shift electricity usage to times when
   carbon intensity is low. This is known as demand shifting. A simple rule of thumb is
-  to favor running computationally intensive work at night.
+  to favour running computationally intensive work at night.
 
 - Gas is a key part of the UK's energy mix because of it's dispatchability i.e., it's
   ability to rapidly respond to changes in demand. Some green technologies like solar
