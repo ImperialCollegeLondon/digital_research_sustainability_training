@@ -462,7 +462,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-02_carbon"><p>Content from <a href="02_carbon.html">Energy, power and carbon</a></p>
 <hr>
-<p>Last updated on 2026-02-17 |
+<p>Last updated on 2026-02-18 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/02_carbon.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -575,27 +575,207 @@ so running it for an hour gives 1 kWh of energy used.</p>
 </section><section><h2 class="section-heading" id="energy-sources-and-carbon-emissions">Energy sources and carbon emissions<a class="anchor" aria-label="anchor" href="#energy-sources-and-carbon-emissions"></a>
 </h2>
 <hr class="half-width">
+<p>Energy famously cannot be created or destroyed but the energy used
+for research activities has to come from somewhere. In practice the
+majority of energy used for digital research comes from a national
+electricity grid so this will be our focus.</p>
+<p>The electrical grid serves to transport energy from electricity
+generators to end users. Economies of scale tend to mean that
+electricity generation is a large scale activity. The electrical energy
+supplied to the grid comes from a variety of different sources. This can
+be fossil fuels like coal and gas or green energy sources like solar and
+wind.</p>
+<p>A key feature of electrical grids is that supply must be balanced
+with demand. Demand for electricity can vary greatly throughout a year
+or even an individual day. The grid responds to increases in demand by
+purchasing additional electricity from suppliers.</p>
+<div class="section level3">
+<h3 id="energy-mix-and-carbon-intensity">Energy Mix and Carbon Intensity<a class="anchor" aria-label="anchor" href="#energy-mix-and-carbon-intensity"></a>
+</h3>
+<p>Different methods of electricity generation have different
+properties. Some of the important include:</p>
 <ul>
-<li>Energy has to come from somewhere - primarily either burning a fuel
-directly or an electrical grid.</li>
-<li>By the nature of digital research we’re primarily concerned with
-electricity.</li>
-<li>Electricity generation is typically a national infrastructure though
-there may be corner cases such as small scale backup generators.</li>
-<li>An electricity grid is constantly trying to match demand with
-production.</li>
-<li>Different methods of electricity generation release different
-amounts of carbon per kwh - carbon intensity.</li>
-<li>Different methods of electricity generation have different
-properties - e.g. solar relies on the sun shining, gas can quickly
-respond to demand.</li>
-<li>Using a plot of grid demand and carbon intensity of a typical UK day
-explain the core dynamics at play, i.e. what drives demand and supply
-and how that interacts with the carbon intensity of different
-sources.</li>
-<li>Forecasts of carbon intensity are available.</li>
-<li>Links to some UK based resources.</li>
-</ul></section><section><h2 class="section-heading" id="embodied-carbon-and-carbon-awareness">Embodied carbon and carbon awareness<a class="anchor" aria-label="anchor" href="#embodied-carbon-and-carbon-awareness"></a>
+<li>Cost - The cost of generating each kWh of energy.</li>
+<li>Carbon Intensity - A measure of the kgCO2e emitted per kWh of
+energy.</li>
+<li>Dispatchability - How easily or quickly generation can be scaled up
+in response to demand.</li>
+<li>Predictability - How easy it is to predict the amount of generation
+available.</li>
+</ul>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The table below provides a quick summary of how different energy
+sources compare on their key properties:</p>
+<table class="table">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
+<thead><tr class="header">
+<th>Energy source</th>
+<th>Cost</th>
+<th>Carbon intensity</th>
+<th>Dispatchability</th>
+<th>Predictability</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Gas</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Solar</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr class="odd">
+<td>Wind</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td>Nuclear</td>
+<td>High</td>
+<td>Low</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Hydro</td>
+<td>Variable</td>
+<td>Low</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>While solar and wind are very good in terms of cost and carbon
+intensity, they are unable to respond effectively to changes to demand.
+Gas, and to some extent, nuclear, while less appealing otherwise, can
+respond to these quick changes and hence complement green sources.</p>
+<p>The energy sources used by the grid will change on an hourly
+timescale and some sources such as wind and solar can be subject to
+seasonal and climate effects. The relative cost of different sources can
+also be impacted by global events and markets. The sources of
+electricity used by the grid are referred to as the energy mix. The
+energy mix of the grid leads to an overall carbon intensity value given
+as gCO2/kWh of electricity generated. This can also be broken down by
+geographical region or given as an average for a time period.</p>
+</div>
+<div class="section level3">
+<h3 id="carbon-intensity-in-the-uk">Carbon Intensity in the UK<a class="anchor" aria-label="anchor" href="#carbon-intensity-in-the-uk"></a>
+</h3>
+<p>The following graphs show a typical UK day in 2026.</p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="../fig/demand-mix-intensity.png" alt="Three graphs showing the relationship between the electricity demand, energy mix and carbon intensity of the UK power grid over the course of a day." class="figure mx-auto d-block"><div class="figcaption">Electricity demand, energy mix and carbon
+intensity of the UK power grid as on 12/01/2026</div>
+</figure><p>The following dynamics are at play:</p>
+<ul>
+<li>At midnight initial energy demand and carbon intensity is low.</li>
+<li>Around 5am, energy usage begins to increase as people wake up and
+businesses open. As demand increases, the proportion of gas in the
+energy mix increases as more gas generation is brought online to keep
+the grid balanced. This also drives an increase in carbon
+intensity.</li>
+<li>Carbon intensity peaks in the morning around 7am. Although energy
+demand continues to rise, gas usage and carbon intensity drop slightly
+as cheaper imported energy becomes available. Slightly later a small
+amount of solar power also becomes available as the sun rises.</li>
+<li>Demand remains steady throughout the day before increasing in the
+evening. This is driven by domestic usage as people come home, cook and
+use domestic appliances. Again additional gas generation is brought
+online to meet the demand and carbon intensity rises to its peak
+value.</li>
+<li>As the evening progresses and people go to bed, demand drops again
+and carbon intensity also falls as gas generation goes offline. Overall
+carbon intensity ends up lower at the end of the day than the beginning
+as more imported energy is available.</li>
+</ul>
+<div id="takeaways" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="takeaways" class="callout-inner">
+<h3 class="callout-title">Takeaways</h3>
+<div class="callout-content">
+<ul>
+<li><p>The pattern shown is typical for a day in the UK. There are
+however many other factors that can determine the relationship between
+demand and carbon intensity which can play out at a variety of
+timescales.</p></li>
+<li><p>There is considerable variability in the carbon intensity of
+electricity throughout the day - a factor of two in the above example. A
+simple strategy to reduce the emissions from digital research is
+therefore to shift electricity usage to times when carbon intensity is
+low. This is known as demand shifting. A simple rule of thumb is to
+favour running computationally intensive work at night.</p></li>
+<li><p>Gas is a key part of the UK’s energy mix because of it’s
+dispatchability i.e., it’s ability to rapidly respond to changes in
+demand. Some green technologies like solar and wind have low
+dispatchability as they depend on factors like the weather.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="../fig/daily_carbon_intensity_2025.png" alt="A graph showing the daily carbon intensity of the UK power grid during 2025. The mean, maximum and minimum values for each day are shown." class="figure mx-auto d-block"><div class="figcaption">Carbon intensity of the UK power grid during
+2025</div>
+</figure><p>The above graph demonstrates how carbon intensity can vary throughout
+the year. Whilst there is little pattern month to month, it is
+interestirng to observe that the mimimum and maximum carbon intensity of
+the grid can vary between ~50 gCO2/kWh and ~250 gCO2/kWh, a factor of
+five.</p>
+<div id="carbon-intensity-forecasts" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="carbon-intensity-forecasts" class="callout-inner">
+<h3 class="callout-title">Carbon Intensity Forecasts</h3>
+<div class="callout-content">
+<p>For the UK there are publically available forecasts for the carbon
+intensity available at <a href="https://carbonintensity.org.uk" class="external-link uri">https://carbonintensity.org.uk</a>.</p>
+</div>
+</div>
+</div>
+<div id="data-sources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="data-sources" class="callout-inner">
+<h3 class="callout-title">Data sources</h3>
+<div class="callout-content">
+<p>The above graphs were generated from publicly available data provided
+by the <a href="https://www.neso.energy/" class="external-link">National Energy System
+Operator</a>. Data was sourced from the <a href="https://carbonintensity.org.uk/" class="external-link">UK Carbon Intensity API</a> and
+the <a href="https://www.neso.energy/data-portal" class="external-link">NESO Data Portal</a>.
+The scripts used to generate the graphs available on GitHub in <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_visualisations" class="external-link">ImperialCollegeLondon/digital_research_sustainability_visualisations</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="embodied-carbon-and-carbon-awareness">Embodied carbon and carbon awareness<a class="anchor" aria-label="anchor" href="#embodied-carbon-and-carbon-awareness"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -781,7 +961,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage of the hardware used for software
@@ -809,7 +989,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Embedded emissions from hardware used for software development.</li>
@@ -1590,8 +1770,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-17",
-  "datePublished": "2026-02-17"
+  "dateModified": "2026-02-18",
+  "datePublished": "2026-02-18"
 }
 
   </script><script>
