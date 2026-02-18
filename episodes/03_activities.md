@@ -41,76 +41,136 @@ Research datasets are increasingly large and replicated across multiple systems 
 
 ### Local storage
 
-- **Solid-State Disk Drives (SDD)**: They use flash memory with no moving parts to store
- data. Their emodied carbon emissions are high due to the rare metals needed for semiconductor
+- **Solid-State Disk Drives (SSD)**: They use flash memory with no moving parts to store
+ data. Their embodied carbon emissions are high due to the rare metals needed for semiconductor
  manufacturing, while operational emissions are low.
-- **Hard Disk Drives (HDD)**: They store data on spinning magentic disks. Embodied emissions
-are lower than those of SDDs but operational emissions are higher because their disks
+- **Hard Disk Drives (HDD)**: They store data on spinning magnetic disks. Embodied emissions
+are lower than those of SSDs but operational emissions are higher because their disks
  must spin continuously.
 - **Linear Tape-Open (LTO Tape)**: Magnetic tape technology used for long-term storage.
- Their manufacturing emissions are low, while their operation emissions are near zero.
+ Their manufacturing emissions are low, while their operational emissions are near zero.
 
 Their associated carbon emissions are summarised below:
 
-| Category | SDD | HDD | LTO tape |
+| Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
-| **Embodied Carbon (kg CO2e per TB)** | High (160-320 kg)^1^ | Moderate (20-40 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO2e per TB)** | Low (25-50 kg )^1^ | High (2-160 kg)^1, 2^ | Zero |
+| **Embodied Carbon (kg CO2e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
+| **Operational Carbon (kg CO2e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1, 2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
-SDDs allow data to be accessed almost instantly and are typically 10–100× faster than HDDs.
+While the numbers vary depending on manufacturers and reporting available, it is generally
+ considered that SSDs have a higher 'carbon debt` per unit of storage than HDDs^4^.
+ However, recent data suggest the difference for enterprise-grade drives is shrinking,
+ and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
+
+SSDs allow data to be accessed almost instantly and are typically 10–100× faster than HDDs.
  LTO tapes offer the slowest access speeds, but they remain the preferred option for
   offloading cold data due to their low cost and excellent energy efficiency.
 
 ### Cloud storage
 
-Cloud storage has become an important component of modern digital research. Storing data
- in the cloud has an associated carbon footprint which arises from its embodied
- emissions and its operational emissions.
+Cloud storage has become an important component of modern digital research. Data centres,
+ the industrial facilities housing the servers and hardware that power the cloud.
+ Storing 1 TB of data in the cloud for a year results in an estimated carbon footprint
+  of 10–40 kg CO₂e, depending on storage type, redundancy, and electricity source^6^. The
+   carbon emissions associated with cloud data storage arise from the embodied emissions
+    and operational emissions of data centres.
 
 **Embodied emissions of cloud storage**:
 
-- manufacturing of storage devices (SDDs, HDDs and tape systems)
-- data-center construction (concrete, steel, electrical infrastructure, etc.)
-- networking and supporting hardware (switched, cables, etc.)
-- hardware transportation and deployment
+- manufacturing of storage devices: SSDs have higher embodied emissions than HDDs and
+magnetic tape
+- data-centre construction: includes the concrete, steel, electrical infrastructure, etc.
+- networking and supporting hardware: switches, cables, etc.
+- hardware transportation and deployment: in cloud environments, hardware is
+ often decommission every 3 to 5 years to maintain reliability
 
-**Operational carbon emission of cloud storage**:
+**Operational carbon emissions of cloud storage**:
 
-- powering the hardware: larger energy usage by HDDs, followed by SDDs, while tape
+The operational carbon emissions of cloud storage arise from:
+
+- powering the hardware: larger energy usage by HDDs, followed by SSDs, while tape
  consumes almost zero energy when idle
-- cooling systems: large amounts of energy needed to maintain optimal temperatures for
+- cooling systems: large amounts of energy are needed to maintain optimal temperatures for
  storage devices
-- redundancy and replication: multiple copied storied across regions
+- redundancy and replication: standard cloud storage providers typically create three
+ distributed copies of every file across different physical buildings
 - networking and data transfer: energy associated with uploading, downloading and syncing
- data
+ data. This depends heavily on the distance and type of network (wired vs 5G) used.
 
-Operational emissions depend heavily on the grid carbon intensity, with lower emission
- in renewable-powered regions and higher emissions in fossil-fuel-dominated regions.
+Data centres consume around 2.5% of the UK's electricity and the annual consumption
+ is expected to increase by 4 times by 2030^7^. In the U.S., data centres are predicted
+  to use up to 12% of the country's electricity by 2028, a 3x increase from 4.4% in 2025^8^.
 
-Choosing between local vs cloud storage depends on several factors, and the table below
- highlights how each option differs in terms of carbon emissions.
+The energy efficiency of data centres is usually measured as their Power Usage
+ Effectiveness (PUE), and determines how much of the energy entering the data centre reaches
+ the IT equipment used for servers and storage compared to the energy used for cooling
+  and lighting.
 
-| Category | Cloud Storage | On‑Prem Storage |
+$$
+\mathbf{PUE} = \frac{\text{IT Equipment Power}}{\text{Total Facility Power}}
+$$
+
+<!-- markdownlint-disable-next-line line-length -->
+![Google Data Center PUE measurement boundaries](fig/pue-infographic.webp){alt="Google Data Center PUE measurement boundaries."}
+
+ An average data centre has a PUE of around 1.59, meaning for every 1 watt used to power
+  the storage drive, an additional 0.5 watts is spent on cooling and power distribution.
+   Newer and larger data centres tend to be more efficient^9^,
+   with a golbal average PUE of 1.41 in 2025^10^.
+
+Operational emissions represent the greenhouse gas (GHG) impact associated with the
+ electricity required for cloud storage. The value depends heavily on the grid carbon
+  intensity, with lower emissions in renewable-powered regions and higher emissions
+   in fossil-fuel-dominated regions.
+
+<!-- markdownlint-disable-next-line line-length -->
+$$
+\text{Operational Emissions} =
+U \times C_{\text{kWh}} \times \text{PUE} \times E_{\text{CO₂e}}
+$$
+
+Where:
+
+- **U**: Cloud provider service usage - can be obtained from the cloud providers
+- **C\_kWh**: Cloud energy conversion factors - can be obtained from cloud providers or
+  academic studies
+- **PUE**: Power usage effectiveness - usually published by cloud providers  
+- **E\_CO₂e**: Grid emissions factors - provided by regional electricity grid authorities
+
+### Local vs Cloud storage
+
+While storing data in the cloud is usually the greener choice, local storage has a number
+ of advantages, including turning storing devices off when not using them, faster speeds
+  for transferring big files, and increased data security.
+
+| Category | Cloud Storage | Local Storage |
 | :--- | :--- | :--- |
 | **Embodied Carbon** | Lower (shared + efficient infrastructure) | Higher (duplications + under‑used hardware) |
-| **Operational Carbon** | Usually lower (efficient cooling) | Usually higher(older facilities + local grid) |
-| **Energy Efficiency** | High | Generally lower |
+| **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
+| **Energy Efficiency** | High (fewer idle disks) | Generally lower |
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
 
 ### Strategies to reduce carbon emissions associated with data storage
 
 - Choose cloud regions powered by renewable energy
 - Delete unused or redundant data
-- Keep frequently accessed data on faster storage (SDDs) and move "cold"
- or infrequently accesed data to slower but more energy efficent systems (tape storage)^4^
+- Keep frequently accessed data on faster storage (SSDs) and move "cold"
+ or infrequently accessed data to slower but more energy efficient systems (tape storage)^11^
 - Use compression to reduce storage requirements
 
 ## Hardware life-cycle footprint
 
 ### References
 
-1. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SDDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
+1. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
 2. [Based on Seagate EXOS X18](https://www.seagate.com/content/dam/seagate/assets/esg/planet/product-sustainability/files/life-cycle-assessment-exos-x18.pdf)
 3. [Based on LTO 9 - FUJIFILM. *Sustainability Report 2020*. 2020](https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf)
-4. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
+4. [Rteil, N., Kenny, R., Andrews, D., & Kerwin, K. (2025). Understanding the carbon footprint of storage media: A critical review of embodied emissions in hard disk drives. International Journal of Environmental and Ecological Engineering, 19(11), 263–270](https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/15145533/understanding-the-carbon-footprint-of-storage-media-a-critical-review-of-embodied-emissions-in-hard-disk-drives_1_.pdf)
+5. [How Do the Embodied Carbon Dioxide Equivalents of Flash Compare to HDDs?](https://blog.purestorage.com/perspectives/how-do-the-embodied-carbon-dioxide-equivalents-of-flash-compare-to-hdds-part-1/#:~:text=Instead%20of%20an%208x%20difference,continue%20well%20into%20the%20future.)
+6. [Digital Decarbonisation - CO2e Data Calculator](https://digitaldecarb.org/co2-data-calculator/)
+7. [National Energy System Operator](https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain)
+8. [U.S. Department of Energy - 2024 Report on U.S. Data Center Energy Use](https://escholarship.org/uc/item/32d6m0d1)
+9. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
+10. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
+11. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
