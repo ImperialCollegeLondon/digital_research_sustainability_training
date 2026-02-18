@@ -124,12 +124,18 @@ bytes per number as `b`, he reserves memory (in bytes) for:
 - An extra 20% for ML frameworks usage
 
 With this estimation framework, he is able to know (before submitting the job) roughly
-how much GPU memory will be required as, for exxample, batch size and layer width scale.
+how much GPU memory will be required as, for example, batch size and layer width scale.
+
+Next, Miguel attempts to estimate the rouch computational complexity of the model.
+Remembering that that FLOPs is a poor surrogate metric of the model's carbon footprint,
+he knows that the metric still provides a decent approcimation of run duration scaling.
 
 - What are the FLOPs requirements of the job?
 - FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
 - but can't predict carbon usage alone
 - whole system measurement needed (MLPerf Power)
+
+## Taking Action
 
 - Is a new model necessary, or can an existing model be adapted?
 - Does it need to be trained from scratch, or can transfer learning be used?
@@ -139,24 +145,8 @@ how much GPU memory will be required as, for exxample, batch size and layer widt
 - What contingency plans are in place (training checkpoints, data backups, ...)?
 - Can floating point precision be reduced?
 
-## Taking Action
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Identify Wasteful Computing
-
-Given these requirements, what changes can Miguel make to help bring down the
-model's carbon footprint, with minimal effect on its accuracy?
-
-:::::::::::::::::::::::: solution
-
 - Use transfer learning (we are still working with cats, after all).
 - Don't adjust the whole model (we only need a new bounding box head).
 - Quit early once converged (faster in transfer learning).
 - Use sparsity-inducing regularisation techniques. This allows us to...
 - Prune weak/redundant neurons/channels, creating a leaner model.
-- Any others you notice?
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
