@@ -208,18 +208,50 @@ Energy System Operator]. Data was sourced from the [UK Carbon Intensity API] and
 
 ## Embodied carbon and carbon awareness
 
-- Embodied carbon covers emissions from the extraction of raw materials, creation,
-  transportion and disposal of a product.
-- Breakdown of the embodied emissions of a laptop.
+So far we've focussed on the relationship between carbon emissions and electricity
+usage. This is relevant to the operation of equipment used in digital research and is
+usually the dominant component of the **operational carbon**. Another key source to
+consider however are **embodied emissions**.
 
-## The greenhouse gass (GHG) protocol and how to use it
+Embodied carbon is the greenhouse gas emissions produced during the full lifecycle of a
+product or system before it starts being used: raw material extraction, manufacturing,
+transport, construction and eventual disposal or recycling. It represents the "upfront"
+carbon locked into goods and infrastructure. Accounting for embodied carbon helps teams
+choose lower‑carbon options by considering repair, reuse, material choices and service
+life in addition to operational energy use.
 
-- A framework for greenhouse gas accounting.
-- Built to help organisations understand and start to measure the sources of their
-  emissions.
-- Holistic - considers both the direct and indirect sources of emissions.
-- Explanation of scopes.
-- Example application.
+We'll discuss in detail the embodied carbon contributions associated with digital
+research activities in the next episode.
+
+## The Greenhouse Gas (GHG) Protocol and how to use it
+
+So far we've discussed several sources of emissions. A key requirement to managing and
+reducing emissions is to measure and account for them. The [Greenhouse Gas Protocol]
+provides a framework for identifying and categorising different emission sources. It's
+holistic and covers both direct and indirect emission sources.
+
+The GHG protocol breaks down emissions into three categories called scopes:
+
+- **Scope 1** are direct emissions. These come from activities that directly emit carbon
+  such as burning fuel. This would cover fuel used in a vehicle or an on-site heating
+  system or electricity generation.
+
+- **Scope 2** are indirect emissions. These come activities that consume energy produced
+  elsewhere. This is primarily the emissions associated with electricity generation
+  covered in detail above.
+
+- **Scope 3** are "Value chain emissions". These come from everything upstream i.e.,
+  requirements you need to carry out research activities and everything downstream i.e.,
+  emissions associated with the use of your research outputs, even by others. Upstream
+  emissions includes things like the embodied emissions of hardware whilst downstream
+  emissions might include use of software or data you've created.
+
+The GHG protocol is most often applied to businesses, countries or cities but it can be
+applied at any scale including an individual or research group. It's easy to get hung up
+on which scope to place emissions in but perhaps the key takeaway is to take a broad
+view of different emissions sources.
+
+[Greenhouse Gas Protocol]: https://ghgprotocol.org/
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
