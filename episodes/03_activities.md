@@ -7,16 +7,16 @@ exercises: 0 # exercise time in minutes
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What digital research activities can have sustainability issues?
-- What activities consume more energy?
-- What activities consume more power?
+- How do different types of data storage (local vs cloud) contribute to carbon emissions?
+- What factors influence the energy and power consumption of digital research workflows?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Identify digital research activities
-- Describe which aspects of them could be problematic from the sustainability perspective
-- Identify if those aspects are related to power or energy usage
+- Identify which aspects of a research workflow are most carbon‑intensive and why.
+- Explain how different storage technologies (SSD, HDD, LTO tape) differ in embodied and
+ operational carbon emissions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -28,10 +28,12 @@ The environmental impact of digital research can be broadly split into three cat
 
 ## Powering Computers
 
+TBC
+
 ## Data storage
 
 Research datasets are increasingly large and replicated across multiple systems for
- reliability. As research practices shift toward open data and long-term storage,
+ reliability. As modern research practices move toward open data and long-term storage,
  the cumulative energy demand of storage becomes a significant component of digital
  research's environmental impact. Data storage options can be split into two main
  categories:
@@ -55,7 +57,7 @@ Their associated carbon emissions are summarised below:
 | Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
 | **Embodied Carbon (kg CO2e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO2e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1, 2^ | Low (~0 kg) |
+| **Operational Carbon (kg CO2e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
@@ -65,47 +67,50 @@ While the numbers vary depending on manufacturers and reporting available, it is
 
 SSDs allow data to be accessed almost instantly and are typically 10–100× faster than HDDs.
  LTO tapes offer the slowest access speeds, but they remain the preferred option for
-  offloading cold data due to their low cost and excellent energy efficiency.
+ storing cold data due to their low cost and great energy efficiency.
 
 ### Cloud storage
 
-Cloud storage has become an important component of modern digital research. Data centres,
- the industrial facilities housing the servers and hardware that power the cloud.
- Storing 1 TB of data in the cloud for a year results in an estimated carbon footprint
-  of 10–40 kg CO₂e, depending on storage type, redundancy, and electricity source^6^. The
-   carbon emissions associated with cloud data storage arise from the embodied emissions
-    and operational emissions of data centres.
+Cloud storage has become an important component of modern digital research. The servers
+ and hardware that make this possible are housed in large industrialfacilities known as
+ data centres. Storing 1 TB of data in the cloud for a year results in an estimated
+ carbon footprint of 2–40 kg CO₂e, depending on storage type, redundancy, and
+ electricity source^6, 7^. These emissions arise from two main sources: the embodied carbon
+ of the hardware and infrastructure, and the operational energy required to run and cool
+ the data centre.
 
 **Embodied emissions of cloud storage**:
 
-- manufacturing of storage devices: SSDs have higher embodied emissions than HDDs and
+- **manufacturing of storage devices**: SSDs have higher embodied emissions than HDDs and
 magnetic tape
-- data-centre construction: includes the concrete, steel, electrical infrastructure, etc.
-- networking and supporting hardware: switches, cables, etc.
-- hardware transportation and deployment: in cloud environments, hardware is
- often decommission every 3 to 5 years to maintain reliability
+- **data-centre construction**: includes the concrete, steel, electrical infrastructure,
+ etc.
+- **networking and supporting hardware**: switches, cables, etc.
+- **hardware transportation and deployment**: in cloud environments, hardware is
+ often decommissioned every 3 to 5 years to maintain reliability
 
 **Operational carbon emissions of cloud storage**:
 
 The operational carbon emissions of cloud storage arise from:
 
-- powering the hardware: larger energy usage by HDDs, followed by SSDs, while tape
+- **powering the hardware**: larger energy usage by HDDs, followed by SSDs, while tape
  consumes almost zero energy when idle
-- cooling systems: large amounts of energy are needed to maintain optimal temperatures for
+- **cooling systems**: large amounts of energy are needed to maintain optimal temperatures
+ for
  storage devices
-- redundancy and replication: standard cloud storage providers typically create three
+- **redundancy and replication**: standard cloud storage providers typically create three
  distributed copies of every file across different physical buildings
-- networking and data transfer: energy associated with uploading, downloading and syncing
+- **networking and data transfer**: energy associated with uploading, downloading and syncing
  data. This depends heavily on the distance and type of network (wired vs 5G) used.
 
 Data centres consume around 2.5% of the UK's electricity and the annual consumption
- is expected to increase by 4 times by 2030^7^. In the U.S., data centres are predicted
-  to use up to 12% of the country's electricity by 2028, a 3x increase from 4.4% in 2025^8^.
+ is expected to increase by 4 times by 2030^9^. In the U.S., data centres are predicted
+ to use up to 12% of the country's electricity by 2028, a 3x increase from 4.4% in 2025^8^.
 
-The energy efficiency of data centres is usually measured as their Power Usage
- Effectiveness (PUE), and determines how much of the energy entering the data centre reaches
+The energy efficiency of data centres is usually measured as their **Power Usage
+ Effectiveness (PUE)**, and determines how much of the energy entering the data centre reaches
  the IT equipment used for servers and storage compared to the energy used for cooling
-  and lighting.
+ and lighting.
 
 $$
 \mathbf{PUE} = \frac{\text{IT Equipment Power}}{\text{Total Facility Power}}
@@ -114,15 +119,15 @@ $$
 <!-- markdownlint-disable-next-line line-length -->
 ![Google Data Center PUE measurement boundaries](fig/pue-infographic.webp){alt="Google Data Center PUE measurement boundaries."}
 
- An average data centre has a PUE of around 1.59, meaning for every 1 watt used to power
-  the storage drive, an additional 0.5 watts is spent on cooling and power distribution.
-   Newer and larger data centres tend to be more efficient^9^,
-   with a golbal average PUE of 1.41 in 2025^10^.
+ An average data centre has a PUE of around 1.59, meaning that for every 1 watt used to
+  power the storage drive, an additional 0.5 watts is spent on cooling and power distribution.
+  Newer and larger data centres tend to be more efficient^11^, with a golbal average PUE
+  of 1.41 in 2025^11^.
 
-Operational emissions represent the greenhouse gas (GHG) impact associated with the
+**Operational emissions** represent the greenhouse gas (GHG) impact associated with the
  electricity required for cloud storage. The value depends heavily on the grid carbon
-  intensity, with lower emissions in renewable-powered regions and higher emissions
-   in fossil-fuel-dominated regions.
+ intensity, with lower emissions in renewable-powered regions and higher emissions
+ in fossil-fuel-dominated regions.
 
 <!-- markdownlint-disable-next-line line-length -->
 $$
@@ -138,11 +143,14 @@ Where:
 - **PUE**: Power usage effectiveness - usually published by cloud providers  
 - **E\_CO₂e**: Grid emissions factors - provided by regional electricity grid authorities
 
-### Local vs Cloud storage
+### Local (on-premise) vs Cloud storage
 
-While storing data in the cloud is usually the greener choice, local storage has a number
- of advantages, including turning storing devices off when not using them, faster speeds
-  for transferring big files, and increased data security.
+Local or on‑premises storage refers to data kept on servers, network‑attached storage
+ systems, or institutional data centres that are owned and managed directly by a
+ university, department, or research group. While storing data in the cloud is usually
+ the greener choice, local storage has a number of advantages, including greater
+ control over data, predictable access speeds, and the ability to power equipment down
+ when not in use.
 
 | Category | Cloud Storage | Local Storage |
 | :--- | :--- | :--- |
@@ -153,13 +161,18 @@ While storing data in the cloud is usually the greener choice, local storage has
 
 ### Strategies to reduce carbon emissions associated with data storage
 
-- Choose cloud regions powered by renewable energy
-- Delete unused or redundant data
+- Delete unused or redundant data and avoid unnecessary replication
 - Keep frequently accessed data on faster storage (SSDs) and move "cold"
- or infrequently accessed data to slower but more energy efficient systems (tape storage)^11^
-- Use compression to reduce storage requirements
+ or infrequently accessed data to slower but more energy efficient systems (tape storage)^12^
+- Use compression and efficient file formats to reduce storage requirements
+- Clean and preprocess data locally before uploading to the cloud to avoid storing
+ large amounts of raw data
+- Choose cloud regions powered by renewable energy
+- Choose cloud storage options designed for infrequent access when appropiate
 
 ## Hardware life-cycle footprint
+
+TBC
 
 ### References
 
@@ -169,8 +182,9 @@ While storing data in the cloud is usually the greener choice, local storage has
 4. [Rteil, N., Kenny, R., Andrews, D., & Kerwin, K. (2025). Understanding the carbon footprint of storage media: A critical review of embodied emissions in hard disk drives. International Journal of Environmental and Ecological Engineering, 19(11), 263–270](https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/15145533/understanding-the-carbon-footprint-of-storage-media-a-critical-review-of-embodied-emissions-in-hard-disk-drives_1_.pdf)
 5. [How Do the Embodied Carbon Dioxide Equivalents of Flash Compare to HDDs?](https://blog.purestorage.com/perspectives/how-do-the-embodied-carbon-dioxide-equivalents-of-flash-compare-to-hdds-part-1/#:~:text=Instead%20of%20an%208x%20difference,continue%20well%20into%20the%20future.)
 6. [Digital Decarbonisation - CO2e Data Calculator](https://digitaldecarb.org/co2-data-calculator/)
-7. [National Energy System Operator](https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain)
-8. [U.S. Department of Energy - 2024 Report on U.S. Data Center Energy Use](https://escholarship.org/uc/item/32d6m0d1)
-9. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
-10. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
-11. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
+7. [WholeGrain DIgital Report](https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage)
+8. [National Energy System Operator](https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain)
+9. [U.S. Department of Energy - 2024 Report on U.S. Data Center Energy Use](https://escholarship.org/uc/item/32d6m0d1)
+10. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
+11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
+12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
