@@ -162,12 +162,16 @@ their usage of the package.
 ### Reducing Scope 2 emissions
 
 - Optimising the code base to reduce the computational resources and runtime of its use.
+
 - She integrates [codecarbon](https://github.com/mlco2/codecarbon) into her code so
 that it reports the carbon emissions when the code is run.
 
 - She also inspects and optimises the error handling and input validation in her
  code to reduce the likelihood of running into errors that lead to repeated runs
 of the code. Thus, minimising wasted computation.
+
+- To measure the energy and CO2 consumption of her software package through a
+software life cycle analysis (SLCA), she uses the [Green Metric Tool](https://metrics.green-coding.io/).
 
 ### Reducing Scope 3 emissions
 
