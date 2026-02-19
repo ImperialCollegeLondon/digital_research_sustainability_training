@@ -92,7 +92,6 @@ She makes a list of these workflows and their runtimes:
 
 - Celia uses AI coding agents to create inline documentation for her code.
 On an average, she writes approximately 20 prompts to the agents every week.
-approximately 20 prompts to the agents every week.
 
 - To find an estimate of the users of her package, Celia looks at the
 package download statistics on PyPI. There are around 200 downloads per month.
