@@ -56,8 +56,8 @@ Their associated carbon emissions are summarised below:
 
 | Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
-| **Embodied Carbon (kg CO2e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO2e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
+| **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
+| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
@@ -75,7 +75,7 @@ Cloud storage has become an important component of modern digital research. The 
  and hardware that make this possible are housed in large industrialfacilities known as
  data centres. Storing 1 TB of data in the cloud for a year results in an estimated
  carbon footprint of 2–40 kg CO₂e, depending on storage type, redundancy, and
- electricity source^6, 7^. These emissions arise from two main sources: the embodied carbon
+ electricity source6, 7^. These emissions arise from two main sources: the embodied carbon
  of the hardware and infrastructure, and the operational energy required to run and cool
  the data centre.
 
@@ -121,7 +121,7 @@ $$
 
  An average data centre has a PUE of around 1.59, meaning that for every 1 watt used to
   power the storage drive, an additional 0.5 watts is spent on cooling and power distribution.
-  Newer and larger data centres tend to be more efficient^11^, with a golbal average PUE
+  Newer and larger data centres tend to be more efficient^11^, with a global average PUE
   of 1.41 in 2025^11^.
 
 **Operational emissions** represent the greenhouse gas (GHG) impact associated with the
@@ -181,7 +181,7 @@ TBC
 3. [Based on LTO 9 - FUJIFILM. *Sustainability Report 2020*. 2020](https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf)
 4. [Rteil, N., Kenny, R., Andrews, D., & Kerwin, K. (2025). Understanding the carbon footprint of storage media: A critical review of embodied emissions in hard disk drives. International Journal of Environmental and Ecological Engineering, 19(11), 263–270](https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/15145533/understanding-the-carbon-footprint-of-storage-media-a-critical-review-of-embodied-emissions-in-hard-disk-drives_1_.pdf)
 5. [How Do the Embodied Carbon Dioxide Equivalents of Flash Compare to HDDs?](https://blog.purestorage.com/perspectives/how-do-the-embodied-carbon-dioxide-equivalents-of-flash-compare-to-hdds-part-1/#:~:text=Instead%20of%20an%208x%20difference,continue%20well%20into%20the%20future.)
-6. [Digital Decarbonisation - CO2e Data Calculator](https://digitaldecarb.org/co2-data-calculator/)
+6. [Digital Decarbonisation - CO₂e Data Calculator](https://digitaldecarb.org/co2-data-calculator/)
 7. [WholeGrain DIgital Report](https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage)
 8. [National Energy System Operator](https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain)
 9. [U.S. Department of Energy - 2024 Report on U.S. Data Center Energy Use](https://escholarship.org/uc/item/32d6m0d1)

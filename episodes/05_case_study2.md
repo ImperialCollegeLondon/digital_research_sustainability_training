@@ -97,12 +97,12 @@ The carbon emissions associated with the three storage types are summarised belo
 
 | Category | SDD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
-| **Embodied Carbon (kg CO2e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO2e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
+| **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
+| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
 In contrast, she found the carbon emissions associated with cloud data storage are
- estimated between 2-40 kg CO2e/TB/year (according to
+ estimated between 2-40 kg CO₂e/TB/year (according to
  a WholeGrain [report](https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage)
  and [Greenly](https://greenly.earth/en-gb/blog/industries/what-is-the-carbon-footprint-of-data-storage)),
  but the value depends heavily on the data center's efficiency and the region's power grid.
@@ -190,31 +190,31 @@ E_{total} =  E_{Desktop} + E_{LLM} \\
 E_{Desktop} = \text{Computer Power Draw} + \text{Grid Carbon Intensity}
 $$
 
-**Computer Power Draw**: we can asume a 0.3kW power draw for the
+**Computer Power Draw**: we can asume a 0.3 kW power draw for the
 old Desktop
 
 **Grid Carbon Intensity**: can be obtained from official grid sources (such as [this](https://www.energydashboard.co.uk/live)).
-For UK, we can use a value of 194 gCO2/kW (high).
+For UK, we can use a value of 194 gCO₂/kW (high).
 
 **Emissions from LLMs**: could use a tool like [Ecologits calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
  to provide estimates. In Emma's case, she is using a reasoning LLM, meaning we could use
-  estimates for OpenAI' GPT-5 model, which are estimated to be around 10.8 gCO2e.
+  estimates for OpenAI' GPT-5 model, which are estimated to be around 10.8 gCO₂e.
 
 <!-- markdownlint-disable-next-line line-length -->
 $$
-E_{Desktop} = 0.3 \text{kW} \times (3 + 8) h \times 194 gCO2/kW \\
-E_{Desktop} = 640 gCO2e = 0.640 kgCO2e
+E_{Desktop} = 0.3 \text{kW} \times (3 + 8) h \times 194 gCO₂/kW \\
+E_{Desktop} = 640 gCO₂e = 0.640 kgCO₂e
 $$
 
 $$
-E_{LLM} = 10.8 gCO2e/query \times 30 queries \\
-E_{LLM} = 325 gCO2e = 0.324 kgCO2e
+E_{LLM} = 10.8 gCO₂e/query \times 30 queries \\
+E_{LLM} = 325 gCO₂e = 0.324 kgCO₂e
 $$
 
 $$
 E_{LLM+Desktop} =  E_{Desktop} + E_{LLM} \\
-E_{LLM+Desktop} = 0.640 kgCO2e + 0.324 kgCO2e \\
-E_{LLM+Desktop} = 0.964 kgCO2e
+E_{LLM+Desktop} = 0.640 kgCO₂e + 0.324 kgCO₂e \\
+E_{LLM+Desktop} = 0.964 kgCO₂e
 $$
 
 - emissions from cloud storage
@@ -228,8 +228,8 @@ They are also not straightforward to determine and are usually provided by cloud
 <!-- markdownlint-disable-next-line line-length -->
 $$
 E_{storage} = \text{cloud emission factor} \times \text{data size} \times \text{time} \\
-E_{storage} = 0.0003037 kgCO2e /TB-hour \times 0.7TB \times 8760 hours \times 5 \\
-E_{storage} = 9.311 kgCO2e
+E_{storage} = 0.0003037 kgCO₂e /TB-hour \times 0.7TB \times 8760 hours \times 5 \\
+E_{storage} = 9.311 kgCO₂e
 $$
 
 Aasumming she only runs her script once and data is stored for 5 years, the total value
@@ -237,7 +237,7 @@ for the carbon emissions from Emma's current workflow is:
 
 $$
 E_{total} = E_{LLM+Desktop} + E_{storage} \\
-E_{total} = 0.964 kgCO2e + 9.311 kgCO2e kgCO2e \\
+E_{total} = 0.964 kgCO₂e + 9.311 kgCO₂e kgCO₂e \\
 E_{total} = 10.275
 $$
 
@@ -257,23 +257,23 @@ $$
 **Grid Carbon Intensity** : same value as in her current workflow
 
 **Emissions from LLM** in this case Emma is using a smaller LLM model, GPT4-0-mini,
- for which emissions are estimated to be around 562 mgCO2e.
+ for which emissions are estimated to be around 562 mgCO₂e.
 
 <!-- markdownlint-disable-next-line line-length -->
 $$
-E_{laptop} = 0.1kW/h \times (5 + 6)hours \times 194 gCO2/kW \\
-E_{laptop} = 213.4 gCO2e = 0.213 kgCO2e \\
+E_{laptop} = 0.1kW/h \times (5 + 6)hours \times 194 gCO₂/kW \\
+E_{laptop} = 213.4 gCO₂e = 0.213 kgCO₂e \\
 $$
 
 $$
-E_{LLM} = 0.562 gCO2e/query \times 50 queries \\
-E_{LLM} = 28.1 gCO2e = 0.028 kgCO2e \\
+E_{LLM} = 0.562 gCO₂e/query \times 50 queries \\
+E_{LLM} = 28.1 gCO₂e = 0.028 kgCO₂e \\
 $$
 
 $$
 E_{LLM+laptop} =  E_{laptop} + E_{LLM} \\
-E_{LLM+laptop} = 0.213 kgCO2e + 0.028 kgCO2e \\
-E_{LLM+laptop} = 0.241 kgCO2e
+E_{LLM+laptop} = 0.213 kgCO₂e + 0.028 kgCO₂e \\
+E_{LLM+laptop} = 0.241 kgCO₂e
 $$
 
 - emissions storage = emissions form cloud storage + emissions from tape storage
@@ -285,43 +285,43 @@ $$
 <!-- markdownlint-disable-next-line line-length -->
 $$
 E_{cloud_storage} = \text{emission factor} \times \text{data size} \times \text{time} \\
-E_{cloud_storage} = 0.0003037 kgCO2e /TB-hour \times 0.2TB \times 8760 hours \times 5 \\
-E_{cloud_storage} = 2.660 kgCO2e
+E_{cloud_storage} = 0.0003037 kgCO₂e /TB-hour \times 0.2TB \times 8760 hours \times 5 \\
+E_{cloud_storage} = 2.660 kgCO₂e
 $$
 
 **Emissions form LTO magnetig tape storage**: Given magnetic tape has negligible emissions
 when idle, we can assume that the total emissions for storing data on tapes come from
- embodied emissions of ~0.07 kgCO2 per TB of data. Therefore, to store the 500 GB data
+ embodied emissions of ~0.07 kgCO₂ per TB of data. Therefore, to store the 500 GB data
  for 5 years, Emma would generate the following emissions:
 
 $$
-E_{tape_storage} = 0.07 kgCO2e/TB/year \times 0.5TB \times 5 years \\
-E_{tape_storage}  = 0.175 kgCO2e
+E_{tape_storage} = 0.07 kgCO₂e/TB/year \times 0.5TB \times 5 years \\
+E_{tape_storage}  = 0.175 kgCO₂e
 $$
 
 The total emissions from storage are:
 
 $$
 E_{storage} = E_{cloud_storage} + E_{tape_storage} \\
-E_{storage} = 2.660 kgCO2e + 0.175 kgCO2e \\
-E_{storage} = 2.835 kgCO2e
+E_{storage} = 2.660 kgCO₂e + 0.175 kgCO₂e \\
+E_{storage} = 2.835 kgCO₂e
 $$
 Therefore, the total carbon emissions for Emma's improved workflow are:
 
 $$
 E_{total} = E_{LLM+Desktop} + E_{storage} \\
-E_{total} = 0.241 kgCO2e + 2.835 kgCO2e \\
-E_{total} = 3.076 kg CO2e
+E_{total} = 0.241 kgCO₂e + 2.835 kgCO₂e \\
+E_{total} = 3.076 kg CO₂e
 $$
 
 The results are summarised below:
 
 | Scenario | **Scenario 1 (current workflow)** | **Scenario 2 (Improved workflow)** | Change |
 | :--- | :--- | :--- | :--- |
-| Emissions Computing (kgCO2e) | 0.640 | 0.2134 | old lab Desktop -> modern laptop |
-| Emissions LLM (kgCO2e) | 0.324 | 0.0281 | GPT-5 -> GPT-4-o-mini |
-| Emissions Storage (kgCO2e) | 9.311 | 2.835 | 0.7TB cloud -> 0.5TB tape + 0.2TB Cloud |
-| **Total Emissions (kgCO2e)** | **10.275** | **3.076** | |
+| Emissions Computing (kgCO₂e) | 0.640 | 0.2134 | old lab Desktop -> modern laptop |
+| Emissions LLM (kgCO₂e) | 0.324 | 0.0281 | GPT-5 -> GPT-4-o-mini |
+| Emissions Storage (kgCO₂e) | 9.311 | 2.835 | 0.7 TB cloud -> 0.5 TB tape + 0.2 TB Cloud |
+| **Total Emissions (kgCO₂e)** | **10.275** | **3.076** | |
 
 :::::::::::::::::::::::::::::::::
 
