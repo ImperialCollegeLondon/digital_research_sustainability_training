@@ -66,13 +66,15 @@ Celia decides to learn more about each of the emission sources.
 - She primarily works on her laptop to develop the software package. In a week, she
 spends around 20 hours on the software development.
 
-- Embedded emissions associated with her laptop:
+- Embedded emissions associated with her laptop. She looks the Product Carbon Footprint (PCF) data sheet for her laptop and finds the following information:
 
 | Component | Emissions (kg CO2e) |
 |-----------|---------------------|
 | CPU       | 50                  |
 | GPU       | 30                  |
 | RAM       | 20                  |
+
+(Refer: Example of PCF data for [Dell products](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints))
 
 - To ensure that her software package follows best practices, she has been using
 GitHub Actions for continuous integration and testing. At present, there are around
@@ -87,8 +89,9 @@ She makes a list of these workflows and their runtimes:
 | auto-merge          | 20                |
 | ci                  | 5                 |
 
-- Celia uses AI coding agents to create inline documentation for her code. She
-estimates that she spends around 2 hours a week using these agents.
+- Celia uses AI coding agents to create inline documentation for her code.
+On an average, she writes approximately 20 prompts to the agents every week.
+approximately 20 prompts to the agents every week.
 
 - To find an estimate of the users of her package, Celia looks at the
 package download statistics on PyPI. There are around 200 downloads per month.
@@ -146,6 +149,14 @@ carbon emissions from her laptop during the future development of the package.
 her code.
 - Reducing the use of services such as GitHub Actions. She reduces the matrix of tests,
 to only include the OS and Python versions that her package intends to support.
+To minimise the number of jobs run in each workflow, she ensures that they are
+run on pull requests against the primary development branch only. Further
+reading:
+
+    - Poster on [Environmentally-aware use of GitHub
+    Actions](https://zenodo.org/records/12754189) and the [associated
+    GitHub repository](https://github.com/ImperialCollegeLondon/game_of_life)
+    - Blog post on [Adopting a more rational use of Continuous Integration with GitHub Actions](https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/).
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
