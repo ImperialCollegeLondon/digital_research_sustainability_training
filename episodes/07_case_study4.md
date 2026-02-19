@@ -85,15 +85,12 @@ What Scope 3 emissions under the GHG protocol can you identity from Miguel's wor
 ## Collecting Information
 
 Miguel finds that the model was highly trained with vast quantities of real animal
-images, and is already quite competent at feline-based image processing. The training
-script is very crude, however, and simply passes through the entire dataset through
-for 100 epochs of stochastic gradient descent (SGD).
-
-He takes a look at the model's architecture, and notices that it is very large for its
-stated purpose, with many channels per convolutional layer, and very wide fully
-connected layers in the head. He realises that his workstation's GPUs may not have
-enough memory to train the model effectively in its current form, and begins to
-consider his options.
+images, and is already quite competent at feline-based image processing. He takes a
+look at the model's architecture, and notices that it is very large for its stated
+purpose, with many channels per convolutional layer, and very wide fully connected
+layers in the head. He realises that his workstation's GPUs may not have enough
+memory to train the model effectively in its current form, and begins to consider
+his options.
 
 The first option is familiar to Miguel: offload the work to a cloud GPU compute
 provider. He browses them, in turn, and is able to find the hardware configuration for
@@ -124,16 +121,16 @@ bytes per number as `b`, he reserves memory (in bytes) for:
 - An extra 20% for ML frameworks usage
 
 With this estimation framework, he is able to know (before submitting the job) roughly
-how much GPU memory will be required as, for example, batch size and layer width scale.
+how much GPU memory will be required, as a function of batch and layer size. Next,
+Miguel roughly estimates the computational complexity of the model. Whilst FLOPs is a
+poor surrogate metric for carbon footprint, it can still help for estimating run
+duration scaling, and is useful for reserving enough cloud job time.
 
-Next, Miguel attempts to estimate the rouch computational complexity of the model.
-Remembering that that FLOPs is a poor surrogate metric of the model's carbon footprint,
-he knows that the metric still provides a decent approcimation of run duration scaling.
+Next, Miguel notices that the training script is very crude, and simply passes through
+the entire dataset through for 100 epochs of stochastic gradient descent (SGD).
 
-- What are the FLOPs requirements of the job?
-- FLOPs can help predict scaling performance (estimate runtime before run, useful on HPC)
-- but can't predict carbon usage alone
-- whole system measurement needed (MLPerf Power)
+- reduce convergence time by switching the optimiser, at the cost of some multiple of
+  `N`, affected by `j` above?
 
 ## Taking Action
 
