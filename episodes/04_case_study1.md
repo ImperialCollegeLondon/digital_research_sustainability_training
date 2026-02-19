@@ -66,7 +66,8 @@ Celia decides to learn more about each of the emission sources.
 - She primarily works on her laptop to develop the software package. In a week, she
 spends around 20 hours on the software development.
 
-- Embedded emissions associated with her laptop. She looks the Product Carbon Footprint (PCF) data sheet for her laptop and finds the following information:
+- Embedded emissions associated with her laptop. She looks the Product Carbon
+ Footprint (PCF) data sheet for her laptop and finds the following information:
 
 | Component | Emissions (kg CO2e) |
 |-----------|---------------------|
@@ -137,11 +138,22 @@ cloud computing)
 - Power Usage Efficiency (PUE) of the local data centre (if applicable)
 - Any multiplicative factor to use
 
+The users of her package also include some members of her research group.
+She reaches out to them to get some information on their usage of the package. She
+finds that they are using it on a local server with 16 CPU cores and
+64 GB of RAM. They run the package for around 4 hours per week. She encourages
+them to use the Green Algorithms Calculator to estimate the carbon footprint of
+their usage of the package.
+
 ### Reducing Scope 2 emissions
 
 - Optimising the code base to reduce the computational resources and runtime of its use.
-- She uses [codecarbon](https://github.com/mlco2/codecarbon) to estimate and track
-carbon emissions from her laptop during the future development of the package.
+- She integrates [codecarbon](https://github.com/mlco2/codecarbon) into her code so
+that it reports the carbon emissions when the code is run.
+
+- She also inspects and optimises the error handling and input validation in her
+ code to reduce the likelihood of running into errors that lead to repeated runs
+of the code. Thus, minimising wasted computation.
 
 ### Reducing Scope 3 emissions
 
