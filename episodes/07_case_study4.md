@@ -99,7 +99,7 @@ surrogate for total power usage in deep learning, he consults public datasets me
 whole-system power usage during inference, such as the
 [MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) dataset. He is
 able to find the hardware configuration of an acceptible provider, and notes that
-`Samples/Joule = (Samples/s)/(Watts) ≈ 9.89`.
+$Samples/Joule = (Samples/s)/(Watts) ≈ 9.89$.
 
 Alongside this, he considers a second option: whilst his personal workstation's GPU is
 far from cutting-edge, it is by no means obsolete. He knows from experience that newer
@@ -110,15 +110,15 @@ for oppurtunities to make the model lean enough to run on his GPU.
 
 For the next step, Miguel begins to quantify the computational resources required to
 modify the model. He makes a rough total memory estimate; with the number of trainable
-parameters `P`, the sum of all layer sizes `N`, the batch size `M`, a constant `j`
-depending on the chosen optimiser, a constant `k` depending on the unit model, and
-bytes per number as `b`, he reserves memory (in bytes) for:
+parameters $P$, the sum of all layer sizes $N$, the batch size $M$, a constant $j$
+depending on the chosen optimiser, a constant $k$ depending on the unit model, and
+bytes per number as $b$, he reserves memory (in bytes) for:
 
-- Parameters: `P * b`
-- Parameter gradients: `P * b`
-- Optimiser state: `P * j * b`
-- Activations: `M * N * k * b`
-- An extra 20% for ML frameworks usage
+- Parameters: $P \cdot b$
+- Parameter gradients: $P \cdot b$
+- Optimiser state: $P \cdot j \cdot b$
+- Activations: $M \cdot N \cdot k \cdot b$
+- An extra $20%$ for ML frameworks usage
 
 With this estimation framework, he is able to know (before submitting the job) roughly
 how much GPU memory will be required, as a function of batch and layer size. Next,
@@ -129,7 +129,7 @@ duration scaling, and is useful for reserving enough cloud job time.
 Finally, Miguel notices that the training script is very crude, and simply passes
 through the entire dataset through the model for exactly 100 epochs of stochastic
 gradient descent (SGD). No regularisation schemes were used. Whilst the choice of
-optimiser affects the memory required to train the model, via `j` above, the possible
+optimiser affects the memory required to train the model, via $j$ above, the possible
 energy savings of early convergence may be overall worth it.
 
 ## Taking Action
@@ -138,14 +138,15 @@ energy savings of early convergence may be overall worth it.
 - Does it need to be trained from scratch, or can transfer learning be used?
 - Does the entire model need adjustment, or only part of it?
 
+- Use transfer learning (we are still working with cats, after all).
+- Don't adjust the whole model (we only need a new bounding box head).
+
 - Can training end early on convergence?
 - Can we reduce convergence time by switching the optimiser?
+- Quit early once converged (faster in transfer learning).
+
+- Use sparsity-inducing L1 (Lasso) regularisation. This allows us to...
+- Prune weak/redundant neurons/channels, creating a leaner model.
 
 - What contingency plans are in place (training checkpoints, data backups, ...)?
 - Can floating point precision be reduced?
-
-- Use transfer learning (we are still working with cats, after all).
-- Don't adjust the whole model (we only need a new bounding box head).
-- Quit early once converged (faster in transfer learning).
-- Use sparsity-inducing regularisation techniques. This allows us to...
-- Prune weak/redundant neurons/channels, creating a leaner model.
