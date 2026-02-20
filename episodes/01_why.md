@@ -23,15 +23,24 @@ exercises: 0 # exercise time in minutes
 
 (For global context, use the [Online MUSE calculator](https://museenergysimulator.co.uk/))
 
-TBC
+Net zero is when greenhouse gases going into the atmosphere -> balanced by removal out
+of the atmosphere.
+what is greenhouse gas?
+why important
+context of climate change and global warming
+tech adds to it
 
 ## The role of digital research
 
-TBC
+digital research is the focus here
+any number on how much digital research contributes to global emissions?
 
 ## Minimising carbon to science
 
-TBC
+how science can reduce its carbon footpront
+account for scope 2 and 3 emissions for digital research
+ways to measure and estimate carbon emissions from digital research
+ways to reduce them
 
 ::::::::::::::::::::::::::::::::::::: callout
 
