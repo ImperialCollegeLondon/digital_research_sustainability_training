@@ -138,14 +138,43 @@ a period of time.
 Once the baseline energy usage is found, strategies can be defined to reduce it, like
 adjusting the power management settings, changing usage habits, etc.
 
+#### Application energy usage
+
+Typically, you will be interested in the energy usage of specific applications, so you
+can minimize its energy usage. For example, a particular simulation software you have
+been working on or a 3D visualization tool.
+
+This is not an easy task, and the solution depends greatly on your accessibility to the
+source code of the application, as well as the hardware you are using.
+
+If you do have access to the source code, then you could use tools like the
+[Intel's Performance Counter Monitor (PCM)] (which [can be used in C++ programs]) or [Codecarbon]
+(for Python programs). These tools require some setting up - and obviously modify your
+code - but will give you the most accurate readings of the energy usage specific for
+your application.
+
+If you do not have access to the source code, then your only option is to rely on external
+tools to monitor the energy usage of the application (e.g. using PCM) or to calculate it
+based on the hardware being used and the time it is being used for using the
+[Green Algorithms Calculator], for example.
+
+It is beyond the scope of this course to teach you how to use any of these tools, given
+the range of use cases and configurations, but in the case studies described in the next
+episodes, there will be examples of how some of these can be employed in practice to
+understand your energy usage and consider ways of reducing them.
+
 ### Product Carbon Footprint of different manufacturers
 
 - [HP](https://h20195.www2.hp.com/v2/library.aspx#doctype-95&country-us&sortorder-popular&teasers-off&isRetired-false&isRHParentNode-false&titleCheck-false)
 - [Lenovo](https://compliance.lenovo.com/content/esg-document-library/en/esg.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FdocumentType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.7_values=PCF%20Sheets&layout=card&p.offset=0&p.limit=24)
+- [Dell](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints)
 
 [Device Donation Scheme]: https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme
 [ECO Declaration]: https://ecma-international.org/publications-and-standards/standards/ecma-370/
 [ECO declaration of the HP EliteBook 840 G9]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&search=HP%20EliteBook%20840%20G9
+[can be used in C++ programs]: https://greencompute.uk/Measurement/RAPL
+[Codecarbon]: https://github.com/mlco2/codecarbon
+[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
 
 ## In the lab
 
