@@ -77,9 +77,15 @@ the location, as discussed in the [previous episode](02_carbon.md), the remainin
 related to production and transportation, accounts for about ~80% of the estimated
 total, i.e. 160 kg CO$_2$e.
 
+It should be noted that different manufacturers use different criteria to calculate their
+embodied emissions, so choosing the computer with the lowest reported embodied emissions
+is not necessarily the best approach. Other aspects like the expected lifetime, the
+possibility oif replacing individual components, etc. might be more useful and impactful
+aspects to look at.
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### What are the embodied carbon emissions of your computer?
+#### What are the embodied carbon emissions of your computer?
 
 Find the model of the computer you are using right now to do this course and try to find
 out its embodied carbon emissions. The links below from some manufacturers might be
