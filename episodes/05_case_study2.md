@@ -25,9 +25,9 @@ lab workflows
 ## Introduction
 
 Emma is a researcher in a biology lab and was tasked with analysing genomic sequencing data.
-While she is an expert in molecular biology, her computational and statistics background
+ While she is an expert in molecular biology, her computational and statistics background
  is limited. Due to the type and volume of data generated in the lab, she chose to write
- custom Python scripts to analyse her data. The project Emma is working on is supposed
+ custom Python scripts to analyse her data. The project Emma is working on is scheduled
  to run for 5 years.
 
 Emma's set up:
@@ -40,8 +40,8 @@ Emma's set up:
 Emma's Workflow:
 
 - She uses cloud-based LLMs to write her scripts for processing and analysing data.
-This often requires many queries and reiterations.
-- She keeps every version of her data in the cloud, and rarely deletes old files.
+This often requires many queries and iterations.
+- She keeps every version of her raw data in the cloud, and rarely deletes old files.
 - She runs her scripts on the lab Desktop station and scripts often take 12-16 hours
  to complete. Sometimes Emma leaves the Desktop running 24/7 even over the weekends,
   so the scripts could finish running.
@@ -58,7 +58,7 @@ Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
 
 - The electricity powering the lab Desktop during a 16-hour run
 - The manufacturing of Emmas's personal laptop
-- The energy used by the LLM provider to answer Emma's prompts
+- The energy used by the LLM provider to write the data processing and analysis code
 - The energy used by cloud-storage provider to store Emma's data
 - The external monitors used with the lab Desktop
 
@@ -66,7 +66,8 @@ Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
 
 - The electricity powering the lab Desktop (**Scope 2**)
 - The manufacturing of Emmas's personal laptop (**Scope 3**)
-- The energy used by the AI/LLM provider to answer Emma's prompts (**Scope 3**)
+- The energy used by the LLM provider to write the data processing and analysis code
+(**Scope 3**)
 - The energy used by cloud-storage provider to store Emma's data (**Scope 3**)
 - The external monitors used with the Lab Desktop (**Scope 2**)
 
@@ -98,7 +99,7 @@ The carbon emissions associated with the three storage types are summarised belo
 | Category | SDD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
 | **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
+| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
 In contrast, she found the carbon emissions associated with cloud data storage are
@@ -118,7 +119,7 @@ Emma is also concerned about the carbon footprint of her increasing use of LLMs 
 - When it comes to programming-related queries, Emma found the following data:
 
     - some LLM models emit between 20% and 59% less emissions than human programmers
-     (GPT-4o-mini), while other models can emit 5 to 19 times more carbon than human programmers
+    (GPT-4o-mini), while other models can emit 5 to 19 times more carbon than human programmers
     (GPT4)^1^
     - the number of inference calls (queries) has a high correlation to the amount
    of carbon emissions ^1^
@@ -155,7 +156,7 @@ might be more appropriate but emits at least 5 times more carbon than humans
 
 Based on her research into the sustainability impacts of digital practices,
  Emma decides to revise her current workflow (Scenario 1) and adopt more
-environmentally conscious methods (Scenario 2). She now wants to quantify
+ environmentally conscious methods (Scenario 2). She now wants to quantify
  the difference in carbon emissions between her existing workflow and the improved one.
 
 ### Scenario 1 (current workflow)
@@ -193,12 +194,12 @@ $$
 **Computer Power Draw**: we can asume a 0.3 kW power draw for the
 old Desktop
 
-**Grid Carbon Intensity**: can be obtained from official grid sources (such as [this](https://www.energydashboard.co.uk/live)).
+**Grid Carbon Intensity**: can be obtained from official grid sources (such as [EnergyDashboard](https://www.energydashboard.co.uk/live)).
 For UK, we can use a value of 194 gCO₂/kW (high).
 
 **Emissions from LLMs**: could use a tool like [Ecologits calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
  to provide estimates. In Emma's case, she is using a reasoning LLM, meaning we could use
-  estimates for OpenAI' GPT-5 model, which are estimated to be around 10.8 gCO₂e.
+  emissions for OpenAI' GPT-5 model, which are estimated to be around 10.8 gCO₂e.
 
 <!-- markdownlint-disable-next-line line-length -->
 $$
@@ -232,7 +233,7 @@ E_{storage} = 0.0003037 kgCO₂e /TB-hour \times 0.7TB \times 8760 hours \times 
 E_{storage} = 9.311 kgCO₂e
 $$
 
-Aasumming she only runs her script once and data is stored for 5 years, the total value
+Assumming she only runs her script once and data is stored for 5 years, the total value
 for the carbon emissions from Emma's current workflow is:
 
 $$
@@ -254,9 +255,9 @@ $$
 **Computer Power Draw**:  Emma is using her modern laptop, which has a lower
  power draw of ~0.1 kW/hour.
 
-**Grid Carbon Intensity** : same value as in her current workflow
+**Grid Carbon Intensity**: same value as in her current workflow
 
-**Emissions from LLM** in this case Emma is using a smaller LLM model, GPT4-0-mini,
+**Emissions from LLM**: in this case Emma is using a smaller LLM model, GPT4-0-mini,
  for which emissions are estimated to be around 562 mgCO₂e.
 
 <!-- markdownlint-disable-next-line line-length -->
@@ -276,9 +277,9 @@ E_{LLM+laptop} = 0.213 kgCO₂e + 0.028 kgCO₂e \\
 E_{LLM+laptop} = 0.241 kgCO₂e
 $$
 
-- emissions storage = emissions form cloud storage + emissions from tape storage
+- emissions storage = emissions from cloud storage + emissions from tape storage
 
-**Emissions form cloud storage** : using the same emission factor as in Option 1,
+**Emissions form cloud storage**: using the same emission factor as in Option 1,
  storing only 200 GB data there for 5 years (8760h/year x 5 years) would generate the following
  emissions:
 
@@ -290,9 +291,9 @@ E_{cloud_storage} = 2.660 kgCO₂e
 $$
 
 **Emissions form LTO magnetig tape storage**: Given magnetic tape has negligible emissions
-when idle, we can assume that the total emissions for storing data on tapes come from
- embodied emissions of ~0.07 kgCO₂ per TB of data. Therefore, to store the 500 GB data
- for 5 years, Emma would generate the following emissions:
+ when idle, we can assume that the total emissions for storing data on tapes come from
+ embodied emissions of magnetic tape of ~0.07 kgCO₂ per TB of data. Therefore, to store
+ 500 GB of data for 5 years, Emma would generate the following emissions:
 
 $$
 E_{tape_storage} = 0.07 kgCO₂e/TB/year \times 0.5TB \times 5 years \\
@@ -306,6 +307,7 @@ E_{storage} = E_{cloud_storage} + E_{tape_storage} \\
 E_{storage} = 2.660 kgCO₂e + 0.175 kgCO₂e \\
 E_{storage} = 2.835 kgCO₂e
 $$
+
 Therefore, the total carbon emissions for Emma's improved workflow are:
 
 $$
@@ -336,6 +338,7 @@ Emma is happy with her carbon footprint after adopting the new workflow.
 - Schedule to run her scripts for then the grid is cleanest
 - Use compression technique to further reduce the size of her stored data
 - Identify and delete dark data (data that is stored but never used again)
+- Process the data before uploading to cloud to reduce storage requirements
 - Change which LLMs models she uses based on the task complexity
 - Make use of tools such as [EcoLogits](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
  (open-source python library to estimate the carbon footprint of inference queries made

@@ -47,7 +47,7 @@ Research datasets are increasingly large and replicated across multiple systems 
  data. Their embodied carbon emissions are high due to the rare metals needed for semiconductor
  manufacturing, while operational emissions are low.
 - **Hard Disk Drives (HDD)**: They store data on spinning magnetic disks. Embodied emissions
-are lower than those of SSDs but operational emissions are higher because their disks
+ are lower than those of SSDs but operational emissions are higher because their disks
  must spin continuously.
 - **Linear Tape-Open (LTO Tape)**: Magnetic tape technology used for long-term storage.
  Their manufacturing emissions are low, while their operational emissions are near zero.
@@ -57,12 +57,12 @@ Their associated carbon emissions are summarised below:
 | Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
 | **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg )^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
+| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
  considered that SSDs have a higher 'carbon debt` per unit of storage than HDDs^4^.
- However, recent data suggest the difference for enterprise-grade drives is shrinking,
+ However, recent data suggests that the difference for enterprise-grade drives is shrinking,
  and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
 
 SSDs allow data to be accessed almost instantly and are typically 10–100× faster than HDDs.
@@ -72,10 +72,10 @@ SSDs allow data to be accessed almost instantly and are typically 10–100× fas
 ### Cloud storage
 
 Cloud storage has become an important component of modern digital research. The servers
- and hardware that make this possible are housed in large industrialfacilities known as
+ and hardware that make this possible are housed in large industrial facilities known as
  data centres. Storing 1 TB of data in the cloud for a year results in an estimated
  carbon footprint of 2–40 kg CO₂e, depending on storage type, redundancy, and
- electricity source6, 7^. These emissions arise from two main sources: the embodied carbon
+ electricity source6^7^. These emissions arise from two main sources: the embodied carbon
  of the hardware and infrastructure, and the operational energy required to run and cool
  the data centre.
 
@@ -96,8 +96,7 @@ The operational carbon emissions of cloud storage arise from:
 - **powering the hardware**: larger energy usage by HDDs, followed by SSDs, while tape
  consumes almost zero energy when idle
 - **cooling systems**: large amounts of energy are needed to maintain optimal temperatures
- for
- storage devices
+ for storage devices
 - **redundancy and replication**: standard cloud storage providers typically create three
  distributed copies of every file across different physical buildings
 - **networking and data transfer**: energy associated with uploading, downloading and syncing
@@ -137,7 +136,7 @@ $$
 
 Where:
 
-- **U**: Cloud provider service usage - can be obtained from the cloud providers
+- **U**: Cloud provider service usage - can be obtained from cloud providers
 - **C\_kWh**: Cloud energy conversion factors - can be obtained from cloud providers or
   academic studies
 - **PUE**: Power usage effectiveness - usually published by cloud providers  
