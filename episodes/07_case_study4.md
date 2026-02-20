@@ -126,11 +126,11 @@ Miguel roughly estimates the computational complexity of the model. Whilst FLOPs
 poor surrogate metric for carbon footprint, it can still help for estimating run
 duration scaling, and is useful for reserving enough cloud job time.
 
-Next, Miguel notices that the training script is very crude, and simply passes through
-the entire dataset through for 100 epochs of stochastic gradient descent (SGD).
-
-- reduce convergence time by switching the optimiser, at the cost of some multiple of
-  `N`, affected by `j` above?
+Finally, Miguel notices that the training script is very crude, and simply passes
+through the entire dataset through the model for exactly 100 epochs of stochastic
+gradient descent (SGD). No regularisation schemes were used. Whilst the choice of
+optimiser affects the memory required to train the model, via `j` above, the possible
+energy savings of early convergence may be overall worth it.
 
 ## Taking Action
 
@@ -139,6 +139,8 @@ the entire dataset through for 100 epochs of stochastic gradient descent (SGD).
 - Does the entire model need adjustment, or only part of it?
 
 - Can training end early on convergence?
+- Can we reduce convergence time by switching the optimiser?
+
 - What contingency plans are in place (training checkpoints, data backups, ...)?
 - Can floating point precision be reduced?
 
