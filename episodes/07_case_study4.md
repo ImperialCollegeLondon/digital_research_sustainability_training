@@ -46,9 +46,9 @@ To do his work, Miguel also purchases and maintains top-of-the-line GPU and file
 whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
 cloud GPU cluster, and datasets are periodically backed up in the cloud.
 
-Miguel is tasked with adding new functionality to a resource-hungry model deployed in
-the cloud. Currently the model performs simple detection of cats in images, but Miguel
-needs to augment the model to produce bounding boxes.
+Miguel is tasked with deploying a new model to the cloud, based on the architecture of
+an existing model he deployed last year. The existing model performs simple detection of
+cats in images, but the new model must produce bounding boxes.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -84,13 +84,15 @@ What Scope 3 emissions under the GHG protocol can you identity from Miguel's wor
 
 ## Collecting Information
 
-Miguel finds that the model was highly trained with vast quantities of real animal
-images, and is already quite competent at feline-based image processing. He takes a
-look at the model's architecture, and notices that it is very large for its stated
-purpose, with many channels per convolutional layer, and very wide fully connected
-layers in the head. He realises that his workstation's GPUs may not have enough
-memory to train the model effectively in its current form, and begins to consider
-his options.
+Miguel finds that the previous model was highly trained with vast quantities of real
+animal images, and is already quite competent at feline-based image processing. It may
+not be necessary to train the model from scratch if transfer learning is utilised.
+
+He takes a look at the model's architecture, and notices that it is very large for
+its stated purpose, with many channels per convolutional layer, and very wide fully
+connected layers in the head. He realises that his workstation's GPUs may not have
+enough memory to train the model effectively in its current form, and begins to
+consider his options.
 
 The first option is familiar to Miguel: offload the work to a cloud GPU compute
 provider. He browses them, in turn, and is able to find the hardware configuration for
@@ -120,33 +122,36 @@ bytes per number as $b$, he reserves memory (in bytes) for:
 - Activations: $M \cdot N \cdot k \cdot b$
 - An extra $20%$ for ML frameworks usage
 
-With this estimation framework, he is able to know (before submitting the job) roughly
-how much GPU memory will be required, as a function of batch and layer size. Next,
+With this estimation framework, he is able to know (before submitting) roughly
+how much GPU memory the job will require, as a function of batch and layer size. Next,
 Miguel roughly estimates the computational complexity of the model. Whilst FLOPs is a
-poor surrogate metric for carbon footprint, it can still help for estimating run
-duration scaling, and is useful for reserving enough cloud job time.
+poor surrogate metric for carbon footprint, it can help for estimating run duration
+scaling, which is useful to prevent wasting computation by reserving enough time for
+the cloud job whilst experimenting.
 
-Finally, Miguel notices that the training script is very crude, and simply passes
-through the entire dataset through the model for exactly 100 epochs of stochastic
-gradient descent (SGD). No regularisation schemes were used. Whilst the choice of
-optimiser affects the memory required to train the model, via $j$ above, the possible
-energy savings of early convergence may be overall worth it.
+Finally, Miguel notices that the training script of the base model was very crude, and
+simply passed through the entire dataset through the model for exactly 100 epochs of
+stochastic gradient descent (SGD). No regularisation schemes were used. Whilst the
+choice of optimiser affects the memory required to train the model, via $j$ above, the
+possible energy savings of early convergence may be overall worth it.
 
 ## Taking Action
 
-- Is a new model necessary, or can an existing model be adapted?
-- Does it need to be trained from scratch, or can transfer learning be used?
-- Does the entire model need adjustment, or only part of it?
+From his observatons, Miguel formulates a plan. It is clear to him that is entirely
+unnecessary to train a new model from scratch. Given the prior model is already quite
+competent at finding cats, it can readily be adapted by appending a new heead for cat
+bounding-boxes, and fine tuning with transfer learning techniques.
 
-- Use transfer learning (we are still working with cats, after all).
-- Don't adjust the whole model (we only need a new bounding box head).
+He begins experimenting, appending the new bounding-box head and starting training,
+keeping the trainable parameters in the body fixed, and gradually relaxing them as
+training progresses. In doing so, he notices that the model comes close to converging
+well before the 100 epochs programmed into the base training script.
 
-- Can training end early on convergence?
 - Can we reduce convergence time by switching the optimiser?
 - Quit early once converged (faster in transfer learning).
 
-- Use sparsity-inducing L1 (Lasso) regularisation. This allows us to...
-- Prune weak/redundant neurons/channels, creating a leaner model.
-
 - What contingency plans are in place (training checkpoints, data backups, ...)?
 - Can floating point precision be reduced?
+
+- Use sparsity-inducing L1 (Lasso) regularisation. This allows us to...
+- Prune weak/redundant neurons/channels, creating a leaner model.
