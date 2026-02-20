@@ -1,5 +1,5 @@
 ---
-title: 'Case Study 2: Lab Scientist doing computational work'
+title: 'Case Study 2 - Lab Scientist doing computational work'
 teaching: 10
 exercises: 4
 ---

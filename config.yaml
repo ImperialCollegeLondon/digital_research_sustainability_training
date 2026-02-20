@@ -66,8 +66,13 @@ contact: 'ict-rse-team@imperial.ac.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
+- 01_why.md
+- 02_carbon.md
 - 03_activities.md
+- 04_case_study1.md
+- 05_case_study2.md
+- 06_case_study3.md
+- 07_case_study4.md
 
 # Information for Learners
 learners: 

@@ -9,7 +9,6 @@ services:
     command:
       - -c
       - |
-        sleep 10
         Rscript -e 'sandpaper::serve("/home/rstudio/lessons/digital_research_sustainability", host="0.0.0.0")'
     volumes:
       - ./:/home/rstudio/lessons/digital_research_sustainability
