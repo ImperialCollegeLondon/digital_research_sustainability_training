@@ -146,14 +146,17 @@ further fine-tune the model to a reasonable accuracy.
 He begins experimenting, appending the new bounding-box head and starting training,
 keeping the trainable parameters in the body fixed, and gradually relaxing them as
 training progresses. In doing so, he notices that the model comes close to converging
-well before the 100 epochs programmed into the base training script. The first
-improvements made are terminating the training process early, once the model's loss
-function converges, and backing up training state after every epoch to avoid starting
-again on software crash or hardware failure. He is able to further reduce training
-time with only a moderate increase in required memory ($j$ in the memory equations)
-using alternative optimisers, such as SGD with momentum, and the Adam optimiser, and
-Finds this extra memory requirement is easily offset using reduced floating-point
-number precision at no cost to model accuracy.
+well before the programmed 100 epochs. He modifies the training script to terminate
+early, once the model's loss function converges, and back up training state after each
+epoch, to avoid starting again on software crash or hardware failure. He is able to
+further reduce training time with a moderate increase in required memory ($j$ in the
+memory equations) using a more sophisticated optimiser, and finds this extra memory
+requirement is easily offset by reducing floating-point number precision at practically
+no detriment to model accuracy.
 
-- Use sparsity-inducing L1 (Lasso) regularisation. This allows us to...
-- Prune weak/redundant neurons/channels, creating a leaner model.
+Finally, revisiting the earlier issue of model size, Miguel wonders if the model can be
+pruned to enable training on his workstation, instead of relying on the cloud provider.
+Noting again that the model is very large for its stated purpose, Miguel adds L1 (Lasso)
+regularisation to reduce redundant activation, allowing many (now-unused) activation
+units to be removed from the model entirely, promoting a leaner and more power-efficient
+model in the process.
