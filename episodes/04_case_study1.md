@@ -61,69 +61,50 @@ emission reduction measures appropriately.
 
 ## Collecting Information
 
-Celia decides to learn more about each of the emission sources.
+Celia decides to learn more about each of the emission sources, starting with
+inspecting the hardware she uses for the package development. She primarily works on her
+laptop, on an average, using it for 20 hours per week for the software development.
+From the Product Carbon Footprint (PCF) data sheet for her laptop, she finds the
+embedded emissions associated with the hardware components - CPU (50 kg CO2e), GPU
+(30 kg CO2e), and RAM (20 kg CO2e).
 
-- She primarily works on her laptop to develop the software package. In a week, she
-spends around 20 hours on the software development.
+Next, she reviews the code base and notices that it is not optimised for performance.
+She finds that the code runs on a single CPU core and does not make use of any
+GPU acceleration. She also finds that there are some redundant computations in the
+code that could be optimised.
 
-- Embedded emissions associated with her laptop. She looks the Product Carbon
- Footprint (PCF) data sheet for her laptop and finds the following information:
-
-| Component | Emissions (kg CO2e) |
-|-----------|---------------------|
-| CPU       | 50                  |
-| GPU       | 30                  |
-| RAM       | 20                  |
-
-(Refer: Example of PCF data for [Dell products](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints))
-
-- To ensure that her software package follows best practices, she has been using
+To ensure that her software package follows best practices, she has been using
 GitHub Actions for continuous integration and testing. At present, there are around
 5 workflows that run on GitHub Actions, and they run around 10 times a day.
-She makes a list of these workflows and their runtimes:
 
-| Workflow Name       | Runtime (seconds) |
-|---------------------|-------------------|
-| docs                | 10                |
-| check-links         | 8                 |
-| upgrade-dependencies| 6                 |
-| auto-merge          | 20                |
-| ci                  | 5                 |
+For creating inline documentation for her code, Celia has been using AI coding agents.
+While she is not using them frequently, she notices that on an average,
+she writes approximately 20 prompts to the agents every week.
 
-- Celia uses AI coding agents to create inline documentation for her code.
-On an average, she writes approximately 20 prompts to the agents every week.
-
-- To find an estimate of the users of her package, Celia looks at the
-package download statistics on PyPI. There are around 200 downloads per month.
-(can also refer to [clickpy](https://github.com/ClickHouse/clickpy)). From this,
-she estimates that the electricity usage when users run the package is
-around 100 kWh per month.
+Finally, Celia reaches out to her research group members who are users of her package.
+They agree to provide the necessary information on their usage of the package.
+She finds that they are using it on a local server with 16 CPU cores and 64 GB of RAM.
+They run the package for around 4 hours per week.
 
 ## Analysis
 
-Celia tracks the activities for a week.
+Celia tracks the activities for a week to get an estimate of the emissions associated
+with her software development and usage. From the PCF data sheet for her laptop, the
+embedded emissions from the hardware components (CPU + GPU + RAM) is 100 kg CO2e.
+Moreover, since her code is not optimised for performance, it has been consuming more
+computational resources and is taking longer to run than it should, leading
+to higher emissions. The runtime of the code on a single CPU core is around 4 hours
+per week.
 
-- Electricity used by the laptop when it is used for 20 hrs per week for software
-development is 2? kWh per week.
+The five workflows on GitHub Actions that run around 10 times a day, have a total
+runtime of 2940 seconds per week. Whereas, the 20 prompts to the AI coding agents
+every week have a total runtime of around 20 minutes per week. The emissions from the
+use of GitHub Actions and AI coding agents are estimated to be around 0.5 kg CO2e
+and 0.1 kg CO2e per week, respectively.
 
-- Total embedded emissions from the laptop (CPU + GPU + RAM) is 100 kg CO2e.
-
-- Five workflows on GitHub Actions run (10 X 7) 70 times a week.
-Total runtime of these workflows is (10 + 8 + 6 + 20 + 5) * 70 = 2940 seconds per week.
-
-- AI coding agents are used for 2 hours per week.
-
-- Electricity usage by users of her package is around 100 kWh per month.
-
-## Taking Action
-
-After Celia has identified the emissions sources associated
-with the development and usage of her software package, she takes some measures
-to reduce these emissions.
-
-To compute the carbon footprint of her software package, she uses the [Green Algorithms
-Calculator](https://calculator.green-algorithms.org/). For the same, she has to record
-the following information:
+Finally, to compute the carbon footprint of her software package, she uses the [Green
+Algorithms Calculator](https://calculator.green-algorithms.org/). For the same, she
+records the following information:
 
 - Runtime of package in hours and minutes
 - Types of cores used (CPU, GPU, or both)
@@ -137,41 +118,41 @@ cloud computing)
 - Power Usage Efficiency (PUE) of the local data centre (if applicable)
 - Any multiplicative factor to use
 
-The users of her package also include some members of her research group.
-She reaches out to them to get some information on their usage of the package. She
-finds that they are using it on a local server with 16 CPU cores and
-64 GB of RAM. They run the package for around 4 hours per week. She encourages
-them to use the Green Algorithms Calculator to estimate the carbon footprint of
-their usage of the package.
+## Taking Action
+
+After Celia has identified the emissions sources associated
+with the development and usage of her software package, she takes some measures
+to reduce these emissions.
 
 ### Reducing Scope 2 emissions
 
-- Optimising the code base to reduce the computational resources and runtime of its use.
-
-- She integrates [codecarbon](https://github.com/mlco2/codecarbon) into her code so
-that it reports the carbon emissions when the code is run.
-
-- She also inspects and optimises the error handling and input validation in her
- code to reduce the likelihood of running into errors that lead to repeated runs
-of the code. Thus, minimising wasted computation.
-
-- To measure the energy and CO2 consumption of her software package through a
-software life cycle analysis (SLCA), she uses the [Green Metric Tool](https://metrics.green-coding.io/).
+She optimises the code base to reduce the computational resources and runtime of its use.
+This includes optimising the error handling and input validation in her
+code to reduce the likelihood of running into errors that lead to repeated runs
+of the code. Thus, minimising wasted computation. She integrates the
+[codecarbon](https://github.com/mlco2/codecarbon) tool into her code base so
+that it can report the carbon emissions when the code is run. This allows her to track
+the emissions associated with the usage of her package and identify areas for
+further optimisation.
 
 ### Reducing Scope 3 emissions
 
-- Producing documentation for users to help them make the most efficient use possible of
-her code.
-- Reducing the use of services such as GitHub Actions. She reduces the matrix of tests,
-to only include the OS and Python versions that her package intends to support.
-To minimise the number of jobs run in each workflow, she ensures that they are
-run on pull requests against the primary development branch only. Further
-reading:
+The users of her package (members of her research group) have been asking her for help
+with optimising the performance of the code. She provides them with some tips on how to
+optimise the performance of the code when they run it on their local server. Eventually,
+she creates a detailed user guide that includes instructions on how to make
+the most efficient use of her package, including tips on how to optimise the
+performance of the code when running it on different hardware configurations.
 
-    - Poster on [Environmentally-aware use of GitHub
-    Actions](https://zenodo.org/records/12754189) and the [associated
-    GitHub repository](https://github.com/ImperialCollegeLondon/game_of_life)
-    - Blog post on [Adopting a more rational use of Continuous Integration with GitHub Actions](https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/).
+Her package only intends to support a specific set of OS and Python versions. Therefore,
+she decides to reduce the number of tests run on GitHub Actions to only include these
+OS and Python versions. Moreover, to minimise the number of jobs run in each workflow,
+she ensures that they are run on pull requests against the primary development branch
+only.
+
+## References
+
+1. Product Carbon Footprint (PCF) data for [Dell products](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints)
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
