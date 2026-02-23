@@ -57,7 +57,7 @@ extend its useful life instead of trashing it (or recycling it)?
 :::::::::::::::::::::::::::::::::::::::::::::
 
 Finding the embodied carbon emissions of computers often relies on the information
-provided by the manufacturers themselves, which might be sketchy or based on different
+provided by the manufacturers themselves, which might be vague or based on different
 assumptions. However, it is a good starting point for estimating the carbon impact of
 your research activities.
 
@@ -110,7 +110,7 @@ These represent a baseline of energy usage just because of the computer (and the
 in the case of desktop computers) being on. There are a number of factors that influence
 this:
 
-- The age of the computer: Modern computers have generally more advance technology that
+- The age of the computer: Modern computers have generally more advanced technology that
 makes them more energy-efficient than older ones.
 - Nature of the computer: Laptops, designed to work with batteries, are often also more
 energy efficient than desktops.
@@ -125,7 +125,7 @@ where, in principle, you can find such information. For example, the
 [ECO declaration of the HP EliteBook 840 G9] indicates an energy consumption of 22.67 kWh/year.
 This declaration also includes useful information about the product, like which components
 can be replaced or upgrade, useful knowledge to reduce the embodied emissions, as pointed
-out above. Having sid that, this document is sometimes not as complete as it should, or
+out above. Having said that, this document is sometimes not as complete as it should, or
 might not represent the exact configuration of your machine. Or might not even exist if
 the machine has been made bespoke with specific components.
 
