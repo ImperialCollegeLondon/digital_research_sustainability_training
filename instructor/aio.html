@@ -879,8 +879,10 @@ any links that you are not going to use.
 <ul>
 <li>What digital research activities can have sustainability
 issues?</li>
-<li>What activities consume more energy?</li>
-<li>What activities consume more power?</li>
+<li>How do different types of data storage (local vs cloud) contribute
+to carbon emissions?</li>
+<li>What factors influence the energy and power consumption of digital
+research workflows?</li>
 </ul>
 </div>
 </div>
@@ -890,16 +892,23 @@ issues?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Identify digital research activities</li>
-<li>Describe which aspects of them could be problematic from the
-sustainability perspective</li>
-<li>Identify if those aspects are related to power or energy usage</li>
+<li>Identify which aspects of a research workflow are most
+carbon‑intensive and why.</li>
+<li>Explain how different storage technologies (SSD, HDD, LTO tape)
+differ in embodied and operational carbon emissions.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
+<p>The environmental impact of digital research can be broadly split
+into three categories:</p>
+<ul>
+<li>Carbon emissions from powering the computers</li>
+<li>Impact of long-term data storage</li>
+<li>Carbon footprint of the hardware life cycle</li>
+</ul>
 <section><h2 class="section-heading" id="laptops-and-workstations">Laptops and workstations<a class="anchor" aria-label="anchor" href="#laptops-and-workstations"></a>
 </h2>
 <hr class="half-width">
@@ -1080,18 +1089,293 @@ usage and consider ways of reducing them.</p>
 <li><a href="https://www.dell.com/en-uk/lp/dt/product-carbon-footprints" class="external-link">Dell</a></li>
 </ul>
 </div>
-</section><section><h2 class="section-heading" id="in-the-lab">In the lab<a class="anchor" aria-label="anchor" href="#in-the-lab"></a>
+</section><section><h2 class="section-heading" id="data-storage">Data storage<a class="anchor" aria-label="anchor" href="#data-storage"></a>
+</h2>
+<hr class="half-width">
+<p>Research datasets are increasingly large and replicated across
+multiple systems for reliability. As modern research practices move
+toward open data and long-term storage, the cumulative energy demand of
+storage becomes a significant component of digital research’s
+environmental impact. Data storage options can be split into two main
+categories:</p>
+<ul>
+<li>local storage</li>
+<li>cloud storage</li>
+</ul>
+<div class="section level3">
+<h3 id="local-storage">Local storage<a class="anchor" aria-label="anchor" href="#local-storage"></a>
+</h3>
+<ul>
+<li>
+<strong>Solid-State Disk Drives (SSD)</strong>: They use flash
+memory with no moving parts to store data. Their embodied carbon
+emissions are high due to the rare metals needed for semiconductor
+manufacturing, while operational emissions are low.</li>
+<li>
+<strong>Hard Disk Drives (HDD)</strong>: They store data on spinning
+magnetic disks. Embodied emissions are lower than those of SSDs but
+operational emissions are higher because their disks must spin
+continuously.</li>
+<li>
+<strong>Linear Tape-Open (LTO Tape)</strong>: Magnetic tape
+technology used for long-term storage. Their manufacturing emissions are
+low, while their operational emissions are near zero.</li>
+</ul>
+<p>Their associated carbon emissions are summarised below:</p>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Category</th>
+<th align="left">SSD</th>
+<th align="left">HDD</th>
+<th align="left">LTO tape</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Embodied Carbon (kg CO₂e per TB)</strong></td>
+<td align="left">High (16-32 kg)<sup>1</sup>
+</td>
+<td align="left">Moderate (2-4 kg)<sup>1</sup>
+</td>
+<td align="left">Low (~0.07 kg)<sup>3</sup>
+</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Operational Carbon (kg CO₂e per
+TB)</strong></td>
+<td align="left">Low (2-5 kg)<sup>1</sup>
+</td>
+<td align="left">Moderate - High (2-16 kg)<sup>1,2</sup>
+</td>
+<td align="left">Low (~0 kg)</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Lifespan</strong></td>
+<td align="left">5–10 years</td>
+<td align="left">5-10 years</td>
+<td align="left">30+ years</td>
+</tr>
+</tbody>
+</table>
+<p>While the numbers vary depending on manufacturers and reporting
+available, it is generally considered that SSDs have a higher ’carbon
+debt` per unit of storage than HDDs<sup>4</sup>. However, recent data
+suggests that the difference for enterprise-grade drives is shrinking,
+and new SSDs have only 2x the embodied carbon of comparable
+HDDs<sup>5</sup>.</p>
+<p>SSDs allow data to be accessed almost instantly and are typically
+10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
+they remain the preferred option for storing cold data due to their low
+cost and great energy efficiency.</p>
+</div>
+<div class="section level3">
+<h3 id="cloud-storage">Cloud storage<a class="anchor" aria-label="anchor" href="#cloud-storage"></a>
+</h3>
+<p>Cloud storage has become an important component of modern digital
+research. The servers and hardware that make this possible are housed in
+large industrial facilities known as data centres. Storing 1 TB of data
+in the cloud for a year results in an estimated carbon footprint of 2–40
+kg CO₂e, depending on storage type, redundancy, and electricity source
+<sup>6,7</sup>. These emissions arise from two main sources: the
+embodied carbon of the hardware and infrastructure, and the operational
+energy required to run and cool the data centre.</p>
+<p><strong>Embodied emissions of cloud storage</strong>:</p>
+<ul>
+<li>
+<strong>manufacturing of storage devices</strong>: SSDs have higher
+embodied emissions than HDDs and magnetic tape</li>
+<li>
+<strong>data-centre construction</strong>: includes the concrete,
+steel, electrical infrastructure, etc.</li>
+<li>
+<strong>networking and supporting hardware</strong>: switches,
+cables, etc.</li>
+<li>
+<strong>hardware transportation and deployment</strong>: in cloud
+environments, hardware is often decommissioned every 3 to 5 years to
+maintain reliability</li>
+</ul>
+<p><strong>Operational carbon emissions of cloud storage</strong>:</p>
+<p>The operational carbon emissions of cloud storage arise from:</p>
+<ul>
+<li>
+<strong>powering the hardware</strong>: larger energy usage by HDDs,
+followed by SSDs, while tape consumes almost zero energy when idle</li>
+<li>
+<strong>cooling systems</strong>: large amounts of energy are needed
+to maintain optimal temperatures for storage devices</li>
+<li>
+<strong>redundancy and replication</strong>: standard cloud storage
+providers typically create three distributed copies of every file across
+different physical buildings</li>
+<li>
+<strong>networking and data transfer</strong>: energy associated
+with uploading, downloading and syncing data. This depends heavily on
+the distance and type of network (wired vs 5G) used.</li>
+</ul>
+<p>Data centres consume around 2.5% of the UK’s electricity and the
+annual consumption is expected to increase by 4 times by
+2030<sup>9</sup>. In the U.S., data centres are predicted to use up to
+12% of the country’s electricity by 2028, a 3x increase from 4.4% in
+2025<sup>8</sup>.</p>
+<p>The energy efficiency of data centres is usually measured as their
+<strong>Power Usage Effectiveness (PUE)</strong>, and determines how
+much of the energy entering the data centre reaches the IT equipment
+used for servers and storage compared to the energy used for cooling and
+lighting.</p>
+<p><span class="math display">\[
+\mathbf{PUE} = \frac{\text{IT Equipment Power}}{\text{Total Facility
+Power}}
+\]</span></p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="../fig/pue-infographic.webp" alt="Google Data Center PUE measurement boundaries." class="figure mx-auto d-block"><div class="figcaption">Google Data Center PUE measurement
+boundaries</div>
+</figure><p>An average data centre has a PUE of around 1.59, meaning that for
+every 1 watt used to power the storage drive, an additional 0.5 watts is
+spent on cooling and power distribution. Newer and larger data centres
+tend to be more efficient<sup>11</sup>, with a global average PUE of
+1.41 in 2025<sup>11</sup>.</p>
+<p><strong>Operational emissions</strong> represent the greenhouse gas
+(GHG) impact associated with the electricity required for cloud storage.
+The value depends heavily on the grid carbon intensity, with lower
+emissions in renewable-powered regions and higher emissions in
+fossil-fuel-dominated regions.</p>
+<!-- markdownlint-disable-next-line line-length -->
+<p><span class="math display">\[
+\text{Operational Emissions} =
+U \times C_{\text{kWh}} \times \text{PUE} \times E_{\text{CO₂e}}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li>
+<strong>U</strong>: Cloud provider service usage - can be obtained
+from cloud providers</li>
+<li>
+<strong>C_kWh</strong>: Cloud energy conversion factors - can be
+obtained from cloud providers or academic studies</li>
+<li>
+<strong>PUE</strong>: Power usage effectiveness - usually published
+by cloud providers<br>
+</li>
+<li>
+<strong>E_CO₂e</strong>: Grid emissions factors - provided by
+regional electricity grid authorities</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="local-on-premise-vs-cloud-storage">Local (on-premise) vs Cloud storage<a class="anchor" aria-label="anchor" href="#local-on-premise-vs-cloud-storage"></a>
+</h3>
+<p>Local or on‑premises storage refers to data kept on servers,
+network‑attached storage systems, or institutional data centres that are
+owned and managed directly by a university, department, or research
+group. While storing data in the cloud is usually the greener choice,
+local storage has a number of advantages, including greater control over
+data, predictable access speeds, and the ability to power equipment down
+when not in use.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Category</th>
+<th align="left">Cloud Storage</th>
+<th align="left">Local Storage</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Embodied Carbon</strong></td>
+<td align="left">Lower (shared + efficient infrastructure)</td>
+<td align="left">Higher (duplications + under‑used hardware)</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Operational Carbon</strong></td>
+<td align="left">Usually lower (efficient cooling)</td>
+<td align="left">Usually higher (older facilities + local grid)</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Energy Efficiency</strong></td>
+<td align="left">High (fewer idle disks)</td>
+<td align="left">Generally lower</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Utilisation</strong></td>
+<td align="left">High (resources shared across many users)</td>
+<td align="left">Lower (over‑provisioning)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="strategies-to-reduce-carbon-emissions-associated-with-data-storage">Strategies to reduce carbon emissions associated with data
+storage<a class="anchor" aria-label="anchor" href="#strategies-to-reduce-carbon-emissions-associated-with-data-storage"></a>
+</h3>
+<ul>
+<li>Delete unused or redundant data and avoid unnecessary
+replication</li>
+<li>Keep frequently accessed data on faster storage (SSDs) and move
+“cold” or infrequently accessed data to slower but more energy efficient
+systems (tape storage)<sup>12</sup>
+</li>
+<li>Use compression and efficient file formats to reduce storage
+requirements</li>
+<li>Clean and preprocess data locally before uploading to the cloud to
+avoid storing large amounts of raw data</li>
+<li>Choose cloud regions powered by renewable energy</li>
+<li>Choose cloud storage options designed for infrequent access when
+appropiate</li>
+</ul>
+</div>
+</section><section><h2 class="section-heading" id="hardware-life-cycle-footprint">Hardware life-cycle footprint<a class="anchor" aria-label="anchor" href="#hardware-life-cycle-footprint"></a>
 </h2>
 <hr class="half-width">
 <p>TBC</p>
-</section><section><h2 class="section-heading" id="in-the-cloud-or-datacenter">In the cloud or datacenter<a class="anchor" aria-label="anchor" href="#in-the-cloud-or-datacenter"></a>
-</h2>
-<hr class="half-width">
-<p>TBC</p>
+<div class="section level3">
+<h3 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><a href="https://dl.acm.org/doi/10.1145/3630614.3630616" class="external-link">Swamit
+Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied
+Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9</a></li>
+<li><a href="https://www.seagate.com/content/dam/seagate/assets/esg/planet/product-sustainability/files/life-cycle-assessment-exos-x18.pdf" class="external-link">Based
+on Seagate EXOS X18</a></li>
+<li><a href="https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf" class="external-link">Based
+on LTO 9 - FUJIFILM. <em>Sustainability Report 2020</em>. 2020</a></li>
+<li><a href="https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/15145533/understanding-the-carbon-footprint-of-storage-media-a-critical-review-of-embodied-emissions-in-hard-disk-drives_1_.pdf" class="external-link">Rteil,
+N., Kenny, R., Andrews, D., &amp; Kerwin, K. (2025). Understanding the
+carbon footprint of storage media: A critical review of embodied
+emissions in hard disk drives. International Journal of Environmental
+and Ecological Engineering, 19(11), 263–270</a></li>
+<li><a href="https://blog.purestorage.com/perspectives/how-do-the-embodied-carbon-dioxide-equivalents-of-flash-compare-to-hdds-part-1/#:~:text=Instead%20of%20an%208x%20difference,continue%20well%20into%20the%20future." class="external-link">How
+Do the Embodied Carbon Dioxide Equivalents of Flash Compare to
+HDDs?</a></li>
+<li><a href="https://digitaldecarb.org/co2-data-calculator/" class="external-link">Digital
+Decarbonisation - CO₂e Data Calculator</a></li>
+<li><a href="https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage" class="external-link">WholeGrain
+DIgital Report</a></li>
+<li><a href="https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain" class="external-link">National
+Energy System Operator</a></li>
+<li><a href="https://escholarship.org/uc/item/32d6m0d1" class="external-link">U.S. Department
+of Energy - 2024 Report on U.S. Data Center Energy Use</a></li>
+<li><a href="https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/" class="external-link">Uptime
+Institute, Large data centres are mostly more efficient, analysis
+confirms, 7 February 2024</a></li>
+<li><a href="https://www.iea.org/reports/energy-and-ai" class="external-link">IEA, Energy and
+AI, April 2025, p259</a></li>
+<li><a href="https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/" class="external-link">Sustainable
+computing in science - EMBL-EBI</a></li>
+</ol>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section><section id="aio-04_case_study1"><p>Content from <a href="04_case_study1.html">Case Study 1 - Researcher</a></p>
 <hr>
 <p>Last updated on 2026-02-05 |
@@ -1168,7 +1452,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage of the hardware used for software
@@ -1196,7 +1480,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Embedded emissions from hardware used for software development.</li>
@@ -1848,7 +2132,7 @@ activities?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><strong>Scope 2</strong></li>
@@ -1906,7 +2190,7 @@ accuracy?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Use transfer learning (we are still working with cats, after
