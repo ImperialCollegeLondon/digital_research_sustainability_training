@@ -333,9 +333,9 @@ of GitHub Actions with the emissions of quotidian activities.
 
 ![Comparison between the yearly
 carbon emissions of the GitHub Actions ecosystem and the emissions of
-quotidian activities](fig/github_actions_equivalent.pdf){alt = "Comparison between the yearly
+quotidian activities](fig/github_actions_equivalent.png){alt="Comparison between the yearly
 carbon emissions of the GitHub Actions ecosystem and the emissions of
-quotidian activities." width = "140%"}
+quotidian activities."}
 
 This study also reports that in 2024, the estimates for the carbon footprint
 from GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario to

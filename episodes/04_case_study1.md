@@ -124,8 +124,6 @@ After Celia has identified the emissions sources associated
 with the development and usage of her software package, she takes some measures
 to reduce these emissions.
 
-### Reducing Scope 2 emissions
-
 She optimises the code base to reduce the computational resources and runtime of its use.
 This includes optimising the error handling and input validation in her
 code to reduce the likelihood of running into errors that lead to repeated runs
@@ -134,8 +132,6 @@ of the code. Thus, minimising wasted computation. She integrates the
 that it can report the carbon emissions when the code is run. This allows her to track
 the emissions associated with the usage of her package and identify areas for
 further optimisation.
-
-### Reducing Scope 3 emissions
 
 The users of her package (members of her research group) have been asking her for help
 with optimising the performance of the code. She provides them with some tips on how to
