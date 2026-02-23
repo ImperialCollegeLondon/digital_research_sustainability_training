@@ -858,7 +858,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
 <hr>
-<p>Last updated on 2026-02-05 |
+<p>Last updated on 2026-02-23 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -895,10 +895,186 @@ sustainability perspective</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="in-the-office-or-at-home">In the office or at home<a class="anchor" aria-label="anchor" href="#in-the-office-or-at-home"></a>
+<section><h2 class="section-heading" id="laptops-and-workstations">Laptops and workstations<a class="anchor" aria-label="anchor" href="#laptops-and-workstations"></a>
 </h2>
 <hr class="half-width">
-<p>TBC</p>
+<p>Everyone in research uses a laptop, desktop PC or workstation to do
+their work, even if they are not involved in coding or running
+simulations. Browsing the web or checking the email are everyday
+activities that consume energy. These are all called <em>operational
+carbon emissions</em>.</p>
+<p>But just the fact that you have one of these machines, also has a
+carbon impact. This is related to the process of sourcing the materials
+the computer is made off, manufacturing and transporting it. These are
+called <em>embodied carbon emissions</em>.</p>
+<p>Both play a significant role in the carbon footprint of using a
+laptop or workstation, but how to estimate them and reduce them is very
+different.</p>
+<p>The following aspects should be considered:</p>
+<div class="section level3">
+<h3 id="embodied-emissions">Embodied emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions"></a>
+</h3>
+<p>Embodied carbon emissions <strong>do not change</strong> once the
+machine is in your hands: they only depend on the manufacturing and
+transport process. However, <strong>embodied carbon emissions per
+year</strong> are reduced the more years the machine is in use. Hence,
+the longer the lifetime of the machine, the lower their embodied carbon
+footprint per year.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Before replacing a laptop, desktop PC or workstation, make sure that
+it is really needed and that it is no longer fit for purpose.</p>
+<ul>
+<li>Can you replace just some parts to extend its lifetime, eg. memory,
+GPUs?</li>
+<li>Can you give it another useful purpose, if not as your main machine
+anymore?</li>
+<li>Can you donate it to charity (eg. see options in the <a href="https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme" class="external-link">Device
+Donation Scheme</a>) to extend its useful life instead of trashing it
+(or recycling it)?</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Finding the embodied carbon emissions of computers often relies on
+the information provided by the manufacturers themselves, which might be
+vague or based on different assumptions. However, it is a good starting
+point for estimating the carbon impact of your research activities.</p>
+<p>Below there is a list of common laptop manufacturers’ webpages
+providing information on their product’s embodied carbon emissions. If
+your machine is custom made or very old, you might need to dig into the
+individual parts’s manufacturers, as well.</p>
+<p>As a specific example, <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991" class="external-link">in
+this link</a> you have the report corresponding to the laptop model used
+to write this bit of the course, an HP EliteBook 840 G9, also shown in
+the following image.</p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="fig/embodied_emissions_laptop.png" alt="Embodied carbon emissions for HP EliteBook 840 G9." class="figure mx-auto d-block"><div class="figcaption">Embodied carbon emissions for HP EliteBook 840
+G9</div>
+</figure><p>If we exclude the <code>Use</code> section of the chart, which
+obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
+production and transportation, accounts for about ~80% of the estimated
+total, i.e. 160 kg CO<span class="math inline">\(_2\)</span>e.</p>
+<p>It should be noted that different manufacturers use different
+criteria to calculate their embodied emissions, so choosing the computer
+with the lowest reported embodied emissions is not necessarily the best
+approach. Other aspects like the expected lifetime, the possibility oif
+replacing individual components, etc. might be more useful and impactful
+aspects to look at.</p>
+<div id="what-are-the-embodied-carbon-emissions-of-your-computer" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="what-are-the-embodied-carbon-emissions-of-your-computer" class="callout-inner">
+<h3 class="callout-title">What are the embodied carbon emissions of your
+computer?</h3>
+<div class="callout-content">
+<p>Find the model of the computer you are using right now to do this
+course and try to find out its embodied carbon emissions. The links
+below from some manufacturers might be useful.</p>
+<ul>
+<li>What part is the one that produces a larger carbon footprint?</li>
+<li>If it is a laptop and the battery is failing, how much carbon could
+you save if you just replace the battery for a new one instead of
+replacing the whole laptop?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="operational-emissions">Operational emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a>
+</h3>
+<p>Operational emissions are those that are produced when <em>using</em>
+the equipment. They depend on its design and performance, but also on
+<em>how</em> it is used and <em>where</em> it is used. For the later
+reason, it is often better to consider the energy usage, rather than the
+carbon emitted as this depends on the energy mix where the machine is
+being used.</p>
+<div class="section level4">
+<h4 id="idle-energy-usage">Idle energy usage<a class="anchor" aria-label="anchor" href="#idle-energy-usage"></a>
+</h4>
+<p>These represent a baseline of energy usage just because of the
+computer (and the monitor in the case of desktop computers) being on.
+There are a number of factors that influence this:</p>
+<ul>
+<li>The age of the computer: Modern computers have generally more
+advanced technology that makes them more energy-efficient than older
+ones.</li>
+<li>Nature of the computer: Laptops, designed to work with batteries,
+are often also more energy efficient than desktops.</li>
+<li>The power management settings: That control when to go to sleep
+after a time of inactivity, switch the screen off, etc. have a very
+strong influence on the idle energy consumption.</li>
+<li>Peripherals: Especially, monitors (sometimes having two or more),
+but also printers can also consume large amounts of energy.</li>
+</ul>
+<p>To figure out the idle energy consumption of a specific machine, one
+option is to check the <a href="https://ecma-international.org/publications-and-standards/standards/ecma-370/" class="external-link">ECO
+Declaration</a> for the equipment. All manufacturers need to provide
+this document where, in principle, you can find such information. For
+example, the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&amp;search=HP%20EliteBook%20840%20G9" class="external-link">ECO
+declaration of the HP EliteBook 840 G9</a> indicates an energy
+consumption of 22.67 kWh/year. This declaration also includes useful
+information about the product, like which components can be replaced or
+upgrade, useful knowledge to reduce the embodied emissions, as pointed
+out above. Having said that, this document is sometimes not as complete
+as it should, or might not represent the exact configuration of your
+machine. Or might not even exist if the machine has been made bespoke
+with specific components.</p>
+<p>In this case, the best option to get the idle energy usage of a
+machine is to use a plug in power meter. These plug in the mains socket
+and then the computer and any other peripherals, like monitors, can be
+plugged to it (possibly via a power strip). There are many models, but
+most will provide both the instantaneous power and the energy used over
+a period of time.</p>
+<p>Once the baseline energy usage is found, strategies can be defined to
+reduce it, like adjusting the power management settings, changing usage
+habits, etc.</p>
+</div>
+<div class="section level4">
+<h4 id="application-energy-usage">Application energy usage<a class="anchor" aria-label="anchor" href="#application-energy-usage"></a>
+</h4>
+<p>Typically, you will be interested in the energy usage of specific
+applications, so you can minimize its energy usage. For example, a
+particular simulation software you have been working on or a 3D
+visualization tool.</p>
+<p>This is not an easy task, and the solution depends greatly on your
+accessibility to the source code of the application, as well as the
+hardware you are using.</p>
+<p>If you do have access to the source code, then you could use tools
+like the [Intel’s Performance Counter Monitor (PCM)] (which <a href="https://greencompute.uk/Measurement/RAPL" class="external-link">can be used in C++
+programs</a>) or <a href="https://github.com/mlco2/codecarbon" class="external-link">Codecarbon</a> (for Python
+programs). These tools require some setting up - and obviously modify
+your code - but will give you the most accurate readings of the energy
+usage specific for your application.</p>
+<p>If you do not have access to the source code, then your only option
+is to rely on external tools to monitor the energy usage of the
+application (e.g. using PCM) or to calculate it based on the hardware
+being used and the time it is being used for using the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a>, for example.</p>
+<p>It is beyond the scope of this course to teach you how to use any of
+these tools, given the range of use cases and configurations, but in the
+case studies described in the next episodes, there will be examples of
+how some of these can be employed in practice to understand your energy
+usage and consider ways of reducing them.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="product-carbon-footprint-of-different-manufacturers">Product Carbon Footprint of different manufacturers<a class="anchor" aria-label="anchor" href="#product-carbon-footprint-of-different-manufacturers"></a>
+</h3>
+<ul>
+<li><a href="https://h20195.www2.hp.com/v2/library.aspx#doctype-95&amp;country-us&amp;sortorder-popular&amp;teasers-off&amp;isRetired-false&amp;isRHParentNode-false&amp;titleCheck-false" class="external-link">HP</a></li>
+<li><a href="https://compliance.lenovo.com/content/esg-document-library/en/esg.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FdocumentType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.7_values=PCF%20Sheets&amp;layout=card&amp;p.offset=0&amp;p.limit=24" class="external-link">Lenovo</a></li>
+<li><a href="https://www.dell.com/en-uk/lp/dt/product-carbon-footprints" class="external-link">Dell</a></li>
+</ul>
+</div>
 </section><section><h2 class="section-heading" id="in-the-lab">In the lab<a class="anchor" aria-label="anchor" href="#in-the-lab"></a>
 </h2>
 <hr class="half-width">
@@ -986,7 +1162,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage of the hardware used for software
@@ -1014,7 +1190,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Embedded emissions from hardware used for software development.</li>
@@ -1378,7 +1554,7 @@ Hugh’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage associated with simulation
@@ -1408,7 +1584,7 @@ Hugh’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Proportional embedded emissions from HPC facilities.</li>
@@ -1663,7 +1839,7 @@ activities?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><strong>Scope 2</strong></li>
@@ -1721,7 +1897,7 @@ accuracy?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Use transfer learning (we are still working with cats, after
@@ -1792,8 +1968,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/aio.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/aio.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-19",
-  "datePublished": "2026-02-19"
+  "dateModified": "2026-02-23",
+  "datePublished": "2026-02-23"
 }
 
   </script><script>
