@@ -98,9 +98,9 @@ per week.
 
 The five workflows on GitHub Actions that run around 10 times a day, have a total
 runtime of 2940 seconds per week. Whereas, the 20 prompts to the AI coding agents
-every week have a total runtime of around 20 minutes per week. The emissions from the
-use of GitHub Actions and AI coding agents are estimated to be around 0.5 kg CO2e
-and 0.1 kg CO2e per week, respectively.
+every week have a total runtime of around 20 minutes per week. At present, she is not
+aware of any tools that can be used to estimate the emissions from the use of GitHub
+Actions and AI coding agents. So decides to use them sparingly and only when necessary.
 
 Finally, to compute the carbon footprint of her software package, she uses the [Green
 Algorithms Calculator](https://calculator.green-algorithms.org/). For the same, she
@@ -135,15 +135,15 @@ further optimisation.
 
 The users of her package (members of her research group) have been asking her for help
 with optimising the performance of the code. She provides them with some tips on how to
-optimise the performance of the code when they run it on their local server. Eventually,
+optimise the performance of the code when they run it on their local server. Additionally,
 she creates a detailed user guide that includes instructions on how to make
 the most efficient use of her package, including tips on how to optimise the
 performance of the code when running it on different hardware configurations.
 
 Her package only intends to support a specific set of OS and Python versions. Therefore,
-she decides to reduce the number of tests run on GitHub Actions to only include these
+she reduces the number of tests run on GitHub Actions to only include these
 OS and Python versions. Moreover, to minimise the number of jobs run in each workflow,
-she ensures that they are run on pull requests against the primary development branch
+she makes sure that they are run on pull requests against the primary development branch
 only.
 
 ## References
