@@ -110,20 +110,6 @@ development is 2? kWh per week.
 
 - Five workflows on GitHub Actions run (10 X 7) 70 times a week.
 Total runtime of these workflows is (10 + 8 + 6 + 20 + 5) * 70 = 2940 seconds per week.
-She comes across a [research study](https://arxiv.org/abs/2510.26413) that compares
-the carbon emissions of GitHub Actions with the emissions of quotidian activities.
-
-![Comparison between the yearly
-carbon emissions of the GitHub Actions ecosystem and the emissions of
-quotidian activities](fig/github_actions_equivalent.pdf){alt = "Comparison between the yearly
-carbon emissions of the GitHub Actions ecosystem and the emissions of
-quotidian activities."}
-
-This research study also reports that in 2024, the estimates for the carbon footprint
-from GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario to
-994.9 MTCO2e in the most pessimistic scenario. The most likely scenario estimates
-are 456.9 MTCO2e which is equivalent to the carbon captured by 7,615 urban trees
-in a year.
 
 - AI coding agents are used for 2 hours per week.
 
