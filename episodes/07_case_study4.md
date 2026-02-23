@@ -138,20 +138,22 @@ possible energy savings of early convergence may be overall worth it.
 ## Taking Action
 
 From his observatons, Miguel formulates a plan. It is clear to him that is entirely
-unnecessary to train a new model from scratch. Given the prior model is already quite
-competent at finding cats, it can readily be adapted by appending a new heead for cat
-bounding-boxes, and fine tuning with transfer learning techniques.
+unnecessary to train a new model from scratch, given the prior model is already quite
+competent at processing cats. The existing model can readily be adapted by appending a
+new head for cat bounding-boxes, and transfer learning techniques can be utilised to
+further fine-tune the model to a reasonable accuracy.
 
 He begins experimenting, appending the new bounding-box head and starting training,
 keeping the trainable parameters in the body fixed, and gradually relaxing them as
 training progresses. In doing so, he notices that the model comes close to converging
-well before the 100 epochs programmed into the base training script.
-
-- Can we reduce convergence time by switching the optimiser?
-- Quit early once converged (faster in transfer learning).
-
-- What contingency plans are in place (training checkpoints, data backups, ...)?
-- Can floating point precision be reduced?
+well before the 100 epochs programmed into the base training script. The first
+improvements made are terminating the training process early, once the model's loss
+function converges, and backing up training state after every epoch to avoid starting
+again on software crash or hardware failure. He is able to further reduce training
+time with only a moderate increase in required memory ($j$ in the memory equations)
+using alternative optimisers, such as SGD with momentum, and the Adam optimiser, and
+Finds this extra memory requirement is easily offset using reduced floating-point
+number precision at no cost to model accuracy.
 
 - Use sparsity-inducing L1 (Lasso) regularisation. This allows us to...
 - Prune weak/redundant neurons/channels, creating a leaner model.
