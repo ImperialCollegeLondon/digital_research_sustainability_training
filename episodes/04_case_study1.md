@@ -135,7 +135,7 @@ further optimisation.
 
 The users of her package (members of her research group) have been asking her for help
 with optimising the performance of the code. She provides them with some tips on how to
-optimise the performance of the code when they run it on their local server. Additionally,
+optimise the performance of the code when they run it on their local machines. Additionally,
 she creates a detailed user guide that includes instructions on how to make
 the most efficient use of her package, including tips on how to optimise the
 performance of the code when running it on different hardware configurations.
