@@ -56,9 +56,7 @@ Their associated carbon emissions are summarised below:
 
 | Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
-<!-- markdownlint-disable-next-line line-length -->
 | **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-<!-- markdownlint-disable-next-line line-length -->
 | **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
@@ -155,12 +153,9 @@ Local or on‑premises storage refers to data kept on servers, network‑attache
 
 | Category | Cloud Storage | Local Storage |
 | :--- | :--- | :--- |
-<!-- markdownlint-disable-next-line line-length -->
 | **Embodied Carbon** | Lower (shared + efficient infrastructure) | Higher (duplications + under‑used hardware) |
-<!-- markdownlint-disable-next-line line-length -->
 | **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
 | **Energy Efficiency** | High (fewer idle disks) | Generally lower |
-<!-- markdownlint-disable-next-line line-length -->
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
 
 ### Strategies to reduce carbon emissions associated with data storage
