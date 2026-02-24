@@ -208,9 +208,11 @@ Their associated carbon emissions are summarised below:
 
 | Category | SSD | HDD | LTO tape |
 | :--- | :--- | :--- | :--- |
-| **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
-| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
+| **Embodied Carbon** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ |
+| **Operational Carbon** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
+
+\* Emissions are in **kg CO₂e per TB per year**
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
  considered that SSDs have a higher 'carbon debt` per unit of storage than HDDs^4^.
@@ -289,10 +291,10 @@ $$
 Where:
 
 - **U**: Cloud provider service usage - can be obtained from cloud providers
-- **C\_kWh**: Cloud energy conversion factors - can be obtained from cloud providers or
+- **C~kWh~**: Cloud energy conversion factors - can be obtained from cloud providers or
   academic studies
 - **PUE**: Power usage effectiveness - usually published by cloud providers  
-- **E\_CO₂e**: Grid emissions factors - provided by regional electricity grid authorities
+- **E~CO₂e~**: Grid emissions factors - provided by regional electricity grid authorities
 
 ### Local (on-premise) vs Cloud storage
 
