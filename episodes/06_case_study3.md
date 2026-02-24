@@ -127,28 +127,28 @@ simulation codes used on each one.
 
 | Cluster | Workload | Total CPU-hours | Notes |
 | --- | --- | ---: | --- |
-| Cluster 1 | Simulation Code 1 | 9000 | Self-compiled |
-| | Simulation Code 2 | 6,000 | |
-| | Simulation Code 3 | 4,000 | |
-| Cluster 2 | Simulation Code 1 | 12,000 | Self-compiled |
-| | Simulation Code 2 | 8,000 | |
-| | Simulation Code 3 | 15,000 | |
+| Cluster 1 | Simulation Code 1 | 45,000 | Self-compiled |
+| | Simulation Code 2 | 30,000 | |
+| | Simulation Code 3 | 20,000 | |
+| Cluster 2 | Simulation Code 1 | 60,000 | Self-compiled |
+| | Simulation Code 2 | 40,000 | |
+| | Simulation Code 3 | 75,000 | |
 
 Using the calculation tool provided by Cluster 2 Hugh is able to get an estimate of the
-carbon emissions associated with all of his work there. The total amount is 1,200
+carbon emissions associated with all of his work there. The total amount is 94
 kgCO2e. Hugh also decides to estimate his emissions from Cluster 1 by scaling the
 emissions of Cluster 2 by the difference in CPU-hours used on both systems - he's aware
 that Cluster 1 and Cluster 2 are quite different and so this value for Cluster 1 is very
-approximate but still thinks it's useful to know. This gives a total of 651 kgCO2e for
+approximate but still thinks it's useful to know. This gives a total of 51 kgCO2e for
 Cluster 1.
 
-Whilst collecting the above data Hugh also notes that around 3,000 CPU-hours were wasted
+Whilst collecting the above data Hugh also notes that around 15,000 CPU-hours were wasted
 on workloads that he hadn't setup properly and which had to be repeated. He estimates
-this corresponds to around 100 kgCO2e.
+this corresponds to around 8 kgCO2e.
 
 Finally Hugh, takes his total emissions figure and tries to better understand what it
-means by comparing with other emissions sources. He finds that arond 1,800 kgCO2e is
-approximately equivalent to driving for 6,000 miles or more in a petrol fueled car.
+means by comparing with other emissions sources. He finds that arond 145 kgCO2e is
+approximately equivalent to driving for around 500 miles in a petrol fueled car.
 
 ## Taking Action
 
@@ -215,14 +215,14 @@ between speed and efficiency.
 ### Outcomes
 
 Putting all of the above steps together Hugh estimates that he can reduce his overall
-use of cpu-hours by 25% across both clusters. This would result in a saving of ~450
-kgCO2 from his two week data collection period. Hugh also continues to collect data on
+use of cpu-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2
+from his two week data collection period. Hugh also continues to collect data on
 his HPC workloads so that he can assess the impact of the changes he's made in the
 future.
 
 Hugh shares his findings with his colleagues in their regular group meeting. Several of
-his colleagues use the same clusters and simulation codes so are as him so are able to
-easily make use of Hugh's work.
+his colleagues use the same clusters and simulation codes as him so are able to easily
+make use of Hugh's work.
 
 Hugh also contacts the team maintaining Cluster 1 highlighting the utility of tools to
 measure carbon intensity data. The team promises to explore how they can add some more
