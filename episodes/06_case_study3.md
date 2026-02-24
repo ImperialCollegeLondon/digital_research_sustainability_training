@@ -216,9 +216,9 @@ between speed and efficiency.
 
 Putting all of the above steps together Hugh estimates that he can reduce his overall
 use of cpu-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2
-from his two week data collection period. Hugh also continues to collect data on
-his HPC workloads so that he can assess the impact of the changes he's made in the
-future.
+from his two week data collection period. Expanding this over a full year gives a
+reduction of nearly 936 kgCO2. Hugh also continues to collect data on his HPC workloads
+so that he can assess the impact of the changes he's made in the future.
 
 Hugh shares his findings with his colleagues in their regular group meeting. Several of
 his colleagues use the same clusters and simulation codes as him so are able to easily
