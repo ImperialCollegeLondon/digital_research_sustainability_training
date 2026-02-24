@@ -137,7 +137,7 @@ possible energy savings of early convergence may be overall worth it.
 
 ## Taking Action
 
-From his observatons, Miguel formulates a plan. It is clear to him that is entirely
+From his observations, Miguel formulates a plan. It is clear to him that it is entirely
 unnecessary to train a new model from scratch, given the prior model is already quite
 competent at processing cats. The existing model can readily be adapted by appending a
 new head for cat bounding-boxes, and transfer learning techniques can be utilised to
