@@ -86,7 +86,7 @@ information. The documentation pages provide some lists of the available hardwar
 these are fairly high level and don't include specific CPU or server models. Electricity
 for this cluster is backed by renewable energy certificates.
 
-LANCER is a cluster based in Wales. It's documentation has some dedicated information on
+LANCER is a cluster based in Wales. Its documentation has some dedicated information on
 sustainability including a GHG analysis of the cluster. This includes an embodied
 emissions analysis as well as total power usage. Most usefully Hugh finds that the
 cluster provides a tool for users to estimate the carbon emissions of their workloads.
@@ -96,17 +96,17 @@ Hugh then considers each of the emissions sources in turn.
 
 ### Electricity usage from HPC workloads
 
-Hugh realises that carbon emissions associated with his HPC usage directly related to
-his level of usage. Currently Hugh is fairly sure he uses LANCER the most but he
+Hugh realises that carbon emissions associated with his HPC usage are directly related
+to his level of usage. Currently Hugh is fairly sure he uses LANCER the most but he
 doesn't track exactly how much and what workloads he runs. Collecting this data will be
-an important first step
+an important first step.
 
-Even without detailed data Hugh is confident that his simulation workloads form more 90%
-of his cluster usage. As the data analysis workflows also tend to be more diverse he
-decides to focus his initial efforts on his simulation workloads as he will get the most
-impact from improving those.
+Even without detailed data Hugh is confident that his simulation workloads form more
+than 90% of his cluster usage. As the data analysis workflows also tend to be more
+diverse he decides to focus his initial efforts on his simulation workloads as he will
+get the most impact from improving those.
 
-Hugh also notes that the of his simulation workloads run for at least 48 hours and he
+Hugh also notes that most of his simulation workloads run for at least 48 hours and he
 has no control over when they start running. He therefore concludes that there is little
 scope to exploit demand shifting to reduce carbon intensity.
 
@@ -122,7 +122,7 @@ embodied emissions in his analysis.
 ## Analysis
 
 For the next two weeks Hugh keeps track of the workloads that he runs on the different
-clusters. He tracks the total cpu-hours spent on different clusters and the different
+clusters. He tracks the total CPU-hours spent on different clusters and the different
 simulation codes used on each one.
 
 | Cluster | Simulation Code | Total CPU-hours | Notes |
@@ -153,10 +153,10 @@ approximately equivalent to driving for around 500 miles in a petrol fueled car.
 
 Based on the data gathered above Hugh observes:
 
-- He spends the most cpu-hours on LANCER.
-- He spends the most cpu-hours using GROMINZ.
+- He spends the most CPU-hours on LANCER.
+- He spends the most CPU-hours using GROMINZ.
 
-This suggests Hugh will get the most impact out focussing his efforts on these areas.
+This suggests Hugh will get the most impact by focussing his efforts on these areas.
 Hugh wants to be able to measure the impact of any changes he makes which can be best
 done using the emissions tooling on LANCER. He's also confident that most changes he
 makes on LANCER will be transferable to DRAGONFLY even if he can't measure the impact so
@@ -167,17 +167,17 @@ the simulations he performs and try to reduce the overall amount of simulation.
 
 ### Reducing Simulation
 
-The 15,000 wasted cpu-hours of simulation are an obvious initial target. Hugh reviews
+The 15,000 wasted CPU-hours of simulation are an obvious initial target. Hugh reviews
 the jobs that went wrong and identifies the root causes. He then adjusts his workflows
 to prevent them happening again. To help in the future, he agrees with a member of this
 research group that they will double check each others simulation inputs before starting
 significant new simulation projects. With these measures Hugh estimates that he may be
-able to reduce his wasted cpu-hours by half.
+able to reduce his wasted CPU-hours by half.
 
 Hugh's work requires running simulations for many individual timesteps but it's often
 not obvious in advance how many timesteps are required. Reviewing some of his recent
 projects Hugh concludes that by monitoring his workloads more closely he can terminate
-some of them earlier. Hugh estimates this could reduce the cpu-hours used per project by
+some of them earlier. Hugh estimates this could reduce the CPU-hours used per project by
 10%.
 
 ### Optimising Workloads
@@ -185,9 +185,9 @@ some of them earlier. Hugh estimates this could reduce the cpu-hours used per pr
 Hugh notes that GROMINZ is less commonly used in his field and so he has had to compile
 it himself on both clusters. Hugh doesn't have a lot of experience doing this and had to
 piece together how to do it with some online searching and notes from a old colleague.
-Hugh reaches out the authors of the code who are able to give him some general advice
-but can't offer tailored help. Hugh also gets in touch with the local research software
-engineering team at his institute who are more familiar with the clusters and are able
+Hugh reaches out to the authors of the code who are able to give him some general advice
+but can't offer tailored help. Hugh also gets in touch with the local Research Software
+Engineering team at his institute who are more familiar with the clusters and are able
 to provide a small amount of effort to help. Together they identify some tweaks to the
 compilation and manage to get a 5% speed boost.
 
@@ -200,7 +200,7 @@ cores. Meanwhile, ORANGE and LUMMPS don't seem to show much difference between t
 clusters. Hugh realises he can work more efficiently by shifting as much of his work
 using GROMINZ to LANCER as possible.
 
-Most of Hugh's simulations require him to run jobs in parallel, using many cpu cores and
+Most of Hugh's simulations require him to run jobs in parallel, using many CPU cores and
 cluster nodes at the same time. Hugh is familiar with the fact that as his jobs use
 increasing amount of resources there is a trade-off in computational efficiency. With
 some of his current projects Hugh realises he has not put much thought into choosing the
@@ -214,14 +214,14 @@ between speed and efficiency.
 ### Outcomes
 
 Putting all of the above steps together Hugh estimates that he can reduce his overall
-use of cpu-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2
+use of CPU-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2
 from his two week data collection period. Expanding this over a full year gives a
 reduction of nearly 936 kgCO2. Hugh also continues to collect data on his HPC workloads
 so that he can assess the impact of the changes he's made in the future.
 
 Hugh shares his findings with his colleagues in their regular group meeting. Several of
-his colleagues use the same clusters and simulation codes as him so are able to easily
-make use of Hugh's work.
+his colleagues use the same clusters and simulation codes as him so they are easily able
+to make use of Hugh's work.
 
 Hugh also contacts the team maintaining DRAGONFLY highlighting the utility of tools to
 measure carbon intensity data. The team promises to explore how they can add some more
