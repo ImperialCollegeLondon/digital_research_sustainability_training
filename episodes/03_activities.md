@@ -325,6 +325,24 @@ Local or on‑premises storage refers to data kept on servers, network‑attache
 
 TBC
 
+## When using GitHub Actions
+
+In a research study on [Environmental Impact of CI/CD
+Pipelines](https://arxiv.org/abs/2510.26413) the authors compare the carbon emissions
+of GitHub Actions with the emissions of quotidian activities.
+
+![Comparison between the yearly
+carbon emissions of the GitHub Actions ecosystem and the emissions of
+quotidian activities](fig/github_actions_equivalent.png){alt="Comparison between the yearly
+carbon emissions of the GitHub Actions ecosystem and the emissions of
+quotidian activities."}
+
+This study also reports that in 2024, the estimates for the carbon footprint
+from GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario to
+994.9 MTCO2e in the most pessimistic scenario. The most likely scenario estimates
+are 456.9 MTCO2e which is equivalent to the carbon captured by 7,615 urban trees
+in a year.
+
 ### References
 
 1. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
@@ -339,3 +357,6 @@ TBC
 10. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
 11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
 12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
+13. Poster on [Environmentally-aware use of GitHub
+Actions](https://zenodo.org/records/12754189) and the [associated GitHub repository](https://github.com/ImperialCollegeLondon/game_of_life)
+14. Blog post on [Adopting a more rational use of Continuous Integration with GitHub Actions](https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/).

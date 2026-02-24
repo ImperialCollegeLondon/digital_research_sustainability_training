@@ -21,9 +21,9 @@ exercises: 10
 ## Scenario
 
 Celia is a researcher in a university. Two years ago, she developed and released
-a Python package with a novel data analysis technique relevant to her research area. She
-had the chance to travel internationally for conducting a workshop based on her package
-at a conference. The package has been a big success and has been widely adopted. However,
+a Python package (hosted on PyPI) with a novel data analysis technique relevant to
+her research area.
+The package has been a big success and has been widely adopted. However,
 she has heard from some users that they are using it on increasingly large datasets that
 leads to demanding memory requirements and slow performance.
 
@@ -36,28 +36,21 @@ and categorises them under the GHG protocol.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Identify Scope 2 Emissions
+## Challenge 1: Identify Scope of the Emissions
 
-What Scope 2 emissions under the GHG protocol can you identity from Celia's work?
-
-:::::::::::::::::::::::: solution
+Under which scope would the following activities from Celia's work be categorised?
 
 - Emissions from electricity usage of the hardware used for software development.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 2: Identify Scope 3 Emissions
-
-What Scope 3 emissions under the GHG protocol can you identity from Celia's work?
-
-:::::::::::::::::::::::: solution
-
 - Embedded emissions from hardware used for software development.
 - Use of services such as GitHub Actions and AI Coding agents.
 - Electricity usage when users of the package run the code.
+
+:::::::::::::::::::::::: solution
+
+- Scope 2
+- Scope 3
+- Scope 3
+- Scope 3
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -66,21 +59,96 @@ Celia should assess the balance of emissions involved in development of the code
 base versus its usage. She should look at how to estimate these then focus her
 emission reduction measures appropriately.
 
-## Suggested Approach
+## Collecting Information
 
-After Celia has identified the Scope 2 and Scope 3 emissions sources associated
-with the development and usage of her software package, she could take some measures
+Celia decides to learn more about each of the emission sources, starting with
+inspecting the hardware she uses for the package development. She primarily works on her
+laptop, on an average, using it for 20 hours per week for the software development.
+From the Product Carbon Footprint (PCF) data sheet for her laptop, she finds the
+embedded emissions associated with the hardware components - CPU (50 kg CO2e), GPU
+(30 kg CO2e), and RAM (20 kg CO2e).
+
+Next, she reviews the code base and notices that it is not optimised for performance.
+She finds that the code runs on a single CPU core and does not make use of any
+GPU acceleration. She also finds that there are some redundant computations in the
+code that could be optimised.
+
+To ensure that her software package follows best practices, she has been using
+GitHub Actions for continuous integration and testing. At present, there are around
+5 workflows that run on GitHub Actions, and they run around 10 times a day.
+
+For creating inline documentation for her code, Celia has been using AI coding agents.
+While she is not using them frequently, she notices that on an average,
+she writes approximately 20 prompts to the agents every week.
+
+Finally, Celia reaches out to her research group members who are users of her package.
+They agree to provide the necessary information on their usage of the package.
+She finds that they are using it on a local server with 16 CPU cores and 64 GB of RAM.
+They run the package for around 4 hours per week.
+
+## Analysis
+
+Celia tracks the activities for a week to get an estimate of the emissions associated
+with her software development and usage. From the PCF data sheet for her laptop, the
+embedded emissions from the hardware components (CPU + GPU + RAM) is 100 kg CO2e.
+Moreover, since her code is not optimised for performance, it has been consuming more
+computational resources and is taking longer to run than it should, leading
+to higher emissions. The runtime of the code on a single CPU core is around 4 hours
+per week.
+
+The five workflows on GitHub Actions that run around 10 times a day, have a total
+runtime of 2940 seconds per week. Whereas, the 20 prompts to the AI coding agents
+every week have a total runtime of around 20 minutes per week. At present, she is not
+aware of any tools that can be used to estimate the emissions from the use of GitHub
+Actions and AI coding agents. So decides to use them sparingly and only when necessary.
+
+Finally, to compute the carbon footprint of her software package, she uses the [Green
+Algorithms Calculator](https://calculator.green-algorithms.org/). For the same, she
+records the following information:
+
+- Runtime of package in hours and minutes
+- Types of cores used (CPU, GPU, or both)
+- Number of cores used
+- Model used
+- Memory available in GB
+- Platform used for the software development (e.g. local server, personal computer,
+cloud computing)
+- Location to retrieve the energy mix of the location
+- Real usage factor of the CPU
+- Power Usage Efficiency (PUE) of the local data centre (if applicable)
+- Any multiplicative factor to use
+
+## Taking Action
+
+After Celia has identified the emissions sources associated
+with the development and usage of her software package, she takes some measures
 to reduce these emissions.
 
-### Reducing Scope 2 emissions
+She optimises the code base to reduce the computational resources and runtime of its use.
+This includes optimising the error handling and input validation in her
+code to reduce the likelihood of running into errors that lead to repeated runs
+of the code. Thus, minimising wasted computation. She integrates the
+[codecarbon](https://github.com/mlco2/codecarbon) tool into her code base so
+that it can report the carbon emissions when the code is run. This allows her to track
+the emissions associated with the usage of her package and identify areas for
+further optimisation.
 
-- Optimising the code base to reduce the computational resources and runtime of its use.
+The users of her package (members of her research group) have been asking her for help
+with optimising the performance of the code. She provides them with some tips on how to
+optimise the performance of the code when they run it on their local machines. Additionally,
+she creates a detailed user guide that includes instructions on how to make
+the most efficient use of her package, including tips on how to optimise the
+performance of the code when running it on different hardware configurations.
 
-### Reducing Scope 3 emissions
+Her package only intends to support a specific set of OS and Python versions. Therefore,
+she reduces the number of tests run on GitHub Actions to only include these
+OS and Python versions. Moreover, to minimise the number of jobs run in each workflow,
+she makes sure that they are run on pull requests against the primary development branch
+only.
 
-- Producing documentation for users to help them make the most efficient use possible of
-her code.
-- Reducing the use of services such as GitHub Actions.
+## References
+
+1. Product Carbon Footprint (PCF) data for [Dell products](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints)
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
