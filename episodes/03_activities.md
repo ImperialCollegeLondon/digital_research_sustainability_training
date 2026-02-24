@@ -26,9 +26,161 @@ The environmental impact of digital research can be broadly split into three cat
 - Impact of long-term data storage
 - Carbon footprint of the hardware life cycle
 
-## Powering Computers
+## Laptops and workstations
 
-TBC
+Everyone in research uses a laptop, desktop PC or workstation to do their work, even if
+they are not involved in coding or running simulations. Browsing the web or checking the
+email are everyday activities that consume energy. These are all called
+_operational carbon emissions_.
+
+But just the fact that you have one of these machines, also has a carbon impact. This is
+related to the process of sourcing the materials the computer is made off, manufacturing
+and transporting it. These are called _embodied carbon emissions_.
+
+Both play a significant role in the carbon footprint of using a laptop or workstation,
+but how to estimate them and reduce them is very different.
+
+The following aspects should be considered:
+
+### Embodied emissions
+
+Embodied carbon emissions **do not change** once the machine is in your hands: they only
+depend on the manufacturing and transport process. However,
+**embodied carbon emissions per year** are reduced the more years the machine
+is in use. Hence, the longer the lifetime of the machine, the lower their embodied
+carbon footprint per year.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Before replacing a laptop, desktop PC or workstation, make sure that it is really
+needed and that it is no longer fit for purpose.
+
+- Can you replace just some parts to extend its lifetime, eg. memory, GPUs?
+- Can you give it another useful purpose, if not as your main machine anymore?
+- Can you donate it to charity (eg. see options in the [Device Donation Scheme]) to
+extend its useful life instead of trashing it (or recycling it)?
+
+:::::::::::::::::::::::::::::::::::::::::::::
+
+Finding the embodied carbon emissions of computers often relies on the information
+provided by the manufacturers themselves, which might be vague or based on different
+assumptions. However, it is a good starting point for estimating the carbon impact of
+your research activities.
+
+Below there is a list of common laptop manufacturers' webpages providing information on
+their product's embodied carbon emissions. If your machine is custom made or very old,
+you might need to dig into the individual parts's manufacturers, as well.
+
+As a specific example, [in this link](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991)
+you have the report corresponding to the laptop model used to write this bit of the
+course, an HP EliteBook 840 G9, also shown in the following image.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Embodied carbon emissions for HP EliteBook 840 G9](episodes/fig/embodied_emissions_laptop.png){alt='Embodied carbon emissions for HP EliteBook 840 G9.'}
+
+If we exclude the `Use` section of the chart, which obviously depends on the usage and
+the location, as discussed in the [previous episode](02_carbon.md), the remaining,
+related to production and transportation, accounts for about ~80% of the estimated
+total, i.e. 160 kg CO$_2$e.
+
+It should be noted that different manufacturers use different criteria to calculate their
+embodied emissions, so choosing the computer with the lowest reported embodied emissions
+is not necessarily the best approach. Other aspects like the expected lifetime, the
+possibility oif replacing individual components, etc. might be more useful and impactful
+aspects to look at.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+#### What are the embodied carbon emissions of your computer?
+
+Find the model of the computer you are using right now to do this course and try to find
+out its embodied carbon emissions. The links below from some manufacturers might be
+useful.
+
+- What part is the one that produces a larger carbon footprint?
+- If it is a laptop and the battery is failing, how much carbon could you save if you
+just replace the battery for a new one instead of replacing the whole laptop?
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+### Operational emissions
+
+Operational emissions are those that are produced when _using_ the equipment. They depend
+on its design and performance, but also on _how_ it is used and _where_ it is used. For
+the later reason, it is often better to consider the energy usage, rather than the carbon
+emitted as this depends on the energy mix where the machine is being used.
+
+#### Idle energy usage
+
+These represent a baseline of energy usage just because of the computer (and the monitor
+in the case of desktop computers) being on. There are a number of factors that influence
+this:
+
+- The age of the computer: Modern computers have generally more advanced technology that
+makes them more energy-efficient than older ones.
+- Nature of the computer: Laptops, designed to work with batteries, are often also more
+energy efficient than desktops.
+- The power management settings: That control when to go to sleep after a time of inactivity,
+switch the screen off, etc. have a very strong influence on the idle energy consumption.
+- Peripherals: Especially, monitors (sometimes having two or more), but also printers
+can also consume large amounts of energy.
+
+To figure out the idle energy consumption of a specific machine, one option is to check
+the [ECO Declaration] for the equipment. All manufacturers need to provide this document
+where, in principle, you can find such information. For example, the
+[ECO declaration of the HP EliteBook 840 G9] indicates an energy consumption of 22.67 kWh/year.
+This declaration also includes useful information about the product, like which components
+can be replaced or upgrade, useful knowledge to reduce the embodied emissions, as pointed
+out above. Having said that, this document is sometimes not as complete as it should, or
+might not represent the exact configuration of your machine. Or might not even exist if
+the machine has been made bespoke with specific components.
+
+In this case, the best option to get the idle energy usage of a machine is to use a plug
+in power meter. These plug in the mains socket and then the computer and any other
+peripherals, like monitors, can be plugged to it (possibly via a power strip). There are
+many models, but most will provide both the instantaneous power and the energy used over
+a period of time.
+
+Once the baseline energy usage is found, strategies can be defined to reduce it, like
+adjusting the power management settings, changing usage habits, etc.
+
+#### Application energy usage
+
+Typically, you will be interested in the energy usage of specific applications, so you
+can minimize its energy usage. For example, a particular simulation software you have
+been working on or a 3D visualization tool.
+
+This is not an easy task, and the solution depends greatly on your accessibility to the
+source code of the application, as well as the hardware you are using.
+
+If you do have access to the source code, then you could use tools like the
+[Intel's Performance Counter Monitor (PCM)] (which [can be used in C++ programs]) or [Codecarbon]
+(for Python programs). These tools require some setting up - and obviously modify your
+code - but will give you the most accurate readings of the energy usage specific for
+your application.
+
+If you do not have access to the source code, then your only option is to rely on external
+tools to monitor the energy usage of the application (e.g. using PCM) or to calculate it
+based on the hardware being used and the time it is being used for using the
+[Green Algorithms Calculator], for example.
+
+It is beyond the scope of this course to teach you how to use any of these tools, given
+the range of use cases and configurations, but in the case studies described in the next
+episodes, there will be examples of how some of these can be employed in practice to
+understand your energy usage and consider ways of reducing them.
+
+### Product Carbon Footprint of different manufacturers
+
+- [HP](https://h20195.www2.hp.com/v2/library.aspx#doctype-95&country-us&sortorder-popular&teasers-off&isRetired-false&isRHParentNode-false&titleCheck-false)
+- [Lenovo](https://compliance.lenovo.com/content/esg-document-library/en/esg.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FdocumentType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.7_values=PCF%20Sheets&layout=card&p.offset=0&p.limit=24)
+- [Dell](https://www.dell.com/en-uk/lp/dt/product-carbon-footprints)
+
+[Device Donation Scheme]: https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme
+[ECO Declaration]: https://ecma-international.org/publications-and-standards/standards/ecma-370/
+[ECO declaration of the HP EliteBook 840 G9]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&search=HP%20EliteBook%20840%20G9
+[can be used in C++ programs]: https://greencompute.uk/Measurement/RAPL
+[Codecarbon]: https://github.com/mlco2/codecarbon
+[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
 
 ## Data storage
 
@@ -75,7 +227,7 @@ Cloud storage has become an important component of modern digital research. The 
  and hardware that make this possible are housed in large industrial facilities known as
  data centres. Storing 1 TB of data in the cloud for a year results in an estimated
  carbon footprint of 2–40 kg CO₂e, depending on storage type, redundancy, and
- electricity source6^7^. These emissions arise from two main sources: the embodied carbon
+ electricity source ^6,7^. These emissions arise from two main sources: the embodied carbon
  of the hardware and infrastructure, and the operational energy required to run and cool
  the data centre.
 
@@ -177,7 +329,7 @@ TBC
 
 1. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
 2. [Based on Seagate EXOS X18](https://www.seagate.com/content/dam/seagate/assets/esg/planet/product-sustainability/files/life-cycle-assessment-exos-x18.pdf)
-3. [Based on LTO 9 - FUJIFILM. *Sustainability Report 2020*. 2020](https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf)
+3. [Based on LTO 9 - FUJIFILM. _Sustainability Report 2020_. 2020](https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf)
 4. [Rteil, N., Kenny, R., Andrews, D., & Kerwin, K. (2025). Understanding the carbon footprint of storage media: A critical review of embodied emissions in hard disk drives. International Journal of Environmental and Ecological Engineering, 19(11), 263–270](https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/15145533/understanding-the-carbon-footprint-of-storage-media-a-critical-review-of-embodied-emissions-in-hard-disk-drives_1_.pdf)
 5. [How Do the Embodied Carbon Dioxide Equivalents of Flash Compare to HDDs?](https://blog.purestorage.com/perspectives/how-do-the-embodied-carbon-dioxide-equivalents-of-flash-compare-to-hdds-part-1/#:~:text=Instead%20of%20an%208x%20difference,continue%20well%20into%20the%20future.)
 6. [Digital Decarbonisation - CO₂e Data Calculator](https://digitaldecarb.org/co2-data-calculator/)
