@@ -30,81 +30,133 @@ exercises: 10 # exercise time in minutes
 Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an
 applied computational neuroscience department, whose applications make heavy use of
 heterogeneous compute hardware such as GPUs and neuromorphic processors. While the use
-of GPUs and other exotic hardware is crucial for demanding [single instruction multiple
-data (SIMD)](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) tasks, he
-is mindful that his domain of work is often disproportionately carbon-intensive.
+of this hardware is crucial for demanding [single instruction multiple data (SIMD)](
+https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) tasks, he is mindful
+that his domain of work is often disproportionately carbon-intensive. The sheer size of
+the models, and the vast amounts of data used to train them, mean that any procedure he
+performs must be carefully planned in advance, as mistakes are costly.
 
-His primary responsibilities include the deployment of cutting edge deep learning models
-and neuromorphic simulations to dedicated performant hardware, and periodically
-maintaining these models to add features and prevent model drift. The sheer size of the
-models, and the vast amounts of data used to train them, mean that any procedure he
-performs must be carefully planned in advance, as mistakes are both financially and
-environmentally expensive.
+His primary responsibilities are:
 
-To do his work, Miguel has access to a bank of top-of-the-line GPUs in his
-institution's HPC cluster, but also works on various GPU-equipped workstations
-throughout the department. Furthermore, larger jobs are offloaded to a dedicated
-external GPU cluster.
+- The deployment of cutting edge deep learning models
+- The curation and storing of large datasets
+- Periodic maintainance of models to add features and prevent model drift
+
+To do his work, Miguel also purchases and maintains top-of-the-line GPU and fileservers,
+whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
+cloud GPU cluster, and datasets are periodically backed up in the cloud.
+
+Miguel is tasked with deploying a new model to the cloud, based on the architecture of
+an existing model he deployed last year. The existing model performs simple detection of
+cats in images, but the new model must produce bounding boxes.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Identify Carbon Emissions
+## Identify Scope 2 Emissions
 
-Using the definitions of Scopes 1, 2 and 3 carbon emissions, how would you classify the
-carbon emissions resulting from the following activities?
-
-1. Training a new model on the HPC cluster
-2. Updating workstation GPUs and disposing retired units
-3. Data backup and curation
-4. Deploying and using a new model in the cloud
+What Scope 2 emissions under the GHG protocol can you identity from Miguel's work?
 
 :::::::::::::::::::::::: solution
 
-1. **Scope 2**
-2. **Scope 3**
-3. **Scope 2** (and **Scope 3** when on-site backups are required)
-4. **Scope 2**
+- Training a model on the local workstations
+- Training and deploying a model to the cloud
+- Running local dataset backup servers
+- Dataset cloud backups
 
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Digital Waste Reduction
-
-- Is a new model necessary, or can an existing model be adapted?
-- Does it need to be trained from scratch, or can transfer learning be used?
-- Does the entire model need adjustment, or only part of it?
-- What are the FLOPS and memory requirements of the job?
-- How does this scale with layer width and dataset size?
-- What is the granularity of your parameter sweep?
-- Can training end early on convergence?
-- What contingency plans are in place (training checkpoints, data backups, ...)?
-- Can artifacts be better curated, to reduce duplicate runs?
-
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Identify Wasteful Computing
+## Identify Scope 3 Emissions
 
-Miguel is tasked with adding new functionality to a very resource-hungry deep learning
-model deployed in the cloud. Currently the model performs simple detection of cats in
-images, but Miguel wants to augment the model to produce bounding boxes. The width of the
-layers is very large, with many convolutional channels each. The model is highly trained
-with vast quantities of animal images, and is already quite competent at feline-based
-image processing. The training script is quite crude, and simply passes through the
-entire dataset through for 100 epochs.
-
-Given these requirements, what changes can Miguel make to help bring down the
-model's carbon footprint, with minimal effect on its accuracy?
+What Scope 3 emissions under the GHG protocol can you identity from Miguel's work?
 
 :::::::::::::::::::::::: solution
 
-- Use transfer learning (we are still working with cats, after all).
-- Don't adjust the whole model (we only need a new bounding box head).
-- Quit early once converged (faster in transfer learning).
-- Use sparsity-inducing regularisation techniques. This allows us to...
-- Prune weak/redundant neurons/channels, creating a leaner model.
-- Any others you notice?
+- Updating GPUs and fileserver hardware
+- Disposal of retired hardware
 
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Collecting Information
+
+Miguel finds that the previous model was highly trained with vast quantities of real
+animal images, and is already quite competent at feline-based image processing. It may
+not be necessary to train the model from scratch if transfer learning is utilised.
+
+He takes a look at the model's architecture, and notices that it is very large for
+its stated purpose, with many channels per convolutional layer, and very wide fully
+connected layers in the head. He realises that his workstation's GPUs may not have
+enough memory to train the model effectively in its current form, and begins to
+consider his options.
+
+The first option is familiar to Miguel: offload the work to a cloud GPU compute
+provider. He browses them, in turn, and is able to find the hardware configuration for
+most of them from datasheets and documentation. Knowing that FLOPs/Watt is a poor
+surrogate for total power usage in deep learning, he consults public datasets measuring
+whole-system power usage during inference, such as the
+[MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) dataset. He is
+able to find the hardware configuration of an acceptible provider, and notes that
+$Samples/Joule = (Samples/s)/(Watts) ≈ 9.89$.
+
+Alongside this, he considers a second option: whilst his personal workstation's GPU is
+far from cutting-edge, it is by no means obsolete. He knows from experience that newer
+does not automatically mean greener, and keeps in mind during pre-job analysis, looking
+for oppurtunities to make the model lean enough to run on his GPU.
+
+## Analysis
+
+For the next step, Miguel begins to quantify the computational resources required to
+modify the model. He makes a rough total memory estimate; with the number of trainable
+parameters $P$, the sum of all layer sizes $N$, the batch size $M$, a constant $j$
+depending on the chosen optimiser, a constant $k$ depending on the unit model, and
+bytes per number as $b$, he reserves memory (in bytes) for:
+
+- Parameters: $P \cdot b$
+- Parameter gradients: $P \cdot b$
+- Optimiser state: $P \cdot j \cdot b$
+- Activations: $M \cdot N \cdot k \cdot b$
+- An extra $20%$ for ML frameworks usage
+
+With this estimation framework, he is able to know (before submitting) roughly
+how much GPU memory the job will require, as a function of batch and layer size. Next,
+Miguel roughly estimates the computational complexity of the model. Whilst FLOPs is a
+poor surrogate metric for carbon footprint, it can help for estimating run duration
+scaling, which is useful to prevent wasting computation by reserving enough time for
+the cloud job whilst experimenting.
+
+Finally, Miguel notices that the training script of the base model was very crude, and
+simply passed through the entire dataset through the model for exactly 100 epochs of
+stochastic gradient descent (SGD). No regularisation schemes were used. Whilst the
+choice of optimiser affects the memory required to train the model, via $j$ above, the
+possible energy savings of early convergence may be overall worth it.
+
+## Taking Action
+
+From his observations, Miguel formulates a plan. It is clear to him that it is entirely
+unnecessary to train a new model from scratch, given the prior model is already quite
+competent at processing cats. The existing model can readily be adapted by appending a
+new head for cat bounding-boxes, and transfer learning techniques can be utilised to
+further fine-tune the model to a reasonable accuracy.
+
+He begins experimenting, appending the new bounding-box head and starting training,
+keeping the trainable parameters in the body fixed, and gradually relaxing them as
+training progresses. In doing so, he notices that the model comes close to converging
+well before the programmed 100 epochs. He modifies the training script to terminate
+early, once the model's loss function converges, and back up training state after each
+epoch, to avoid starting again on software crash or hardware failure. He is able to
+further reduce training time with a moderate increase in required memory ($j$ in the
+memory equations) using a more sophisticated optimiser, and finds this extra memory
+requirement is easily offset by reducing floating-point number precision at practically
+no detriment to model accuracy.
+
+Finally, revisiting the earlier issue of model size, Miguel wonders if the model can be
+pruned to enable training on his workstation, instead of relying on the cloud provider.
+Noting again that the model is very large for its stated purpose, Miguel adds L1 (Lasso)
+regularisation to reduce redundant activation, allowing many (now-unused) activation
+units to be removed from the model entirely, promoting a leaner and more power-efficient
+model in the process.
