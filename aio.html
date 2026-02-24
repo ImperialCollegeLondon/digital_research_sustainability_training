@@ -586,7 +586,7 @@ so running it for an hour gives 1 kWh of energy used.</p>
   Answers
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>A - 0.2 kW x 0.2 hours = 0.04 kWh</li>
@@ -875,7 +875,7 @@ calculations run.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>No idea. We need to do it.</p>
 </div>
@@ -927,16 +927,20 @@ differ in embodied and operational carbon emissions.</li>
 </div>
 </div>
 </div>
-<p>The environmental impact of digital research can be broadly split
-into three categories:</p>
-<ul>
-<li>Carbon emissions from powering the computers</li>
-<li>Impact of long-term data storage</li>
-<li>Carbon footprint of the hardware life cycle</li>
-</ul>
-<section><h2 class="section-heading" id="laptops-and-workstations">Laptops and workstations<a class="anchor" aria-label="anchor" href="#laptops-and-workstations"></a>
+<section><h2 class="section-heading" id="digital-research-infrastructure">Digital Research Infrastructure<a class="anchor" aria-label="anchor" href="#digital-research-infrastructure"></a>
 </h2>
 <hr class="half-width">
+<p>Modern digital research depends on infrastructure ranging from
+individual computers and devices up to the globe spanning network of the
+internet. In this section we’ll look at some of the different components
+of digital infrastructure and their relation to carbon emissions.</p>
+</section><section><h2 class="section-heading" id="computers">Computers<a class="anchor" aria-label="anchor" href="#computers"></a>
+</h2>
+<hr class="half-width">
+<p>Computers have become an indispensible component of modern life as
+well as digital research. These include everyday devices such as a
+laptop or desktop PC used to check email as well as servers accessed
+remotely.</p>
 <p>Everyone in research uses a laptop, desktop PC or workstation to do
 their work, even if they are not involved in coding or running
 simulations. Browsing the web or checking the email are everyday
@@ -946,10 +950,9 @@ carbon emissions</em>.</p>
 carbon impact. This is related to the process of sourcing the materials
 the computer is made off, manufacturing and transporting it. These are
 called <em>embodied carbon emissions</em>.</p>
-<p>Both play a significant role in the carbon footprint of using a
-laptop or workstation, but how to estimate them and reduce them is very
-different.</p>
-<p>The following aspects should be considered:</p>
+<p>Both embodied and operational emmisions play a significant role in
+the carbon footprint of computing devices, but how to estimate them and
+reduce them is very different.</p>
 <div class="section level3">
 <h3 id="embodied-emissions">Embodied emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions"></a>
 </h3>
@@ -966,13 +969,12 @@ footprint per year.</p>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Before replacing a laptop, desktop PC or workstation, make sure that
-it is really needed and that it is no longer fit for purpose.</p>
+<p>Before replacing a computer, make sure that it is really needed and
+that it is no longer fit for purpose.</p>
 <ul>
 <li>Can you replace just some parts to extend its lifetime, eg. memory,
 GPUs?</li>
-<li>Can you give it another useful purpose, if not as your main machine
-anymore?</li>
+<li>Can you give it another useful purpose?</li>
 <li>Can you donate it to charity (eg. see options in the <a href="https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme" class="external-link">Device
 Donation Scheme</a>) to extend its useful life instead of trashing it
 (or recycling it)?</li>
@@ -998,11 +1000,11 @@ G9</div>
 </figure><p>If we exclude the <code>Use</code> section of the chart, which
 obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
 production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kg CO<span class="math inline">\(_2\)</span>e.</p>
+total, i.e. 160 kgCO2e.</p>
 <p>It should be noted that different manufacturers use different
 criteria to calculate their embodied emissions, so choosing the computer
 with the lowest reported embodied emissions is not necessarily the best
-approach. Other aspects like the expected lifetime, the possibility oif
+approach. Other aspects like the expected lifetime, the possibility of
 replacing individual components, etc. might be more useful and impactful
 aspects to look at.</p>
 <div id="what-are-the-embodied-carbon-emissions-of-your-computer" class="callout discussion">
@@ -1018,7 +1020,7 @@ computer?</h3>
 course and try to find out its embodied carbon emissions. The links
 below from some manufacturers might be useful.</p>
 <ul>
-<li>What part is the one that produces a larger carbon footprint?</li>
+<li>Which part produces a larger carbon footprint?</li>
 <li>If it is a laptop and the battery is failing, how much carbon could
 you save if you just replace the battery for a new one instead of
 replacing the whole laptop?</li>
@@ -1080,6 +1082,11 @@ habits, etc.</p>
 <div class="section level4">
 <h4 id="application-energy-usage">Application energy usage<a class="anchor" aria-label="anchor" href="#application-energy-usage"></a>
 </h4>
+<p>Once you start doing any work with a computer it’s power usage will
+rise above its idle consumption. This is caused by components like the
+CPU, GPU or memory using more power to complete the computational work.
+There may also be increased power requirements to keep components
+cool.</p>
 <p>Typically, you will be interested in the energy usage of specific
 applications, so you can minimize its energy usage. For example, a
 particular simulation software you have been working on or a 3D
@@ -1114,22 +1121,15 @@ usage and consider ways of reducing them.</p>
 <li><a href="https://www.dell.com/en-uk/lp/dt/product-carbon-footprints" class="external-link">Dell</a></li>
 </ul>
 </div>
-</section><section><h2 class="section-heading" id="data-storage">Data storage<a class="anchor" aria-label="anchor" href="#data-storage"></a>
+</section><section><h2 class="section-heading" id="storage-devices">Storage Devices<a class="anchor" aria-label="anchor" href="#storage-devices"></a>
 </h2>
 <hr class="half-width">
 <p>Research datasets are increasingly large and replicated across
 multiple systems for reliability. As modern research practices move
 toward open data and long-term storage, the cumulative energy demand of
 storage becomes a significant component of digital research’s
-environmental impact. Data storage options can be split into two main
-categories:</p>
-<ul>
-<li>local storage</li>
-<li>cloud storage</li>
-</ul>
-<div class="section level3">
-<h3 id="local-storage">Local storage<a class="anchor" aria-label="anchor" href="#local-storage"></a>
-</h3>
+environmental impact.</p>
+<p>There are a few different storage mediums in common use:</p>
 <ul>
 <li>
 <strong>Solid-State Disk Drives (SSD)</strong>: They use flash
@@ -1146,7 +1146,9 @@ continuously.</li>
 technology used for long-term storage. Their manufacturing emissions are
 low, while their operational emissions are near zero.</li>
 </ul>
-<p>Their associated carbon emissions are summarised below:</p>
+<p>Similarly to computers, their associated carbon emissions can be
+split into operational and embedded components. These are summarised
+below:</p>
 <table class="table">
 <colgroup>
 <col width="25%">
@@ -1189,65 +1191,51 @@ low, while their operational emissions are near zero.</li>
 <p>* Emissions are in <strong>kg CO₂e per TB per year</strong></p>
 <p>While the numbers vary depending on manufacturers and reporting
 available, it is generally considered that SSDs have a higher ’carbon
-debt` per unit of storage than HDDs<sup>4</sup>. However, recent data
-suggests that the difference for enterprise-grade drives is shrinking,
-and new SSDs have only 2x the embodied carbon of comparable
+debt<code>per unit of storage than HDDs^4^.  However, recent data suggests that the difference for enterprise-grade drives is shrinking,  and new SSDs have only 2x the embodied carbon of comparable HDDs^5^. While the numbers vary depending on manufacturers and reporting available, it is generally considered that SSDs have a higher 'carbon debt</code>
+per unit of storage than HDDs<sup>4</sup>. However, recent data suggests
+that the difference for enterprise-grade drives is shrinking, and new
+SSDs have only 2x the embodied carbon of comparable
 HDDs<sup>5</sup>.</p>
 <p>SSDs allow data to be accessed almost instantly and are typically
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
 they remain the preferred option for storing cold data due to their low
 cost and great energy efficiency.</p>
-</div>
-<div class="section level3">
-<h3 id="cloud-storage">Cloud storage<a class="anchor" aria-label="anchor" href="#cloud-storage"></a>
-</h3>
-<p>Cloud storage has become an important component of modern digital
-research. The servers and hardware that make this possible are housed in
-large industrial facilities known as data centres. Storing 1 TB of data
-in the cloud for a year results in an estimated carbon footprint of 2–40
-kg CO₂e, depending on storage type, redundancy, and electricity source
-<sup>6,7</sup>. These emissions arise from two main sources: the
-embodied carbon of the hardware and infrastructure, and the operational
-energy required to run and cool the data centre.</p>
-<p><strong>Embodied emissions of cloud storage</strong>:</p>
+</section><section><h2 class="section-heading" id="data-centres">Data Centres<a class="anchor" aria-label="anchor" href="#data-centres"></a>
+</h2>
+<hr class="half-width">
+<p>Beyond personal computing devices like laptops and PC’s, much
+computing infrastructure is now accessed remotely. In this case the
+computers are generally hosted in a Data Centre, a large industrial
+facility that can contain thousands of servers and the supporting
+infrastructure required to allow remote access.</p>
+<p>The carbon emissions associated with the computers in a data centre
+are covered by the same considerations above. As purpose built
+facilities, data centres can host more specialised equipment and benefit
+from economies of scale. They also have additional emissions sources
+beyond the individual servers they house.</p>
+<p>Data centre embodied emissions:</p>
 <ul>
-<li>
-<strong>manufacturing of storage devices</strong>: SSDs have higher
-embodied emissions than HDDs and magnetic tape</li>
 <li>
 <strong>data-centre construction</strong>: includes the concrete,
 steel, electrical infrastructure, etc.</li>
 <li>
-<strong>networking and supporting hardware</strong>: switches,
-cables, etc.</li>
+<strong>networking and supporting hardware</strong>: as the servers
+in a data centre are accessed remotely they must be serviced by network
+infrastructure such as switches and cables.</li>
 <li>
-<strong>hardware transportation and deployment</strong>: in cloud
-environments, hardware is often decommissioned every 3 to 5 years to
-maintain reliability</li>
+<strong>cooling</strong>: the density of compute in data centres
+means they must have dedicated infrastructure for cooling.</li>
 </ul>
-<p><strong>Operational carbon emissions of cloud storage</strong>:</p>
-<p>The operational carbon emissions of cloud storage arise from:</p>
+<p>There are additional sources of operational emissions as well:</p>
 <ul>
 <li>
-<strong>powering the hardware</strong>: larger energy usage by HDDs,
-followed by SSDs, while tape consumes almost zero energy when idle</li>
+<strong>power for infrastructure</strong>: this includes the
+networking infrastructure, cooling systems, lighting, etc.</li>
 <li>
-<strong>cooling systems</strong>: large amounts of energy are needed
-to maintain optimal temperatures for storage devices</li>
-<li>
-<strong>redundancy and replication</strong>: standard cloud storage
-providers typically create three distributed copies of every file across
-different physical buildings</li>
-<li>
-<strong>networking and data transfer</strong>: energy associated
-with uploading, downloading and syncing data. This depends heavily on
-the distance and type of network (wired vs 5G) used.</li>
+<strong>power distribution overheads</strong>: data centers deal
+with large amounts of electrical and encounter overheads in its
+distribution and transformation.</li>
 </ul>
-<p>Data centres consume around 2.5% of the UK’s electricity and the
-annual consumption is expected to increase by 4 times by
-2030<sup>9</sup>. In the U.S., data centres are predicted to use up to
-12% of the country’s electricity by 2028, a 3x increase from 4.4% in
-2025<sup>8</sup>.</p>
 <p>The energy efficiency of data centres is usually measured as their
 <strong>Power Usage Effectiveness (PUE)</strong>, and determines how
 much of the energy entering the data centre reaches the IT equipment
@@ -1261,47 +1249,23 @@ Power}}
 <figure><img src="fig/pue-infographic.webp" alt="Google Data Center PUE measurement boundaries." class="figure mx-auto d-block"><div class="figcaption">Google Data Center PUE measurement
 boundaries</div>
 </figure><p>An average data centre has a PUE of around 1.59, meaning that for
-every 1 watt used to power the storage drive, an additional 0.5 watts is
-spent on cooling and power distribution. Newer and larger data centres
-tend to be more efficient<sup>11</sup>, with a global average PUE of
-1.41 in 2025<sup>11</sup>.</p>
-<p><strong>Operational emissions</strong> represent the greenhouse gas
-(GHG) impact associated with the electricity required for cloud storage.
-The value depends heavily on the grid carbon intensity, with lower
-emissions in renewable-powered regions and higher emissions in
-fossil-fuel-dominated regions.</p>
-<!-- markdownlint-disable-next-line line-length -->
-<p><span class="math display">\[
-\text{Operational Emissions} =
-U \times C_{\text{kWh}} \times \text{PUE} \times E_{\text{CO₂e}}
-\]</span></p>
-<p>Where:</p>
-<ul>
-<li>
-<strong>U</strong>: Cloud provider service usage - can be obtained
-from cloud providers</li>
-<li>
-<strong>C<sub>kWh</sub></strong>: Cloud energy conversion factors -
-can be obtained from cloud providers or academic studies</li>
-<li>
-<strong>PUE</strong>: Power usage effectiveness - usually published
-by cloud providers<br>
-</li>
-<li>
-<strong>E<sub>CO₂e</sub></strong>: Grid emissions factors - provided
-by regional electricity grid authorities</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="local-on-premise-vs-cloud-storage">Local (on-premise) vs Cloud storage<a class="anchor" aria-label="anchor" href="#local-on-premise-vs-cloud-storage"></a>
-</h3>
-<p>Local or on‑premises storage refers to data kept on servers,
-network‑attached storage systems, or institutional data centres that are
-owned and managed directly by a university, department, or research
-group. While storing data in the cloud is usually the greener choice,
-local storage has a number of advantages, including greater control over
-data, predictable access speeds, and the ability to power equipment down
-when not in use.</p>
+every 1 watt used to power computational resources, an additional 0.5
+watts is spent on cooling and power distribution. Newer and larger data
+centres tend to be more efficient<sup>11</sup>, with a global average
+PUE of 1.41 in 2025<sup>11</sup>.</p>
+<p>Data centres consume around 2.5% of the UK’s electricity and the
+annual consumption is expected to increase by 4 times by
+2030<sup>9</sup>. In the U.S., data centres are predicted to use up to
+12% of the country’s electricity by 2028, a 3x increase from 4.4% in
+2025<sup>8</sup>.</p>
+<p>The operational emissions of data centers depends heavily on the grid
+carbon intensity, with lower emissions in renewable-powered regions and
+higher emissions in fossil-fuel-dominated regions.</p>
+<p>Despite the additional emissions sources, data centres have the
+ability to be far more energy efficient than the equivalent collection
+individual computers or storage devices. This is due to their scale and
+specialisation and the provision of infrastructure that can be shared
+between many users.</p>
 <table class="table">
 <colgroup>
 <col width="33%">
@@ -1310,14 +1274,14 @@ when not in use.</p>
 </colgroup>
 <thead><tr class="header">
 <th align="left">Category</th>
-<th align="left">Cloud Storage</th>
-<th align="left">Local Storage</th>
+<th align="left">Data Center</th>
+<th align="left">Local Equipment</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left"><strong>Embodied Carbon</strong></td>
 <td align="left">Lower (shared + efficient infrastructure)</td>
-<td align="left">Higher (duplications + under‑used hardware)</td>
+<td align="left">Higher (duplication + under‑used hardware)</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Operational Carbon</strong></td>
@@ -1336,45 +1300,168 @@ when not in use.</p>
 </tr>
 </tbody>
 </table>
+<div id="data-centres-and-the-cloud" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
+<div id="data-centres-and-the-cloud" class="callout-inner">
+<h3 class="callout-title">Data Centres and The Cloud</h3>
+<div class="callout-content">
+<p>The “cloud” is the delivery model for computing services over the
+internet. Cloud services are implemented and run on physical data
+centres owned and operated by cloud providers. Because cloud providers
+benefit from the advantages of data centre hosting, cloud deployments
+are often more energy and carbon efficient than many small scale
+on‑premise setups - but the cloud’s actual footprint still depends on
+the provider’s hardware, PUE, electricity grid mix and
+redundancy/replication practices.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="research-activities">Research Activities<a class="anchor" aria-label="anchor" href="#research-activities"></a>
+</h2>
+<hr class="half-width">
 <div class="section level3">
-<h3 id="strategies-to-reduce-carbon-emissions-associated-with-data-storage">Strategies to reduce carbon emissions associated with data
-storage<a class="anchor" aria-label="anchor" href="#strategies-to-reduce-carbon-emissions-associated-with-data-storage"></a>
+<h3 id="simulation-modelling-and-data-analysis">Simulation, Modelling and Data Analysis<a class="anchor" aria-label="anchor" href="#simulation-modelling-and-data-analysis"></a>
 </h3>
+<p>The primary infrastructure required to carry out these activities is
+access to computation. This can be provided by a laptop, desktop or a
+server hosted in a data centre.</p>
+<p>Factors to consider:</p>
 <ul>
-<li>Delete unused or redundant data and avoid unnecessary
-replication</li>
-<li>Keep frequently accessed data on faster storage (SSDs) and move
-“cold” or infrequently accessed data to slower but more energy efficient
-systems (tape storage)<sup>12</sup>
-</li>
-<li>Use compression and efficient file formats to reduce storage
-requirements</li>
-<li>Clean and preprocess data locally before uploading to the cloud to
-avoid storing large amounts of raw data</li>
-<li>Choose cloud regions powered by renewable energy</li>
-<li>Choose cloud storage options designed for infrequent access when
-appropiate</li>
+<li>
+<strong>Embodied and operational emissions</strong> are both key
+contributors. Optimally, a given amount of compute should be provided by
+the minimum associated embodied emissions. It’s therefore key to
+maximise utilisation of hardware rather than investing in more. This
+strongly promotes using computational computational services based on
+shared infrastructure (such as cloud or high performance computing
+facilities) where utilisation can be kept high and operational emissions
+are greatly reduced compared to individual desktops or laptops.</li>
+<li>
+<strong>Computational Architectures</strong> have become
+increasingly diverse in recent years both for CPUs and for accelerators
+(e.g. GPUs). Computational problems can have very different power usages
+depending on the architecture used so choosing the right one can be very
+impactful.</li>
+<li>
+<strong>Doing less computation</strong> is also worth considering.
+This can take the form of planning computational workloads carefully to
+minimise resource usage or limiting work carried out for speculative or
+exploratory purposes.</li>
+<li>
+<strong>Code optimisation</strong> is the art of minimising the
+computational resources required to solve a given problem. This can take
+various forms depending on programming language and computational
+architecture but impressive speed ups can be obtained in some cases
+compared with unoptimised code.</li>
 </ul>
 </div>
-</section><section><h2 class="section-heading" id="hardware-life-cycle-footprint">Hardware life-cycle footprint<a class="anchor" aria-label="anchor" href="#hardware-life-cycle-footprint"></a>
-</h2>
-<hr class="half-width">
-<p>TBC</p>
-</section><section><h2 class="section-heading" id="when-using-github-actions">When using GitHub Actions<a class="anchor" aria-label="anchor" href="#when-using-github-actions"></a>
-</h2>
-<hr class="half-width">
+<div class="section level3">
+<h3 id="research-data-management">Research Data Management<a class="anchor" aria-label="anchor" href="#research-data-management"></a>
+</h3>
+<div class="section level4">
+<h4 id="storing-data">Storing Data<a class="anchor" aria-label="anchor" href="#storing-data"></a>
+</h4>
+<p>Generally when presented with a choice between buying your own
+storage devices or using a storage service, it will be more sustainable
+to use the latter. That said, local storage has a number of advantages,
+including greater control over data, predictable access speeds, and the
+ability to power equipment down when not in use. Typically research
+organisations will provide dedicated storage services for research
+data.</p>
+<p>Factors to consider (to be expanded):</p>
+<ul>
+<li>Delete unused or redundant data and avoid unnecessary
+replication.</li>
+<li>Keep frequently accessed data on faster storage (SSDs) and move
+“cold” or infrequently accessed data to slower but more energy efficient
+systems (tape storage)<sup>12</sup>.</li>
+<li>Use compression and efficient file formats to reduce storage
+requirements</li>
+<li>Consider cleaning and preprocessing data locally before
+storing.</li>
+<li>Choose storage options designed for infrequent access when
+appropiate.</li>
+</ul>
+<div id="data-management-plans" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="data-management-plans" class="callout-inner">
+<h3 class="callout-title">Data Management Plans</h3>
+<div class="callout-content">
+<p>The best time to think about how to manage you data is before you
+collect or generate it…</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="sharing-and-publishing-data">Sharing and Publishing Data<a class="anchor" aria-label="anchor" href="#sharing-and-publishing-data"></a>
+</h4>
+<p>Todo</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="use-of-computational-services">Use of Computational Services<a class="anchor" aria-label="anchor" href="#use-of-computational-services"></a>
+</h3>
+<p>Rather than directly using a computer, many digital research
+activities are provided by accessing services over the internet.
+Ultimately these services are provided by physical infrastructure
+however, as an end user, it can be very difficult to know how your
+activity corresponds to resource consumption. In these cases we usually
+have to depend on information from the service provider or make relative
+comparisons through proxy metrics.</p>
+<p>It’s not possible to comprehensively cover the services used in
+modern digital research so below we’ve chosen a few examplars to look at
+in detail.</p>
+<div class="section level4">
+<h4 id="github">GitHub<a class="anchor" aria-label="anchor" href="#github"></a>
+</h4>
 <p>In a research study on <a href="https://arxiv.org/abs/2510.26413" class="external-link">Environmental Impact of CI/CD
-Pipelines</a> the authors compare the carbon emissions of GitHub Actions
-with the emissions of quotidian activities.</p>
+Pipelines</a> the authors estimates that the carbon footprint from
+GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario
+to 994.9 MTCO2e in the most pessimistic scenario. The most likely
+scenario estimates are 456.9 MTCO2e which is equivalent to the carbon
+captured by 7,615 urban trees in a year.</p>
+<p>The study also compares the carbon emissions of GitHub Actions with
+the emissions of quotidian activities.</p>
 <figure><img src="fig/github_actions_equivalent.png" alt="Comparison between the yearly carbon emissions of the GitHub Actions ecosystem and the emissions of quotidian activities." class="figure mx-auto d-block"><div class="figcaption">Comparison between the yearly carbon emissions
 of the GitHub Actions ecosystem and the emissions of quotidian
 activities</div>
-</figure><p>This study also reports that in 2024, the estimates for the carbon
-footprint from GitHub Actions range from 150.5 MTCO2e in the most
-optimistic scenario to 994.9 MTCO2e in the most pessimistic scenario.
-The most likely scenario estimates are 456.9 MTCO2e which is equivalent
-to the carbon captured by 7,615 urban trees in a year.</p>
+</figure>
+</div>
+<div class="section level4">
+<h4 id="generative-ai">Generative AI<a class="anchor" aria-label="anchor" href="#generative-ai"></a>
+</h4>
+<p>Increasingly, generative AI services are used to generate text,
+images and computer code with consequent diverse applications in digital
+research. Emissions associated with generative AI models can be split
+into two components:</p>
+<ul>
+<li>
+<strong>Training</strong> is carried out as a one-off process before
+you even interact with a model. These are all of the resources required
+to gather training data, design the architecture and parameterise model
+weights.</li>
+<li>
+<strong>Inference</strong> occurs whenever you interact with a
+model, typically by providing a prompt. This refers to the energy
+required to transmit your prompt, generate the response and transmit it
+back to you.</li>
+</ul>
+<p>There are some important factors to bear in mind when interacting
+with LLMs that can drive emissions (to be expanded):</p>
+<ul>
+<li><strong>Model size</strong></li>
+<li><strong>Query count</strong></li>
+<li><strong>Response token count</strong></li>
+</ul>
+</div>
+</div>
 <div class="section level3">
 <h3 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h3>
