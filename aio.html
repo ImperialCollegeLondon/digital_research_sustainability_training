@@ -1446,7 +1446,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage of the hardware used for software
@@ -1474,7 +1474,7 @@ Celia’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Embedded emissions from hardware used for software development.</li>
@@ -1624,7 +1624,7 @@ data</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>The electricity powering the Lab Desktop (<strong>Scope
@@ -1675,7 +1675,7 @@ by renewable energy?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Other options:</p>
 <ul>
@@ -1704,7 +1704,7 @@ without adding scientific value in Emma’s current workflow.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ul>
 <li>data storage</li>
@@ -1734,7 +1734,7 @@ footprint.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul>
 <li>code optimisation</li>
@@ -1755,7 +1755,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06_case_study3"><p>Content from <a href="06_case_study3.html">Case Study 3 - HPC User</a></p>
 <hr>
-<p>Last updated on 2026-02-12 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/06_case_study3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1880,159 +1880,211 @@ Hugh’s work?</p>
 </section><section><h2 class="section-heading" id="collecting-information">Collecting Information<a class="anchor" aria-label="anchor" href="#collecting-information"></a>
 </h2>
 <hr class="half-width">
-<p>Hugh considers each of the emissions sources in turn.</p>
-<ul>
-<li>Hugh also carries out some background research about clusters he
-uses:
-<ul>
-<li>Cluster 1 is based in London. Doesn’t publish any sustainability
-information. Lists of hardware are available online. Hugh gets in touch
-with the local team that maintains the cluster and they’re able to
-provide him with some basic power usage data. Electricity for this
-cluster is backed by renewable energy certificates.</li>
-<li>Cluster 2 is based in Wales. Has published a GHG analysis of the
-cluster. This includes an embodied emissions analysis as well as power
-usage. Provides a tool for system users to estimate the carbon emissions
-of their workloads.</li>
-</ul>
-</li>
-<li>Electricity usage from calculations.
-<ul>
-<li>Hugh is fairly sure he uses cluster 2 more than the others but he
-doesn’t track exactly how much and what workloads he runs.</li>
-<li>Hugh is confident that his simulation workloads form &gt; 90% of his
-cluster usage and he will get the most impact out of focus on those over
-data analysis workloads.</li>
-<li>The majority of Hugh’s workloads run for at least 48 hours. He
+<p>Hugh starts by doing research some background reasearch about the two
+clusters he uses.</p>
+<p>DRAGONFLY is a cluster based in London. It doesn’t publish any
+sustainability information. The documentation pages provide some lists
+of the available hardware but these are fairly high level and don’t
+include specific CPU or server models. Electricity for this cluster is
+backed by renewable energy certificates.</p>
+<p>LANCER is a cluster based in Wales. Its documentation has some
+dedicated information on sustainability including a GHG analysis of the
+cluster. This includes an embodied emissions analysis as well as total
+power usage. Most usefully Hugh finds that the cluster provides a tool
+for users to estimate the carbon emissions of their workloads. This tool
+has been tested and calibrated for the cluster so should be fairly
+accurate.</p>
+<p>Hugh then considers each of the emissions sources in turn.</p>
+<div class="section level3">
+<h3 id="electricity-usage-from-hpc-workloads">Electricity usage from HPC workloads<a class="anchor" aria-label="anchor" href="#electricity-usage-from-hpc-workloads"></a>
+</h3>
+<p>Hugh realises that carbon emissions associated with his HPC usage are
+directly related to his level of usage. Currently Hugh is fairly sure he
+uses LANCER the most but he doesn’t track exactly how much and what
+workloads he runs. Collecting this data will be an important first
+step.</p>
+<p>Even without detailed data Hugh is confident that his simulation
+workloads form more than 90% of his cluster usage. As the data analysis
+workflows also tend to be more diverse he decides to focus his initial
+efforts on his simulation workloads as he will get the most impact from
+improving those.</p>
+<p>Hugh also notes that most of his simulation workloads run for at
+least 48 hours and he has no control over when they start running. He
 therefore concludes that there is little scope to exploit demand
-shifting to reduce carbon intensity.</li>
-</ul>
-</li>
-<li>Whilst the embodied emissions for the clusters are relevant to
+shifting to reduce carbon intensity.</p>
+</div>
+<div class="section level3">
+<h3 id="embodied-emissions-from-hpc-facilities">Embodied Emissions from HPC facilities<a class="anchor" aria-label="anchor" href="#embodied-emissions-from-hpc-facilities"></a>
+</h3>
+<p>Whilst the embodied emissions for the clusters are relevant to
 calculating the carbon impact of his work, Hugh notes that these are a
-sunk cost that he is unable to impact at this point. He also doesn’t
-have much data to go on for this.</li>
-</ul></section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a>
+sunk cost that he is unable to impact at this point. LANCER provides
+some data but DRAGONFLY doesn’t provide nearly enough information to
+make much headway. Hugh emails the admins of DRAGONFLY but they’re
+unable to provide him with more information. Based on this Hugh decides
+not to consider embodied emissions in his analysis.</p>
+</div>
+</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a>
 </h2>
 <hr class="half-width">
-<ul>
-<li>Estimate total CPU usage for simulation / data analysis. For the
-next two weeks Hugh keeps track of the workloads that he runs on the
-different clusters. He tracks the total cpu-hours spent on different
-clusters and the different codes used on each one.</li>
-</ul>
+<p>For the next two weeks Hugh keeps track of the workloads that he runs
+on the different clusters. He tracks the total CPU-hours spent on
+different clusters and the different simulation codes used on each
+one.</p>
 <table class="table">
 <thead><tr class="header">
 <th>Cluster</th>
-<th>Workload</th>
+<th>Simulation Code</th>
 <th align="right">Total CPU-hours</th>
 <th>Notes</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Cluster 1</td>
-<td>Simulation Code 1</td>
-<td align="right">9000</td>
+<td>DRAGONFLY</td>
+<td>GROMINZ</td>
+<td align="right">45,000</td>
 <td>Self-compiled</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Simulation Code 2</td>
-<td align="right">6,000</td>
+<td>ORANGE</td>
+<td align="right">30,000</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Simulation Code 3</td>
-<td align="right">4,000</td>
+<td>LUMMPS</td>
+<td align="right">20,000</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Cluster 2</td>
-<td>Simulation Code 1</td>
-<td align="right">12,000</td>
+<td>LANCER</td>
+<td>GROMINZ</td>
+<td align="right">60,000</td>
 <td>Self-compiled</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Simulation Code 2</td>
-<td align="right">8,000</td>
+<td>ORANGE</td>
+<td align="right">40,000</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Simulation Code 3</td>
-<td align="right">15,000</td>
+<td>LUMMPS</td>
+<td align="right">75,000</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><p>Whilst collecting the above data Hugh also notes that around
-3,000 CPU-hours were wasted on workloads that he hadn’t setup properly
-and which had to be repeated.</p></li>
-<li><p>Thanks to the tooling on Cluster 2, Hugh is able to produce a
-total figure for the carbon emissions of his work there</p></li>
-<li>
-<p>Hugh also researches the average carbon intensities of different
-regions.</p>
-<ul>
-<li>Cluster 1 - 100 gCO2e/kwh</li>
-<li>Cluster 2 - 60 gCO2e/kwh</li>
-</ul>
-</li>
-</ul></section><section><h2 class="section-heading" id="taking-action">Taking Action<a class="anchor" aria-label="anchor" href="#taking-action"></a>
+<p>Using the calculation tool provided by LANCER Hugh is able to get an
+estimate of the carbon emissions associated with all of his work there.
+The total amount is 94 kgCO2e. Hugh also decides to estimate his
+emissions from DRAGONFLY by scaling the emissions of LANCER by the
+difference in CPU-hours used on both systems - he’s aware that LANCER
+and DRAGONFLY are quite different and so this value for DRAGONFLY is
+very approximate but still thinks it’s useful to know. This gives a
+total of 51 kgCO2e for DRAGONFLY.</p>
+<p>Whilst collecting the above data Hugh also notes that around 15,000
+CPU-hours were wasted on workloads that he hadn’t setup properly and
+which had to be repeated. He estimates this corresponds to around 8
+kgCO2e.</p>
+<p>Finally Hugh, takes his total emissions figure and tries to better
+understand what it means by comparing with other emissions sources. He
+finds that arond 145 kgCO2e is approximately equivalent to driving for
+around 500 miles in a petrol fueled car.</p>
+</section><section><h2 class="section-heading" id="taking-action">Taking Action<a class="anchor" aria-label="anchor" href="#taking-action"></a>
 </h2>
 <hr class="half-width">
 <p>Based on the data gathered above Hugh observes:</p>
 <ul>
-<li>He spends the most cpu-hours on Cluster 2.</li>
-<li>He spends the most cpu-hours using Simulation Code 1.</li>
-<li>The carbon intensity of the electricity for Cluster 2 is
-significantly lower.</li>
+<li>He spends the most CPU-hours on LANCER.</li>
+<li>He spends the most CPU-hours using GROMINZ.</li>
 </ul>
-<p>Hugh wants to be able to measure the impact of any changes he makes
-so he decides to focus on Cluster 2 as this has tooling to support
-accurately measuring carbon emissions. He’s confident that any changes
-he makes on Cluster 2 will be transferable to Cluster 1 even if he can’t
-measure the impact so directly there.</p>
-<p>Actions he can take (to be expanded):</p>
-<ul>
-<li><p>Sanity check his workloads before - to reduce wasted CPU-hours.
-Pairs up with colleagues so they can all check each others.</p></li>
-<li><p>Optimise compilation - Simulation Code 1 is the one he uses the
-most so it’s worth looking if there are any easy performance boosts from
-tweaking the compilation. Asks the code authors and his friendly local
-RSE team for help. Gets a 5% speed boost by changing some compiler flags
-and linking a better optimised library.</p></li>
-<li><p>Compare code performance on different systems - Hugh identifies
-that Simulation Code 1 is 20% faster on cluster 2 with the same number
-of CPU cores. Codes 2 and 3 don’t show much difference. Hugh shifts to
-prioritising running Simulation Code 1 on Cluster 2.</p></li>
-<li><p>Optimise workloads - parallel execution has diminishing returns
-as more resources are applied to the same size problem. Hugh adopts the
-practice of carrying out performance profiling of his different
-simulation setups before commiting to production simulations to identify
-the best tradeoffs between simulation speed and carbon
-efficiency.</p></li>
-<li><p>Monitor workloads more closely for termination. Hugh simulates
-his systems for many timesteps but it’s not clear in advance how many
-are required for a given study. By monitoring the progress of his
-simulations more closely, Hugh can stop running them sooner rather than
-choosing an arbitrary number of timesteps in advance.</p></li>
-</ul>
-<p>Other actions:</p>
-<ul>
-<li><p>Hugh shares his findings with his colleagues and is able to
-easily help them make some small improvements.</p></li>
-<li><p>Hugh contacts the team maintaining Cluster 1 highlighting the
-utility of tools to measure carbon intensity data. The team promise to
-explore how they can add some more functionality to Cluster 1.</p></li>
-</ul>
+<p>This suggests Hugh will get the most impact by focussing his efforts
+on these areas. Hugh wants to be able to measure the impact of any
+changes he makes which can be best done using the emissions tooling on
+LANCER. He’s also confident that most changes he makes on LANCER will be
+transferable to DRAGONFLY even if he can’t measure the impact so
+directly there.</p>
+<p>In order to minimise his emissions Hugh realises he can both improve
+the efficiency of the simulations he performs and try to reduce the
+overall amount of simulation.</p>
+<div class="section level3">
+<h3 id="reducing-simulation">Reducing Simulation<a class="anchor" aria-label="anchor" href="#reducing-simulation"></a>
+</h3>
+<p>The 15,000 wasted CPU-hours of simulation are an obvious initial
+target. Hugh reviews the jobs that went wrong and identifies the root
+causes. He then adjusts his workflows to prevent them happening again.
+To help in the future, he agrees with a member of this research group
+that they will double check each others simulation inputs before
+starting significant new simulation projects. With these measures Hugh
+estimates that he may be able to reduce his wasted CPU-hours by
+half.</p>
+<p>Hugh’s work requires running simulations for many individual
+timesteps but it’s often not obvious in advance how many timesteps are
+required. Reviewing some of his recent projects Hugh concludes that by
+monitoring his workloads more closely he can terminate some of them
+earlier. Hugh estimates this could reduce the CPU-hours used per project
+by 10%.</p>
+</div>
+<div class="section level3">
+<h3 id="optimising-workloads">Optimising Workloads<a class="anchor" aria-label="anchor" href="#optimising-workloads"></a>
+</h3>
+<p>Hugh notes that GROMINZ is less commonly used in his field and so he
+has had to compile it himself on both clusters. Hugh doesn’t have a lot
+of experience doing this and had to piece together how to do it with
+some online searching and notes from a old colleague. Hugh reaches out
+to the authors of the code who are able to give him some general advice
+but can’t offer tailored help. Hugh also gets in touch with the local
+Research Software Engineering team at his institute who are more
+familiar with the clusters and are able to provide a small amount of
+effort to help. Together they identify some tweaks to the compilation
+and manage to get a 5% speed boost.</p>
+<p>To better understand the differences between the codes and clusters
+he uses Hugh carries out some performance benchmarking. He runs
+simulations with all of his simulation codes across both clusters. Hugh
+carefully designs these simulations to be short, so as to not generate
+too many emissions, but representative of typical workloads. A key
+finding he identifies is that GROMINZ runs 15% faster on LANCER when
+using the same number of CPU cores. Meanwhile, ORANGE and LUMMPS don’t
+seem to show much difference between the two clusters. Hugh realises he
+can work more efficiently by shifting as much of his work using GROMINZ
+to LANCER as possible.</p>
+<p>Most of Hugh’s simulations require him to run jobs in parallel, using
+many CPU cores and cluster nodes at the same time. Hugh is familiar with
+the fact that as his jobs use increasing amount of resources there is a
+trade-off in computational efficiency. With some of his current projects
+Hugh realises he has not put much thought into choosing the resources
+used. Taking one of his recent projects Hugh carries out some
+benchmarking by running the same simulation using different sets of
+computational resources. He identifies that for that set of simulations
+he could have reduced his use of computational resources by 20% whilst
+only losing 10% speed. Hugh resolves to carry out this sort of
+benchmarking for all new projects he starts to identify a good trade-off
+between speed and efficiency.</p>
+</div>
+<div class="section level3">
+<h3 id="outcomes">Outcomes<a class="anchor" aria-label="anchor" href="#outcomes"></a>
+</h3>
+<p>Putting all of the above steps together Hugh estimates that he can
+reduce his overall use of CPU-hours by 25% across both clusters. This
+would result in a saving of ~36 kgCO2 from his two week data collection
+period. Expanding this over a full year gives a reduction of nearly 936
+kgCO2. Hugh also continues to collect data on his HPC workloads so that
+he can assess the impact of the changes he’s made in the future.</p>
+<p>Hugh shares his findings with his colleagues in their regular group
+meeting. Several of his colleagues use the same clusters and simulation
+codes as him so they are easily able to make use of Hugh’s work.</p>
+<p>Hugh also contacts the team maintaining DRAGONFLY highlighting the
+utility of tools to measure carbon intensity data. The team promises to
+explore how they can add some more functionality to DRAGONFLY.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-07_case_study4"><p>Content from <a href="07_case_study4.html">Case Study 4 - GPU Computing User</a></p>
+ -->
+</div>
+</section></section><section id="aio-07_case_study4"><p>Content from <a href="07_case_study4.html">Case Study 4 - GPU Computing User</a></p>
 <hr>
 <p>Last updated on 2026-02-05 |
 
@@ -2123,7 +2175,7 @@ activities?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><strong>Scope 2</strong></li>
@@ -2181,7 +2233,7 @@ accuracy?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Use transfer learning (we are still working with cats, after
