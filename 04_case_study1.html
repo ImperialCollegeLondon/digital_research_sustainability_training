@@ -245,7 +245,10 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#scenario">Scenario</a></li>
-<li><a href="#suggested-approach">Suggested Approach</a></li>
+<li><a href="#collecting-information">Collecting Information</a></li>
+<li><a href="#analysis">Analysis</a></li>
+<li><a href="#taking-action">Taking Action</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -337,7 +340,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Study 1 - Researcher</h1>
-        <p>Last updated on 2026-02-05 |
+        <p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/04_case_study1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -378,13 +381,11 @@ workload.</li>
 </div>
 <section><h2 class="section-heading" id="scenario">Scenario<a class="anchor" aria-label="anchor" href="#scenario"></a></h2>
 <hr class="half-width"><p>Celia is a researcher in a university. Two years ago, she developed
-and released a Python package with a novel data analysis technique
-relevant to her research area. She had the chance to travel
-internationally for conducting a workshop based on her package at a
-conference. The package has been a big success and has been widely
-adopted. However, she has heard from some users that they are using it
-on increasingly large datasets that leads to demanding memory
-requirements and slow performance.</p>
+and released a Python package (hosted on PyPI) with a novel data
+analysis technique relevant to her research area. The package has been a
+big success and has been widely adopted. However, she has heard from
+some users that they are using it on increasingly large datasets that
+leads to demanding memory requirements and slow performance.</p>
 <p>Celia is concerned about the environmental impact of her software
 package. She wants to assess the carbon emissions associated with both
 the development and usage of her package and identify ways to reduce
@@ -392,17 +393,23 @@ these emissions.</p>
 <p>To begin with, Celia identifies the sources of carbon emissions
 associated with her work and categorises them under the GHG
 protocol.</p>
-<div id="challenge-1-identify-scope-2-emissions" class="callout challenge">
+<div id="challenge-1-identify-scope-of-the-emissions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-identify-scope-2-emissions" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Identify Scope 2 Emissions</h3>
+<div id="challenge-1-identify-scope-of-the-emissions" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify Scope of the
+Emissions</h3>
 <div class="callout-content">
-<p>What Scope 2 emissions under the GHG protocol can you identity from
-Celia’s work?</p>
-</div>
+<p>Under which scope would the following activities from Celia’s work be
+categorised?</p>
+<ul><li>Emissions from electricity usage of the hardware used for software
+development.</li>
+<li>Embedded emissions from hardware used for software development.</li>
+<li>Use of services such as GitHub Actions and AI Coding agents.</li>
+<li>Electricity usage when users of the package run the code.</li>
+</ul></div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -412,35 +419,10 @@ Celia’s work?</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ul><li>Emissions from electricity usage of the hardware used for software
-development.</li>
-</ul></div>
-</div>
-</div>
-</div>
-<div id="challenge-2-identify-scope-3-emissions" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-identify-scope-3-emissions" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Identify Scope 3 Emissions</h3>
-<div class="callout-content">
-<p>What Scope 3 emissions under the GHG protocol can you identity from
-Celia’s work?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<ul><li>Embedded emissions from hardware used for software development.</li>
-<li>Use of services such as GitHub Actions and AI Coding agents.</li>
-<li>Electricity usage when users of the package run the code.</li>
+<ul><li>Scope 2</li>
+<li>Scope 3</li>
+<li>Scope 3</li>
+<li>Scope 3</li>
 </ul></div>
 </div>
 </div>
@@ -448,21 +430,94 @@ Celia’s work?</p>
 <p>Celia should assess the balance of emissions involved in development
 of the code base versus its usage. She should look at how to estimate
 these then focus her emission reduction measures appropriately.</p>
-</section><section><h2 class="section-heading" id="suggested-approach">Suggested Approach<a class="anchor" aria-label="anchor" href="#suggested-approach"></a></h2>
-<hr class="half-width"><p>After Celia has identified the Scope 2 and Scope 3 emissions sources
-associated with the development and usage of her software package, she
-could take some measures to reduce these emissions.</p>
-<div class="section level3">
-<h3 id="reducing-scope-2-emissions">Reducing Scope 2 emissions<a class="anchor" aria-label="anchor" href="#reducing-scope-2-emissions"></a></h3>
-<ul><li>Optimising the code base to reduce the computational resources and
-runtime of its use.</li>
-</ul></div>
-<div class="section level3">
-<h3 id="reducing-scope-3-emissions">Reducing Scope 3 emissions<a class="anchor" aria-label="anchor" href="#reducing-scope-3-emissions"></a></h3>
-<ul><li>Producing documentation for users to help them make the most
-efficient use possible of her code.</li>
-<li>Reducing the use of services such as GitHub Actions.</li>
-</ul><div id="keypoints1" class="callout keypoints">
+</section><section><h2 class="section-heading" id="collecting-information">Collecting Information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
+<hr class="half-width"><p>Celia decides to learn more about each of the emission sources,
+starting with inspecting the hardware she uses for the package
+development. She primarily works on her laptop, on an average, using it
+for 20 hours per week for the software development. From the Product
+Carbon Footprint (PCF) data sheet for her laptop, she finds the embedded
+emissions associated with the hardware components - CPU (50 kg CO2e),
+GPU (30 kg CO2e), and RAM (20 kg CO2e).</p>
+<p>Next, she reviews the code base and notices that it is not optimised
+for performance. She finds that the code runs on a single CPU core and
+does not make use of any GPU acceleration. She also finds that there are
+some redundant computations in the code that could be optimised.</p>
+<p>To ensure that her software package follows best practices, she has
+been using GitHub Actions for continuous integration and testing. At
+present, there are around 5 workflows that run on GitHub Actions, and
+they run around 10 times a day.</p>
+<p>For creating inline documentation for her code, Celia has been using
+AI coding agents. While she is not using them frequently, she notices
+that on an average, she writes approximately 20 prompts to the agents
+every week.</p>
+<p>Finally, Celia reaches out to her research group members who are
+users of her package. They agree to provide the necessary information on
+their usage of the package. She finds that they are using it on a local
+server with 16 CPU cores and 64 GB of RAM. They run the package for
+around 4 hours per week.</p>
+</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
+<hr class="half-width"><p>Celia tracks the activities for a week to get an estimate of the
+emissions associated with her software development and usage. From the
+PCF data sheet for her laptop, the embedded emissions from the hardware
+components (CPU + GPU + RAM) is 100 kg CO2e. Moreover, since her code is
+not optimised for performance, it has been consuming more computational
+resources and is taking longer to run than it should, leading to higher
+emissions. The runtime of the code on a single CPU core is around 4
+hours per week.</p>
+<p>The five workflows on GitHub Actions that run around 10 times a day,
+have a total runtime of 2940 seconds per week. Whereas, the 20 prompts
+to the AI coding agents every week have a total runtime of around 20
+minutes per week. At present, she is not aware of any tools that can be
+used to estimate the emissions from the use of GitHub Actions and AI
+coding agents. So decides to use them sparingly and only when
+necessary.</p>
+<p>Finally, to compute the carbon footprint of her software package, she
+uses the <a href="https://calculator.green-algorithms.org/" class="external-link">Green
+Algorithms Calculator</a>. For the same, she records the following
+information:</p>
+<ul><li>Runtime of package in hours and minutes</li>
+<li>Types of cores used (CPU, GPU, or both)</li>
+<li>Number of cores used</li>
+<li>Model used</li>
+<li>Memory available in GB</li>
+<li>Platform used for the software development (e.g. local server,
+personal computer, cloud computing)</li>
+<li>Location to retrieve the energy mix of the location</li>
+<li>Real usage factor of the CPU</li>
+<li>Power Usage Efficiency (PUE) of the local data centre (if
+applicable)</li>
+<li>Any multiplicative factor to use</li>
+</ul></section><section><h2 class="section-heading" id="taking-action">Taking Action<a class="anchor" aria-label="anchor" href="#taking-action"></a></h2>
+<hr class="half-width"><p>After Celia has identified the emissions sources associated with the
+development and usage of her software package, she takes some measures
+to reduce these emissions.</p>
+<p>She optimises the code base to reduce the computational resources and
+runtime of its use. This includes optimising the error handling and
+input validation in her code to reduce the likelihood of running into
+errors that lead to repeated runs of the code. Thus, minimising wasted
+computation. She integrates the <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a> tool into her
+code base so that it can report the carbon emissions when the code is
+run. This allows her to track the emissions associated with the usage of
+her package and identify areas for further optimisation.</p>
+<p>The users of her package (members of her research group) have been
+asking her for help with optimising the performance of the code. She
+provides them with some tips on how to optimise the performance of the
+code when they run it on their local machines. Additionally, she creates
+a detailed user guide that includes instructions on how to make the most
+efficient use of her package, including tips on how to optimise the
+performance of the code when running it on different hardware
+configurations.</p>
+<p>Her package only intends to support a specific set of OS and Python
+versions. Therefore, she reduces the number of tests run on GitHub
+Actions to only include these OS and Python versions. Moreover, to
+minimise the number of jobs run in each workflow, she makes sure that
+they are run on pull requests against the primary development branch
+only.</p>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ol style="list-style-type: decimal"><li>Product Carbon Footprint (PCF) data for <a href="https://www.dell.com/en-uk/lp/dt/product-carbon-footprints" class="external-link">Dell
+products</a>
+</li>
+</ol><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -480,7 +535,6 @@ development is important for identifying areas for improvement.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03_activities.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -541,7 +595,7 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/04_case_study1.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/04_case_study1.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-05",
+  "dateModified": "2026-02-24",
   "datePublished": "2026-02-24"
 }
 
