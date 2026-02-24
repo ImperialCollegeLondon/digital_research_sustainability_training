@@ -205,8 +205,8 @@ associated with her current workflow are **~113 kgCO2.**
 - Emma switches to GPT-40-mini, which has a lower carbon footprint per query, and
  since her computational requirements are fairly light. However, debugging now
  takes 50 queries.
-- She keeps the two copies of raw data (7 GB) in the LTO-tape based facilities provided
- by her institution. She keeps the processed data (2 GB) on HDDs for active work
+- She keeps the two copies of raw data (7 TB) in the LTO-tape based facilities provided
+ by her institution. She keeps the processed data (2 TB) on HDDs for active work
 - She runs her scripts on her modern laptop, which take 6h to finish.
 
 Given all we know about Emma's workflow, calculate the emissions associated with the current
@@ -217,7 +217,7 @@ Given all we know about Emma's workflow, calculate the emissions associated with
 Emma is using her modern laptop and looks up the specifications for her model to get more
  more accurate emissions. She finds that her laptop has a Core i6-1145G7 process, with 4
  CPU cores and 64 GB memory. [She uses the Green-algorithms calculator](https://calculator.green-algorithms.org/)
- to find that her computeremits 53.20 gCO2e each time she runs the script for 6 hours.
+ to find that her computer emits 53.20 gCO2e each time she runs the script for 6 hours.
  If she runs the script once every year, the total emissions would be **0.266 kgCo2e**.
 
 #### New data storage strategy
@@ -229,14 +229,14 @@ Given that magnetic tape has negligible emissions when idle, we can assume that 
 
 $$
 E_{tape storage} = 0.07 kgCO₂e/TB/year \times 7 TB \\
-E_{tapestorage}  = 0.49 kgCO₂e
+E_{tapestorage}  = 0.49 kgCO₂e/year
 $$
 
 Keeping the 2 GB of processed data on HDDs would generate:
 
 $$
 E_{HDDs} =  3 kgCO₂e/TB/year \times 2 TB + 9 kgCO₂e/TB/year \times 2 TB   \\
-E_{HDDs}  = 24 kgCO₂e
+E_{HDDs}  = 24 kgCO₂e/year
 $$
 
 Therefore, the total costs associated with storing Emma's research data would be
