@@ -272,7 +272,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#scenario">Scenario</a></li>
-<li><a href="#digital-waste-reduction">Digital Waste Reduction</a></li>
+<li><a href="#collecting-information">Collecting Information</a></li>
+<li><a href="#analysis">Analysis</a></li>
+<li><a href="#taking-action">Taking Action</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -337,7 +339,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Study 4 - GPU Computing User</h1>
-        <p>Last updated on 2026-02-05 |
+        <p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/07_case_study4.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,37 +388,37 @@ applications.</li>
 <hr class="half-width"><p>Miguel is an <a href="https://en.wikipedia.org/wiki/MLOps" class="external-link">MLOps</a>
 engineer embedded in an applied computational neuroscience department,
 whose applications make heavy use of heterogeneous compute hardware such
-as GPUs and neuromorphic processors. While the use of GPUs and other
-exotic hardware is crucial for demanding <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data" class="external-link">single
+as GPUs and neuromorphic processors. While the use of this hardware is
+crucial for demanding <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data" class="external-link">single
 instruction multiple data (SIMD)</a> tasks, he is mindful that his
-domain of work is often disproportionately carbon-intensive.</p>
-<p>His primary responsibilities include the deployment of cutting edge
-deep learning models and neuromorphic simulations to dedicated
-performant hardware, and periodically maintaining these models to add
-features and prevent model drift. The sheer size of the models, and the
-vast amounts of data used to train them, mean that any procedure he
-performs must be carefully planned in advance, as mistakes are both
-financially and environmentally expensive.</p>
-<p>To do his work, Miguel has access to a bank of top-of-the-line GPUs
-in his institution’s HPC cluster, but also works on various GPU-equipped
-workstations throughout the department. Furthermore, larger jobs are
-offloaded to a dedicated external GPU cluster.</p>
-<div id="challenge-1-identify-carbon-emissions" class="callout challenge">
+domain of work is often disproportionately carbon-intensive. The sheer
+size of the models, and the vast amounts of data used to train them,
+mean that any procedure he performs must be carefully planned in
+advance, as mistakes are costly.</p>
+<p>His primary responsibilities are:</p>
+<ul><li>The deployment of cutting edge deep learning models</li>
+<li>The curation and storing of large datasets</li>
+<li>Periodic maintainance of models to add features and prevent model
+drift</li>
+</ul><p>To do his work, Miguel also purchases and maintains top-of-the-line
+GPU and fileservers, whilst safely disposing retired equipment. The
+largest jobs are offloaded to a dedicated cloud GPU cluster, and
+datasets are periodically backed up in the cloud.</p>
+<p>Miguel is tasked with deploying a new model to the cloud, based on
+the architecture of an existing model he deployed last year. The
+existing model performs simple detection of cats in images, but the new
+model must produce bounding boxes.</p>
+<div id="identify-scope-2-emissions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-identify-carbon-emissions" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Identify Carbon Emissions</h3>
+<div id="identify-scope-2-emissions" class="callout-inner">
+<h3 class="callout-title">Identify Scope 2 Emissions</h3>
 <div class="callout-content">
-<p>Using the definitions of Scopes 1, 2 and 3 carbon emissions, how
-would you classify the carbon emissions resulting from the following
-activities?</p>
-<ol style="list-style-type: decimal"><li>Training a new model on the HPC cluster</li>
-<li>Updating workstation GPUs and disposing retired units</li>
-<li>Data backup and curation</li>
-<li>Deploying and using a new model in the cloud</li>
-</ol></div>
+<p>What Scope 2 emissions under the GHG protocol can you identity from
+Miguel’s work?</p>
+</div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -424,50 +426,26 @@ activities?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li><strong>Scope 2</strong></li>
-<li><strong>Scope 3</strong></li>
-<li>
-<strong>Scope 2</strong> (and <strong>Scope 3</strong> when on-site
-backups are required)</li>
-<li><strong>Scope 2</strong></li>
-</ol></div>
+<ul><li>Training a model on the local workstations</li>
+<li>Training and deploying a model to the cloud</li>
+<li>Running local dataset backup servers</li>
+<li>Dataset cloud backups</li>
+</ul></div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="digital-waste-reduction">Digital Waste Reduction<a class="anchor" aria-label="anchor" href="#digital-waste-reduction"></a></h2>
-<hr class="half-width"><ul><li>Is a new model necessary, or can an existing model be adapted?</li>
-<li>Does it need to be trained from scratch, or can transfer learning be
-used?</li>
-<li>Does the entire model need adjustment, or only part of it?</li>
-<li>What are the FLOPS and memory requirements of the job?</li>
-<li>How does this scale with layer width and dataset size?</li>
-<li>What is the granularity of your parameter sweep?</li>
-<li>Can training end early on convergence?</li>
-<li>What contingency plans are in place (training checkpoints, data
-backups, …)?</li>
-<li>Can artifacts be better curated, to reduce duplicate runs?</li>
-</ul><div id="challenge-2-identify-wasteful-computing" class="callout challenge">
+<div id="identify-scope-3-emissions" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-2-identify-wasteful-computing" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Identify Wasteful Computing</h3>
+<div id="identify-scope-3-emissions" class="callout-inner">
+<h3 class="callout-title">Identify Scope 3 Emissions</h3>
 <div class="callout-content">
-<p>Miguel is tasked with adding new functionality to a very
-resource-hungry deep learning model deployed in the cloud. Currently the
-model performs simple detection of cats in images, but Miguel wants to
-augment the model to produce bounding boxes. The width of the layers is
-very large, with many convolutional channels each. The model is highly
-trained with vast quantities of animal images, and is already quite
-competent at feline-based image processing. The training script is quite
-crude, and simply passes through the entire dataset through for 100
-epochs.</p>
-<p>Given these requirements, what changes can Miguel make to help bring
-down the model’s carbon footprint, with minimal effect on its
-accuracy?</p>
+<p>What Scope 3 emissions under the GHG protocol can you identity from
+Miguel’s work?</p>
 </div>
 </div>
 </div>
@@ -476,21 +454,98 @@ accuracy?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ul><li>Use transfer learning (we are still working with cats, after
-all).</li>
-<li>Don’t adjust the whole model (we only need a new bounding box
-head).</li>
-<li>Quit early once converged (faster in transfer learning).</li>
-<li>Use sparsity-inducing regularisation techniques. This allows us
-to…</li>
-<li>Prune weak/redundant neurons/channels, creating a leaner model.</li>
-<li>Any others you notice?</li>
+<ul><li>Updating GPUs and fileserver hardware</li>
+<li>Disposal of retired hardware</li>
 </ul></div>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="collecting-information">Collecting Information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
+<hr class="half-width"><p>Miguel finds that the previous model was highly trained with vast
+quantities of real animal images, and is already quite competent at
+feline-based image processing. It may not be necessary to train the
+model from scratch if transfer learning is utilised.</p>
+<p>He takes a look at the model’s architecture, and notices that it is
+very large for its stated purpose, with many channels per convolutional
+layer, and very wide fully connected layers in the head. He realises
+that his workstation’s GPUs may not have enough memory to train the
+model effectively in its current form, and begins to consider his
+options.</p>
+<p>The first option is familiar to Miguel: offload the work to a cloud
+GPU compute provider. He browses them, in turn, and is able to find the
+hardware configuration for most of them from datasheets and
+documentation. Knowing that FLOPs/Watt is a poor surrogate for total
+power usage in deep learning, he consults public datasets measuring
+whole-system power usage during inference, such as the <a href="https://mlcommons.org/working-groups/benchmarks/power/" class="external-link">MLPerf
+Power</a> dataset. He is able to find the hardware configuration of an
+acceptible provider, and notes that <span class="math inline">\(Samples/Joule = (Samples/s)/(Watts) ≈
+9.89\)</span>.</p>
+<p>Alongside this, he considers a second option: whilst his personal
+workstation’s GPU is far from cutting-edge, it is by no means obsolete.
+He knows from experience that newer does not automatically mean greener,
+and keeps in mind during pre-job analysis, looking for oppurtunities to
+make the model lean enough to run on his GPU.</p>
+</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
+<hr class="half-width"><p>For the next step, Miguel begins to quantify the computational
+resources required to modify the model. He makes a rough total memory
+estimate; with the number of trainable parameters <span class="math inline">\(P\)</span>, the sum of all layer sizes <span class="math inline">\(N\)</span>, the batch size <span class="math inline">\(M\)</span>, a constant <span class="math inline">\(j\)</span> depending on the chosen optimiser, a
+constant <span class="math inline">\(k\)</span> depending on the unit
+model, and bytes per number as <span class="math inline">\(b\)</span>,
+he reserves memory (in bytes) for:</p>
+<ul><li>Parameters: <span class="math inline">\(P \cdot b\)</span>
+</li>
+<li>Parameter gradients: <span class="math inline">\(P \cdot
+b\)</span>
+</li>
+<li>Optimiser state: <span class="math inline">\(P \cdot j \cdot
+b\)</span>
+</li>
+<li>Activations: <span class="math inline">\(M \cdot N \cdot k \cdot
+b\)</span>
+</li>
+<li>An extra <span class="math inline">\(20%\)</span> for ML frameworks
+usage</li>
+</ul><p>With this estimation framework, he is able to know (before
+submitting) roughly how much GPU memory the job will require, as a
+function of batch and layer size. Next, Miguel roughly estimates the
+computational complexity of the model. Whilst FLOPs is a poor surrogate
+metric for carbon footprint, it can help for estimating run duration
+scaling, which is useful to prevent wasting computation by reserving
+enough time for the cloud job whilst experimenting.</p>
+<p>Finally, Miguel notices that the training script of the base model
+was very crude, and simply passed through the entire dataset through the
+model for exactly 100 epochs of stochastic gradient descent (SGD). No
+regularisation schemes were used. Whilst the choice of optimiser affects
+the memory required to train the model, via <span class="math inline">\(j\)</span> above, the possible energy savings of
+early convergence may be overall worth it.</p>
+</section><section><h2 class="section-heading" id="taking-action">Taking Action<a class="anchor" aria-label="anchor" href="#taking-action"></a></h2>
+<hr class="half-width"><p>From his observations, Miguel formulates a plan. It is clear to him
+that it is entirely unnecessary to train a new model from scratch, given
+the prior model is already quite competent at processing cats. The
+existing model can readily be adapted by appending a new head for cat
+bounding-boxes, and transfer learning techniques can be utilised to
+further fine-tune the model to a reasonable accuracy.</p>
+<p>He begins experimenting, appending the new bounding-box head and
+starting training, keeping the trainable parameters in the body fixed,
+and gradually relaxing them as training progresses. In doing so, he
+notices that the model comes close to converging well before the
+programmed 100 epochs. He modifies the training script to terminate
+early, once the model’s loss function converges, and back up training
+state after each epoch, to avoid starting again on software crash or
+hardware failure. He is able to further reduce training time with a
+moderate increase in required memory (<span class="math inline">\(j\)</span> in the memory equations) using a more
+sophisticated optimiser, and finds this extra memory requirement is
+easily offset by reducing floating-point number precision at practically
+no detriment to model accuracy.</p>
+<p>Finally, revisiting the earlier issue of model size, Miguel wonders
+if the model can be pruned to enable training on his workstation,
+instead of relying on the cloud provider. Noting again that the model is
+very large for its stated purpose, Miguel adds L1 (Lasso) regularisation
+to reduce redundant activation, allowing many (now-unused) activation
+units to be removed from the model entirely, promoting a leaner and more
+power-efficient model in the process.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -555,7 +610,7 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/07_case_study4.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/07_case_study4.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-05",
+  "dateModified": "2026-02-24",
   "datePublished": "2026-02-24"
 }
 
