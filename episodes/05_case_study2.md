@@ -7,6 +7,7 @@ exercises: 4
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How does the increasing use of LLMs affect carbon foorprint and energy efficiency?
+- What strategies can minimise the carbon footprint of research data storage?
 - How does relying on old hardware prevent a modern research lab from being energy efficient?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -17,8 +18,8 @@ exercises: 4
 lab workflows
 - Identify tools and resources to help estimate emissions associated with daily
  computational research tasks
-- Quantify carbon emissions associated with using LLMs to generate scripts
-- Qiantify carbon emissions associate with storing research data
+- Quantify carbon emissions associated with using LLMs to generate Python scripts
+- Quantify carbon emissions associated with storing research data
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -96,7 +97,7 @@ She found the following information for the carbon footprint associated with the
 - SDDs are the most carbon efficient when in operation, but their manufacturing produces
  significantly more emissions.
 - HDDs have a lifespan of 5-10 years, similar to that of SDDs. Their embodied emissions
- are signifcantly lower than that of SDDs but operational emissions are higher.
+ are significantly lower than that of SDDs but operational emissions are higher.
 - Tape storage has a longer lifespan (10-15 years), with modern ones reaching
  up to 30 years. However, moving and accessing data on a LTO tape is slow.
 - Cloud storage's associated emissions are estimated between 2-40 kg CO₂e/TB/year
@@ -104,15 +105,17 @@ She found the following information for the carbon footprint associated with the
  and [Greenly](https://greenly.earth/en-gb/blog/industries/what-is-the-carbon-footprint-of-data-storage)),
  but the value depends heavily on the data center's efficiency and the region's power grid.
  Embodied emissions are hard to estimate and depend on the hardware used by the provider
- (HDDs or SSHs). They are often included in the operational carbon footprint emissions.
+ (HDDs or SSDs). They are often included in the operational carbon footprint emissions.
 
 The carbon emissions associated with the four storage types are summarised below:
 
 | Category | SDD | HDD | LTO tape | Cloud |
 | :--- | :--- | :--- | :--- | :--- |
-| **Embodied Carbon (kg CO₂e per TB)** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ | Difficult to estimate |
-| **Operational Carbon (kg CO₂e per TB)** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) | Moderate - High (2-40 kg) |
+| **Embodied Carbon** | High (16-32 kg)^1^ | Moderate (2-4 kg)^1^ | Low (~0.07 kg)^3^ | Difficult to estimate |
+| **Operational Carbon** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) | Moderate - High (2-40 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years | Depends on provider |
+
+\* Emissions are in **kg CO₂e per TB per year**
 
 Emma’s research produces 700 GB of raw data each year, and since her project will run
  for five years, she will accumulate 3.5 TB of raw data. Because she keeps two
@@ -122,13 +125,13 @@ Emma’s research produces 700 GB of raw data each year, and since her project w
  9 TB of storage to keep both raw and processed data.
 
  Emma works out that storing the 9 TB data on HDDs will have associated carbon emissions
- aproximately equal to **108 kgCO2e** in combined embodied and operational emissions,
+ approximately equal to **108 kgCO2e** in combined embodied and operational emissions,
  based on the average values within the emissions ranges she identified.
 
 ### LLMs use
 
 Emma is also concerned about the carbon footprint of her increasing use of LLMs to write
- the python code to process and analyse her data. While the exact carbon footprint
+ the Python code to process and analyse her data. While the exact carbon footprint
  of using LLMs is hard to quantify, she found the following:
 
 - The carbon emissions associated with LLM use come from model training emissions,
@@ -150,7 +153,7 @@ Based on her current workflow, Emma uses a reasoning model to write her scripts,
 
 ### Emissions from running her scripts
 
-Emma also begins estimating the carbon emmissions asssociated with running her scripts.
+Emma also begins estimating the carbon emissions associated with running her scripts.
  Since she cannot find the exact specifications of the old desktop, she uses a
  0.3 kW **power draw**, a value she found commonly cited for older computer stations.
  However, she is still unable to find any information on the
@@ -161,17 +164,17 @@ Emma also begins estimating the carbon emmissions asssociated with running her s
 
  She uses the information gathered to calculate the total
  emissions associated with running her scripts for 16 to a total of 0.931 kgCO2e. However,
- this numer is probably going to be higher, as Emma is likely to run the script several
+ this number is probably going to be higher, as Emma is likely to run the script several
  times throughout the course. Assuming, she runs the scripts once a year, the total carbon
- emissions would be closer to approx. **4.656 kgCO2e.**
+ emissions would be closer to approx. **4.656 kgCO2e**.
 
 ### Greatest source of carbon emissions
 
 Based on her calculations, Emma concludes that storing her research data and running her
- python scripts are the activities with the largest associated carbon emissions. Even so,
+ Python scripts are the activities with the largest associated carbon emissions. Even so,
  the emissions linked to using LLMs to help write her code are not insignificant. With
  this in mind, Emma begins developing an improved research workflow to reduce her digital
- cabron footprint.
+ carbon footprint.
 
 ## Analysis
 
@@ -186,7 +189,7 @@ She has heard that her institution provides a tape-based cold storage options lo
  reduce her carbon emissions. While the carbon footprint of using the LLM to generate
  her scripts is not as high as that associated with data storage and running her scripts,
  she decides to switch to a more simple LLM model, which is more suitable for the type
- of python code she is generating.
+ of Python code she is generating.
 
  Emma now wants to quantify the difference in carbon emissions between her existing
   workflow (Scenario 1) and the improved one (Scenario 2).
@@ -229,7 +232,7 @@ Given that magnetic tape has negligible emissions when idle, we can assume that 
 
 $$
 E_{tape storage} = 0.07 kgCO₂e/TB/year \times 7 TB \\
-E_{tapestorage}  = 0.49 kgCO₂e/year
+E_{tape storage}  = 0.49 kgCO₂e/year
 $$
 
 Keeping the 2 GB of processed data on HDDs would generate:
@@ -258,10 +261,9 @@ A comparison of the emissions associated with both scenarios can be found below:
 
 | | **Scenario 1 (Current Workflow)** | **Scenario 2 (Improved Workflow)** | Change |
 | :--- | :--- | :--- | :--- |
-| Emissions Storage (kgCO₂e) | 108 kg | 24.49 kg | HDDs only -> LTO tape + HDDs |
-| Emissions Computing (kgCO₂e) | 4.656 kg | 0.266 kg | old lab Desktop -> modern laptop |
+| Emissions Storage (kgCO₂e) | 108 kg/year | 24.49 kg/year | HDDs only -> LTO tape + HDDs |
+| Emissions Computing (kgCO₂e) | 4.656 kg total | 0.266 kg total | old lab Desktop -> modern laptop |
 | Emissions LLM (kgCO₂e) | 0.324 kg | 0.028 kg | GPT-5 -> GPT-4-o-mini |
-| **Total Emissions (kgCO₂e)** | **132.518 kg** | **24.784 kg** | |
 
 Switching to the new, improved workflow would result in a six-fold reduction in Emma's
  carbon emissions. Particularly, moving from storing data on HDDs to a hybrid storing
@@ -279,7 +281,7 @@ Emma is happy with her carbon footprint after adopting the new workflow.
 - Process the data before uploading to cloud to reduce storage requirements
 - Change which LLMs models she uses based on the task complexity
 - Make use of tools such as [EcoLogits](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
- (open-source python library to estimate the carbon footprint of inference queries made
+ (open-source Python library to estimate the carbon footprint of inference queries made
  to LLMs) and online LLM carbon emissions leaderboards
 
 ## References
