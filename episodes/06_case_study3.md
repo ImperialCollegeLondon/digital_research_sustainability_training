@@ -81,12 +81,12 @@ What Scope 3 emissions under the GHG protocol can you identity from Hugh's work?
 
 Hugh starts by doing research some background reasearch about the two clusters he uses.
 
-Cluster 1 is based in London. It doesn't publish any sustainability information. The
-documentation pages provide some lists of the available hardware but these are fairly
-high level and don't include specific CPU or server models. Electricity for this cluster
-is backed by renewable energy certificates.
+DRAGONFLY is a cluster based in London. It doesn't publish any sustainability
+information. The documentation pages provide some lists of the available hardware but
+these are fairly high level and don't include specific CPU or server models. Electricity
+for this cluster is backed by renewable energy certificates.
 
-Cluster 2 is based in Wales. It's documentation has some dedicated information on
+LANCER is a cluster based in Wales. It's documentation has some dedicated information on
 sustainability including a GHG analysis of the cluster. This includes an embodied
 emissions analysis as well as total power usage. Most usefully Hugh finds that the
 cluster provides a tool for users to estimate the carbon emissions of their workloads.
@@ -97,7 +97,7 @@ Hugh then considers each of the emissions sources in turn.
 ### Electricity usage from HPC workloads
 
 Hugh realises that carbon emissions associated with his HPC usage directly related to
-his level of usage. Currently Hugh is fairly sure he uses cluster 2 the most but he
+his level of usage. Currently Hugh is fairly sure he uses LANCER the most but he
 doesn't track exactly how much and what workloads he runs. Collecting this data will be
 an important first step
 
@@ -114,8 +114,8 @@ scope to exploit demand shifting to reduce carbon intensity.
 
 Whilst the embodied emissions for the clusters are relevant to calculating the carbon
 impact of his work, Hugh notes that these are a sunk cost that he is unable to impact at
-this point. Cluster 2 provides some data but Cluster 1 doesn't provide nearly enough
-information to make much headway. Hugh emails the admins of Cluster 1 but they're unable
+this point. LANCER provides some data but DRAGONFLY doesn't provide nearly enough
+information to make much headway. Hugh emails the admins of DRAGONFLY but they're unable
 to provide him with more information. Based on this Hugh decides not to consider
 embodied emissions in his analysis.
 
@@ -125,22 +125,21 @@ For the next two weeks Hugh keeps track of the workloads that he runs on the dif
 clusters. He tracks the total cpu-hours spent on different clusters and the different
 simulation codes used on each one.
 
-| Cluster | Workload | Total CPU-hours | Notes |
+| Cluster | Simulation Code | Total CPU-hours | Notes |
 | --- | --- | ---: | --- |
-| Cluster 1 | Simulation Code 1 | 45,000 | Self-compiled |
-| | Simulation Code 2 | 30,000 | |
-| | Simulation Code 3 | 20,000 | |
-| Cluster 2 | Simulation Code 1 | 60,000 | Self-compiled |
-| | Simulation Code 2 | 40,000 | |
-| | Simulation Code 3 | 75,000 | |
+| DRAGONFLY | GROMINZ | 45,000 | Self-compiled |
+| | ORANGE | 30,000 | |
+| | LUMMPS | 20,000 | |
+| LANCER | GROMINZ | 60,000 | Self-compiled |
+| | ORANGE | 40,000 | |
+| | LUMMPS | 75,000 | |
 
-Using the calculation tool provided by Cluster 2 Hugh is able to get an estimate of the
-carbon emissions associated with all of his work there. The total amount is 94
-kgCO2e. Hugh also decides to estimate his emissions from Cluster 1 by scaling the
-emissions of Cluster 2 by the difference in CPU-hours used on both systems - he's aware
-that Cluster 1 and Cluster 2 are quite different and so this value for Cluster 1 is very
-approximate but still thinks it's useful to know. This gives a total of 51 kgCO2e for
-Cluster 1.
+Using the calculation tool provided by LANCER Hugh is able to get an estimate of the
+carbon emissions associated with all of his work there. The total amount is 94 kgCO2e.
+Hugh also decides to estimate his emissions from DRAGONFLY by scaling the emissions of
+LANCER by the difference in CPU-hours used on both systems - he's aware that LANCER and
+DRAGONFLY are quite different and so this value for DRAGONFLY is very approximate but
+still thinks it's useful to know. This gives a total of 51 kgCO2e for DRAGONFLY.
 
 Whilst collecting the above data Hugh also notes that around 15,000 CPU-hours were wasted
 on workloads that he hadn't setup properly and which had to be repeated. He estimates
@@ -154,26 +153,26 @@ approximately equivalent to driving for around 500 miles in a petrol fueled car.
 
 Based on the data gathered above Hugh observes:
 
-- He spends the most cpu-hours on Cluster 2.
-- He spends the most cpu-hours using Simulation Code 1.
+- He spends the most cpu-hours on LANCER.
+- He spends the most cpu-hours using GROMINZ.
 
 This suggests Hugh will get the most impact out focussing his efforts on these areas.
 Hugh wants to be able to measure the impact of any changes he makes which can be best
-done using the emissions tooling on Cluster 2. He's also confident that most changes he
-makes on Cluster 2 will be transferable to Cluster 1 even if he can't measure the impact
-so directly there.
+done using the emissions tooling on LANCER. He's also confident that most changes he
+makes on LANCER will be transferable to DRAGONFLY even if he can't measure the impact so
+directly there.
 
 In order to minimise his emissions Hugh realises he can both improve the efficiency of
 the simulations he performs and try to reduce the overall amount of simulation.
 
 ### Reducing Simulation
 
-The 3,000 wasted cpu-hours of simulation are an obvious target initial target. Hugh
-reviews the jobs that went wrong and identifies the root causes. He then adjusts his
-workflows to prevent them happening again. To help in the future, he agrees with a
-member of this research group that they will double check each others simulation inputs
-before starting significant new simulation projects. With these measures Hugh estimates
-that he may be able to reduce his wasted cpu-hours by half.
+The 15,000 wasted cpu-hours of simulation are an obvious initial target. Hugh reviews
+the jobs that went wrong and identifies the root causes. He then adjusts his workflows
+to prevent them happening again. To help in the future, he agrees with a member of this
+research group that they will double check each others simulation inputs before starting
+significant new simulation projects. With these measures Hugh estimates that he may be
+able to reduce his wasted cpu-hours by half.
 
 Hugh's work requires running simulations for many individual timesteps but it's often
 not obvious in advance how many timesteps are required. Reviewing some of his recent
@@ -183,31 +182,31 @@ some of them earlier. Hugh estimates this could reduce the cpu-hours used per pr
 
 ### Optimising Workloads
 
-Hugh notes that Simulation Code 1 is less commonly used in his field and so he has had
-to compile it himself on both clusters. Hugh doesn't have a lot of experience doing this
-and had to piece together how to do it with some online searching and notes from a old
-colleague. Hugh reaches out the authors of the code who are able to give him some
-general advice but can't offer tailored help. Hugh also gets in touch with the local
-research software engineering team at his institute who are more familiar with the
-clusters and are able to provide a small amount of effort to help. Together they
-identify some tweaks to the compilation and manage to get a 5% speed boost.
+Hugh notes that GROMINZ is less commonly used in his field and so he has had to compile
+it himself on both clusters. Hugh doesn't have a lot of experience doing this and had to
+piece together how to do it with some online searching and notes from a old colleague.
+Hugh reaches out the authors of the code who are able to give him some general advice
+but can't offer tailored help. Hugh also gets in touch with the local research software
+engineering team at his institute who are more familiar with the clusters and are able
+to provide a small amount of effort to help. Together they identify some tweaks to the
+compilation and manage to get a 5% speed boost.
 
 To better understand the differences between the codes and clusters he uses Hugh carries
 out some performance benchmarking. He runs simulations with all of his simulation codes
 across both clusters. Hugh carefully designs these simulations to be short, so as to not
 generate too many emissions, but representative of typical workloads. A key finding he
-identifies is that Simulation Code 1 runs 15% faster on Cluster 2 when using the same
-number of CPU cores. Meanwhile, Codes 2 and 3 don't seem to show much difference between
-the two clusters. Hugh realises he can work more efficiently by shifting as much of
-using work using Simulation Code 1 to Cluster 2 as possible.
+identifies is that GROMINZ runs 15% faster on LANCER when using the same number of CPU
+cores. Meanwhile, ORANGE and LUMMPS don't seem to show much difference between the two
+clusters. Hugh realises he can work more efficiently by shifting as much of his work
+using GROMINZ to LANCER as possible.
 
-Most of Hugh's simulations require him to run jobs that in parallel using many cpu cores
-and cluster nodes at the same time. Hugh is familiar with the fact that as his jobs use
+Most of Hugh's simulations require him to run jobs in parallel, using many cpu cores and
+cluster nodes at the same time. Hugh is familiar with the fact that as his jobs use
 increasing amount of resources there is a trade-off in computational efficiency. With
 some of his current projects Hugh realises he has not put much thought into choosing the
 resources used. Taking one of his recent projects Hugh carries out some benchmarking by
 running the same simulation using different sets of computational resources. He
-identifies that for that particular set of simulations he could have reduced his of
+identifies that for that set of simulations he could have reduced his use of
 computational resources by 20% whilst only losing 10% speed. Hugh resolves to carry out
 this sort of benchmarking for all new projects he starts to identify a good trade-off
 between speed and efficiency.
@@ -224,6 +223,6 @@ Hugh shares his findings with his colleagues in their regular group meeting. Sev
 his colleagues use the same clusters and simulation codes as him so are able to easily
 make use of Hugh's work.
 
-Hugh also contacts the team maintaining Cluster 1 highlighting the utility of tools to
+Hugh also contacts the team maintaining DRAGONFLY highlighting the utility of tools to
 measure carbon intensity data. The team promises to explore how they can add some more
-functionality to Cluster 1.
+functionality to DRAGONFLY.
