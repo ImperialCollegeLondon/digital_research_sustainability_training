@@ -42,8 +42,14 @@ But just the fact that you have one of these machines, also has a carbon impact.
 related to the process of sourcing the materials the computer is made off, manufacturing
 and transporting it. These are called _embodied carbon emissions_.
 
-Both embodied and operational emmisions play a significant role in the carbon footprint
+Both embodied and operational emissions play a significant role in the carbon footprint
 of computing devices, but how to estimate them and reduce them is very different.
+
+For modern personal devices in the UK(smartphones, tablets, laptops, etc.) the embodied
+emissions are typically 80-90% of the lifetime emissions with operational emissions being
+a much smaller fraction of the emissions. This means you should focus on activities that
+improve the embodied emissions rate (i.e. extending the lifetime of the device) in the
+first instance.
 
 ### Embodied emissions
 
@@ -83,7 +89,7 @@ course, an HP EliteBook 840 G9, also shown in the following image.
 If we exclude the `Use` section of the chart, which obviously depends on the usage and
 the location, as discussed in the [previous episode](02_carbon.md), the remaining,
 related to production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO2e.
+total, i.e. 160 kgCO<sub>2</sub>e.
 
 It should be noted that different manufacturers use different criteria to calculate
 their embodied emissions, so choosing the computer with the lowest reported embodied
@@ -109,7 +115,7 @@ useful.
 
 Operational emissions are those that are produced when _using_ the equipment. They depend
 on its design and performance, but also on _how_ it is used and _where_ it is used. For
-the later reason, it is often better to consider the energy usage, rather than the carbon
+the latter reason, it is often better to consider the energy usage, rather than the carbon
 emitted as this depends on the energy mix where the machine is being used.
 
 #### Idle energy usage
@@ -193,19 +199,20 @@ understand your energy usage and consider ways of reducing them.
 
 Research datasets are increasingly large and replicated across multiple systems for
 reliability. As modern research practices move toward open data and long-term storage,
-the cumulative energy demand of storage becomes a significant component of digital
+the embodied and operational emissions of storage becomes a significant component of digital
 research's environmental impact.
 
 There are a few different storage mediums in common use:
 
 - **Solid-State Disk Drives (SSD)**: They use flash memory with no moving parts to store
-  data. Their embodied carbon emissions are high due to the rare metals needed for
-  semiconductor manufacturing, while operational emissions are low.
+  data. Their embodied carbon emissions are high compared to spinning disks due to
+  the rare metals needed for semiconductor manufacturing, while operational emissions are
+  somewhat lower than for spinning disks.
 - **Hard Disk Drives (HDD)**: They store data on spinning magnetic disks. Embodied
-  emissions are lower than those of SSDs but operational emissions are higher because
-  their disks must spin continuously.
+  emissions are lower than those of SSDs but operational emissions are higher
+  because their disks must spin continuously.
 - **Linear Tape-Open (LTO Tape)**: Magnetic tape technology used for long-term storage.
-  Their manufacturing emissions are low, while their operational emissions are near
+  Their embodied emissions are low, while their operational emissions are near
   zero.
 
 Similarly to computers, their associated carbon emissions can be split into operational
@@ -217,7 +224,7 @@ and embedded components. These are summarised below:
 | **Operational Carbon** | Low (2-5 kg)^1^ | Moderate - High (2-16 kg)^1,2^ | Low (~0 kg) |
 | **Lifespan** | 5–10 years | 5-10 years | 30+ years |
 
-\* Emissions are in **kg CO₂e per TB per year**
+\* Emissions are in **kgCO₂e per TB per year**
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
  considered that SSDs have a higher 'carbon debt`per unit of storage than HDDs^4^.
@@ -230,7 +237,7 @@ is shrinking, and new SSDs have only 2x the embodied carbon of comparable HDDs^5
 
 SSDs allow data to be accessed almost instantly and are typically 10–100× faster than
 HDDs. LTO tapes offer the slowest access speeds, but they remain the preferred option
-for storing cold data due to their low cost and great energy efficiency.
+for storing cold data due to their low cost, low embodied emissions and great energy efficiency.
 
 ## Data Centres
 
@@ -273,7 +280,7 @@ $$
 ![Google Data Center PUE measurement boundaries](fig/pue-infographic.webp){alt="Google Data Center PUE measurement boundaries."}
 
 An average data centre has a PUE of around 1.59, meaning that for every 1 watt used to
-power computational resources, an additional 0.5 watts is spent on cooling and power
+power computational resources, an additional 0.59 watts is spent on cooling and power
 distribution. Newer and larger data centres tend to be more efficient^11^, with a global
 average PUE of 1.41 in 2025^11^.
 
@@ -309,6 +316,14 @@ cloud deployments are often more energy and carbon efficient than many small sca
 on‑premise setups - but the cloud's actual footprint still depends on the provider's
 hardware, PUE, electricity grid mix and redundancy/replication practices.
 
+<!-- ART Comment
+
+Mention hyperscalers history in under-reporting and obscuring emissions from cloud resources
+
+e.g. https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech
+
+-->
+
 :::::::::::::::::::::::::::::::::::::
 
 ## Research Activities
@@ -321,6 +336,30 @@ centre.
 
 Factors to consider:
 
+<!-- ART Comment
+
+Net Zero is fundamentally about reducing consumption. The point on minimising use 
+of digital resources should be emphasised as *the* key first action people should
+take.
+
+- Do you really need to run that calculation/analysis? What benefit will it bring 
+  to the research project?
+- Does the dataset or information already exist somewhere else that you can reuse
+  rather than wasting emissions regenerating it yourself?
+- Have you thoroughly tested your approach/method at small scale before scaling
+  up to full dataset or large scale? How can you minimise the risk of wasted
+  emissions?
+- If you are running many repeats for sampling reasons: have you chosen a sampling
+  method that provides the best ratio of accuracy to work? For example, regular
+  sampling is often very inefficient but people often choose it as it does not 
+  require them to think hard.
+
+It is critical that researchers produce a research plan that has minimising
+emissions as the fundamental driver of their activity.
+
+
+-->
+
 - **Embodied and operational emissions** are both key contributors. Optimally, a given
   amount of compute should be provided by the minimum associated embodied emissions.
   It's therefore key to maximise utilisation of hardware rather than investing in more.
@@ -330,7 +369,7 @@ Factors to consider:
   individual desktops or laptops.
 - **Computational Architectures** have become increasingly diverse in recent years both
   for CPUs and for accelerators (e.g. GPUs). Computational problems can have very
-  different power usages depending on the architecture used so choosing the right one
+  different electricity consumption depending on the architecture used so choosing the right one
   can be very impactful.
 - **Doing less computation** is also worth considering. This can take the form of
   planning computational workloads carefully to minimise resource usage or limiting work
@@ -339,6 +378,12 @@ Factors to consider:
   solve a given problem. This can take various forms depending on programming language
   and computational architecture but impressive speed ups can be obtained in some cases
   compared with unoptimised code.
+- **Carbon awareness** is making your use of digital resources responsive to changes in
+  carbon intensity of electricity generation. This can take different forms, for example,
+  moving use to locations which have lower carbon intensities, changing the time at which
+  you consume electricity to periods with lower carbon intensities or even making your
+  workload intensity responsive to carbon intensity forecasts to minimise operational
+  emissions.
 
 ### Research Data Management
 
