@@ -30,7 +30,8 @@ exercises: 10 # exercise time in minutes
 
 Energy is a physical property that can be used to do work. This can be lifting a weight,
 pushing a piston or even running a computation on a computer. The SI unit of energy is
-the Joule (J) but commonly the kilowatt-hour (kWh) is also used.
+the Joule (J) but commonly the kilowatt-hour (kWh) is also used when expressing electrical
+energy use.
 
 Power is a rate at which energy is consumed i.e., how much energy is used in a given
 amount of time. The SI unit of power is the watt (W) however kilowatts (kW) are commonly
@@ -46,7 +47,7 @@ watts by another unit of time we recover units of energy with a scaling factor.
 
 Kilowatt-hours are commonly used because they tend to work out nicely for everyday
 situations, e.g. a kettle may have a power rating of 1 kW so running it for an hour
-gives 1 kWh of energy used.
+gives 1 kWh of electrical energy used.
 
 :::::::::::::::::::::::::::::::::::::::::::::
 
@@ -76,8 +77,8 @@ Which of the below are not equal to 1 kWh.
 
 ## Energy sources and carbon emissions
 
-Energy famously cannot be created or destroyed but the energy used for research
-activities has to come from somewhere. In practice the majority of energy used for
+Energy famously cannot be created or destroyed but the electrical energy used for research
+activities has to come from somewhere. In practice the majority of electrical energy used for
 digital research comes from a national electricity grid so this will be our focus.
 
 The electrical grid serves to transport energy from electricity generators to end users.
@@ -95,7 +96,7 @@ Different methods of electricity generation have different properties. Some of t
 include:
 
 - Cost - The cost of generating each kWh of energy.
-- Carbon Intensity - A measure of the kgCO2e emitted per kWh of energy.
+- Carbon Intensity - A measure of the kgCO<sub>2</sub>e emitted per kWh of energy.
 - Dispatchability - How easily or quickly generation can be scaled up in response to
   demand.
 - Predictability - How easy it is to predict the amount of generation available.
@@ -124,9 +125,16 @@ The energy sources used by the grid will change on an hourly timescale and some 
 such as wind and solar can be subject to seasonal and climate effects. The relative cost
 of different sources can also be impacted by global events and markets. The sources of
 electricity used by the grid are referred to as the energy mix. The energy mix of the
-grid leads to an overall carbon intensity value given as gCO2/kWh of electricity
+grid leads to an overall carbon intensity value given as gCO<sub>2</sub>/kWh of electricity
 generated. This can also be broken down by geographical region or given as an average
 for a time period.
+
+A key aspect to note is that renewable sources of electricity generation are usually
+the cheapest option so the electricity grid will always try to minimise costs by using
+renewable sources where possible. This shows that if we can shape our demand for
+electricity to times where more renewable energy is available we both reduce emissions
+and provide an economic drive for more investment in renewable sources and less
+investment in sources of electricity generation based on fossil fuels.
 
 ### Carbon Intensity in the UK
 
@@ -153,6 +161,12 @@ The following dynamics are at play:
 - As the evening progresses and people go to bed, demand drops again and carbon
   intensity also falls as gas generation goes offline. Overall carbon intensity ends up
   lower at the end of the day than the beginning as more imported energy is available.
+
+<!-- ART Comment
+
+Why does imported electricity have a low carbon intensity? Where do the imported carbon intensity numbers come from and are they accurate?
+
+-->
 
 :::::::::::::::::::::::::: callout
 
