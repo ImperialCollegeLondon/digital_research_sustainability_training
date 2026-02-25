@@ -133,7 +133,7 @@ A key aspect to note is that renewable sources of electricity generation are usu
 the cheapest option so the electricity grid will always try to minimise costs by using
 renewable sources where possible. This shows that if we can shape our demand for
 electricity to times where more renewable energy is available we both reduce emissions
-and provide an economic drive for more investment in renewable sources and less 
+and provide an economic drive for more investment in renewable sources and less
 investment in sources of electricity generation based on fossil fuels.
 
 ### Carbon Intensity in the UK

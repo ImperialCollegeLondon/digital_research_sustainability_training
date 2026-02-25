@@ -357,7 +357,6 @@ take.
 It is critical that researchers produce a research plan that has minimising
 emissions as the fundamental driver of their activity.
 
-
 -->
 
 - **Embodied and operational emissions** are both key contributors. Optimally, a given
