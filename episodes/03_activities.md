@@ -251,7 +251,8 @@ Data centre embodied emissions:
 - **networking and supporting hardware**: as the servers in a data centre are accessed
   remotely they must be serviced by network infrastructure such as switches and cables.
 - **cooling**: the density of compute in data centres means they must have dedicated
-  infrastructure for cooling.
+  infrastructure for cooling. More information on this topic, in particular the water
+  usage, is discussed below.
 
 There are additional sources of operational emissions as well:
 
@@ -297,6 +298,38 @@ can be shared between many users.
 | **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
 | **Energy Efficiency** | High (fewer idle disks) | Generally lower |
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
+
+### Data centres and water usage
+
+While this course focus on the carbon emissions via the electricity usage, there is
+another big environmental factor associated to the running of data centres: water.
+
+Water in data centres is used in huge amounts for cooling purposes. [Recent studies]
+suggest that medium-size data centres consume more than 1 million litres of water per
+day, while for large data centres, this number jumps to about 23 million litres per day,
+equivalent to the daily usage of about 50,000 households in the US.
+
+Except in cooler locations where natural or air-only cooling can be enough to extract
+all the heat generated during computation from the data centres, in most cases, some
+level of water-based cooling is required. There are two broad methods for water-cooled
+data centres:
+
+- **Using air cooling with water evaporation in chillers**. This is an open-loop method
+where water is lost into the atmosphere - hence removing it from the reservoir it was
+taken from, and therefore wasteful - but it is technically simpler to implement.
+- **Via direct liquid cooling**, where the coolant (not necessarily water) is directly in
+contact with the processing unit. [Direct-to-chip liquid cooling and immersive liquid cooling]
+are two server liquid cooling technologies that dissipate heat while significantly
+reducing water consumption, but at a much higher costs and technical complexity.
+
+While not as commonly available as the Power Usage Effectiveness (PUE), some data
+centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
+per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
+most common values are around 1.9 l/kWh.
+
+[Recent studies]: https://www.eesi.org/articles/view/data-centers-and-water-consumption
+[Direct-to-chip liquid cooling and immersive liquid cooling]: https://www.datacenterdynamics.com/en/analysis/an-introduction-to-liquid-cooling-in-the-data-center/
+[Water Usage Effectiveness (WUE)]: https://www.datacenterknowledge.com/cooling/a-guide-to-data-center-water-usage-effectiveness-wue-and-best-practices
 
 ::::::::::::::::::::::::::::: callout
 
