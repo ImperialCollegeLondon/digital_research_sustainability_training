@@ -301,7 +301,7 @@ can be shared between many users.
 
 ### Data centres and water usage
 
-While this course focus on the carbon emissions via the electricity usage, there is
+While this course focuses on the carbon emissions via the electricity usage, there is
 another big environmental factor associated to the running of data centres: water.
 
 Water in data centres is used in huge amounts for cooling purposes. [Recent studies]
@@ -309,7 +309,7 @@ suggest that medium-size data centres consume more than 1 million litres of wate
 day, while for large data centres, this number jumps to about 23 million litres per day,
 equivalent to the daily usage of about 50,000 households in the US.
 
-Except in cooler locations where natural or air-only cooling can be enough to extract
+Except in cooler locations where natural or air-only cooling ("free cooling") can be enough to extract
 all the heat generated during computation from the data centres, in most cases, some
 level of water-based cooling is required. There are two broad methods for water-cooled
 data centres:
@@ -320,7 +320,7 @@ taken from, and therefore wasteful - but it is technically simpler to implement.
 - **Via direct liquid cooling**, where the coolant (not necessarily water) is directly in
 contact with the processing unit. [Direct-to-chip liquid cooling and immersive liquid cooling]
 are two server liquid cooling technologies that dissipate heat while significantly
-reducing water consumption, but at a much higher costs and technical complexity.
+reducing water consumption, but at a much higher cost and technical complexity.
 
 While not as commonly available as the Power Usage Effectiveness (PUE), some data
 centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
