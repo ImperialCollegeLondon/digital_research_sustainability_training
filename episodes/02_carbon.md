@@ -262,12 +262,42 @@ view of different emissions sources.
 
 :::::::::::::::::::::::: solution
 
-## Output
-
-No idea. We need to do it.
-
 :::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+## Carbon in Context
+
+Digital technology plays a crucial role in UK's efforts to reduce carbon emissions
+ and achieve Net Zero emissions by 2050. However, it is also a significant source of
+ GHG emissions. A [2024 report](https://zenodo.org/records/14831758) estimates that the
+ digital sector produces 19.28 Mt CO₂e, which is around 2.73% of the UK’s total emissions,
+ with user devices making up the largest share, followed by data centres and networking.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Digital Technology Emissions - [2024 report](https://zenodo.org/records/14831758)](fig/digital-tech-emissions.png){alt="Total GHG emissions associated with the digital sector"}
+
+ Digital research is a growing component of the digital technology sector, with emissions
+ sources split into two major categories:
+
+- everyday research work: laptops and desktops, monitors, storage, networking
+- digital research infrastructure: High Performance computing, AI, storage systems, data
+ centres
+
+While the individual emissions might seem small when compared with the overall footprint
+ of the sector, their effects are cummulative. A single laptop can have associated emissions
+ of up to 300 kgCO2e, which come mostly from embodied emissions. Replacing a work laptop
+ every 3 years would then result in almost 1 tCO2e, equivalent to up to 2 months of a
+  person's carbon footprint in the UK according to this [source](https://www.theecoexperts.co.uk/news/average-carbon-footprint-uk).
+  Backing up 10 TB of data on the cloud for a year could easily emit up to 400 kgCO2e.
+These digital emissions are just one part of the picture, alongside other research related
+ impacts. For example, a long-haul return flight to a conference can reach up 2 tCO2e (based
+ on a return flight London-New York in Economy Class). Lab-related activities, such
+ as running a fume hood continuously for a year can use as much energy as 3.5 homes per
+ year (about 2 tCO2e).
+
+Thinking about digital emissions in the context of the wider usual research activities gives
+ a better sense of what is driving carbon footprint, making it easier to see where the
+ most meaningful opportunities for change are.
 
 [Green software practitioner course]: https://learn.greensoftware.foundation/
