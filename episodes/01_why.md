@@ -19,6 +19,24 @@ exercises: 0 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Environmental sustainability
+
+Environmental sustainability refers to the need for human activity to be balanced with
+the long term health of the planet and availability of natural resources. There are many
+issues that can impact environmental sustainability:
+
+- Greenhouse gas emissions.
+- Potable water usage.
+- Waste and pollution.
+- Biodiversity.
+
+The most pressing sustainability challenge facing the world is the emission of
+greenhouse gases driving the climate emergency. For this reason we will primarily focus
+on greenhouse gas emissions, in particular we'll focus on the metric Kilograms Carbon
+Dioxide Equivalent (kgCO₂e). This is a simplified metric that aims to represent the
+impact of a range of greenhouse gases as a single figure by expressing them as an
+equivalent emitted quantity of Carbon Dioxide (CO₂).
+
 ## The context of net zero goals
 
 (For global context, use the [Online MUSE calculator](https://museenergysimulator.co.uk/))
