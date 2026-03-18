@@ -301,7 +301,7 @@ While these individual emissions might seem small when compared with the overall
  on a return flight London-New York in Economy Class). Lab-related activities, such
  as running a fume hood continuously for a year can use as much energy as 3.5 homes per
  year, and using ultra-low freezers can use as much energy as an average household every
- day according to mygreenlab (<https://mygreenlab.org/resources/energy/>).
+ day according to [mygreenlab](https://mygreenlab.org/resources/energy/).
 
 Thinking about digital emissions in the context of the wider usual research activities gives
 a better idea of what is driving carbon footprint, making it easier to see where one can
