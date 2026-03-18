@@ -291,6 +291,17 @@ energy efficient than the equivalent collection individual computers or storage 
 This is due to their scale and specialisation and the provision of infrastructure that
 can be shared between many users.
 
+Even still, it is wise to conduct due diligence checks on the data centres you aim to
+utilise. As you may have heard
+[in the news](https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech),
+the industry frequently tries to obscure its true carbon footprint in a number of ways.
+One such way is the use of renewable energy certificates (Recs), where a data centre
+company can make itself appear to purchase some percentage of its energy from renewable
+sources, despite that energy not reaching the facility. The companies frequently report
+'market-based' emissions, which are manipulated by the inclusion of Recs, but look out
+for the 'location-based' emissions figure for a less misleading view of their carbon
+footprint.
+
 | Category | Data Center | Local Equipment |
 | :--- | :--- | :--- |
 | **Embodied Carbon** | Lower (shared + efficient infrastructure) | Higher (duplication + under‑used hardware) |
