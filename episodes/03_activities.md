@@ -365,7 +365,21 @@ Factors to consider (to be expanded):
 #### Data Management Plans
 
 The best time to think about how to manage you data is before you collect or generate
-it...
+it. This is the purpose of a Data Management Plan (DMP), a document that describes how you
+will handle your data during and after a research project. DMPs are often required by
+funding agencies and research institutions, but they are also a good practice to ensure
+that your data is well organised, documented and preserved. [Imperial College London's
+policy](https://www.imperial.ac.uk/research-and-innovation/support-for-staff/scholarly-communication/research-data-management/data-management-planning/)
+requires a data management plan (DMP) to accompany every grant application.
+
+In addition to being a good scientific practice, DMPs can also help you to reduce
+the carbon footprint of your data. Tracking and monitoring your data in this manner
+can help you to identify (and where possible, avoid) unnecessary data collection and
+storage. This will in turn help you to make informed decisions about your data
+management practices and making them more sustainable.
+
+The UK Data Service provides a [data management planning overview](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/data-management-planning-overview/) and
+a [checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/) of key points to consider when creating a DMP.
 
 :::::::::::::::::::::::::::::::::::
 
