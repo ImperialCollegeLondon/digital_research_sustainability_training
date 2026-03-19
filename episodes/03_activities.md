@@ -378,8 +378,9 @@ can help you to identify (and where possible, avoid) unnecessary data collection
 storage. This will in turn help you to make informed decisions about your data
 management practices and making them more sustainable.
 
-The UK Data Service provides a [data management planning overview](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/data-management-planning-overview/) and
-a [checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/) of key points to consider when creating a DMP.
+The UK Data Service provides a [data management planning overview](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/data-management-planning-overview/)
+and a [checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/)
+of key points to consider when creating a DMP.
 
 :::::::::::::::::::::::::::::::::::
 
