@@ -340,7 +340,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Digital research activities with sustainability issues</h1>
-        <p>Last updated on 2026-02-24 |
+        <p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -402,7 +402,7 @@ carbon emissions</em>.</p>
 carbon impact. This is related to the process of sourcing the materials
 the computer is made off, manufacturing and transporting it. These are
 called <em>embodied carbon emissions</em>.</p>
-<p>Both embodied and operational emmisions play a significant role in
+<p>Both embodied and operational emissions play a significant role in
 the carbon footprint of computing devices, but how to estimate them and
 reduce them is very different.</p>
 <div class="section level3">
@@ -449,7 +449,7 @@ G9</div>
 </figure><p>If we exclude the <code>Use</code> section of the chart, which
 obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
 production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO2e.</p>
+total, i.e. 160 kgCO₂e.</p>
 <p>It should be noted that different manufacturers use different
 criteria to calculate their embodied emissions, so choosing the computer
 with the lowest reported embodied emissions is not necessarily the best
@@ -480,7 +480,7 @@ replacing the whole laptop?</li>
 <h3 id="operational-emissions">Operational emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a></h3>
 <p>Operational emissions are those that are produced when <em>using</em>
 the equipment. They depend on its design and performance, but also on
-<em>how</em> it is used and <em>where</em> it is used. For the later
+<em>how</em> it is used and <em>where</em> it is used. For the latter
 reason, it is often better to consider the energy usage, rather than the
 carbon emitted as this depends on the energy mix where the machine is
 being used.</p>
@@ -563,15 +563,16 @@ usage and consider ways of reducing them.</p>
 </section><section><h2 class="section-heading" id="storage-devices">Storage Devices<a class="anchor" aria-label="anchor" href="#storage-devices"></a></h2>
 <hr class="half-width"><p>Research datasets are increasingly large and replicated across
 multiple systems for reliability. As modern research practices move
-toward open data and long-term storage, the cumulative energy demand of
-storage becomes a significant component of digital research’s
-environmental impact.</p>
+toward open data and long-term storage, the embodied and operational
+emissions of storage becomes a significant component of digital
+research’s environmental impact.</p>
 <p>There are a few different storage mediums in common use:</p>
 <ul><li>
 <strong>Solid-State Disk Drives (SSD)</strong>: They use flash
 memory with no moving parts to store data. Their embodied carbon
 emissions are high due to the rare metals needed for semiconductor
-manufacturing, while operational emissions are low.</li>
+manufacturing, while operational emissions are somewhat lower than for
+spinning disks.</li>
 <li>
 <strong>Hard Disk Drives (HDD)</strong>: They store data on spinning
 magnetic disks. Embodied emissions are lower than those of SSDs but
@@ -579,8 +580,8 @@ operational emissions are higher because their disks must spin
 continuously.</li>
 <li>
 <strong>Linear Tape-Open (LTO Tape)</strong>: Magnetic tape
-technology used for long-term storage. Their manufacturing emissions are
-low, while their operational emissions are near zero.</li>
+technology used for long-term storage. Their embodied emissions are low,
+while their operational emissions are near zero.</li>
 </ul><p>Similarly to computers, their associated carbon emissions can be
 split into operational and embedded components. These are summarised
 below:</p>
@@ -600,7 +601,7 @@ below:</p>
 <td align="left">5–10 years</td>
 <td align="left">5-10 years</td>
 <td align="left">30+ years</td>
-</tr></tbody></table><p>* Emissions are in <strong>kg CO₂e per TB per year</strong></p>
+</tr></tbody></table><p>* Emissions are in <strong>kgCO₂e per TB per year</strong></p>
 <p>While the numbers vary depending on manufacturers and reporting
 available, it is generally considered that SSDs have a higher ’carbon
 debt<code>per unit of storage than HDDs^4^.  However, recent data suggests that the difference for enterprise-grade drives is shrinking,  and new SSDs have only 2x the embodied carbon of comparable HDDs^5^. While the numbers vary depending on manufacturers and reporting available, it is generally considered that SSDs have a higher 'carbon debt</code>
@@ -611,7 +612,7 @@ HDDs<sup>5</sup>.</p>
 <p>SSDs allow data to be accessed almost instantly and are typically
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
 they remain the preferred option for storing cold data due to their low
-cost and great energy efficiency.</p>
+cost, low embodied emissions and great energy efficiency.</p>
 </section><section><h2 class="section-heading" id="data-centres">Data Centres<a class="anchor" aria-label="anchor" href="#data-centres"></a></h2>
 <hr class="half-width"><p>Beyond personal computing devices like laptops and PC’s, much
 computing infrastructure is now accessed remotely. In this case the
@@ -655,7 +656,7 @@ Power}}
 <figure><img src="../fig/pue-infographic.webp" alt="Google Data Center PUE measurement boundaries." class="figure mx-auto d-block"><div class="figcaption">Google Data Center PUE measurement
 boundaries</div>
 </figure><p>An average data centre has a PUE of around 1.59, meaning that for
-every 1 watt used to power computational resources, an additional 0.5
+every 1 watt used to power computational resources, an additional 0.59
 watts is spent on cooling and power distribution. Newer and larger data
 centres tend to be more efficient<sup>11</sup>, with a global average
 PUE of 1.41 in 2025<sup>11</sup>.</p>
@@ -725,9 +726,9 @@ are greatly reduced compared to individual desktops or laptops.</li>
 <li>
 <strong>Computational Architectures</strong> have become
 increasingly diverse in recent years both for CPUs and for accelerators
-(e.g. GPUs). Computational problems can have very different power usages
-depending on the architecture used so choosing the right one can be very
-impactful.</li>
+(e.g. GPUs). Computational problems can have very different electricity
+comsumption depending on the architecture used so choosing the right one
+can be very impactful.</li>
 <li>
 <strong>Doing less computation</strong> is also worth considering.
 This can take the form of planning computational workloads carefully to
@@ -739,6 +740,14 @@ computational resources required to solve a given problem. This can take
 various forms depending on programming language and computational
 architecture but impressive speed ups can be obtained in some cases
 compared with unoptimised code.</li>
+<li>
+<strong>Carbon awareness</strong> is making your use of digital
+resources responsive to changes in carbon intensity of electricity
+generation. This can take different forms, for example, moving use to
+locations which have lower carbon intensities, changing the time at
+which you consume electricity to periods with lower carbon intensities
+or even making your workload intensity responsive to carbon intensity
+forecasts to minimise operational emissions.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="research-data-management">Research Data Management<a class="anchor" aria-label="anchor" href="#research-data-management"></a></h3>
@@ -798,9 +807,9 @@ in detail.</p>
 <h4 id="github">GitHub<a class="anchor" aria-label="anchor" href="#github"></a></h4>
 <p>In a research study on <a href="https://arxiv.org/abs/2510.26413" class="external-link">Environmental Impact of CI/CD
 Pipelines</a> the authors estimates that the carbon footprint from
-GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario
-to 994.9 MTCO2e in the most pessimistic scenario. The most likely
-scenario estimates are 456.9 MTCO2e which is equivalent to the carbon
+GitHub Actions range from 150.5 MTCO₂e in the most optimistic scenario
+to 994.9 MTCO₂e in the most pessimistic scenario. The most likely
+scenario estimates are 456.9 MTCO₂e which is equivalent to the carbon
 captured by 7,615 urban trees in a year.</p>
 <p>The study also compares the carbon emissions of GitHub Actions with
 the emissions of quotidian activities.</p>
@@ -934,7 +943,7 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-02-24",
+  "dateModified": "2026-03-24",
   "datePublished": "2026-03-24"
 }
 

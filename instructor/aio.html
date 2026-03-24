@@ -383,7 +383,7 @@
         
 <section id="aio-01_why"><p>Content from <a href="01_why.html">Why sustainable digital research matters</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/01_why.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -421,13 +421,11 @@
 <section><h2 class="section-heading" id="the-context-of-net-zero-goals">The context of net zero goals<a class="anchor" aria-label="anchor" href="#the-context-of-net-zero-goals"></a>
 </h2>
 <hr class="half-width">
-<p>(For global context, use the <a href="https://museenergysimulator.co.uk/" class="external-link">Online MUSE
-calculator</a>)</p>
 <p><a href="https://weather.metoffice.gov.uk/climate-change/effects-of-climate-change" class="external-link">Climate
 change and global warming</a> have become pressing issues in recent
 years. A primary cause of these phenomena is the increase in greenhouse
 gas emissions in the atmosphere. Greenhouse gases (for example, carbon
-dioxide (CO2)) are responsible for trapping heat in the Earth’s
+dioxide (CO₂) are responsible for trapping heat in the Earth’s
 atmosphere, leading to rising global temperatures. These gases are
 emitted from various human activities, including the burning of fossil
 fuels, deforestation, and industrial processes.</p>
@@ -445,11 +443,15 @@ research is one of the contributors. Digital research involves a wide
 range of activities, including the use of software for data analysis,
 simulations, machine learning, and the use of cloud computing resources.
 All these activities often require significant computational power and
-energy consumption, which can lead to substantial carbon emissions.</p>
-<ul>
-<li>any number on how much digital research contributes to global
-emissions?</li>
-</ul></section><section><h2 class="section-heading" id="minimising-carbon-to-science">Minimising carbon to science<a class="anchor" aria-label="anchor" href="#minimising-carbon-to-science"></a>
+data storage resources. Providing these digital resources requires
+significant production of computer hardware and leads to significant
+electricity consumption. Both of these aspects can lead to substantial
+carbon emissions.</p>
+<p>A <a href="https://www.nature.com/articles/s44458-025-00022-6" class="external-link">recent
+paper in Nature</a> estimated the digital sector at 4.1% of global
+emissions but that these emissions are typically obscured within other
+categories of emissions.</p>
+</section><section><h2 class="section-heading" id="minimising-carbon-to-science">Minimising carbon to science<a class="anchor" aria-label="anchor" href="#minimising-carbon-to-science"></a>
 </h2>
 <hr class="half-width">
 <p>Digital research is important for scientific progress and has the
@@ -492,7 +494,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-02_carbon"><p>Content from <a href="02_carbon.html">Energy, power and carbon</a></p>
 <hr>
-<p>Last updated on 2026-02-18 |
+<p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/02_carbon.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -534,16 +536,15 @@ emissions</li>
 </div>
 </div>
 </div>
-<p>(This episode will be heavy on pointing to the <a href="https://learn.greensoftware.foundation/" class="external-link">Green software
-practitioner course</a> sections)</p>
 <section><h2 class="section-heading" id="energy-and-power">Energy and power<a class="anchor" aria-label="anchor" href="#energy-and-power"></a>
 </h2>
 <hr class="half-width">
 <p>Energy is a physical property that can be used to do work. This can
 be lifting a weight, pushing a piston or even running a computation on a
 computer. The SI unit of energy is the Joule (J) but commonly the
-kilowatt-hour (kWh) is also used.</p>
-<p>Power is a rate at which energy is consumed i.e., how much energy is
+kilowatt-hour (kWh) is also used when expressing electrical energy
+use.</p>
+<p>Power is a rate at which energy is drawn i.e., how much energy is
 used in a given amount of time. The SI unit of power is the watt (W)
 however kilowatts (kW) are commonly used as well.</p>
 <div id="joules-kilowatts-and-kilowatt-hours" class="callout">
@@ -561,7 +562,7 @@ watts by another unit of time we recover units of energy with a scaling
 factor.</p>
 <p>Kilowatt-hours are commonly used because they tend to work out nicely
 for everyday situations, e.g. a kettle may have a power rating of 1 kW
-so running it for an hour gives 1 kWh of energy used.</p>
+so running it for an hour gives 1 kWh of electrical energy used.</p>
 </div>
 </div>
 </div>
@@ -575,10 +576,10 @@ so running it for an hour gives 1 kWh of energy used.</p>
 <div class="callout-content">
 <p>Which of the below are not equal to 1 kWh.</p>
 <ul>
-<li>A - 200 W consumed for 12 minutes.</li>
+<li>A - 200 W drawn for 12 minutes.</li>
 <li>B - 1000 J</li>
 <li>C - 3,600,000 J</li>
-<li>D - 5000 W consumed for 12 minutes.</li>
+<li>D - 5000 W drawn for 12 minutes.</li>
 </ul>
 </div>
 </div>
@@ -605,16 +606,16 @@ so running it for an hour gives 1 kWh of energy used.</p>
 </section><section><h2 class="section-heading" id="energy-sources-and-carbon-emissions">Energy sources and carbon emissions<a class="anchor" aria-label="anchor" href="#energy-sources-and-carbon-emissions"></a>
 </h2>
 <hr class="half-width">
-<p>Energy famously cannot be created or destroyed but the energy used
-for research activities has to come from somewhere. In practice the
-majority of energy used for digital research comes from a national
-electricity grid so this will be our focus.</p>
-<p>The electrical grid serves to transport energy from electricity
-generators to end users. Economies of scale tend to mean that
-electricity generation is a large scale activity. The electrical energy
-supplied to the grid comes from a variety of different sources. This can
-be fossil fuels like coal and gas or green energy sources like solar and
-wind.</p>
+<p>Energy famously cannot be created or destroyed but the electrical
+energy used for research activities has to come from somewhere. In
+practice the majority of electrical energy used for digital research
+comes from a national electricity grid so this will be our focus.</p>
+<p>The electrical grid serves to transport electrical energy from
+electricity generators to end users. Economies of scale tend to mean
+that electricity generation is a large scale activity. The electrical
+energy supplied to the grid comes from a variety of different sources.
+This can be fossil fuels like coal and gas or green energy sources like
+solar and wind.</p>
 <p>A key feature of electrical grids is that supply must be balanced
 with demand. Demand for electricity can vary greatly throughout a year
 or even an individual day. The grid responds to increases in demand by
@@ -626,7 +627,7 @@ purchasing additional electricity from suppliers.</p>
 properties. Some of the important include:</p>
 <ul>
 <li>Cost - The cost of generating each kWh of energy.</li>
-<li>Carbon Intensity - A measure of the kgCO2e emitted per kWh of
+<li>Carbon Intensity - A measure of the kgCO₂e emitted per kWh of
 energy.</li>
 <li>Dispatchability - How easily or quickly generation can be scaled up
 in response to demand.</li>
@@ -690,7 +691,7 @@ sources compare on their key properties:</p>
 <td>Hydro</td>
 <td>Variable</td>
 <td>Low</td>
-<td>Low</td>
+<td>Variable</td>
 <td>High</td>
 </tr>
 </tbody>
@@ -708,8 +709,27 @@ seasonal and climate effects. The relative cost of different sources can
 also be impacted by global events and markets. The sources of
 electricity used by the grid are referred to as the energy mix. The
 energy mix of the grid leads to an overall carbon intensity value given
-as gCO2/kWh of electricity generated. This can also be broken down by
+as gCO₂/kWh of electricity generated. This can also be broken down by
 geographical region or given as an average for a time period.</p>
+<div id="green-energy-costs" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="green-energy-costs" class="callout-inner">
+<h3 class="callout-title">Green Energy Costs</h3>
+<div class="callout-content">
+<p>A key aspect to note is that renewable sources of electricity
+generation are usually the cheapest option so the electricity grid will
+always try to minimise costs by using renewable sources where possible.
+This shows that if we can shape our demand for electricity to times
+where more renewable energy is available we both reduce emissions and
+provide an economic drive for more investment in renewable sources and
+less investment in sources of electricity generation based on fossil
+fuels.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="carbon-intensity-in-the-uk">Carbon Intensity in the UK<a class="anchor" aria-label="anchor" href="#carbon-intensity-in-the-uk"></a>
@@ -771,10 +791,10 @@ dispatchability as they depend on factors like the weather.</p></li>
 <figure><img src="../fig/daily_carbon_intensity_2025.png" alt="A graph showing the daily carbon intensity of the UK power grid during 2025. The mean, maximum and minimum values for each day are shown." class="figure mx-auto d-block"><div class="figcaption">Carbon intensity of the UK power grid during
 2025</div>
 </figure><p>The above graph demonstrates how carbon intensity can vary throughout
-the year. Whilst there is little pattern month to month, it is
-interestirng to observe that the mimimum and maximum carbon intensity of
-the grid can vary between ~50 gCO2/kWh and ~250 gCO2/kWh, a factor of
-five.</p>
+the year in the UK. For the UK season is not a strong driver of carbon
+intensity. It is interesting to observe that the mimimum and maximum
+carbon intensity of the grid can vary between ~50 gCO₂/kWh and ~250
+gCO₂/kWh, a factor of five.</p>
 <div id="carbon-intensity-forecasts" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -839,7 +859,7 @@ activities that directly emit carbon such as burning fuel. This would
 cover fuel used in a vehicle or an on-site heating system or electricity
 generation.</p></li>
 <li><p><strong>Scope 2</strong> are indirect emissions. These come
-activities that consume energy produced elsewhere. This is primarily the
+activities that draw energy produced elsewhere. This is primarily the
 emissions associated with electricity generation covered in detail
 above.</p></li>
 <li><p><strong>Scope 3</strong> are “Value chain emissions”. These come
@@ -892,7 +912,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -955,7 +975,7 @@ carbon emissions</em>.</p>
 carbon impact. This is related to the process of sourcing the materials
 the computer is made off, manufacturing and transporting it. These are
 called <em>embodied carbon emissions</em>.</p>
-<p>Both embodied and operational emmisions play a significant role in
+<p>Both embodied and operational emissions play a significant role in
 the carbon footprint of computing devices, but how to estimate them and
 reduce them is very different.</p>
 <div class="section level3">
@@ -1005,7 +1025,7 @@ G9</div>
 </figure><p>If we exclude the <code>Use</code> section of the chart, which
 obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
 production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO2e.</p>
+total, i.e. 160 kgCO₂e.</p>
 <p>It should be noted that different manufacturers use different
 criteria to calculate their embodied emissions, so choosing the computer
 with the lowest reported embodied emissions is not necessarily the best
@@ -1039,7 +1059,7 @@ replacing the whole laptop?</li>
 </h3>
 <p>Operational emissions are those that are produced when <em>using</em>
 the equipment. They depend on its design and performance, but also on
-<em>how</em> it is used and <em>where</em> it is used. For the later
+<em>how</em> it is used and <em>where</em> it is used. For the latter
 reason, it is often better to consider the energy usage, rather than the
 carbon emitted as this depends on the energy mix where the machine is
 being used.</p>
@@ -1131,16 +1151,17 @@ usage and consider ways of reducing them.</p>
 <hr class="half-width">
 <p>Research datasets are increasingly large and replicated across
 multiple systems for reliability. As modern research practices move
-toward open data and long-term storage, the cumulative energy demand of
-storage becomes a significant component of digital research’s
-environmental impact.</p>
+toward open data and long-term storage, the embodied and operational
+emissions of storage becomes a significant component of digital
+research’s environmental impact.</p>
 <p>There are a few different storage mediums in common use:</p>
 <ul>
 <li>
 <strong>Solid-State Disk Drives (SSD)</strong>: They use flash
 memory with no moving parts to store data. Their embodied carbon
 emissions are high due to the rare metals needed for semiconductor
-manufacturing, while operational emissions are low.</li>
+manufacturing, while operational emissions are somewhat lower than for
+spinning disks.</li>
 <li>
 <strong>Hard Disk Drives (HDD)</strong>: They store data on spinning
 magnetic disks. Embodied emissions are lower than those of SSDs but
@@ -1148,8 +1169,8 @@ operational emissions are higher because their disks must spin
 continuously.</li>
 <li>
 <strong>Linear Tape-Open (LTO Tape)</strong>: Magnetic tape
-technology used for long-term storage. Their manufacturing emissions are
-low, while their operational emissions are near zero.</li>
+technology used for long-term storage. Their embodied emissions are low,
+while their operational emissions are near zero.</li>
 </ul>
 <p>Similarly to computers, their associated carbon emissions can be
 split into operational and embedded components. These are summarised
@@ -1193,7 +1214,7 @@ below:</p>
 </tr>
 </tbody>
 </table>
-<p>* Emissions are in <strong>kg CO₂e per TB per year</strong></p>
+<p>* Emissions are in <strong>kgCO₂e per TB per year</strong></p>
 <p>While the numbers vary depending on manufacturers and reporting
 available, it is generally considered that SSDs have a higher ’carbon
 debt<code>per unit of storage than HDDs^4^.  However, recent data suggests that the difference for enterprise-grade drives is shrinking,  and new SSDs have only 2x the embodied carbon of comparable HDDs^5^. While the numbers vary depending on manufacturers and reporting available, it is generally considered that SSDs have a higher 'carbon debt</code>
@@ -1204,7 +1225,7 @@ HDDs<sup>5</sup>.</p>
 <p>SSDs allow data to be accessed almost instantly and are typically
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
 they remain the preferred option for storing cold data due to their low
-cost and great energy efficiency.</p>
+cost, low embodied emissions and great energy efficiency.</p>
 </section><section><h2 class="section-heading" id="data-centres">Data Centres<a class="anchor" aria-label="anchor" href="#data-centres"></a>
 </h2>
 <hr class="half-width">
@@ -1254,7 +1275,7 @@ Power}}
 <figure><img src="../fig/pue-infographic.webp" alt="Google Data Center PUE measurement boundaries." class="figure mx-auto d-block"><div class="figcaption">Google Data Center PUE measurement
 boundaries</div>
 </figure><p>An average data centre has a PUE of around 1.59, meaning that for
-every 1 watt used to power computational resources, an additional 0.5
+every 1 watt used to power computational resources, an additional 0.59
 watts is spent on cooling and power distribution. Newer and larger data
 centres tend to be more efficient<sup>11</sup>, with a global average
 PUE of 1.41 in 2025<sup>11</sup>.</p>
@@ -1347,9 +1368,9 @@ are greatly reduced compared to individual desktops or laptops.</li>
 <li>
 <strong>Computational Architectures</strong> have become
 increasingly diverse in recent years both for CPUs and for accelerators
-(e.g. GPUs). Computational problems can have very different power usages
-depending on the architecture used so choosing the right one can be very
-impactful.</li>
+(e.g. GPUs). Computational problems can have very different electricity
+comsumption depending on the architecture used so choosing the right one
+can be very impactful.</li>
 <li>
 <strong>Doing less computation</strong> is also worth considering.
 This can take the form of planning computational workloads carefully to
@@ -1361,6 +1382,14 @@ computational resources required to solve a given problem. This can take
 various forms depending on programming language and computational
 architecture but impressive speed ups can be obtained in some cases
 compared with unoptimised code.</li>
+<li>
+<strong>Carbon awareness</strong> is making your use of digital
+resources responsive to changes in carbon intensity of electricity
+generation. This can take different forms, for example, moving use to
+locations which have lower carbon intensities, changing the time at
+which you consume electricity to periods with lower carbon intensities
+or even making your workload intensity responsive to carbon intensity
+forecasts to minimise operational emissions.</li>
 </ul>
 </div>
 <div class="section level3">
@@ -1428,9 +1457,9 @@ in detail.</p>
 </h4>
 <p>In a research study on <a href="https://arxiv.org/abs/2510.26413" class="external-link">Environmental Impact of CI/CD
 Pipelines</a> the authors estimates that the carbon footprint from
-GitHub Actions range from 150.5 MTCO2e in the most optimistic scenario
-to 994.9 MTCO2e in the most pessimistic scenario. The most likely
-scenario estimates are 456.9 MTCO2e which is equivalent to the carbon
+GitHub Actions range from 150.5 MTCO₂e in the most optimistic scenario
+to 994.9 MTCO₂e in the most pessimistic scenario. The most likely
+scenario estimates are 456.9 MTCO₂e which is equivalent to the carbon
 captured by 7,615 urban trees in a year.</p>
 <p>The study also compares the carbon emissions of GitHub Actions with
 the emissions of quotidian activities.</p>
@@ -1596,7 +1625,7 @@ development.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Scope 2</li>
