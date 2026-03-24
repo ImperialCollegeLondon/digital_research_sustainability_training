@@ -21,14 +21,12 @@ exercises: 0 # exercise time in minutes
 
 ## The context of net zero goals
 
-(For global context, use the [Online MUSE calculator](https://museenergysimulator.co.uk/))
-
 [Climate change and global warming](https://weather.metoffice.gov.uk/climate-change/effects-of-climate-change)
 have become pressing issues in recent years. A primary cause of these phenomena is the
 increase in greenhouse gas emissions in the atmosphere. Greenhouse gases (for example,
-carbon dioxide (CO2)) are responsible for trapping heat in the Earth's atmosphere,
-leading to rising global temperatures. These gases are emitted from various human
-activities, including the burning of fossil fuels, deforestation, and industrial
+carbon dioxide (CO₂) are responsible for trapping heat in the Earth's
+atmosphere, leading to rising global temperatures. These gases are emitted from various
+human activities, including the burning of fossil fuels, deforestation, and industrial
 processes.
 
 To combat this, many countries, including the UK have set "[net
@@ -43,11 +41,15 @@ zero](https://commonslibrary.parliament.uk/research-briefings/cbp-9888/) by 2050
 
 Amongst the various sources of greenhouse gas emissions, digital research is one of the
 contributors. Digital research involves a wide range of activities, including
-the use of software for data analysis, simulations, machine learning, and the use of cloud
-computing resources. All these activities often require significant computational
-power and energy consumption, which can lead to substantial carbon emissions.
+the use of software for data analysis, simulations, machine learning, and the use of
+cloud computing resources. All these activities often require significant computational
+power and data storage resources. Providing these digital resources requires significant
+production of computer hardware and leads to significant electricity consumption. Both
+of these aspects can lead to substantial carbon emissions.
 
-- any number on how much digital research contributes to global emissions?
+A [recent paper in Nature](https://www.nature.com/articles/s44458-025-00022-6) estimated
+the digital sector at 4.1% of global emissions but that these emissions are typically
+obscured within other categories of emissions.
 
 ## Minimising carbon to science
 
