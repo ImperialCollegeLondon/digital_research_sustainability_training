@@ -192,7 +192,7 @@ The following dynamics are at play:
 ![Carbon intensity of the UK power grid during 2025](fig/daily_carbon_intensity_2025.png){alt="A graph showing the daily carbon intensity of the UK power grid during 2025. The mean, maximum and minimum values for each day are shown."}
 
 The above graph demonstrates how carbon intensity can vary throughout the year in the
-UK. For the UK season is not a strong driver of carbon intensity. It is interestirng to
+UK. For the UK season is not a strong driver of carbon intensity. It is interesting to
 observe that the mimimum and maximum carbon intensity of the grid can vary between ~50
 gCO₂/kWh and ~250 gCO₂/kWh, a factor of five.
 
