@@ -268,43 +268,44 @@ view of different emissions sources.
 
 ## Carbon in Context
 
-Digital technology plays a crucial role in UK's efforts to reduce carbon emissions
- and achieve Net Zero emissions by 2050. However, it is also a significant source of
- GHG emissions. A [2024 report](https://zenodo.org/records/14831758) estimates that the
- digital sector produces 19.28 MtCO₂e, which is around 2.73% of the UK’s total emissions,
- with user devices making up the largest share, followed by data centres and networking.
+While digital emissions might seem small, their impacts are cummulative. To provide a
+ clearer picture of these impacts, the following table contextualizes digital emissions
+ against common research-related activities, such as international travel and
+ laboratory-related activities. Thinking about digital emissions in the context of the
+ wider usual research activities gives a better idea of what is driving carbon footprint,
+ making it easier to see where one can make the most impactful changes.
 
-<!-- markdownlint-disable-next-line line-length -->
-![Digital Technology Emissions - [2024 report](https://zenodo.org/records/14831758)](fig/digital-tech-emissions.png){alt="Total GHG emissions associated with the digital sector"}
+| Activity / Item | Carbon Impact (kgCO2e) | Comparison | % of per-capita UK emissions |
+| --- | --- | --- | --- |
+| **Running a Fume Hood** (1 yr) | **~4,700** | 2.35x Return Flights (LHR-JFK) | **112%** |
+| **Ultra-low Freezer** (1 yr) | **~1,200** | Storing 10TB of data on SSD for ~3 years | **28.7%** |
+| **Long-haul Return Flight** (LHR-JFK) | **2,000** | Energy for 1 average household | **47%** |
+| **SSD Storage** (10 TB / 1 yr) | **360** | Purchasing two new laptops in a year | **8.5%** |
+| **New Laptop** (Manufacturing) | **160** | 77.6% of the carbon emissions from a 4 year lifecycle of the same laptop | **3.8%** |
+| **Laptop Lifecycle** (4 yrs) | **206** | Replacing laptop every 4 years | **4.9%** |
 
- Digital research is a growing component of the digital technology sector, with emissions
- sources split into two major categories:
+Data assumptions and calculations:
 
-- **Everyday research work**: Laptops and desktops, monitors, storage, networking. These
- involve both Scope 2 emissions from daily energy use and significant Scope 3 emissions
- from the manufacturing process.
-- **Digital research infrastructure**: High Performance computing, AI, storage systems,
- data centres. Most emissions in this category are Scope 2 for the provider but Scope 3
- for the user.
+- 4.22 tCO2e emissions per-capita in UK according to the [International Energy Association](https://www.iea.org/countries/united-kingdom/emissions)
+- Grid intensity: 0.136 kgCO₂/kW as the average intensity grid in England in February 2026^1^
+- Long-haul flight emission: based on a return flight in Economy class from London
+ Heathrow to New York JFK, according to MyClimate calculator [tool](https://co2.myclimate.org/en/portfolios?calculation_id=8535150)
+- Fume Hoods: Based on an electrity consumption of 34,871 kWh/year ^2^
+- Ultra-low Freezer: Based on a energy consumption of up to 25 kWh/day (8,900 kWh/year)
+ of traditional cascade refrigeration systems ^3^.
+- Household energy consumption: bBsed on Ofgem estimate of typical household consumption
+ in England of 2,700 kWh of electricity and 11,500 kWh of gas in a year, resulting in
+ ~1900 kgCO2e
+- SSD storage: Based on the higher end of estimated carbon emissions per TB/year ^4^
+- New laptop: Based on the embedded emissions of a typical [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
+ It does not include operational emissions.
+- Laptop Lifecycle: Based on the embedded and operational emissions of a typical
+ [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
 
-While these individual emissions might seem small when compared with the overall footprint
- of the sector, their effects are cummulative. A single laptop can have associated emissions
- of up to 300 kgCO2e, which come mostly from embodied emissions (manufacturing). Replacing
- a work laptop every 3 years would then result in almost 1 tCO2e, equivalent to up to 2
- months of a person's carbon footprint in the UK, according to this
- [source](https://www.theecoexperts.co.uk/news/average-carbon-footprint-uk). When it comes
- to data storage, backing up 10 TB of data on the cloud for a year could easily emit up
- to 400 kgCO2e.
+References:
 
- These digital emissions are just one part of the picture, alongside other research related
- impacts. For example, a long-haul return flight to a conference can reach up 2 tCO2e (based
- on a return flight London-New York in Economy Class). Lab-related activities, such
- as running a fume hood continuously for a year can use as much energy as 3.5 homes per
- year, and using ultra-low freezers can use as much energy as an average household every
- day according to [mygreenlab](https://mygreenlab.org/resources/energy/).
-
-Thinking about digital emissions in the context of the wider usual research activities gives
-a better idea of what is driving carbon footprint, making it easier to see where one can
-make the most impactful changes.
-
-[Green software practitioner course]: https://learn.greensoftware.foundation/
+1. [National Energy System Operator](https://www.neso.energy/)
+2. [Mills, E. & Sartor, D. Energy use and savings potential for laboratory fume hoods. Energy 30, 1859–1864 (2005). https://doi.org/10.1016/j.energy.2004.11.008](https://www.sciencedirect.com/science/article/pii/S0360544204004906)
+[Green software practitioner course]: <https://learn.greensoftware.foundation/>
+3. [Kypraiou C, Varzakas T. Evolution and Evaluation of Ultra-Low Temperature Freezers: A Comprehensive Literature Review. Foods. 2025 Jun 28;14(13):2298. doi: 10.3390/foods14132298. PMID: 40647050; PMCID: PMC12248920.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12248920/)
+4. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
