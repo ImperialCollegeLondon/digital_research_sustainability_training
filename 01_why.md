@@ -82,7 +82,16 @@ Digital research is important for scientific progress and has the potential
 to contribute to solving many of the global challenges, including climate change.
 However, it is necessary to ensure that the carbon emissions associated with
 digital research are minimised. As researchers, we have a responsibility to
-consider the environmental impact of our work and take steps to reduce it.
+consider the environmental impact of our work and take steps to reduce it. This
+begins with `mindful computing`, a term which describes a more concious approach
+to planning, running and managing digital tasks to ensure that scientific advances
+don't produce more emissions than needed. Adopting this mindset could look different
+to everyone. For example, choosing a datacenter in a region powered by renewable energy
+can significantly reduce a project's carbon footprint. Another example is storage data
+management, where small steps such as deleting unused data or compressing data
+can reduce the carbon associated with long-term storage. Mindful computing can also
+be applied to analyses tasks, by using incremental processing or requesting the right
+GPU/CPU resources when using High Performance Computing.
 
 In the following episodes, we will explore how to measure and estimate the carbon
 emissions from digital research activities, what are the sources of these emissions,
