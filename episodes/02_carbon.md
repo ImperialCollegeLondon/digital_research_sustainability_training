@@ -24,17 +24,16 @@ exercises: 10 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-(This episode will be heavy on pointing to the [Green software practitioner course] sections)
-
 ## Energy and power
 
 Energy is a physical property that can be used to do work. This can be lifting a weight,
 pushing a piston or even running a computation on a computer. The SI unit of energy is
-the Joule (J) but commonly the kilowatt-hour (kWh) is also used.
+the Joule (J) but commonly the kilowatt-hour (kWh) is also used when expressing
+electrical energy use.
 
-Power is a rate at which energy is consumed i.e., how much energy is used in a given
-amount of time. The SI unit of power is the watt (W) however kilowatts (kW) are commonly
-used as well.
+Power is a rate at which energy is drawn i.e., how much energy is used in a given amount
+of time. The SI unit of power is the watt (W) however kilowatts (kW) are commonly used
+as well.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -46,7 +45,7 @@ watts by another unit of time we recover units of energy with a scaling factor.
 
 Kilowatt-hours are commonly used because they tend to work out nicely for everyday
 situations, e.g. a kettle may have a power rating of 1 kW so running it for an hour
-gives 1 kWh of energy used.
+gives 1 kWh of electrical energy used.
 
 :::::::::::::::::::::::::::::::::::::::::::::
 
@@ -56,10 +55,10 @@ gives 1 kWh of energy used.
 
 Which of the below are not equal to 1 kWh.
 
-- A - 200 W consumed for 12 minutes.
+- A - 200 W drawn for 12 minutes.
 - B - 1000 J
 - C - 3,600,000 J
-- D - 5000 W consumed for 12 minutes.
+- D - 5000 W drawn for 12 minutes.
 
 :::::::::::::::::::::::: solution
 
@@ -76,14 +75,16 @@ Which of the below are not equal to 1 kWh.
 
 ## Energy sources and carbon emissions
 
-Energy famously cannot be created or destroyed but the energy used for research
-activities has to come from somewhere. In practice the majority of energy used for
-digital research comes from a national electricity grid so this will be our focus.
+Energy famously cannot be created or destroyed but the electrical energy used for
+research activities has to come from somewhere. In practice the majority of electrical
+energy used for digital research comes from a national electricity grid so this will be
+our focus.
 
-The electrical grid serves to transport energy from electricity generators to end users.
-Economies of scale tend to mean that electricity generation is a large scale activity.
-The electrical energy supplied to the grid comes from a variety of different sources.
-This can be fossil fuels like coal and gas or green energy sources like solar and wind.
+The electrical grid serves to transport electrical energy from electricity generators to
+end users. Economies of scale tend to mean that electricity generation is a large scale
+activity. The electrical energy supplied to the grid comes from a variety of different
+sources. This can be fossil fuels like coal and gas or green energy sources like solar
+and wind.
 
 A key feature of electrical grids is that supply must be balanced with demand. Demand
 for electricity can vary greatly throughout a year or even an individual day. The grid
@@ -95,7 +96,7 @@ Different methods of electricity generation have different properties. Some of t
 include:
 
 - Cost - The cost of generating each kWh of energy.
-- Carbon Intensity - A measure of the kgCO2e emitted per kWh of energy.
+- Carbon Intensity - A measure of the kgCO₂e emitted per kWh of energy.
 - Dispatchability - How easily or quickly generation can be scaled up in response to
   demand.
 - Predictability - How easy it is to predict the amount of generation available.
@@ -111,7 +112,7 @@ their key properties:
 | Solar | Low | Low | Low | Low |
 | Wind | Low | Low | Low | Low |
 | Nuclear | High | Low | Medium | High |
-| Hydro | Variable | Low | Low | High |
+| Hydro | Variable | Low | Variable | High |
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
@@ -124,9 +125,22 @@ The energy sources used by the grid will change on an hourly timescale and some 
 such as wind and solar can be subject to seasonal and climate effects. The relative cost
 of different sources can also be impacted by global events and markets. The sources of
 electricity used by the grid are referred to as the energy mix. The energy mix of the
-grid leads to an overall carbon intensity value given as gCO2/kWh of electricity
-generated. This can also be broken down by geographical region or given as an average
-for a time period.
+grid leads to an overall carbon intensity value given as gCO₂/kWh of
+electricity generated. This can also be broken down by geographical region or given as
+an average for a time period.
+
+::::::::::::::::::::::::::: callout
+
+#### Green Energy Costs
+
+A key aspect to note is that renewable sources of electricity generation are usually the
+cheapest option so the electricity grid will always try to minimise costs by using
+renewable sources where possible. This shows that if we can shape our demand for
+electricity to times where more renewable energy is available we both reduce emissions
+and provide an economic drive for more investment in renewable sources and less
+investment in sources of electricity generation based on fossil fuels.
+
+:::::::::::::::::::::::::::::::::::
 
 ### Carbon Intensity in the UK
 
@@ -177,10 +191,10 @@ The following dynamics are at play:
 <!-- markdownlint-disable-next-line line-length -->
 ![Carbon intensity of the UK power grid during 2025](fig/daily_carbon_intensity_2025.png){alt="A graph showing the daily carbon intensity of the UK power grid during 2025. The mean, maximum and minimum values for each day are shown."}
 
-The above graph demonstrates how carbon intensity can vary throughout the year. Whilst
-there is little pattern month to month, it is interestirng to observe that the mimimum
-and maximum carbon intensity of the grid can vary between ~50 gCO2/kWh and ~250
-gCO2/kWh, a factor of five.
+The above graph demonstrates how carbon intensity can vary throughout the year in the
+UK. For the UK season is not a strong driver of carbon intensity. It is interesting to
+observe that the mimimum and maximum carbon intensity of the grid can vary between ~50
+gCO₂/kWh and ~250 gCO₂/kWh, a factor of five.
 
 :::::::::::::::::::::::::: callout
 
@@ -236,7 +250,7 @@ The GHG protocol breaks down emissions into three categories called scopes:
   such as burning fuel. This would cover fuel used in a vehicle or an on-site heating
   system or electricity generation.
 
-- **Scope 2** are indirect emissions. These come activities that consume energy produced
+- **Scope 2** are indirect emissions. These come activities that draw energy produced
   elsewhere. This is primarily the emissions associated with electricity generation
   covered in detail above.
 
