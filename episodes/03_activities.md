@@ -309,10 +309,10 @@ suggest that medium-size data centres consume more than 1 million litres of wate
 day, while for large data centres, this number jumps to about 23 million litres per day,
 equivalent to the daily usage of about 50,000 households in the US.
 
-Except in cooler locations where natural or air-only cooling ("free cooling") can be enough to extract
-all the heat generated during computation from the data centres, in most cases, some
-level of water-based cooling is required. There are two broad methods for water-cooled
-data centres:
+Except in cooler locations where natural or air-only cooling ("free cooling") can be
+enough to extract all the heat generated during computation from the data centres, in
+most cases, some level of water-based cooling is required. There are two broad methods
+for water-cooled data centres:
 
 - **Using air cooling with water evaporation in chillers**. This is an open-loop method
 where water is lost into the atmosphere - hence removing it from the reservoir it was
