@@ -1088,7 +1088,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
 <hr>
-<p>Last updated on 2026-03-24 |
+<p>Last updated on 2026-03-30 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1425,7 +1425,9 @@ in a data centre are accessed remotely they must be serviced by network
 infrastructure such as switches and cables.</li>
 <li>
 <strong>cooling</strong>: the density of compute in data centres
-means they must have dedicated infrastructure for cooling.</li>
+means they must have dedicated infrastructure for cooling. More
+information on this topic, in particular the water usage, is discussed
+below.</li>
 </ul>
 <p>There are additional sources of operational emissions as well:</p>
 <ul>
@@ -1511,6 +1513,43 @@ less misleading view of their carbon footprint.</p>
 </tr>
 </tbody>
 </table>
+<div class="section level3">
+<h3 id="data-centres-and-water-usage">Data centres and water usage<a class="anchor" aria-label="anchor" href="#data-centres-and-water-usage"></a>
+</h3>
+<p>While this course focuses on the carbon emissions via the electricity
+usage, there is another big environmental factor associated to the
+running of data centres: water.</p>
+<p>Water in data centres is used in huge amounts for cooling purposes.
+<a href="https://www.eesi.org/articles/view/data-centers-and-water-consumption" class="external-link">Recent
+studies</a> suggest that medium-size data centres consume more than 1
+million litres of water per day, while for large data centres, this
+number jumps to about 23 million litres per day, equivalent to the daily
+usage of about 50,000 households in the US.</p>
+<p>Except in cooler locations where natural or air-only cooling (“free
+cooling”) can be enough to extract all the heat generated during
+computation from the data centres, in most cases, some level of
+water-based cooling is required. There are two broad methods for
+water-cooled data centres:</p>
+<ul>
+<li>
+<strong>Using air cooling with water evaporation in
+chillers</strong>. This is an open-loop method where water is lost into
+the atmosphere - hence removing it from the reservoir it was taken from,
+and therefore wasteful - but it is technically simpler to
+implement.</li>
+<li>
+<strong>Via direct liquid cooling</strong>, where the coolant (not
+necessarily water) is directly in contact with the processing unit. <a href="https://www.datacenterdynamics.com/en/analysis/an-introduction-to-liquid-cooling-in-the-data-center/" class="external-link">Direct-to-chip
+liquid cooling and immersive liquid cooling</a> are two server liquid
+cooling technologies that dissipate heat while significantly reducing
+water consumption, but at a much higher cost and technical
+complexity.</li>
+</ul>
+<p>While not as commonly available as the Power Usage Effectiveness
+(PUE), some data centres provide a <a href="https://www.datacenterknowledge.com/cooling/a-guide-to-data-center-water-usage-effectiveness-wue-and-best-practices" class="external-link">Water
+Usage Effectiveness (WUE)</a> that measures how much water is used per
+kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is
+used, but most common values are around 1.9 l/kWh.</p>
 <div id="data-centres-and-the-cloud" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1527,6 +1566,7 @@ are often more energy and carbon efficient than many small scale
 on‑premise setups - but the cloud’s actual footprint still depends on
 the provider’s hardware, PUE, electricity grid mix and
 redundancy/replication practices.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2808,7 +2848,7 @@ Miguel’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Training a model on the local workstations</li>
@@ -2838,7 +2878,7 @@ Miguel’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Updating GPUs and fileserver hardware</li>
