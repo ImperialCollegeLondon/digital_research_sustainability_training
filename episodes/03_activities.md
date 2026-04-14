@@ -253,7 +253,8 @@ Data centre embodied emissions:
 - **networking and supporting hardware**: as the servers in a data centre are accessed
   remotely they must be serviced by network infrastructure such as switches and cables.
 - **cooling**: the density of compute in data centres means they must have dedicated
-  infrastructure for cooling.
+  infrastructure for cooling. More information on this topic, in particular the water
+  usage, is discussed below.
 
 There are additional sources of operational emissions as well:
 
@@ -310,6 +311,38 @@ footprint.
 | **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
 | **Energy Efficiency** | High (fewer idle disks) | Generally lower |
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
+
+### Data centres and water usage
+
+While this course focuses on the carbon emissions via the electricity usage, there is
+another big environmental factor associated to the running of data centres: water.
+
+Water in data centres is used in huge amounts for cooling purposes. [Recent studies]
+suggest that medium-size data centres consume more than 1 million litres of water per
+day, while for large data centres, this number jumps to about 23 million litres per day,
+equivalent to the daily usage of about 50,000 households in the US.
+
+Except in cooler locations where natural or air-only cooling ("free cooling") can be
+enough to extract all the heat generated during computation from the data centres, in
+most cases, some level of water-based cooling is required. There are two broad methods
+for water-cooled data centres:
+
+- **Using air cooling with water evaporation in chillers**. This is an open-loop method
+where water is lost into the atmosphere - hence removing it from the reservoir it was
+taken from, and therefore wasteful - but it is technically simpler to implement.
+- **Via direct liquid cooling**, where the coolant (not necessarily water) is directly in
+contact with the processing unit. [Direct-to-chip liquid cooling and immersive liquid cooling]
+are two server liquid cooling technologies that dissipate heat while significantly
+reducing water consumption, but at a much higher cost and technical complexity.
+
+While not as commonly available as the Power Usage Effectiveness (PUE), some data
+centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
+per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
+most common values are around 1.9 l/kWh.
+
+[Recent studies]: https://www.eesi.org/articles/view/data-centers-and-water-consumption
+[Direct-to-chip liquid cooling and immersive liquid cooling]: https://www.datacenterdynamics.com/en/analysis/an-introduction-to-liquid-cooling-in-the-data-center/
+[Water Usage Effectiveness (WUE)]: https://www.datacenterknowledge.com/cooling/a-guide-to-data-center-water-usage-effectiveness-wue-and-best-practices
 
 ::::::::::::::::::::::::::::: callout
 
@@ -384,13 +417,24 @@ Factors to consider (to be expanded):
 #### Data Management Plans
 
 The best time to think about how to manage you data is before you collect or generate
-it...
+it. This is the purpose of a Data Management Plan (DMP), a document that describes how you
+will handle your data during and after a research project. DMPs are often required by
+funding agencies and research institutions, but they are also a good practice to ensure
+that your data is well organised, documented and preserved.
+
+In addition to being a good scientific practice, DMPs can also help you to reduce
+the carbon footprint of your data. Tracking and monitoring your data in this manner
+can help you to identify (and where possible, avoid) unnecessary data collection and
+storage. This will in turn help you to make informed decisions about your data
+management practices and making them more sustainable.
+
+The UK Data Service provides a [data management planning overview](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/data-management-planning-overview/)
+and a [checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/)
+of key points to consider when creating a DMP.
 
 :::::::::::::::::::::::::::::::::::
 
 #### Sharing and Publishing Data
-
-Todo
 
 ### Use of Computational Services
 
@@ -434,12 +478,16 @@ generative AI models can be split into two components:
   prompt. This refers to the energy required to transmit your prompt, generate the
   response and transmit it back to you.
 
-There are some important factors to bear in mind when interacting with LLMs that can
-drive emissions (to be expanded):
+There are some important driving factors to bear in mind when interacting with LLMs
+that can drive emissions:
 
-- **Model size**
-- **Query count**
-- **Response token count**
+- **Model size**: Larger models typically require more energy to run.
+- **Query count**: The more queries you make to a model, the more energy it will
+consume. Hence, being mindful of the number of interactions and trying to batch queries
+when possible can help reduce emissions comparatively.
+- **Response token count**: The length of the response generated by the model can also
+impact energy usage, as longer responses require more computation. Reducing the length of
+the response by being more specific in your prompt might help.
 
 ### References
 

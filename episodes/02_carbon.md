@@ -276,10 +276,50 @@ view of different emissions sources.
 
 :::::::::::::::::::::::: solution
 
-## Output
-
-No idea. We need to do it.
-
 :::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+## Carbon in Context
+
+While digital emissions might seem small, their impacts are cummulative. To provide a
+ clearer picture of these impacts, the following table contextualizes digital emissions
+ against common research-related activities, such as international travel and
+ laboratory-related activities. Thinking about digital emissions in the context of the
+ wider usual research activities gives a better idea of what is driving carbon footprint,
+ making it easier to see where one can make the most impactful changes.
+
+| Activity / Item | Carbon Impact (kgCO2e) | Comparison | % of per-capita UK emissions |
+| --- | --- | --- | --- |
+| **Running a Fume Hood** (1 yr) | **~4,700** | 2.35x Return Flights (LHR-JFK) | **112%** |
+| **Ultra-low Freezer** (1 yr) | **~1,200** | Storing 10TB of data on SSD for ~3 years | **28.7%** |
+| **Long-haul Return Flight** (LHR-JFK) | **2,000** | Energy for 1 average household | **47%** |
+| **SSD Storage** (10 TB / 1 yr) | **360** | Purchasing two new laptops in a year | **8.5%** |
+| **New Laptop** (Manufacturing) | **160** | 77.6% of the carbon emissions from a 4 year lifecycle of the same laptop | **3.8%** |
+| **Laptop Lifecycle** (4 yrs) | **206** | Replacing laptop every 4 years | **4.9%** |
+
+Data assumptions and calculations:
+
+- 4.22 tCO2e emissions per-capita in UK according to the [International Energy Association](https://www.iea.org/countries/united-kingdom/emissions)
+- Grid intensity: 0.136 kgCO₂/kW as the average intensity grid in England in February 2026^1^
+- Long-haul flight emission: based on a return flight in Economy class from London
+ Heathrow to New York JFK, according to MyClimate calculator [tool](https://co2.myclimate.org/en/portfolios?calculation_id=8535150)
+- Fume Hoods: Based on an electrity consumption of 34,871 kWh/year ^2^
+- Ultra-low Freezer: Based on a energy consumption of up to 25 kWh/day (8,900 kWh/year)
+ of traditional cascade refrigeration systems ^3^.
+- Household energy consumption: bBsed on Ofgem estimate of typical household consumption
+ in England of 2,700 kWh of electricity and 11,500 kWh of gas in a year, resulting in
+ ~1900 kgCO2e
+- SSD storage: Based on the higher end of estimated carbon emissions per TB/year ^4^
+- New laptop: Based on the embedded emissions of a typical [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
+ It does not include operational emissions.
+- Laptop Lifecycle: Based on the embedded and operational emissions of a typical
+ [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
+
+References:
+
+1. [National Energy System Operator](https://www.neso.energy/)
+2. [Mills, E. & Sartor, D. Energy use and savings potential for laboratory fume hoods. Energy 30, 1859–1864 (2005). https://doi.org/10.1016/j.energy.2004.11.008](https://www.sciencedirect.com/science/article/pii/S0360544204004906)
+[Green software practitioner course]: <https://learn.greensoftware.foundation/>
+3. [Kypraiou C, Varzakas T. Evolution and Evaluation of Ultra-Low Temperature Freezers: A Comprehensive Literature Review. Foods. 2025 Jun 28;14(13):2298. doi: 10.3390/foods14132298. PMID: 40647050; PMCID: PMC12248920.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12248920/)
+4. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)

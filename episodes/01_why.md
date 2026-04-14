@@ -19,6 +19,24 @@ exercises: 0 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Environmental sustainability
+
+Environmental sustainability refers to the need for human activity to be balanced with
+the long term health of the planet and availability of natural resources. There are many
+issues that can impact environmental sustainability:
+
+- Greenhouse gas emissions.
+- Potable water usage.
+- Waste and pollution.
+- Biodiversity.
+
+The most pressing sustainability challenge facing the world is the emission of
+greenhouse gases driving the climate emergency. For this reason we will primarily focus
+on greenhouse gas emissions, in particular we'll focus on the metric Kilograms Carbon
+Dioxide Equivalent (kgCO₂e). This is a simplified metric that aims to represent the
+impact of a range of greenhouse gases as a single figure by expressing them as an
+equivalent emitted quantity of Carbon Dioxide (CO₂).
+
 ## The context of net zero goals
 
 [Climate change and global warming](https://weather.metoffice.gov.uk/climate-change/effects-of-climate-change)
@@ -72,38 +90,47 @@ power and data storage resources. Providing these digital resources requires sig
 production of computer hardware and leads to significant electricity consumption. Both
 of these aspects can lead to substantial carbon emissions.
 
-A [recent paper in Nature](https://www.nature.com/articles/s44458-025-00022-6) estimated
-the digital sector at 4.1% of global emissions but that these emissions are typically
-obscured within other categories of emissions.
+The [ICT contributions to global carbon emissions in 2007] was estimated in 1.3%, and a
+more recent study [increases this number to 4.1% in 2021]. But more striking are the
+predictions that [ICT global emissions will reach over 14% in 2040].
 
-## Minimising carbon to science
+While digital research will always be a fraction of all of these emissions, the
+[UKRI Net Zero DRI Scoping Project final technical report] suggests a very challenging scenario
+in the years to come if carbon emissions are to be kept at bay with the growing demand for
+energy in digital-related activities in research. For the UKRI alone, the estimated carbon
+emissions of digital research are 75 kilotons of CO2e per year, with 40 kilotons corresponding
+to large scale compute facilities and the remaining 35 kilotons related to servers, laptops
+and small equipment.
 
-Digital research is important for scientific progress and has the potential
-to contribute to solving many of the global challenges, including climate change.
-However, it is necessary to ensure that the carbon emissions associated with
-digital research are minimised. As researchers, we have a responsibility to
-consider the environmental impact of our work and take steps to reduce it. This
-begins with `mindful computing`, a term which describes a more concious approach
-to planning, running and managing digital tasks to ensure that scientific advances
-don't produce more emissions than needed. Adopting this mindset could look different
-to everyone. For example, choosing a datacenter in a region powered by renewable energy
-can significantly reduce a project's carbon footprint. Another example is storage data
-management, where small steps such as deleting unused data or compressing data
-can reduce the carbon associated with long-term storage. Mindful computing can also
-be applied to analyses tasks, by using incremental processing or requesting the right
-GPU/CPU resources when using High Performance Computing.
+Digital research is important for scientific progress and has the potential to
+contribute to solving many of the global challenges, including climate change. However,
+it is necessary to ensure that the carbon emissions associated with digital research are
+minimised. As we will learn in the following episodes, there is not a single, big carbon
+producer in digital research that we can eliminate without hindering the research
+activity, but a myriad small activities, practices, tools and processes that, while
+individually do not represent a big challenge, their sheer amount results in the above
+estimates.
 
-In the following episodes, we will explore how to measure and estimate the carbon
-emissions from digital research activities, what are the sources of these emissions,
-and what are some ways to reduce them.
+As researchers, we have a responsibility to consider the environmental impact of our
+work and take steps to reduce it. This begins with `mindful computing`, a term which
+describes a more concious approach to planning, running and managing digital tasks to
+ensure that scientific advances don't produce more emissions than needed. Adopting this
+mindset could look different to everyone. For example, choosing a datacenter in a region
+powered by renewable energy can significantly reduce a project's carbon footprint.
+Another example is storage data management, where small steps such as deleting unused
+data or compressing data can reduce the carbon associated with long-term storage.
+Mindful computing can also be applied to analyses tasks, by using incremental processing
+or requesting the right GPU/CPU resources when using High Performance Computing.
 
-::::::::::::::::::::::::::::::::::::: callout
+As researchers, we have a responsibility to consider the environmental impact of our work
+and take steps to reduce it. Hence, the purpose of this course is to explore how to measure
+and estimate the carbon emissions from digital research activities, what are the sources
+of these emissions, and what are some ways to reduce them.
 
-Once upon a time, in a research intensive university...
-
-TBC - Eye-opening scenario on producing carbon in digital research
-
-:::::::::::::::::::::::::::::::::::::::::::::
+[ICT contributions to global carbon emissions in 2007]: https://doi.org/10.1111%2Fj.1530-9290.2010.00278.x
+[increases this number to 4.1% in 2021]: https://doi.org/10.1038/s44458-025-00022-6
+[ICT global emissions will reach over 14% in 2040]: https://doi.org/10.1016/j.jclepro.2017.12.239
+[UKRI Net Zero DRI Scoping Project final technical report]: https://doi.org/10.5281/zenodo.8199983
 
 ## References
 
