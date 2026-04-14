@@ -266,10 +266,6 @@ Emma is happy with her carbon footprint after adopting the new workflow.
  (open-source Python library to estimate the carbon footprint of inference queries made
  to LLMs) and online LLM carbon emissions leaderboards
 
-By combining these new behaviours with her new storage workflow, Emma's digital footprint
-will drop even further, proving that even data-intensive research can be done without a
-high environmental cost.
-
 ## References
 
 1. [Winter N,The paradox of the life sciences: How to address climate change in the lab: How to address climate change in the la. doi: 10.15252/embr.202256683](https://pmc.ncbi.nlm.nih.gov/articles/PMC9986813/)
