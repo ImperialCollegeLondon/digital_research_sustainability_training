@@ -38,9 +38,9 @@ Emma's set up:
  She is planning to back up 2 copies of the raw data on different HDDs. In addition, she
  will generate approx. 400 GB of processed data every year, which will be used for active
 analyses, which she plans to store on different HDDs. While the project only runs for 5
- years,there is a 10 year data retention period to comply with her funder's coniditions
+ years,there is a 10 year data retention period to comply with her funding's coniditions
 
-Emma's Workflow:
+Emma's workflow:
 
 - She uses cloud-based LLMs to write her scripts for processing and analysing data.
 This often requires many queries and iterations.
@@ -82,16 +82,14 @@ Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
 
 ### Data storage
 
-Emma is considering using differnt storage types after she heard that
+Emma is considering using different storage types after she heard that
  storing large amounts of data on HDDs might not be the most evironmentally friendly
- choice. She has heard from other colleagues that she could choose between hard drives
+ option. She has learnt from colleagues that she could choose between hard drives
  (HDD), Solid State Drives (SDD), LTO magnetic tapes or cloud-based storage. However,
-  she is unsure about the enivronmental impacts of these.
+  she is unsure about their different enivronmental impacts.
 
-She did some research on the available storage types and used the table below summarising
- their emissions below to calculate the carbon footprint of storing the project's data.
-
-The carbon emissions associated with the four storage types are summarised below:
+Emma did some research on the above storage types and used the table below summarising
+ their emissions below to calculate the carbon footprint of storing her project's data:
 
 | Category | SDD | HDD | LTO tape | Cloud |
 | :--- | :--- | :--- | :--- | :--- |
@@ -102,7 +100,7 @@ The carbon emissions associated with the four storage types are summarised below
 \* Emissions are in **kg CO₂e per TB per year**
 
 Emma’s research will produce 3.5 TB of raw data for the duration of the project. Because
-she keeps two opies of all raw data, the total required storage for raw data comes to 7
+she keeps two copies of all raw data, the total required storage for raw data comes to 7
 TB. Beyond that, Emma will generate an additional 400 GB of processed data per year,
 adding up to 2 TB over the duration of the project. Altogether, Emma will need
 9 TB of storage to keep both raw and processed data.
