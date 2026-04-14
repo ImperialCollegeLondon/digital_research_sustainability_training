@@ -86,27 +86,30 @@ What Scope 3 emissions under the GHG protocol can you identity from Miguel's wor
 
 Miguel finds that the previous model was highly trained with vast quantities of real
 animal images, and is already quite competent at feline-based image processing. It may
-not be necessary to train the model from scratch if transfer learning is utilised.
+not be necessary to train the model from scratch if transfer learning can be utilised.
+He takes a look at the model's architecture, and notes that it is very large for its
+stated purpose, with many channels per convolutional layer, and very wide fully
+connected layers in the head. He realises that his workstation's GPUs will not have
+enough memory to train the model efficiently in its current form.
 
-He takes a look at the model's architecture, and notices that it is very large for
-its stated purpose, with many channels per convolutional layer, and very wide fully
-connected layers in the head. He realises that his workstation's GPUs may not have
-enough memory to train the model effectively in its current form, and begins to
-consider his options.
+For rough comparison, he approximates the environmental impact of retraining the model
+based on the impact of training the original model. Remembering the hardware setup and
+the time elapsed for the previous job, he plugs these values into the
+[Green Algorithms Calculator](https://calculator.green-algorithms.org/), which estimates
+28.02 kWh of energy required to train the model, with a carbon footprint of 6.48 kgCO2e.
 
-The first option is familiar to Miguel: offload the work to a cloud GPU compute
-provider. He browses them, in turn, and is able to find the hardware configuration for
-most of them from datasheets and documentation. Knowing that FLOPs/Watt is a poor
-surrogate for total power usage in deep learning, he consults public datasets measuring
-whole-system power usage during inference, such as the
-[MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) dataset. He is
-able to find the hardware configuration of an acceptible provider, and notes that
-$Samples/Joule = (Samples/s)/(Watts) ≈ 9.89$.
+Miguel's first option is familiar to him: offload the work to a cloud GPU compute
+provider. In his searches, he is able to find the hardware configuration for several
+candidates by looking in documentation and datasheets. He consults the
+[MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) datasets of
+whole-system inference power usage, and finds the energy efficiency for representaive ML
+models $Samples/Joule = (Samples/second)/Watts$ for some of the candidate datacentres,
+helping him to choose a favourite.
 
 Alongside this, he considers a second option: whilst his personal workstation's GPU is
 far from cutting-edge, it is by no means obsolete. He knows from experience that newer
-does not automatically mean greener, and keeps in mind during pre-job analysis, looking
-for oppurtunities to make the model lean enough to run on his GPU.
+does not automatically mean greener, and keeps this in mind during pre-job analysis,
+looking for oppurtunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 
@@ -130,10 +133,10 @@ scaling, which is useful to prevent wasting computation by reserving enough time
 the cloud job whilst experimenting.
 
 Finally, Miguel notices that the training script of the base model was very crude, and
-simply passed through the entire dataset through the model for exactly 100 epochs of
-stochastic gradient descent (SGD). No regularisation schemes were used. Whilst the
-choice of optimiser affects the memory required to train the model, via $j$ above, the
-possible energy savings of early convergence may be overall worth it.
+simply passed through the entire dataset through the model, with a fixed batch size,
+for exactly 100 epochs of stochastic gradient descent (SGD). No regularisation schemes
+were used. Whilst the choice of optimiser affects the memory required to train the model,
+via $j$ above, the possible energy savings of early convergence may be overall worth it.
 
 ## Taking Action
 
@@ -160,3 +163,11 @@ Noting again that the model is very large for its stated purpose, Miguel adds L1
 regularisation to reduce redundant activation, allowing many (now-unused) activation
 units to be removed from the model entirely, promoting a leaner and more power-efficient
 model in the process.
+
+With the model now small enough to run efficiently on his workstation, Miguel runs
+a short test-run to check that all is well before the main training run. He notes that
+even on his relatively small GPU, the model is not utilising his GPU entirely. Since a
+partially-occupied GPU is disproportionally less efficient than an occupied one, he
+changes his training code to adapt the batch size based on available GPU memory.
+
+TODO: NEW TRAINING POWER ESTIMATE
