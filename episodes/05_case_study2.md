@@ -33,13 +33,13 @@ Emma is a researcher in a biology lab and was tasked with analysing genomic sequ
 
 Emma's set up:
 
-- Personal laptop: modern and energy efficient laptop (2 years old), which she uses for
- email and paper writing.
-- Lab Desktop: a 15 year old Desktop station, with an outdated version of Linux and no GPUs.
-- Data storage: Her research generates approx. 700 GB of raw data every year. She is
- planning to back up 2 copies of the raw data on different HDDs. In addition, she plans
- to keep a copy of the processed data on different HDDs (approx 400 GB), which
- will be used for active analyses.
+- Work laptop: modern and energy efficient laptop
+- Data storage: Her research will generate approx 3.5 Tb for the duration of the project.
+  She is planning to back up 2 copies of the raw data on different HDDs. In addition,
+  she will generate approx. 400 GB of processed data every year, which will be used for
+  active analyses, which she plans to store on different HDDs. While the project only
+  runs for 5 years,there is a 10 year data retention period to comply with her funding's
+  coniditions
 
 Emma's Workflow:
 
