@@ -132,7 +132,7 @@ variables for all layers $N ≈ 11,000,000$:
 | Optimiser State  | $P \cdot k \cdot b$ | 0              |
 | Activation State | $M \cdot N \cdot b$ | 11,264,000,000 |
 
-An extra $20\% = 2,294,400,000$ bytes overhead for internal ML framework usage is also
+An extra $20\% ≈ 2,294,400,000$ bytes overhead for internal ML framework usage is also
 included, totalling approximately $12.8$ GB. In general, there is an optimiser memory
 factor $k$, but plain stochastic gradient descent (SGD) has no internal state, hence
 $k = 0$ for now. With this estimation framework, he is able to know upfront roughly how
@@ -181,7 +181,7 @@ a short test-run to check that all is well before the main training run. He note
 even on his relatively small GPU, the model is not utilising his GPU entirely. Since a
 partially-occupied GPU is disproportionally less efficient than an occupied one, he
 estimates the memory requirements of this revised model, with the aim of maximising
-batch size to better-utilise the GPU. With new values $b_{16} = 2$ and $b_{32} = 4$,
+batch size to better-utilise the GPU. With new values $b_{16} = 2$, $b_{32} = 4$,
 $P ≈ 20,800,000$, $k = 2$, $M = 256$ and $N ≈ 8,800,000$:
 
 | Memory Type      | Formula                  | Size (bytes)   |
@@ -191,8 +191,16 @@ $P ≈ 20,800,000$, $k = 2$, $M = 256$ and $N ≈ 8,800,000$:
 | Optimiser State  | $P \cdot k \cdot b_{32}$ | 166,400,000    |
 | Activation State | $M \cdot N \cdot b_{16}$ | 4,505,600,000  |
 
-and extra $20\% = 959,360,000$ bytes overhead, totalling approximately $5.4$ GB only.
+and extra $20\% ≈ 959,360,000$ bytes overhead, totalling approximately $5.4$ GB only.
 Indeed, Miguel finds he can increase batch size even up to $M = 728$ before the $16$ GB
 of memory from the previous job comes close to full, further increasing job speed.
 
-TODO: discussion of other stuff
+TODO: Add discussion around execution considerations.
+Naive implementation would require large GPU resources,
+clever approach is small enough to maybe run locally.
+
+Discuss considerations around:
+
+- cloud vs local execution,
+- operational vs embedded
+- potential demand shifting
