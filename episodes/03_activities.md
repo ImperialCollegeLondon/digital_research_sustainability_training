@@ -27,6 +27,9 @@ devices up to the globe spanning network of the internet. In this section we'll 
 some of the different components of digital infrastructure and their relation to carbon
 emissions.
 
+<!-- markdownlint-disable-next-line line-length -->
+![Placeholder image - What components of digital infrastructure produce carbon emissions? (Image by Rae)](https://cdni.iconscout.com/illustration/premium/thumb/man-choosing-environment-over-carbon-emissions-illustration-svg-download-png-7237101.png){alt='Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself.'}
+
 ## Computers
 
 Computers have become an indispensible component of modern life as well as digital
@@ -146,6 +149,18 @@ a period of time.
 Once the baseline energy usage is found, strategies can be defined to reduce it, like
 adjusting the power management settings, changing usage habits, etc.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+#### What are the idle energy usage of your computer?
+
+Like in the previous exercise, try to find the ECO Declaration for your computer
+in the manufacturer's webpage.
+
+- What's such an energy consumption?
+- How easy was to find it?
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 #### Application energy usage
 
 Once you start doing any work with a computer it's power usage will rise above its idle
@@ -160,8 +175,8 @@ been working on or a 3D visualization tool.
 This is not an easy task, and the solution depends greatly on your accessibility to the
 source code of the application, as well as the hardware you are using.
 
-If you do have access to the source code, then you could use tools like the [Intel's
-Performance Counter Monitor (PCM)] (which [can be used in C++ programs]) or [Codecarbon]
+If you do have access to the source code, then you could use tools like the
+[Intel's Performance Counter Monitor (PCM)] (which [can be used in C++ programs]) or [Codecarbon]
 (for Python programs). These tools require some setting up - and obviously modify your
 code - but will give you the most accurate readings of the energy usage specific for
 your application.
@@ -185,6 +200,7 @@ understand your energy usage and consider ways of reducing them.
 [Device Donation Scheme]: https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme
 [ECO Declaration]: https://ecma-international.org/publications-and-standards/standards/ecma-370/
 [ECO declaration of the HP EliteBook 840 G9]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&search=HP%20EliteBook%20840%20G9
+[Intel's Performance Counter Monitor (PCM)]: https://github.com/intel/pcm
 [can be used in C++ programs]: https://greencompute.uk/Measurement/RAPL
 [Codecarbon]: https://github.com/mlco2/codecarbon
 [Green Algorithms Calculator]: https://calculator.green-algorithms.org/
@@ -196,12 +212,15 @@ reliability. As modern research practices move toward open data and long-term st
 the embodied and operational emissions of storage becomes a significant component of
 digital research's environmental impact.
 
+<!-- markdownlint-disable-next-line line-length -->
+![History of digital storage media. Image from the blog post ["Data storage through history"]](https://www.anycloud.dk/wp-content/uploads/2023/07/2-1.png){alt='Timeline with the history of digital storage media showing: punchcards (1881), magnetic tape (1950), removable hard drives (1963), floppy discs (1971), CD-ROM (1983), SD Cards (1999), USB drives (2000) and cloud (2013).'}
+
 There are a few different storage mediums in common use:
 
 - **Solid-State Disk Drives (SSD)**: They use flash memory with no moving parts to store
-  data. Their embodied carbon emissions are high due to the rare metals needed for
-  semiconductor manufacturing, while operational emissions are somewhat lower than for
-  spinning disks.
+  data, much like SD cards and USB drives, but with much larger capacity. Their embodied
+  carbon emissions are high due to the rare metals needed for semiconductor manufacturing,
+  while operational emissions are somewhat lower than for spinning disks.
 - **Hard Disk Drives (HDD)**: They store data on spinning magnetic disks. Embodied
   emissions are lower than those of SSDs but operational emissions are higher because
   their disks must spin continuously.
@@ -221,9 +240,9 @@ and embedded components. These are summarised below:
 \* Emissions are in **kgCO₂e per TB per year**
 
 While the numbers vary depending on manufacturers and reporting available, it is generally
- considered that SSDs have a higher 'carbon debt`per unit of storage than HDDs^4^.
- However, recent data suggests that the difference for enterprise-grade drives is shrinking,
- and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
+considered that SSDs have a higher carbon debt per unit of storage than HDDs^4^.
+However, recent data suggests that the difference for enterprise-grade drives is shrinking,
+and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
 While the numbers vary depending on manufacturers and reporting available, it is
 generally considered that SSDs have a higher 'carbon debt` per unit of storage than
 HDDs^4^. However, recent data suggests that the difference for enterprise-grade drives
@@ -234,12 +253,17 @@ HDDs. LTO tapes offer the slowest access speeds, but they remain the preferred o
 for storing cold data due to their low cost, low embodied emissions and great energy
 efficiency.
 
+["Data storage through history"]: https://www.anycloud.dk/anycloud/data-management/data-storage-thoughout-history/
+
 ## Data Centres
 
 Beyond personal computing devices like laptops and PC's, much computing infrastructure
 is now accessed remotely. In this case the computers are generally hosted in a Data
 Centre, a large industrial facility that can contain thousands of servers and the
 supporting infrastructure required to allow remote access.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Data centers consume huge amounts of energy and water, which can be a risk for the environment. Image originally published at [The Seattle Times].](https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg){alt="Cartoon showing a datacenter as a monster demanding more power."}
 
 The carbon emissions associated with the computers in a data centre are covered by the
 same considerations above. As purpose built facilities, data centres can host more
@@ -269,7 +293,7 @@ reaches the IT equipment used for servers and storage compared to the energy use
 cooling and lighting.
 
 $$
-\mathbf{PUE} = \frac{\text{IT Equipment Power}}{\text{Total Facility Power}}
+\mathbf{PUE} = \frac{\text{Total Facility Power}}{\text{IT Equipment Power}}
 $$
 
 <!-- markdownlint-disable-next-line line-length -->
@@ -311,6 +335,8 @@ footprint.
 | **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
 | **Energy Efficiency** | High (fewer idle disks) | Generally lower |
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
+
+[The Seattle Times]: https://www.seattletimes.com/opinion/the-ai-energy-monster-is-coming-for-our-salmon-and-electricity/
 
 ### Data centres and water usage
 
@@ -356,6 +382,56 @@ on‑premise setups - but the cloud's actual footprint still depends on the prov
 hardware, PUE, electricity grid mix and redundancy/replication practices.
 
 :::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## What do you use data centres for?
+
+There are way more things that we initially may think that make use of data centres, some
+related to digital research but plenty of others than do not.
+
+In small groups, reflect and discuss what daily activities pof your everyday life make
+use of data centres, sorting them into digital research, other work-related activites,
+and personal activities.
+
+- Where do you have more items?
+- Which category do you think consume more data centre power?
+- After talking to your colleagues, was there any surprise on things that use data centres?
+
+:::::::::::::::: solution
+
+Each group is likely to have a different list, but some of the items that are likely
+to be present in most of them are:
+
+- Digital research
+    - Store some code in GitHub, Codeberg or other platform
+    - Run continuous integration workflows
+    - Run software - including AI training - in cloud services
+    - Store large amounts of research data with a cloud provider
+- Other work related activities
+    - Send emails
+    - Meet colleagues via Teams or Zoom
+    - Store some office documents in Onedrive, Dropbox or similiar
+- Personal activities
+    - Use instant message apps with familly and friends
+    - Send personal emails
+    - Stream music or films
+    - Order food
+    - Buy items in online shops
+    - Read newspapers online, blogposts or similar
+    - Check the weather forecast
+    - Check Google Maps or other similar applications
+    - Review your bank account
+    - ...
+
+As you see, a lot of our daily activities go through a data centre somewhere
+and while digital research will make heavy use of these facilities because they are
+intensive workflows, the sheer amount of other small tasks can easily offset the carbon
+emissions of the former when considered collectively.
+
+:::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Research Activities
 
@@ -433,8 +509,6 @@ and a [checklist](https://ukdataservice.ac.uk/learning-hub/research-data-managem
 of key points to consider when creating a DMP.
 
 :::::::::::::::::::::::::::::::::::
-
-#### Sharing and Publishing Data
 
 ### Use of Computational Services
 
