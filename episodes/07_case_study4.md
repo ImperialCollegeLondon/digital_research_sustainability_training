@@ -121,10 +121,9 @@ looking for oppurtunities to make the model lean enough to run on his GPU.
 ## Analysis
 
 For the next step, Miguel begins to quantify the computational resources required to
-train the modified model. He computes the memory requirements of the modified model,
-with bytes per value $b = 4$, the number of trainable parameters $P ≈ 26,000,000$, the
-batch size $M = 256$ and the number of activation state variables for all layers
-$N ≈ 11,000,000$:
+train the modified model. With bytes per value $b = 4$, the number of trainable
+parameters $P ≈ 26,000,000$, the batch size $M = 256$ and the number of activation state
+variables for all layers $N ≈ 11,000,000$:
 
 | Memory Type      | Formula             | Size (bytes)   |
 | ---------------- | ------------------- | -------------- |
@@ -156,28 +155,44 @@ further fine-tune the model to a reasonable accuracy.
 
 He begins experimenting, appending the new bounding-box head and starting training,
 keeping the trainable parameters in the body fixed, and gradually relaxing them as
-training progresses. In doing so, he notices that the model comes close to converging
-well before the programmed 100 epochs. He modifies the training script to terminate
-early, once the model's loss function converges, and back up training state after each
-epoch, to avoid starting again on software crash or hardware failure. He is able to
-further reduce training time with a moderate increase in required memory ($k$ in the
-memory equations) using a more sophisticated optimiser, and finds this extra memory
-requirement is easily offset by reducing floating-point number precision at no
-detriment to model accuracy.
+training progresses. He modifies the training script to back up training state after
+each epoch, to avoid starting again on software crash or hardware failure. He is able
+to greatly increase convergence rate with a moderate increase in required memory
+($k = 2$ in the memory equations) using the more sophisticated Adam optimiser, and
+further improves it by adding learning rate decay. With convergence rate noticeably
+increased, he adds logic to terminate early once the model's loss function converges.
+The 32-bit floating-point numbers for activation state and gradients are switched to
+16-bit, increasing operator speed and halving the memory required for both.
 
-Finally, revisiting the earlier issue of model size, Miguel wonders if the model can be
-pruned to enable training on his workstation, instead of relying on the cloud provider.
-Noting again that the model is very large for its stated purpose, Miguel adds L1 (Lasso)
+Based on experience on similar jobs, Miguel expects at least a 15x increase in training
+speed on similar hardware. Plugging the new runtime estimate of 10 hours into the
+[Green Algorithms Calculator](https://calculator.green-algorithms.org/), his new
+estimated energy usage is $4.25$ kWh, with a carbon footprint of $0.98$ kgCO2e from
+these changes alone.
+
+Revisiting the earlier issue of model size, Miguel wonders if the model can be pruned
+to enable training on his workstation, instead of relying on the cloud provider. Noting
+again that the model is very large for its stated purpose, Miguel adds L1 (Lasso)
 regularisation to reduce redundant activation, allowing many (now-unused) activation
-units to be removed from the model entirely, promoting a leaner and more power-efficient
-model in the process.
-
-TODO: about 20% memory reduction from L1 and pruning
+units to be removed from the model entirely, resulting in a $20\%$ memory saving.
 
 With the model now small enough to run efficiently on his workstation, Miguel runs
 a short test-run to check that all is well before the main training run. He notes that
 even on his relatively small GPU, the model is not utilising his GPU entirely. Since a
 partially-occupied GPU is disproportionally less efficient than an occupied one, he
-changes his training code to adapt the batch size based on available GPU memory.
+estimates the memory requirements of this revised model, with the aim of maximising
+batch size to better-utilise the GPU. With new values $b_{16} = 2$ and $b_{32} = 4$,
+$P ≈ 20,800,000$, $k = 2$, $M = 256$ and $N ≈ 8,800,000$:
 
-TODO: NEW TRAINING POWER ESTIMATE
+| Memory Type      | Formula                  | Size (bytes)   |
+| ---------------- | ------------------------ | -------------- |
+| Parameters       | $P \cdot b_{32}$         | 83,200,000     |
+| Gradients        | $P \cdot b_{16}$         | 41,600,000     |
+| Optimiser State  | $P \cdot k \cdot b_{32}$ | 166,400,000    |
+| Activation State | $M \cdot N \cdot b_{16}$ | 4,505,600,000  |
+
+and extra $20\% = 959,360,000$ bytes overhead, totalling approximately $5.4$ GB only.
+Indeed, Miguel finds he can increase batch size even up to $M = 728$ before the $16$ GB
+of memory from the previous job comes close to full, further increasing job speed.
+
+TODO: discussion of other stuff
