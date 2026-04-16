@@ -383,6 +383,19 @@ hardware, PUE, electricity grid mix and redundancy/replication practices.
 
 :::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+Depending on the size of the group and their engagement, the following challenge can also
+be done collectively as a class:
+
+- Participants go in turns suggesting items, and the instructor writes them in a whiteboard
+- Participants write items in post-its and then stick them on a wall
+
+Both options can be done for remote delivery of the course, using digital whiteboards.
+Finally, the instructor comments on the results.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## What do you use data centres for?
@@ -416,6 +429,7 @@ to be present in most of them are:
     - Use instant message apps with familly and friends
     - Send personal emails
     - Stream music or films
+    - Check social media
     - Order food
     - Buy items in online shops
     - Read newspapers online, blogposts or similar
