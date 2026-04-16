@@ -1,5 +1,5 @@
 ---
-title: 'Case Study 1 - Researcher'
+title: 'Case Study 1 - Research Software Engineer'
 teaching: 20
 exercises: 10
 ---
@@ -20,12 +20,12 @@ exercises: 10
 
 ## Scenario
 
-Celia is a researcher in a university. Two years ago, she developed and released
-a Python package (hosted on PyPI) with a novel data analysis technique relevant to
-her research area.
-The package has been a big success and has been widely adopted. However,
-she has heard from some users that they are using it on increasingly large datasets that
-leads to demanding memory requirements and slow performance.
+Celia is a Research Software Engineer that works as part of a research group. Two years
+ago, she developed and released a Python package (hosted on PyPI) with a novel data
+analysis technique relevant to her research area. The package has been a big success and
+has been widely adopted. However, she has heard from some users that they are using it
+on increasingly large datasets that leads to demanding memory requirements and slow
+performance.
 
 Celia is concerned about the environmental impact of her software package.
 She wants to assess the carbon emissions associated with both the development
@@ -88,23 +88,38 @@ They run the package for around 4 hours per week.
 
 ## Analysis
 
-Celia tracks the activities for a week to get an estimate of the emissions associated
-with her software development and usage. From the PCF data sheet for her laptop, the
-embedded emissions from the hardware components (CPU + GPU + RAM) is 100 kg CO2e.
-Moreover, since her code is not optimised for performance, it has been consuming more
-computational resources and is taking longer to run than it should, leading
-to higher emissions. The runtime of the code on a single CPU core is around 4 hours
-per week.
+::::::::::::::::::::::::::::::: challenge
 
-The five workflows on GitHub Actions that run around 10 times a day, have a total
-runtime of 2940 seconds per week. Whereas, the 20 prompts to the AI coding agents
-every week have a total runtime of around 20 minutes per week. At present, she is not
-aware of any tools that can be used to estimate the emissions from the use of GitHub
-Actions and AI coding agents. So decides to use them sparingly and only when necessary.
+## Tracking activities and estimating emissions
 
-Finally, to compute the carbon footprint of her software package, she uses the [Green
-Algorithms Calculator](https://calculator.green-algorithms.org/). For the same, she
-records the following information:
+Based on the scenario above, what are the activities that Celia should track,
+over a period of one week, to estimate the emissions associated with her software
+development and usage? What additional information does she need to collect?
+
+::::::::::::::::::::::: solution
+
+Celia tracks the following activities:
+
+1. From the PCF data sheet for her laptop, she can find the embedded emissions
+from the hardware components (CPU + GPU + RAM). In this case, the total embedded emissions
+is 100 kg CO2e.
+
+2. She notices that, her code is not optimised for performance, it has been
+consuming more computational resources and is taking longer to run than it should,
+ultimately leading to higher emissions. She notes that the runtime of the code on a
+single CPU core is around 4 hours per week.
+
+3. Her package has five workflows on GitHub Actions that run around 10 times a day.
+They have a total runtime of 2940 seconds per week. Additionally, she records that
+she has been writing approximately 20 prompts to the AI coding agents every week,
+which has a total runtime of around 20 minutes per week. At present,
+she is not aware of any tools that can be used to estimate the emissions from the use
+of GitHub Actions and AI coding agents. So decides to use them sparingly and only when
+necessary.
+
+Finally, to compute the carbon footprint of her software package, she records the
+following additional information to be used in the [Green
+Algorithms Calculator](https://calculator.green-algorithms.org/):
 
 - Runtime of package in hours and minutes
 - Types of cores used (CPU, GPU, or both)
@@ -117,6 +132,9 @@ cloud computing)
 - Real usage factor of the CPU
 - Power Usage Efficiency (PUE) of the local data centre (if applicable)
 - Any multiplicative factor to use
+
+:::::::::::::::::::::::
+:::::::::::::::::::::::::::::::
 
 ## Taking Action
 
