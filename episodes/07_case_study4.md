@@ -93,10 +93,17 @@ connected layers in the head. He realises that his workstation's GPUs will not h
 enough memory to train the model efficiently in its current form.
 
 For rough comparison, he approximates the environmental impact of retraining the model
-based on the impact of training the original model. Remembering the hardware setup and
-the time elapsed for the previous job, he plugs these values into the
-[Green Algorithms Calculator](https://calculator.green-algorithms.org/), which estimates
-28.02 kWh of energy required to train the model, with a carbon footprint of 6.48 kgCO2e.
+based on the impact of training the original model. He remembers that the previous job
+ran for approximately 72 hours, and used the Azure (Southern UK) datacentre with the
+following hardware:
+
+- $64$ GB of available host RAM
+- Eight virtual cores of an Intel Xeon Platinum 8260 CPU
+- One whole NVIDIA Tesla V100 GPU ($16$ GB memory variant)
+
+Using the [Green Algorithms Calculator](https://calculator.green-algorithms.org/), he
+estimates that $30.57$ kWh of energy was required to train the model, with a carbon
+footprint of $7.06$ kgCO2e.
 
 Miguel's first option is familiar to him: offload the work to a cloud GPU compute
 provider. In his searches, he is able to find the hardware configuration for several
@@ -114,29 +121,30 @@ looking for oppurtunities to make the model lean enough to run on his GPU.
 ## Analysis
 
 For the next step, Miguel begins to quantify the computational resources required to
-modify the model. He makes a rough total memory estimate; with the number of trainable
-parameters $P$, the sum of all layer sizes $N$, the batch size $M$, a constant $j$
-depending on the chosen optimiser, a constant $k$ depending on the unit model, and
-bytes per number as $b$, he reserves memory (in bytes) for:
+train the modified model. He computes the memory requirements of the modified model,
+with bytes per value $b = 4$, the number of trainable parameters $P ≈ 26,000,000$, the
+batch size $M = 256$ and the number of activation state variables for all layers
+$N ≈ 11,000,000$:
 
-- Parameters: $P \cdot b$
-- Parameter gradients: $P \cdot b$
-- Optimiser state: $P \cdot j \cdot b$
-- Activations: $M \cdot N \cdot k \cdot b$
-- An extra $20%$ for ML frameworks usage
+| Memory Type      | Formula             | Size (bytes)   |
+| ---------------- | ------------------- | -------------- |
+| Parameters       | $P \cdot b$         | 104,000,000    |
+| Gradients        | $P \cdot b$         | 104,000,000    |
+| Optimiser State  | $P \cdot k \cdot b$ | 0              |
+| Activation State | $M \cdot N \cdot b$ | 11,264,000,000 |
 
-With this estimation framework, he is able to know (before submitting) roughly
-how much GPU memory the job will require, as a function of batch and layer size. Next,
-Miguel roughly estimates the computational complexity of the model. Whilst FLOPs is a
-poor surrogate metric for carbon footprint, it can help for estimating run duration
-scaling, which is useful to prevent wasting computation by reserving enough time for
-the cloud job whilst experimenting.
+An extra $20\% = 2,294,400,000$ bytes overhead for internal ML framework usage is also
+included, totalling approximately $12.8$ GB. In general, there is an optimiser memory
+factor $k$, but plain stochastic gradient descent (SGD) has no internal state, hence
+$k = 0$ for now. With this estimation framework, he is able to know upfront roughly how
+much GPU memory the job will require, as a function of batch and layer size.
 
 Finally, Miguel notices that the training script of the base model was very crude, and
 simply passed through the entire dataset through the model, with a fixed batch size,
-for exactly 100 epochs of stochastic gradient descent (SGD). No regularisation schemes
-were used. Whilst the choice of optimiser affects the memory required to train the model,
-via $j$ above, the possible energy savings of early convergence may be overall worth it.
+for exactly 100 epochs of SGD. No regularisation schemes were used. Whilst the initial
+decision to use the SGD optimiser reduces the memory required to train the model, via
+$k = 0$ above, the prospect of earlier convergence using an alternative optimiser with
+$k > 0$ may make the memory increase overall worthwhile.
 
 ## Taking Action
 
@@ -152,10 +160,10 @@ training progresses. In doing so, he notices that the model comes close to conve
 well before the programmed 100 epochs. He modifies the training script to terminate
 early, once the model's loss function converges, and back up training state after each
 epoch, to avoid starting again on software crash or hardware failure. He is able to
-further reduce training time with a moderate increase in required memory ($j$ in the
+further reduce training time with a moderate increase in required memory ($k$ in the
 memory equations) using a more sophisticated optimiser, and finds this extra memory
-requirement is easily offset by reducing floating-point number precision at practically
-no detriment to model accuracy.
+requirement is easily offset by reducing floating-point number precision at no
+detriment to model accuracy.
 
 Finally, revisiting the earlier issue of model size, Miguel wonders if the model can be
 pruned to enable training on his workstation, instead of relying on the cloud provider.
@@ -163,6 +171,8 @@ Noting again that the model is very large for its stated purpose, Miguel adds L1
 regularisation to reduce redundant activation, allowing many (now-unused) activation
 units to be removed from the model entirely, promoting a leaner and more power-efficient
 model in the process.
+
+TODO: about 20% memory reduction from L1 and pruning
 
 With the model now small enough to run efficiently on his workstation, Miguel runs
 a short test-run to check that all is well before the main training run. He notes that
