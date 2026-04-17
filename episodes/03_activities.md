@@ -401,15 +401,15 @@ Finally, the instructor comments on the results.
 ## What do you use data centres for?
 
 There are way more things that we initially may think that make use of data centres, some
-related to digital research but plenty of others than do not.
+related to digital research but plenty of others that do not.
 
-In small groups, reflect and discuss what daily activities pof your everyday life make
-use of data centres, sorting them into digital research, other work-related activites,
+In small groups, reflect and discuss which daily activities in your everyday life make
+use of data centres, sorting them into digital research, other work-related activities,
 and personal activities.
 
 - Where do you have more items?
 - Which category do you think consume more data centre power?
-- After talking to your colleagues, was there any surprise on things that use data centres?
+- After talking to your colleagues, did anything surprise you about what uses data centres?
 
 :::::::::::::::: solution
 
