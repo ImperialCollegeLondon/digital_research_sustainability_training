@@ -193,14 +193,21 @@ $P ≈ 20,800,000$, $k = 2$, $M = 256$ and $N ≈ 8,800,000$:
 
 and extra $20\% ≈ 959,360,000$ bytes overhead, totalling approximately $5.4$ GB only.
 Indeed, Miguel finds he can increase batch size even up to $M = 728$ before the $16$ GB
-of memory from the previous job comes close to full, further increasing job speed.
+of memory from the previous job comes close to full, potentially tripling job speed on
+the same hardware.
 
-TODO: Add discussion around execution considerations.
-Naive implementation would require large GPU resources,
-clever approach is small enough to maybe run locally.
+These experiments highlight the dramatic computational efficiency increases that can
+be achieved with careful optimisation of the job. Naive implementation of training and
+inference can have a considerably higher carbon foorprint, requiring larger GPUs and
+longer run times, while carefully optimised workflows  be run very quickly and be small
+enough to run on local hardware.
 
-Discuss considerations around:
-
-- cloud vs local execution,
-- operational vs embedded
-- potential demand shifting
+It can often be the case that running AI workflows on cloud providers has a smaller
+carbon foorprint than running on local hardware. The energy efficiency measures of
+datacentres make operational carbon relatively lower than smaller dedicated hardware
+setups, and embedded carbon can be lower using existing datacentre hardware, compared
+to buying and decommissioning in-house hardware. The flipside is that one looses the
+ability to choose when a job is executed, meaning demmand shifting to off-peak times
+is no longer an option. In either case, Miguel's optimisations have had a hige effect
+on the model's carbon footprint, and have afforded him the *choice* of using either,
+depending on the circumstances.
