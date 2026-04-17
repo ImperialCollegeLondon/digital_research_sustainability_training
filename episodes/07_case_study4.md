@@ -208,6 +208,6 @@ datacentres make operational carbon relatively lower than smaller dedicated hard
 setups, and embedded carbon can be lower using existing datacentre hardware, compared
 to buying and decommissioning in-house hardware. The flipside is that one looses the
 ability to choose when a job is executed, meaning demmand shifting to off-peak times
-is no longer an option. In either case, Miguel's optimisations have had a hige effect
+is no longer an option. In either case, Miguel's optimisations have had a huge effect
 on the model's carbon footprint, and have afforded him the *choice* of using either,
 depending on the circumstances.
