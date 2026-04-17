@@ -199,8 +199,8 @@ the same hardware.
 These experiments highlight the dramatic computational efficiency increases that can
 be achieved with careful optimisation of the job. Naive implementation of training and
 inference can have a considerably higher carbon foorprint, requiring larger GPUs and
-longer run times, while carefully optimised workflows  be run very quickly and be small
-enough to run on local hardware.
+longer run times, while carefully optimised workflows can be run very quickly and be
+small enough to run on local hardware.
 
 It can often be the case that running AI workflows on cloud providers has a smaller
 carbon foorprint than running on local hardware. The energy efficiency measures of
