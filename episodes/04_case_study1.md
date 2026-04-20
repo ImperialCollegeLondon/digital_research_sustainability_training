@@ -20,12 +20,12 @@ exercises: 10
 
 ## Scenario
 
-Celia is a researcher in a university. Two years ago, she developed and released
-a Python package (hosted on PyPI) with a novel data analysis technique relevant to
-her research area.
-The package has been a big success and has been widely adopted. However,
-she has heard from some users that they are using it on increasingly large datasets that
-leads to demanding memory requirements and slow performance.
+Celia is a Research Software Engineer that works as part of a research group. Two years
+ago, she developed and released a Python package (hosted on PyPI) with a novel data
+analysis technique relevant to her research area. The package has been a big success and
+has been widely adopted. However, she has heard from some users that they are using it
+on increasingly large datasets that leads to demanding memory requirements and slow
+performance.
 
 Celia is concerned about the environmental impact of her software package.
 She wants to assess the carbon emissions associated with both the development
