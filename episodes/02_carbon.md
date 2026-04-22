@@ -168,6 +168,25 @@ The following dynamics are at play:
   intensity also falls as gas generation goes offline. Overall carbon intensity ends up
   lower at the end of the day than the beginning as more imported energy is available.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Real-time Carbon Intensity
+
+- On your laptop or your phone, open [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)
+- Look at the current carbon intensity for our region right now. Which energy source do
+you think is  currently marginal ('filling the gap' to meet demand)?
+
+:::::::::::::::::::::::: solution
+
+The marginal source is the most expensive source needed to meet demand. On days with lower
+intensity the marginal power source is usually the one with the highest
+dispatchability. For example, renewables are almost always used first, while nuclear energy
+could be more difficult to turn off. In contrast, gas is expensive but has high dispatchability.
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::: callout
 
 ## Takeaways
@@ -269,12 +288,30 @@ view of different emissions sources.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## According to the GHG protocol, what are the carbon emissions of...?
+## Emission types
 
-- Using a laptop in the office for coding 4h a day, 5 days a week. No calculations run.
-- Brewing 5 cups of coffee per day, at home, 5 days a week.
+Based on the **GHG Protocol**, categorise each of the following activities
+as **Scope 1**, **Scope 2**, or **Scope 3**.
+
+1. Powering your laptop
+2. Running simulations on a cloud provider
+3. A return flight to a conference in New York
+4. University-owned car that transports equipment
+5. Recycling an old laptop
+6. Leaking Ultra-low temperature (ULT) freezer
 
 :::::::::::::::::::::::: solution
+
+## Answer Key
+
+| Activity | Scope | Justification |
+| :--- | :---: | :--- |
+| 1. Powering your laptop | **Scope 2** | Indirect emissions from energy purchased and used by the lab |
+| 2. Running simulations on a cloud provider | **Scope 3** | You are using a service but don't own the servers |
+| 3. Conference travel | **Scope 3** | The airline owns the plane |
+| 4. University-owned car | **Scope 1** | Direct emissions by the institution |
+| 5. Recycling an old laptop | **Scope 3** | Downstream emissions from the laptop 'end-of-life |
+| 6. Leaking Ultra-low temperature (ULT) freezer | **Scope 1** | Direct emissions from leakage of equipment owned by the lab |
 
 :::::::::::::::::::::::::::::::::
 
@@ -315,6 +352,31 @@ Data assumptions and calculations:
  It does not include operational emissions.
 - Laptop Lifecycle: Based on the embedded and operational emissions of a typical
  [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Carbon Break-Even Point
+
+- We often hear that new technology is greener. However, sometimes replacing devices
+comes with a higher cost of carbon emissions and. How many years of using
+an old laptop does it take to equal the carbon footprint of getting a new device? For simplicity,
+you can assume an old laptop emits 12 kgCO2e per year while a new laptop requires 160
+kgCO2e to manufacture.
+
+:::::::::::::::::::::::: solution
+
+It would take around 12 years of using an old laptop before its energy use would equal the
+carbon emissions of manufacturing a new laptop.
+
+_Note: When making this comparison we don't include the manufacturing emissins of the old
+laptop as these have already occured and cannot be reversed._
+
+_Under the GHG Protocol Corporate Standard, emissions are reported in the year they occur.
+Therefore, the manufacturing of an existing laptop is a "past event" and is excluded
+from calculations related to future operational changes._
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 References:
 
