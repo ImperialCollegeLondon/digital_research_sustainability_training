@@ -6,7 +6,7 @@ exercises: 4
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How does the increasing use of LLMs affect carbon foorprint and energy efficiency?
+- How does the increasing use of LLMs affect carbon footprint and energy efficiency?
 - What strategies can minimise the carbon footprint of research data storage?
 - How does relying on old hardware prevent a modern research lab from being energy efficient?
 
@@ -38,7 +38,7 @@ Emma's set up:
  She is planning to back up 2 copies of the raw data on different HDDs. In addition, she
  will generate approx. 400 GB of processed data every year, which will be used for active
 analyses, which she plans to store on different HDDs. While the project only runs for 5
- years,there is a 10 year data retention period to comply with her funding's coniditions
+ years,there is a 10 year data retention period to comply with her funding's conditions
 
 Emma's workflow:
 
@@ -126,8 +126,8 @@ The analysis section is split into two parts:
 1. Have attendees complete the "Emissions from Emma's current workflow" challenge.
    This is best done in groups. Have attendees report back on what they've come up with.
 
-1. Then have attendees open the spoiler tag - "Hugh's estimates". This section provides
-   the "canonical" outcome of Hugh's emissions estimates and further develops the
+1. Then have attendees open the spoiler tag - "Emma's estimates". This section provides
+   the "canonical" outcome of Emma's emissions estimates and further develops the
    scenario so that reductions in emissions can be considered. Recommend that the groups
    from above look through the section together and complete the embedded challenge.
 
@@ -157,6 +157,8 @@ to find that the emissions emitted by her laptop
 
 :::::::::::::::::::::::::::::::::::: spoiler
 
+### Emma's carbon estimates
+
 - **Data storage**:
 
 Emma’s research will produce 3.5 TB of raw data for the duration of the project. Because
@@ -169,15 +171,15 @@ However, the data retention policy of 10 years beyond the end of the project mea
 the data must be stored for a total of 15 years. Given that the lifespan of HDDs can reach
 10 years in best case scenario, Emma will have to replace the HDDs at least once.
 
-    $$
-    E_{HDDs} = E_{embodied}+ E_{operational} \\
-    E_{HDDs} = (3 kgCO₂e/TB \times 9 TB + 9 kgCO₂e/TB \times 9 TB) \times 15   \\
-    E_{HDDs} = 1,620 kgCO₂e
-    $$
+$$
+E_{HDDs} = E_{embodied}+ E_{operational} \\
+E_{HDDs} = (3 kgCO₂e/TB \times 9 TB + 9 kgCO₂e/TB \times 9 TB) \times 15   \\
+E_{HDDs} = 1,620 kgCO₂e
+$$
 
-    Storing the 9 TB data on HDDs will have associated carbon emissions
-    approximately equal to **1,620 kgCO2e** in combined embodied and operational emissions,
-    based on the average values within the emissions ranges she identified.
+Storing the 9 TB data on HDDs will have associated carbon emissions
+approximately equal to **1,620 kgCO2e** in combined embodied and operational emissions,
+based on the average values within the emissions ranges she identified.
 
 - **LLM usage**:
 
@@ -202,7 +204,7 @@ would be **0.266 kgCo2e**.
 Based on the calculations above, storing research data and running
 Python scripts are the activities with the largest associated carbon emissions. At around
 1,900 kgCO2e these activities account to a quarter of the emissions per-capita in the
-UK,according to the [International Energy Association](https://www.iea.org/countries/united-kingdom/emissions)
+UK,according to the [International Energy Association](https://www.iea.org/countries/united-kingdom/emissions).
 While lower in comparison, the emissions linked to using LLMs to help write her code
 are not insignificant and are equivalent to charging a smartphone [27 times](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator#results).
 With this in mind, Emma begins developing an improved research workflow to reduce her digital
@@ -222,10 +224,12 @@ outcome. Suggest that the below "outcomes" section is delivered to all attendees
 
 :::::::::::::::::::::::::::::::::: challenge
 
+## Emissions from Emma's improved workflow
+
 Based on the results of the carbon emissions associated with Emma's current workflow,
 consider the following:
 
-- What is the simplest change Emma can make that would have the highets impact on her
+- What is the simplest change Emma can make that would have the highest impact on her
 carbon emissions?
 - How does that compare with other activities that Emma might be doing?
 
@@ -275,7 +279,7 @@ to estimate emissions per query.
 
 ::::::::::::::::::::::::::::::::::: spoiler
 
-### Emma improves her workflow
+### Emma's improved workflow carbon estimates
 
 - **Hybrid data storage**:
 
@@ -284,21 +288,21 @@ total emissions from storing data on tape come from embodied emissions, estimate
 ~0.07 kgCO₂ per TB. Keeping the two copies of raw data (7 GB) in the institution’s
   LTO‑tape storage facilities would therefore generate:
 
-    $$
-    E_{tape storage} = 0.07 kgCO₂e/TB \times 7 TB \times 15 years \\
-    E_{tape storage}  = 7.35 kgCO₂e
-    $$
+$$
+E_{tape storage} = 0.07 kgCO₂e/TB \times 7 TB \times 15 years \\
+E_{tape storage}  = 7.35 kgCO₂e
+$$
 
-    Keeping the 2 GB of processed data on HDDs would generate:
+Keeping the 2 GB of processed data on HDDs would generate:
 
-    $$
-    E_{HDDs} =  (3 kgCO₂e/TB \times 2 TB + 9 kgCO₂e/TB \times 2 TB) \times 15 years   \\
-    E_{HDDs}  = 360 kgCO₂e
-    E
-    $$
+$$
+E_{HDDs} =  (3 kgCO₂e/TB \times 2 TB + 9 kgCO₂e/TB \times 2 TB) \times 15 years   \\
+E_{HDDs}  = 360 kgCO₂e
+E
+$$
 
-    Therefore, the total costs associated with storing Emma's research data would be
-    **367.35 kgCO₂e**.
+Therefore, the total costs associated with storing Emma's research data would be
+**367.35 kgCO₂e**.
 
 - **Simpler LLM model**:
 
