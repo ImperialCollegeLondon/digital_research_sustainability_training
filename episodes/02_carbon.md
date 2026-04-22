@@ -51,7 +51,7 @@ gives 1 kWh of electrical energy used.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Praticing units of power and energy
+## Practising units of power and energy
 
 Which of the below are not equal to 1 kWh.
 
@@ -286,6 +286,9 @@ view of different emissions sources.
 
 [Greenhouse Gas Protocol]: https://ghgprotocol.org/
 
+<!-- markdownlint-disable-next-line line-length -->
+![PLACEHOLDER](fig/ghg_emissions_placeholder.webp){alt="Placeholder - GHG Emissions Types."}
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Emission types
@@ -319,7 +322,7 @@ as **Scope 1**, **Scope 2**, or **Scope 3**.
 
 ## Carbon in Context
 
-While digital emissions might seem small, their impacts are cummulative. To provide a
+While digital emissions might seem small, their impacts are cumulative. To provide a
  clearer picture of these impacts, the following table contextualizes digital emissions
  against common research-related activities, such as international travel and
  laboratory-related activities. Thinking about digital emissions in the context of the
@@ -344,7 +347,7 @@ Data assumptions and calculations:
 - Fume Hoods: Based on an electrity consumption of 34,871 kWh/year ^2^
 - Ultra-low Freezer: Based on a energy consumption of up to 25 kWh/day (8,900 kWh/year)
  of traditional cascade refrigeration systems ^3^.
-- Household energy consumption: bBsed on Ofgem estimate of typical household consumption
+- Household energy consumption: based on Ofgem estimate of typical household consumption
  in England of 2,700 kWh of electricity and 11,500 kWh of gas in a year, resulting in
  ~1900 kgCO2e
 - SSD storage: Based on the higher end of estimated carbon emissions per TB/year ^4^
@@ -368,8 +371,8 @@ kgCO2e to manufacture.
 It would take around 12 years of using an old laptop before its energy use would equal the
 carbon emissions of manufacturing a new laptop.
 
-_Note: When making this comparison we don't include the manufacturing emissins of the old
-laptop as these have already occured and cannot be reversed._
+_Note: When making this comparison we don't include the manufacturing emissions of the old
+laptop as these have already occurred and cannot be reversed._
 
 _Under the GHG Protocol Corporate Standard, emissions are reported in the year they occur.
 Therefore, the manufacturing of an existing laptop is a "past event" and is excluded
