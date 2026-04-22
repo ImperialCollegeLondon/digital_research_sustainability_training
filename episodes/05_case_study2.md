@@ -35,10 +35,11 @@ Emma's set up:
 
 - Work laptop: modern and energy efficient laptop
 - Data storage: Her research will generate approx 3.5 Tb for the duration of the project.
- She is planning to back up 2 copies of the raw data on different HDDs. In addition, she
- will generate approx. 400 GB of processed data every year, which will be used for active
-analyses, which she plans to store on different HDDs. While the project only runs for 5
- years,there is a 10 year data retention period to comply with her funding's conditions
+  She is planning to back up 2 copies of the raw data on different HDDs. In addition,
+  she will generate approx. 400 GB of processed data every year, which will be used for
+  active analyses, which she plans to store on different HDDs. While the project only
+  runs for 5 years,there is a 10 year data retention period to comply with her funding's
+  conditions
 
 Emma's workflow:
 
@@ -46,7 +47,7 @@ Emma's workflow:
 This often requires many queries and iterations.
 - She keeps every version of her raw data on the HDDs, and rarely deletes old files.
 - After pre-processing the raw data, she stores a copy of the processed data on
- different HDDs
+ different HDDs.
 - She runs her scripts on her laptop and scripts often take 6h to complete.
 
 Emma is interested in reducing her digital carbon footprint and wants to optimise
@@ -83,10 +84,10 @@ Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
 ### Data storage
 
 Emma is considering using different storage types after she heard that
- storing large amounts of data on HDDs might not be the most evironmentally friendly
+ storing large amounts of data on HDDs might not be the most environmentally friendly
  option. She has learnt from colleagues that she could choose between hard drives
  (HDD), Solid State Drives (SDD), LTO magnetic tapes or cloud-based storage. However,
-  she is unsure about their different enivronmental impacts.
+  she is unsure about their different environmental impacts.
 
 Emma did some research on the above storage types and used the table below summarising
  their emissions below to calculate the carbon footprint of storing her project's data:
@@ -336,7 +337,7 @@ emissions of three average UK households.
 While these improvements are substantial, they represent only one piece of a larger
 puzzle. For a life scientist, the total work-related emissions typically range from
 4 to 15 tCO2e annually ^2^. These numbers are driven by carbon intensive activities,
- such as international travel, laboratory heating, ventialtion and AC systems,
+ such as international travel, laboratory heating, ventilation and AC systems,
  and the heavy use of chemical reagents and single-use equipment.
 
 :::::::::::::::::::::::::::::::::: challenge
