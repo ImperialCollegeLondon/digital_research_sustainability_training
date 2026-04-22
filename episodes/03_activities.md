@@ -262,9 +262,6 @@ is now accessed remotely. In this case the computers are generally hosted in a D
 Centre, a large industrial facility that can contain thousands of servers and the
 supporting infrastructure required to allow remote access.
 
-<!-- markdownlint-disable-next-line line-length -->
-![Data centers consume huge amounts of energy and water, which can be a risk for the environment. Image originally published at [The Seattle Times].](https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg){alt="Cartoon showing a datacenter as a monster demanding more power."}
-
 The carbon emissions associated with the computers in a data centre are covered by the
 same considerations above. As purpose built facilities, data centres can host more
 specialised equipment and benefit from economies of scale. They also have additional
@@ -335,8 +332,6 @@ footprint.
 | **Operational Carbon** | Usually lower (efficient cooling) | Usually higher (older facilities + local grid) |
 | **Energy Efficiency** | High (fewer idle disks) | Generally lower |
 | **Utilisation** | High (resources shared across many users) | Lower (over‑provisioning) |
-
-[The Seattle Times]: https://www.seattletimes.com/opinion/the-ai-energy-monster-is-coming-for-our-salmon-and-electricity/
 
 ### Data centres and water usage
 
