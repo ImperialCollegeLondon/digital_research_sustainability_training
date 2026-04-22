@@ -156,8 +156,8 @@ adjusting the power management settings, changing usage habits, etc.
 Like in the previous exercise, try to find the ECO Declaration for your computer
 in the manufacturer's webpage.
 
-- What's such an energy consumption?
-- How easy was to find it?
+- What is the reported idle energy consumption?
+- How easy was it to find?
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
