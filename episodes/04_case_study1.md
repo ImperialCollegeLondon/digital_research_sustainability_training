@@ -138,13 +138,43 @@ cloud computing)
 
 ## Taking Action
 
-After Celia has identified the emissions sources associated
-with the development and usage of her software package, she takes some measures
-to reduce these emissions.
+:::::::::::::::::::::::::::::::::: challenge
 
-She optimises the code base to reduce the computational resources and runtime of its use.
-This includes optimising the error handling and input validation in her
-code to reduce the likelihood of running into errors that lead to repeated runs
+## Measures to reduce emissions
+
+After Celia has identified the emissions sources associated
+with the development and usage of her software package, what are some measures that
+she can take to reduce these emissions?
+
+- Are there any ways to make the code base more efficient?
+- How can she ensure that the current and future users of her package are using it
+in an efficient way?
+- Any measure she can take to reduce the emissions associated with the use of GitHub Actions?
+
+::::::::::::::::::::::: solution
+
+To reduce the emissions associated with the development and usage of her software
+package, Celia can take the following measures:
+
+- She could consider [profiling and
+optimising](https://step-up.ac.uk/blog/2026-03-31-profile-optimise-py/) her code base.
+- Making note the repetitive questions her package users might have and creating a
+detailed user guide that includes instructions on how to make the most efficient use
+of her package.
+- Reducing the number of tests run on GitHub Actions to only what are required.
+
+There are many steps Celia could take to reduce emissions. Keep a record of the ideas
+you've had and compare them with those in the next section.
+::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::: spoiler
+
+### Celia Takes Action
+
+She profiles and optimises the code base to reduce the computational resources and
+runtime of its use. This includes optimising the error handling and input validation in
+her code to reduce the likelihood of running into errors that lead to repeated runs
 of the code. Thus, minimising wasted computation. She integrates the
 [codecarbon](https://github.com/mlco2/codecarbon) tool into her code base so
 that it can report the carbon emissions when the code is run. This allows her to track
@@ -163,6 +193,7 @@ she reduces the number of tests run on GitHub Actions to only include these
 OS and Python versions. Moreover, to minimise the number of jobs run in each workflow,
 she makes sure that they are run on pull requests against the primary development branch
 only.
+:::::::::::::::::::::::::::::::::::::::::::
 
 ## References
 
