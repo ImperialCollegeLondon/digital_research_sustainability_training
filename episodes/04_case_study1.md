@@ -150,6 +150,8 @@ she can take to reduce these emissions?
 - How can she ensure that the current and future users of her package are using it
 in an efficient way?
 - Any measure she can take to reduce the emissions associated with the use of GitHub Actions?
+- How can she track the embedded emissions from the hardware (laptop) she uses for
+software development?
 
 ::::::::::::::::::::::: solution
 
@@ -162,6 +164,8 @@ optimising](https://step-up.ac.uk/blog/2026-03-31-profile-optimise-py/) her code
 detailed user guide that includes instructions on how to make the most efficient use
 of her package.
 - Reducing the number of tests run on GitHub Actions to only what are required.
+- She can explore the product carbon footprint (PCF) data for her laptop to find the
+embedded emissions from the hardware components.
 
 There are many steps Celia could take to reduce emissions. Keep a record of the ideas
 you've had and compare them with those in the next section.
@@ -193,6 +197,10 @@ she reduces the number of tests run on GitHub Actions to only include these
 OS and Python versions. Moreover, to minimise the number of jobs run in each workflow,
 she makes sure that they are run on pull requests against the primary development branch
 only.
+
+Finally, she explores the product carbon footprint (PCF) data for her laptop to find the
+embedded emissions from the hardware components. She finds that the total embedded
+emissions from the CPU, GPU, and RAM is 100 kg CO2e.
 :::::::::::::::::::::::::::::::::::::::::::
 
 ## References
