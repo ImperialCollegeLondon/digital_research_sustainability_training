@@ -87,6 +87,20 @@ embodied emissions in his analysis.
 
 ## Analysis
 
+::::::::::::::::::::::::::::::: instructor
+
+Delivery of the rest of this material is intended to go in two phases:
+
+1. Have attendees complete the "Estimating Emissions" challenge. This is best done in
+   groups. Have attendees report back on what they've come up with.
+
+1. Then have attendees open the spoiler tag - "Hugh's estimates". This section provides
+   the "canonical" outcome of Hugh's emissions estimates and further develops the
+   scenario so that reductions in emissions can be considered. Recommend that the groups
+   from above look through the section together and complete the embedded challenge.
+
+::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::: challenge
 
 ### Estimating Emissions
@@ -138,10 +152,10 @@ using the provided cluster tooling.
 | | ORANGE | 40,000 | | 21 |
 | | LUMMPS | 75,000 | | 40 |
 
-The total estimated emissions are 94 kgCO₂e from the two week period. Scaling . Hugh also
-decides to estimate his emissions from DRAGONFLY by scaling the emissions of LANCER by
-the difference in CPU-hours used on both systems - he's aware that LANCER and DRAGONFLY
-are quite different and so this value for DRAGONFLY is very approximate.
+The total estimated emissions are 94 kgCO₂e from the two week period. Hugh also decides
+to estimate his emissions from DRAGONFLY by scaling the emissions of LANCER by the
+difference in CPU-hours used on both systems - he's aware that LANCER and DRAGONFLY are
+quite different and so this value for DRAGONFLY is very approximate.
 
 :::::::::::::::::::::::::::::::::: challenge
 
@@ -194,6 +208,16 @@ person.
 ::::::::::::::::::::::::::::::::::::::::::::
 
 ## Taking Action
+
+:::::::::::::::::::::::::::::::::: instructor
+
+Similarly to above, the below challenge can be tackled collectively and attendees can
+report back on their results.
+
+The following spoiler section then rounds out the scenario and provides a "canonical"
+outcome. Suggest that the below "outcomes" section is delivered to all attendees.
+
+:::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::: challenge
 
@@ -289,6 +313,9 @@ between speed and efficiency.
 ::::::::::::::::::::::::::::::::::::::::::::
 
 ## Outcomes
+
+<!-- markdownlint-disable-next-line line-length -->
+![Carbon emissions from each cluter comparing pre- and post-intervention](fig/case_study3_outcomes.png){alt='A bar chart comparing the emissions from DRAGONFLY and LANCER before and after implementation of emissions reduction measures'}
 
 Putting all of the above steps together Hugh estimates that he can reduce his overall
 use of CPU-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2
