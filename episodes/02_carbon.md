@@ -183,6 +183,19 @@ intensity the marginal power source is usually the one with the highest
 dispatchability. For example, renewables are almost always used first, while nuclear energy
 could be more difficult to turn off. In contrast, gas is expensive but has high dispatchability.
 
+<!-- markdownlint-disable-next-line line-length -->
+![Energy generation mix pie chart on a sunny day in London obtained from [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)](fig/ep2_challenge_intensity.png){alt="Energy generation mix pie chart on a sunny day in London"}
+
+Looking at the Generation Mix in the pie chart obtained from [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)
+on a sunny day in London:
+
+- Wind (17.9%) and Solar (18.6%): These have very low variable costs. If it is windy or
+sunny, the grid uses all of this energy this energy first.
+- Imports (44.5%): These are usually scheduled in advance based on international contracts.
+While they can be marginal, they can't be as easily switched on and off.
+- Gas (15.4%): High dispatchability, and can be 'increased' if the grid needs an immediate
+increase in supply.
+
 :::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -355,31 +368,6 @@ Data assumptions and calculations:
  It does not include operational emissions.
 - Laptop Lifecycle: Based on the embedded and operational emissions of a typical
  [office laptop](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991).
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Carbon Break-Even Point
-
-- We often hear that new technology is greener. However, sometimes replacing devices
-comes with a higher cost of carbon emissions and. How many years of using
-an old laptop does it take to equal the carbon footprint of getting a new device? For simplicity,
-you can assume an old laptop emits 12 kgCO2e per year while a new laptop requires 160
-kgCO2e to manufacture.
-
-:::::::::::::::::::::::: solution
-
-It would take around 12 years of using an old laptop before its energy use would equal the
-carbon emissions of manufacturing a new laptop.
-
-_Note: When making this comparison we don't include the manufacturing emissions of the old
-laptop as these have already occurred and cannot be reversed._
-
-_Under the GHG Protocol Corporate Standard, emissions are reported in the year they occur.
-Therefore, the manufacturing of an existing laptop is a "past event" and is excluded
-from calculations related to future operational changes._
-:::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::
 
 References:
 
