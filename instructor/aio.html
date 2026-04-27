@@ -484,7 +484,7 @@ emissions.</p></li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>To make the audience reflect a little bit before diving into the
 content, run a poll with the following questions:</p>
@@ -680,7 +680,7 @@ so running it for an hour gives 1 kWh of electrical energy used.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answers </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>A - 0.2 kW x 0.2 hours = 0.04 kWh</li>
@@ -986,7 +986,7 @@ calculations run.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 
 </div>
@@ -1117,7 +1117,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
 <hr>
-<p>Last updated on 2026-03-30 |
+<p>Last updated on 2026-04-27 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -1164,7 +1164,10 @@ differ in embodied and operational carbon emissions.</li>
 individual computers and devices up to the globe spanning network of the
 internet. In this section we’ll look at some of the different components
 of digital infrastructure and their relation to carbon emissions.</p>
-</section><section><h2 class="section-heading" id="computers">Computers<a class="anchor" aria-label="anchor" href="#computers"></a>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="https://cdni.iconscout.com/illustration/premium/thumb/man-choosing-environment-over-carbon-emissions-illustration-svg-download-png-7237101.png" alt="Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself." class="figure mx-auto d-block"><div class="figcaption">Placeholder image - What components of digital
+infrastructure produce carbon emissions? (Image by Rae)</div>
+</figure></section><section><h2 class="section-heading" id="computers">Computers<a class="anchor" aria-label="anchor" href="#computers"></a>
 </h2>
 <hr class="half-width">
 <p>Computers have become an indispensible component of modern life as
@@ -1308,6 +1311,24 @@ a period of time.</p>
 <p>Once the baseline energy usage is found, strategies can be defined to
 reduce it, like adjusting the power management settings, changing usage
 habits, etc.</p>
+<div id="what-are-the-idle-energy-usage-of-your-computer" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="what-are-the-idle-energy-usage-of-your-computer" class="callout-inner">
+<h3 class="callout-title">What are the idle energy usage of your
+computer?</h3>
+<div class="callout-content">
+<p>Like in the previous exercise, try to find the ECO Declaration for
+your computer in the manufacturer’s webpage.</p>
+<ul>
+<li>What is the reported idle energy consumption?</li>
+<li>How easy was it to find?</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="section level4">
 <h4 id="application-energy-usage">Application energy usage<a class="anchor" aria-label="anchor" href="#application-energy-usage"></a>
@@ -1325,7 +1346,8 @@ visualization tool.</p>
 accessibility to the source code of the application, as well as the
 hardware you are using.</p>
 <p>If you do have access to the source code, then you could use tools
-like the [Intel’s Performance Counter Monitor (PCM)] (which <a href="https://greencompute.uk/Measurement/RAPL" class="external-link">can be used in C++
+like the <a href="https://github.com/intel/pcm" class="external-link">Intel’s Performance
+Counter Monitor (PCM)</a> (which <a href="https://greencompute.uk/Measurement/RAPL" class="external-link">can be used in C++
 programs</a>) or <a href="https://github.com/mlco2/codecarbon" class="external-link">Codecarbon</a> (for Python
 programs). These tools require some setting up - and obviously modify
 your code - but will give you the most accurate readings of the energy
@@ -1359,14 +1381,20 @@ multiple systems for reliability. As modern research practices move
 toward open data and long-term storage, the embodied and operational
 emissions of storage becomes a significant component of digital
 research’s environmental impact.</p>
-<p>There are a few different storage mediums in common use:</p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="https://www.anycloud.dk/wp-content/uploads/2023/07/2-1.png" alt="Timeline with the history of digital storage media showing: punchcards (1881), magnetic tape (1950), removable hard drives (1963), floppy discs (1971), CD-ROM (1983), SD Cards (1999), USB drives (2000) and cloud (2013)." class="figure mx-auto d-block"><div class="figcaption">History of digital storage media. Image from the
+blog post <a href="https://www.anycloud.dk/anycloud/data-management/data-storage-thoughout-history/" class="external-link">“Data
+storage through history”</a>
+</div>
+</figure><p>There are a few different storage mediums in common use:</p>
 <ul>
 <li>
 <strong>Solid-State Disk Drives (SSD)</strong>: They use flash
-memory with no moving parts to store data. Their embodied carbon
-emissions are high due to the rare metals needed for semiconductor
-manufacturing, while operational emissions are somewhat lower than for
-spinning disks.</li>
+memory with no moving parts to store data, much like SD cards and USB
+drives, but with much larger capacity. Their embodied carbon emissions
+are high due to the rare metals needed for semiconductor manufacturing,
+while operational emissions are somewhat lower than for spinning
+disks.</li>
 <li>
 <strong>Hard Disk Drives (HDD)</strong>: They store data on spinning
 magnetic disks. Embodied emissions are lower than those of SSDs but
@@ -1421,11 +1449,15 @@ below:</p>
 </table>
 <p>* Emissions are in <strong>kgCO₂e per TB per year</strong></p>
 <p>While the numbers vary depending on manufacturers and reporting
-available, it is generally considered that SSDs have a higher ’carbon
-debt<code>per unit of storage than HDDs^4^.  However, recent data suggests that the difference for enterprise-grade drives is shrinking,  and new SSDs have only 2x the embodied carbon of comparable HDDs^5^. While the numbers vary depending on manufacturers and reporting available, it is generally considered that SSDs have a higher 'carbon debt</code>
-per unit of storage than HDDs<sup>4</sup>. However, recent data suggests
-that the difference for enterprise-grade drives is shrinking, and new
-SSDs have only 2x the embodied carbon of comparable
+available, it is generally considered that SSDs have a higher carbon
+debt per unit of storage than HDDs<sup>4</sup>. However, recent data
+suggests that the difference for enterprise-grade drives is shrinking,
+and new SSDs have only 2x the embodied carbon of comparable
+HDDs<sup>5</sup>. While the numbers vary depending on manufacturers and
+reporting available, it is generally considered that SSDs have a higher
+’carbon debt` per unit of storage than HDDs<sup>4</sup>. However, recent
+data suggests that the difference for enterprise-grade drives is
+shrinking, and new SSDs have only 2x the embodied carbon of comparable
 HDDs<sup>5</sup>.</p>
 <p>SSDs allow data to be accessed almost instantly and are typically
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
@@ -1475,7 +1507,7 @@ much of the energy entering the data centre reaches the IT equipment
 used for servers and storage compared to the energy used for cooling and
 lighting.</p>
 <p><span class="math display">\[
-\mathbf{PUE} = \frac{\text{IT Equipment Power}}{\text{Total Facility
+\mathbf{PUE} = \frac{\text{Total Facility Power}}{\text{IT Equipment
 Power}}
 \]</span></p>
 <!-- markdownlint-disable-next-line line-length -->
@@ -1599,6 +1631,101 @@ redundancy/replication practices.</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Depending on the size of the group and their engagement, the
+following challenge can also be done collectively as a class:</p>
+<ul>
+<li>Participants go in turns suggesting items, and the instructor writes
+them in a whiteboard</li>
+<li>Participants write items in post-its and then stick them on a
+wall</li>
+</ul>
+<p>Both options can be done for remote delivery of the course, using
+digital whiteboards. Finally, the instructor comments on the
+results.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="what-do-you-use-data-centres-for" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-do-you-use-data-centres-for" class="callout-inner">
+<h3 class="callout-title">What do you use data centres for?</h3>
+<div class="callout-content">
+<p>There are way more things that we initially may think that make use
+of data centres, some related to digital research but plenty of others
+that do not.</p>
+<p>In small groups, reflect and discuss which daily activities in your
+everyday life make use of data centres, sorting them into digital
+research, other work-related activities, and personal activities.</p>
+<ul>
+<li>Where do you have more items?</li>
+<li>Which category do you think consume more data centre power?</li>
+<li>After talking to your colleagues, did anything surprise you about
+what uses data centres?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Each group is likely to have a different list, but some of the items
+that are likely to be present in most of them are:</p>
+<ul>
+<li>Digital research
+<ul>
+<li>Store some code in GitHub, Codeberg or other platform</li>
+<li>Run continuous integration workflows</li>
+<li>Run software - including AI training - in cloud services</li>
+<li>Store large amounts of research data with a cloud provider</li>
+</ul>
+</li>
+<li>Other work related activities
+<ul>
+<li>Send emails</li>
+<li>Meet colleagues via Teams or Zoom</li>
+<li>Store some office documents in Onedrive, Dropbox or similiar</li>
+</ul>
+</li>
+<li>Personal activities
+<ul>
+<li>Use instant message apps with familly and friends</li>
+<li>Send personal emails</li>
+<li>Stream music or films</li>
+<li>Check social media</li>
+<li>Order food</li>
+<li>Buy items in online shops</li>
+<li>Read newspapers online, blogposts or similar</li>
+<li>Check the weather forecast</li>
+<li>Check Google Maps or other similar applications</li>
+<li>Review your bank account</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p>As you see, a lot of our daily activities go through a data centre
+somewhere and while digital research will make heavy use of these
+facilities because they are intensive workflows, the sheer amount of
+other small tasks can easily offset the carbon emissions of the former
+when considered collectively.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="research-activities">Research Activities<a class="anchor" aria-label="anchor" href="#research-activities"></a>
 </h2>
@@ -1700,10 +1827,6 @@ of key points to consider when creating a DMP.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section level4">
-<h4 id="sharing-and-publishing-data">Sharing and Publishing Data<a class="anchor" aria-label="anchor" href="#sharing-and-publishing-data"></a>
-</h4>
 </div>
 </div>
 <div class="section level3">
@@ -1903,7 +2026,7 @@ development.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Scope 2</li>
@@ -2141,7 +2264,7 @@ analysis code</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>The electricity powering the lab Desktop (<strong>Scope
@@ -2566,7 +2689,7 @@ Hugh’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity usage associated with simulation
@@ -2596,7 +2719,7 @@ Hugh’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Proportional embedded emissions from HPC facilities.</li>
@@ -3059,7 +3182,7 @@ any links that you are not going to use.
         | <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/" class="external-link">Source</a></p>
         <p>
-        <a href="../citation.html">Cite</a>
+        <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/blob/main/" class="external-link">Cite</a>
         | <a href="mailto:ict-rse-team@imperial.ac.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -3090,8 +3213,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/aio.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-04-21",
-  "datePublished": "2026-04-21"
+  "dateModified": "2026-04-27",
+  "datePublished": "2026-04-27"
 }
 
   </script><script>
