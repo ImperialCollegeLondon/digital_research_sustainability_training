@@ -637,7 +637,7 @@ available as a Python package or an online version is [hosted by
 HuggingFace][huggingface-ecologits]. It is currently limited to text generation with
 Large Language Models ond only covers the inference stage. Whilst it supports as many
 open LLMs as possible it only has data for a limited number of proprietary LLMs where
-they've information is available about the model architecture.
+information is available about the model architecture.
 
 [EcoLogits]: https://ecologits.ai
 [huggingface-ecologits]: https://huggingface.co/spaces/genai-impact/ecologits-calculator
