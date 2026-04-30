@@ -460,7 +460,7 @@ additional data would he need to collect?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Hugh needs two things.</p>
 <ol style="list-style-type: decimal"><li>An estimate of his resource usage over a year. It may be possible to
@@ -488,44 +488,44 @@ more approximate but is still useful to have.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh’s Estimates </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>For the next two weeks Hugh keeps track of the workloads that he runs
 on the different clusters. He tracks the total CPU-hours spent on
 different clusters and the different simulation codes used on each one.
 He also gets the total estimated emissions for LANCER using the provided
 cluster tooling.</p>
-<table class="table"><colgroup><col width="18%"><col width="18%"><col width="25%"><col width="18%"><col width="18%"></colgroup><thead><tr class="header"><th>Cluster</th>
+<table class="table"><colgroup><col width="18%"><col width="18%"><col width="25%"><col width="18%"><col width="18%"></colgroup><thead><tr><th>Cluster</th>
 <th>Simulation Code</th>
 <th align="right">Total CPU-hours</th>
 <th>Notes</th>
 <th>Emissions (kgCO₂e)</th>
-</tr></thead><tbody><tr class="odd"><td>DRAGONFLY</td>
+</tr></thead><tbody><tr><td>DRAGONFLY</td>
 <td>GROMINZ</td>
 <td align="right">45,000</td>
 <td>Self-compiled</td>
 <td></td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>ORANGE</td>
 <td align="right">30,000</td>
 <td></td>
 <td></td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td>LUMMPS</td>
 <td align="right">20,000</td>
 <td></td>
 <td></td>
-</tr><tr class="even"><td>LANCER</td>
+</tr><tr><td>LANCER</td>
 <td>GROMINZ</td>
 <td align="right">60,000</td>
 <td>Self-compiled</td>
 <td>32</td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td>ORANGE</td>
 <td align="right">40,000</td>
 <td></td>
 <td>21</td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>LUMMPS</td>
 <td align="right">75,000</td>
 <td></td>
@@ -553,7 +553,7 @@ for each of the simulation codes.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Taking GROMINZ as an example:</p>
 <p><span class="math display">\[
@@ -565,37 +565,37 @@ kgCO_2e \\
 Emissions_{DRAGONFLY} = 24 kgCO_2e
 \]</span></p>
 <p>Applying this to the other simulation codes gives:</p>
-<table class="table"><colgroup><col width="18%"><col width="18%"><col width="25%"><col width="18%"><col width="18%"></colgroup><thead><tr class="header"><th>Cluster</th>
+<table class="table"><colgroup><col width="18%"><col width="18%"><col width="25%"><col width="18%"><col width="18%"></colgroup><thead><tr><th>Cluster</th>
 <th>Simulation Code</th>
 <th align="right">Total CPU-hours</th>
 <th>Notes</th>
 <th>Emissions (kgCO₂e)</th>
-</tr></thead><tbody><tr class="odd"><td>DRAGONFLY</td>
+</tr></thead><tbody><tr><td>DRAGONFLY</td>
 <td>GROMINZ</td>
 <td align="right">45,000</td>
 <td>Self-compiled</td>
 <td>24</td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>ORANGE</td>
 <td align="right">30,000</td>
 <td></td>
 <td>16</td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td>LUMMPS</td>
 <td align="right">20,000</td>
 <td></td>
 <td>11</td>
-</tr><tr class="even"><td>LANCER</td>
+</tr><tr><td>LANCER</td>
 <td>GROMINZ</td>
 <td align="right">60,000</td>
 <td>Self-compiled</td>
 <td>32</td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td>ORANGE</td>
 <td align="right">40,000</td>
 <td></td>
 <td>21</td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>LUMMPS</td>
 <td align="right">75,000</td>
 <td></td>
@@ -644,7 +644,7 @@ practices.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>For focussing his future actions and exploration:</p>
 <ul><li>Hugh spends the most CPU-hours on LANCER.</li>
@@ -663,7 +663,7 @@ section.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh Takes Action </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Based on the data gathered above Hugh observes:</p>
 <ul><li>He spends the most CPU-hours on LANCER.</li>
@@ -816,7 +816,7 @@ any links that you are not going to use.
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/06_case_study3.html",
   "dateCreated": "2026-01-13",
   "dateModified": "2026-04-28",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-04-30"
 }
 
   </script><script>
