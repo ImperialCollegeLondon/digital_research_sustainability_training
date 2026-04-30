@@ -51,7 +51,7 @@ gives 1 kWh of electrical energy used.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Praticing units of power and energy
+## Practising units of power and energy
 
 Which of the below are not equal to 1 kWh.
 
@@ -168,6 +168,38 @@ The following dynamics are at play:
   intensity also falls as gas generation goes offline. Overall carbon intensity ends up
   lower at the end of the day than the beginning as more imported energy is available.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Real-time Carbon Intensity
+
+- On your laptop or your phone, open [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)
+- Look at the current carbon intensity for our region right now. Which energy source do
+you think is  currently marginal ('filling the gap' to meet demand)?
+
+:::::::::::::::::::::::: solution
+
+The marginal source is the most expensive source needed to meet demand. On days with lower
+intensity the marginal power source is usually the one with the highest
+dispatchability. For example, renewables are almost always used first, while nuclear energy
+could be more difficult to turn off. In contrast, gas is expensive but has high dispatchability.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Energy generation mix pie chart on a sunny day in London obtained from [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)](fig/ep2_challenge_intensity.png){alt="Energy generation mix pie chart on a sunny day in London"}
+
+Looking at the Generation Mix in the pie chart obtained from [https://carbonintensity.org.uk/](https://carbonintensity.org.uk/)
+on a sunny day in London:
+
+- Wind (17.9%) and Solar (18.6%): These have very low variable costs. If it is windy or
+sunny, the grid uses all of this energy this energy first.
+- Imports (44.5%): These are usually scheduled in advance based on international contracts.
+While they can be marginal, they can't be as easily switched on and off.
+- Gas (15.4%): High dispatchability, and can be 'increased' if the grid needs an immediate
+increase in supply.
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::: callout
 
 ## Takeaways
@@ -267,14 +299,35 @@ view of different emissions sources.
 
 [Greenhouse Gas Protocol]: https://ghgprotocol.org/
 
+<!-- markdownlint-disable-next-line line-length -->
+![PLACEHOLDER](fig/ghg_emissions_placeholder.webp){alt="Placeholder - GHG Emissions Types."}
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## According to the GHG protocol, what are the carbon emissions of...?
+## Emission types
 
-- Using a laptop in the office for coding 4h a day, 5 days a week. No calculations run.
-- Brewing 5 cups of coffee per day, at home, 5 days a week.
+Based on the **GHG Protocol**, categorise each of the following activities
+as **Scope 1**, **Scope 2**, or **Scope 3**.
+
+1. Powering your laptop
+2. Running simulations on a cloud provider
+3. A return flight to a conference in New York
+4. University-owned car that transports equipment
+5. Recycling an old laptop
+6. Leaking Ultra-low temperature (ULT) freezer
 
 :::::::::::::::::::::::: solution
+
+## Answer Key
+
+| Activity | Scope | Justification |
+| :--- | :---: | :--- |
+| 1. Powering your laptop | **Scope 2** | Indirect emissions from energy purchased and used by the lab |
+| 2. Running simulations on a cloud provider | **Scope 3** | You are using a service but don't own the servers |
+| 3. Conference travel | **Scope 3** | The airline owns the plane |
+| 4. University-owned car | **Scope 1** | Direct emissions by the institution |
+| 5. Recycling an old laptop | **Scope 3** | Downstream emissions from the laptop 'end-of-life |
+| 6. Leaking Ultra-low temperature (ULT) freezer | **Scope 1** | Direct emissions from leakage of equipment owned by the lab |
 
 :::::::::::::::::::::::::::::::::
 
@@ -282,7 +335,7 @@ view of different emissions sources.
 
 ## Carbon in Context
 
-While digital emissions might seem small, their impacts are cummulative. To provide a
+While digital emissions might seem small, their impacts are cumulative. To provide a
  clearer picture of these impacts, the following table contextualizes digital emissions
  against common research-related activities, such as international travel and
  laboratory-related activities. Thinking about digital emissions in the context of the
@@ -307,7 +360,7 @@ Data assumptions and calculations:
 - Fume Hoods: Based on an electrity consumption of 34,871 kWh/year ^2^
 - Ultra-low Freezer: Based on a energy consumption of up to 25 kWh/day (8,900 kWh/year)
  of traditional cascade refrigeration systems ^3^.
-- Household energy consumption: bBsed on Ofgem estimate of typical household consumption
+- Household energy consumption: based on Ofgem estimate of typical household consumption
  in England of 2,700 kWh of electricity and 11,500 kWh of gas in a year, resulting in
  ~1900 kgCO2e
 - SSD storage: Based on the higher end of estimated carbon emissions per TB/year ^4^
