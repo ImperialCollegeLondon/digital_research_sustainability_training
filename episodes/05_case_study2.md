@@ -51,31 +51,6 @@ Emma is interested in reducing her digital carbon footprint and wants to optimis
  her computational workflow to balance scientific rigour with environmental
  responsibility.
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Identify Emissions
-
-Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
-
-- The electricity powering Emma's laptop
-- The manufacturing of Emmas's laptop
-- The energy used by the LLM provider to write the data processing and analysis code
-- The energy used by cloud-storage provider to store Emma's data
-- The external monitors used with the laptop
-
-:::::::::::::::::::::::: solution
-
-- The electricity powering Emma's laptop (**Scope 2**)
-- The manufacturing of Emmas's laptop (**Scope 3**)
-- The energy used by the LLM provider to write the data processing and analysis code
-(**Scope 3**)
-- The energy used by cloud-storage provider to store Emma's data (**Scope 3**)
-- The external monitors used with the laptop (**Scope 2**)
-
-:::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Collecting information
 
 ### Data storage
