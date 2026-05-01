@@ -44,8 +44,8 @@ Celia decides to learn more about each of the emission sources, starting with
 inspecting the hardware she uses for the package development. She primarily works on her
 laptop, on an average, using it for 20 hours per week for the software development.
 From the Product Carbon Footprint (PCF) data sheet for her laptop, she finds the
-embedded emissions associated with the hardware components - CPU (50 kg CO2e), GPU
-(30 kg CO2e), and RAM (20 kg CO2e).
+embedded emissions associated with the hardware components - CPU (50 kgCO₂e), GPU
+(30 kgCO₂e), and RAM (20 kgCO₂e).
 
 Next, she reviews the code base and notices that it is not optimised for performance.
 She finds that the code runs on a single CPU core and does not make use of any
@@ -81,7 +81,7 @@ Celia tracks the following activities:
 
 1. From the PCF data sheet for her laptop, she can find the embedded emissions
 from the hardware components (CPU + GPU + RAM). In this case, the total embedded emissions
-is 100 kg CO2e.
+is 100 kgCO₂e.
 
 2. She notices that, her code is not optimised for performance, it has been
 consuming more computational resources and is taking longer to run than it should,
@@ -179,7 +179,7 @@ only.
 
 Finally, she explores the product carbon footprint (PCF) data for her laptop to find the
 embedded emissions from the hardware components. She finds that the total embedded
-emissions from the CPU, GPU, and RAM is 100 kg CO2e.
+emissions from the CPU, GPU, and RAM is 100 kgCO₂e.
 :::::::::::::::::::::::::::::::::::::::::::
 
 ## References
