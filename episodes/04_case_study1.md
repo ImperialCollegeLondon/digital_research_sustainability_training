@@ -34,27 +34,6 @@ and usage of her package and identify ways to reduce these emissions.
 To begin with, Celia identifies the sources of carbon emissions associated with her work
 and categorises them under the GHG protocol.
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 1: Identify Scope of the Emissions
-
-Under which scope would the following activities from Celia's work be categorised?
-
-- Emissions from electricity usage of the hardware used for software development.
-- Embedded emissions from hardware used for software development.
-- Use of services such as GitHub Actions and AI Coding agents.
-- Electricity usage when users of the package run the code.
-
-:::::::::::::::::::::::: solution
-
-- Scope 2
-- Scope 3
-- Scope 3
-- Scope 3
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 Celia should assess the balance of emissions involved in development of the code
 base versus its usage. She should look at how to estimate these then focus her
 emission reduction measures appropriately.
