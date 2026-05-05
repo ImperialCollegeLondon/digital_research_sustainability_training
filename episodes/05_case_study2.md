@@ -41,10 +41,10 @@ Emma's set up:
 Emma's current workflow:
 
 - She uses cloud-based LLMs to write her scripts for processing and analysing data.
-This often requires many queries and iterations.
+  This often requires many queries and iterations.
 - She keeps every version of her raw data on the HDDs, and rarely deletes old files.
 - After pre-processing the raw data, she stores a copy of the processed data on
- different HDDs.
+  different HDDs.
 - She runs her scripts on her laptop and scripts often take 6h to complete.
 
 Emma is interested in reducing her digital carbon footprint and wants to optimise
@@ -52,6 +52,38 @@ Emma is interested in reducing her digital carbon footprint and wants to optimis
  responsibility.
 
 ## Collecting information
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+### What data does Emma need to understand the emissions associated with her software?
+
+- What are the key aspects of her work that Emma could estimate emissions for?
+- What methodologies could Emma use to estimate her emissions?
+- What additional data would she need to collect in each case?
+
+::::::::::::::::::::::::::::::: solution
+
+1. Data storage. If Emma has particular storage devices in mind she could look for PCF
+   reports to get the embodied emissions and possibly a usage estimate. Such data is
+   less readily available for storage devices however. In the absence of PCF data Emma
+   could used some of the emissions estimates from sources such as those covered in
+   episode 3. She will need to know the volume of data and the amount of time she'll
+   need to store it for.
+1. Use of LLMs. Tracking which model she uses, and how many queries she sends and the
+   approximate size of the replies for use with the Hugging Face Ecologits calculator.
+1. Data processing. Looking for a PCF data sheet for her laptop will provide information
+   about the embedded emissions. For the operational emissions she could choose between
+   direct measurement with a power meter, use of a tool like codecarbon or estimation
+   with the Green Algorithms Calculator. In the known context that operational emissions
+   of laptops are low, it's probably easiest to use the lowest effort method of the
+   Green Algorithms calculator. She can always follow up with a more accurate method
+   later if the initial estimate seems significant. To do this she'll need an estimate
+   of the CPU utilisation of her laptop and its specifications.
+
+::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::  spoiler
 
 ### Data storage
 
@@ -80,6 +112,8 @@ more accurate emissions. She finds that her laptop has a Core i5-1145G7 processo
 up to 1 core. As she often leaves her scripts running overnight she's not sure exactly
 how long they take. For the next run she does she adds a command to record the total
 runtime which is 6 hours.
+
+::::::::::::::::::::::::::::::::::::::::
 
 ## Analysis
 
