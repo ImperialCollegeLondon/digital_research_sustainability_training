@@ -116,7 +116,7 @@ dominate.
 
 #### Embodied Emissions
 
-Finding the embodied emissions of device relies on information provided by the
+Finding the embodied emissions of a device relies on information provided by the
 manufacturer. The regulatory environment is evolving however increasingly there are
 legal requirements for manufacturers to publish Product Carbon Footprint (PCF) data for
 their products. Information can be easily found by searching the internet for "PCF" and
@@ -198,7 +198,7 @@ on.
 #### What is the idle energy usage of your computer?
 
 Like in the previous exercise, try to find the ECO Declaration for your computer
-in the manufacturer's webpag.epo
+in the manufacturer's webpage.
 
 - What is the reported idle energy consumption?
 - How easy was it to find?
@@ -238,8 +238,8 @@ There are a few different storage mediums in common use:
 
 Similarly to computers, their associated carbon emissions can be split into operational
 and embedded components. Storage devices are often components of larger systems which
-can make it difficult to directly measure their power usage. Whilst some manufacters do
-report sustainability data this is highly variable. In some cases storage device data
+can make it difficult to directly measure their power usage. Whilst some manufacturers
+do report sustainability data this is highly variable. In some cases storage device data
 may be included as a component of the PCF data for a complete system.
 
 Given the general paucity of data there have been some studies that attempt to estimate
@@ -450,7 +450,7 @@ environment. Image originally published at [The Seattle
 Times].](https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg){alt="Cartoon
 showing a datacenter as a monster demanding more power."}
 
-Increasingly data centres are appearing in the media in a negative light due to their
+Increasingly, data centres are appearing in the media in a negative light due to their
 power and water consumption. Data centres consume around 2.5% of the UK's electricity
 and the annual consumption is expected to increase by 4 times by 2030^8^. In the U.S.,
 data centres are predicted to use up to 12% of the country's electricity by 2028, a 3x
@@ -459,11 +459,11 @@ increase from 4.4% in 2025^9^.
 Much of this expansion is driven by a relatively small number of tech companies. The
 compute demands of training and serving AI models is also driving a noticable increase.
 In the UK the Department of Science Innovation and Technology have projected a need for
-6GW of AI ready data centre capacity by 2030^15^ compared to overall current national
+6GW of AI ready data centre capacity by 2030^13^ compared to overall current national
 demand of ~30-35 GW.
 
-Additionally there have been accusations of tech companies obscuring and under-reporting
-the emissions associated with data centres. This [Guardian
+Additionally there have been reports of tech companies obscuring and under-reporting the
+emissions associated with data centres. This [Guardian
 article][guardian-data-centre-emissions] for instance covers how, the industry
 frequently tries to obscure its true carbon footprint in a number of ways. One such way
 is the use of renewable energy certificates (Recs), where a data centre company can make
@@ -603,10 +603,10 @@ workflows. It supports GitHub and GitLab.
 
 To reduce emissions from CI/CD usage consider ways to reduce the number of workflow
 executions whilst maintaing strong quality assurance checks. Some strategies are
-explored in this [blogpost][rational-use-of-ci] from the Imperial Research Software
-Engineering team.
+explored in this [poster][evironmentally-aware-github-actions] from the Imperial
+Research Software Engineering team.
 
-[rational-use-of-ci]: https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/
+[evironmentally-aware-github-actions]: https://doi.org/10.5281/zenodo.12754189
 
 #### Generative AI
 
@@ -656,7 +656,4 @@ information is available about the model architecture.
 10. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
 11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
 12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
-13. Poster on [Environmentally-aware use of GitHub
-Actions](https://zenodo.org/records/12754189) and the [associated GitHub repository](https://github.com/ImperialCollegeLondon/game_of_life)
-14. Blog post on [Adopting a more rational use of Continuous Integration with GitHub Actions](https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/).
-15. [Data centres: planning policy, sustainability and resiliance](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
+13. [Data centres: planning policy, sustainability and resiliance](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
