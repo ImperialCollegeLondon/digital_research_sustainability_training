@@ -1186,7 +1186,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-03_activities"><p>Content from <a href="03_activities.html">Digital research activities with sustainability issues</a></p>
 <hr>
-<p>Last updated on 2026-04-27 |
+<p>Last updated on 2026-05-05 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1240,20 +1240,13 @@ infrastructure produce carbon emissions? (Image by Rae)</div>
 <hr class="half-width">
 <p>Computers have become an indispensible component of modern life as
 well as digital research. These include everyday devices such as a
-laptop or desktop PC used to check email as well as servers accessed
+laptop, desktops or phones as well as servers that are accessed
 remotely.</p>
-<p>Everyone in research uses a laptop, desktop PC or workstation to do
-their work, even if they are not involved in coding or running
-simulations. Browsing the web or checking the email are everyday
-activities that consume energy. These are all called <em>operational
-carbon emissions</em>.</p>
-<p>But just the fact that you have one of these machines, also has a
-carbon impact. This is related to the process of sourcing the materials
-the computer is made off, manufacturing and transporting it. These are
-called <em>embodied carbon emissions</em>.</p>
-<p>Both embodied and operational emissions play a significant role in
-the carbon footprint of computing devices, but how to estimate them and
-reduce them is very different.</p>
+<p>Computers draw electricity during use and also produce considerable
+embodied emissions from production and transportation. Both embodied and
+operational emissions play a significant role in the carbon footprint of
+computing devices, but how to estimate them and reduce them is very
+different.</p>
 <div class="section level3">
 <h3 id="embodied-emissions">Embodied emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions"></a>
 </h3>
@@ -1283,31 +1276,108 @@ Donation Scheme</a>) to extend its useful life instead of trashing it
 </div>
 </div>
 </div>
-<p>Finding the embodied carbon emissions of computers often relies on
-the information provided by the manufacturers themselves, which might be
-vague or based on different assumptions. However, it is a good starting
-point for estimating the carbon impact of your research activities.</p>
-<p>Below there is a list of common laptop manufacturers’ webpages
-providing information on their product’s embodied carbon emissions. If
-your machine is custom made or very old, you might need to dig into the
-individual parts’s manufacturers, as well.</p>
-<p>As a specific example, <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991" class="external-link">in
-this link</a> you have the report corresponding to the laptop model used
-to write this bit of the course, an HP EliteBook 840 G9, also shown in
-the following image.</p>
+</div>
+<div class="section level3">
+<h3 id="operational-emissions">Operational emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a>
+</h3>
+<p>The operational emissions of a device depend on its design and
+performance, but also on <em>how</em>, <em>when</em> and <em>where</em>
+it is used. For this reason, it is useful to consider energy usage first
+as a proxy for carbon emissions.</p>
+<p>The power consumption of digital devices can be split into idle and
+usage-based consumption. Idle consumption is incurred when a device is
+powered but not carrying out any particular operation. Additional energy
+is consumed as the computational load placed on the device is increased.
+In particular, components like CPUs, GPUs and memory will draw
+additional electricity and cooling systems may have to work harder to
+remove excess heat.</p>
+<p>There are a number of factors that affect operational power
+usage:</p>
+<ul>
+<li>Age: Modern computers have generally more advanced technology that
+makes them more energy-efficient than older ones.</li>
+<li>Type: Laptops are typically more energy efficient than
+desktops.</li>
+<li>Power management settings: That control when to go to sleep after a
+time of inactivity, or control the CPU frequency, etc.</li>
+<li>Peripherals: Especially, monitors, but also printers can also
+consume large amounts of energy.</li>
+</ul>
+<div id="utilisation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="utilisation" class="callout-inner">
+<h3 class="callout-title">Utilisation</h3>
+<div class="callout-content">
+<p>The nature of both operational and embodied energy usage highlights
+the importance of utilisation in relation to computing hardware. The
+embodied emissions of a device are a fixed overhead, so the more
+computational work that is carried out over the lifetime of a device the
+more efficiently that overhead has been invested. Similarly, as there is
+a mimimum power draw associated with idle usage, as utilisation of a
+device increases the power draw per unit of computational work
+decreases.</p>
+</div>
+</div>
+</div>
+<div id="operational-vs-embedded-emissions" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="operational-vs-embedded-emissions" class="callout-inner">
+<h3 class="callout-title">Operational vs Embedded Emissions</h3>
+<div class="callout-content">
+<p>As a rule of thumb, for consumer electronic devices (that is laptops,
+desktops, tablets and phones) the embodied emissions are far in excess
+of operational ones. This emphasises the importance of maximising the
+lifetime of these devices.</p>
+<p>For enterprise servers that have a much greater maximum operational
+power draw, the balance can vary due to a number of factors, not least
+the carbon intensity of the electricity used to power them and their
+utilisation. As the carbon intensity of electricity falls over time
+however embodied emissions are expected to increasingly dominate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="estimating-and-measuring-computer-emissions">Estimating and Measuring Computer Emissions<a class="anchor" aria-label="anchor" href="#estimating-and-measuring-computer-emissions"></a>
+</h3>
+<div class="section level4">
+<h4 id="embodied-emissions-1">Embodied Emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions-1"></a>
+</h4>
+<p>Finding the embodied emissions of a device relies on information
+provided by the manufacturer. The regulatory environment is evolving
+however increasingly there are legal requirements for manufacturers to
+publish Product Carbon Footprint (PCF) data for their products.
+Information can be easily found by searching the internet for “PCF” and
+the manufacturer’s name.</p>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>We’ll see some example PCF sheets below however it’s important to
+note that different manufacturers can use different methodologies and
+assumptions. This means it is not advised to directly compare PCF data
+between manufacturers.</p>
+</div>
+</div>
+</div>
+<p>Here is the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991" class="external-link">HP
+EliteBook 840 G9 PCF Report</a>:</p>
 <!-- markdownlint-disable-next-line line-length -->
-<figure><img src="fig/embodied_emissions_laptop.png" alt="Embodied carbon emissions for HP EliteBook 840 G9." class="figure mx-auto d-block"><div class="figcaption">Embodied carbon emissions for HP EliteBook 840
+<figure><img src="fig/embodied_emissions_laptop.png" alt="Product Carbon Footprint report for HP EliteBook 840 G9." class="figure mx-auto d-block"><div class="figcaption">Product Carbon Footprint for HP EliteBook 840
 G9</div>
 </figure><p>If we exclude the <code>Use</code> section of the chart, which
 obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
 production and transportation, accounts for about ~80% of the estimated
 total, i.e. 160 kgCO₂e.</p>
-<p>It should be noted that different manufacturers use different
-criteria to calculate their embodied emissions, so choosing the computer
-with the lowest reported embodied emissions is not necessarily the best
-approach. Other aspects like the expected lifetime, the possibility of
-replacing individual components, etc. might be more useful and impactful
-aspects to look at.</p>
 <div id="what-are-the-embodied-carbon-emissions-of-your-computer" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1318,8 +1388,7 @@ aspects to look at.</p>
 computer?</h3>
 <div class="callout-content">
 <p>Find the model of the computer you are using right now to do this
-course and try to find out its embodied carbon emissions. The links
-below from some manufacturers might be useful.</p>
+course and try to find out its embodied carbon emissions.</p>
 <ul>
 <li>Which part produces a larger carbon footprint?</li>
 <li>If it is a laptop and the battery is failing, how much carbon could
@@ -1330,62 +1399,51 @@ replacing the whole laptop?</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="operational-emissions">Operational emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a>
-</h3>
-<p>Operational emissions are those that are produced when <em>using</em>
-the equipment. They depend on its design and performance, but also on
-<em>how</em> it is used and <em>where</em> it is used. For the latter
-reason, it is often better to consider the energy usage, rather than the
-carbon emitted as this depends on the energy mix where the machine is
-being used.</p>
 <div class="section level4">
-<h4 id="idle-energy-usage">Idle energy usage<a class="anchor" aria-label="anchor" href="#idle-energy-usage"></a>
+<h4 id="operational-emissions-1">Operational Emissions<a class="anchor" aria-label="anchor" href="#operational-emissions-1"></a>
 </h4>
-<p>These represent a baseline of energy usage just because of the
-computer (and the monitor in the case of desktop computers) being on.
-There are a number of factors that influence this:</p>
-<ul>
-<li>The age of the computer: Modern computers have generally more
-advanced technology that makes them more energy-efficient than older
-ones.</li>
-<li>Nature of the computer: Laptops, designed to work with batteries,
-are often also more energy efficient than desktops.</li>
-<li>The power management settings: That control when to go to sleep
-after a time of inactivity, switch the screen off, etc. have a very
-strong influence on the idle energy consumption.</li>
-<li>Peripherals: Especially, monitors (sometimes having two or more),
-but also printers can also consume large amounts of energy.</li>
-</ul>
-<p>To figure out the idle energy consumption of a specific machine, one
-option is to check the <a href="https://ecma-international.org/publications-and-standards/standards/ecma-370/" class="external-link">ECO
-Declaration</a> for the equipment. All manufacturers need to provide
-this document where, in principle, you can find such information. For
-example, the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&amp;search=HP%20EliteBook%20840%20G9" class="external-link">ECO
-declaration of the HP EliteBook 840 G9</a> indicates an energy
+<p>The most direct and accurate option to get the idle energy usage of a
+consumer device is to use a plug in power meter. There are many models,
+but most will provide both the instantaneous power and the energy used
+over a period of time. This can be used both to ascertain the idle power
+draw of a system and to estimate the emissions of a running application
+by comparing to the baseline idle draw.</p>
+<p>If measuring the energy usage of the entire device is not possible,
+modern hardware often supports reporting the energy consumption of
+different components. This varies based on the hardware and operating
+system but we’ll look at two common examples. RAPL (Running Average
+Power Limit) is a CPU feature which reports real time energy usage.
+Similarly nvidia-smi can report power consumption for NVIDIA GPUs.</p>
+<p>In practice, low level interfaces like RAPL and nvidia-smi are
+difficult to use directly. There are more user friendly interfaces that
+can abstract over the particular hardware in use on your system. In
+particular, <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a>
+is a Python application that can be used to directly measure hardware
+power consumption during the runtime of an application.</p>
+<p>If it is impractical to make any direct measurements, there are also
+some methods to estimate power draw.</p>
+<p>For idle power usage, one option is to check for an <a href="https://ecma-international.org/publications-and-standards/standards/ecma-370/" class="external-link">ECO
+Declaration</a> for the equipment. For example, the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&amp;search=HP%20EliteBook%20840%20G9" class="external-link">ECO
+declaration of the HP EliteBook 840 G9</a> indicates an idle energy
 consumption of 22.67 kWh/year. This declaration also includes useful
 information about the product, like which components can be replaced or
-upgrade, useful knowledge to reduce the embodied emissions, as pointed
-out above. Having said that, this document is sometimes not as complete
-as it should, or might not represent the exact configuration of your
-machine. Or might not even exist if the machine has been made bespoke
-with specific components.</p>
-<p>In this case, the best option to get the idle energy usage of a
-machine is to use a plug in power meter. These plug in the mains socket
-and then the computer and any other peripherals, like monitors, can be
-plugged to it (possibly via a power strip). There are many models, but
-most will provide both the instantaneous power and the energy used over
-a period of time.</p>
-<p>Once the baseline energy usage is found, strategies can be defined to
-reduce it, like adjusting the power management settings, changing usage
-habits, etc.</p>
-<div id="what-are-the-idle-energy-usage-of-your-computer" class="callout discussion">
+upgrade. The ECO Declaration is a voluntary standard so not all
+manufacturers provide it or it may contain incomplete information.</p>
+<p>For estimating the power usage of a computational workload a useful
+resource is the <a href="https://calculator.green-algorithms.org/" class="external-link">Green
+Algorithms Calculator</a>. This uses a simple model that combines
+information about the resource utilisation of a computational workload
+with details of the hardware it ran on.</p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="fig/green_algorithms_calculator_screenshot.png" alt="A screenshot of the Green Algorithms Calculator webpage showing an example calculation and the result carbon emissions." class="figure mx-auto d-block"><div class="figcaption">Screenshot of the Green Algorithms
+Calculator</div>
+</figure><div id="what-is-the-idle-energy-usage-of-your-computer" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="what-are-the-idle-energy-usage-of-your-computer" class="callout-inner">
-<h3 class="callout-title">What are the idle energy usage of your
+<div id="what-is-the-idle-energy-usage-of-your-computer" class="callout-inner">
+<h3 class="callout-title">What is the idle energy usage of your
 computer?</h3>
 <div class="callout-content">
 <p>Like in the previous exercise, try to find the ECO Declaration for
@@ -1398,48 +1456,6 @@ your computer in the manufacturer’s webpage.</p>
 </div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="application-energy-usage">Application energy usage<a class="anchor" aria-label="anchor" href="#application-energy-usage"></a>
-</h4>
-<p>Once you start doing any work with a computer it’s power usage will
-rise above its idle consumption. This is caused by components like the
-CPU, GPU or memory using more power to complete the computational work.
-There may also be increased power requirements to keep components
-cool.</p>
-<p>Typically, you will be interested in the energy usage of specific
-applications, so you can minimize its energy usage. For example, a
-particular simulation software you have been working on or a 3D
-visualization tool.</p>
-<p>This is not an easy task, and the solution depends greatly on your
-accessibility to the source code of the application, as well as the
-hardware you are using.</p>
-<p>If you do have access to the source code, then you could use tools
-like the <a href="https://github.com/intel/pcm" class="external-link">Intel’s Performance
-Counter Monitor (PCM)</a> (which <a href="https://greencompute.uk/Measurement/RAPL" class="external-link">can be used in C++
-programs</a>) or <a href="https://github.com/mlco2/codecarbon" class="external-link">Codecarbon</a> (for Python
-programs). These tools require some setting up - and obviously modify
-your code - but will give you the most accurate readings of the energy
-usage specific for your application.</p>
-<p>If you do not have access to the source code, then your only option
-is to rely on external tools to monitor the energy usage of the
-application (e.g. using PCM) or to calculate it based on the hardware
-being used and the time it is being used for using the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
-Calculator</a>, for example.</p>
-<p>It is beyond the scope of this course to teach you how to use any of
-these tools, given the range of use cases and configurations, but in the
-case studies described in the next episodes, there will be examples of
-how some of these can be employed in practice to understand your energy
-usage and consider ways of reducing them.</p>
-</div>
-</div>
-<div class="section level3">
-<h3 id="product-carbon-footprint-of-different-manufacturers">Product Carbon Footprint of different manufacturers<a class="anchor" aria-label="anchor" href="#product-carbon-footprint-of-different-manufacturers"></a>
-</h3>
-<ul>
-<li><a href="https://h20195.www2.hp.com/v2/library.aspx#doctype-95&amp;country-us&amp;sortorder-popular&amp;teasers-off&amp;isRetired-false&amp;isRHParentNode-false&amp;titleCheck-false" class="external-link">HP</a></li>
-<li><a href="https://compliance.lenovo.com/content/esg-document-library/en/esg.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FdocumentType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.7_values=PCF%20Sheets&amp;layout=card&amp;p.offset=0&amp;p.limit=24" class="external-link">Lenovo</a></li>
-<li><a href="https://www.dell.com/en-uk/lp/dt/product-carbon-footprints" class="external-link">Dell</a></li>
-</ul>
 </div>
 </section><section><h2 class="section-heading" id="storage-devices">Storage Devices<a class="anchor" aria-label="anchor" href="#storage-devices"></a>
 </h2>
@@ -1473,9 +1489,19 @@ continuously.</li>
 technology used for long-term storage. Their embodied emissions are low,
 while their operational emissions are near zero.</li>
 </ul>
+<div class="section level3">
+<h3 id="measuring-and-estimating-data-storage-emissions">Measuring and Estimating Data Storage Emissions<a class="anchor" aria-label="anchor" href="#measuring-and-estimating-data-storage-emissions"></a>
+</h3>
 <p>Similarly to computers, their associated carbon emissions can be
-split into operational and embedded components. These are summarised
-below:</p>
+split into operational and embedded components. Storage devices are
+often components of larger systems which can make it difficult to
+directly measure their power usage. Whilst some manufacturers do report
+sustainability data this is highly variable. In some cases storage
+device data may be included as a component of the PCF data for a
+complete system.</p>
+<p>Given the general paucity of data there have been some studies that
+attempt to estimate emissions from different storage media. We’ve
+summarised some useful estimates below:</p>
 <table class="table">
 <colgroup>
 <col width="25%">
@@ -1531,19 +1557,20 @@ HDDs<sup>5</sup>.</p>
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
 they remain the preferred option for storing cold data due to their low
 cost, low embodied emissions and great energy efficiency.</p>
+</div>
 </section><section><h2 class="section-heading" id="data-centres">Data Centres<a class="anchor" aria-label="anchor" href="#data-centres"></a>
 </h2>
 <hr class="half-width">
 <p>Beyond personal computing devices like laptops and PC’s, much
 computing infrastructure is now accessed remotely. In this case the
-computers are generally hosted in a Data Centre, a large industrial
+computers are generally hosted in a data centre, a large industrial
 facility that can contain thousands of servers and the supporting
 infrastructure required to allow remote access.</p>
-<p>The carbon emissions associated with the computers in a data centre
-are covered by the same considerations above. As purpose built
-facilities, data centres can host more specialised equipment and benefit
-from economies of scale. They also have additional emissions sources
-beyond the individual servers they house.</p>
+<p>The carbon emissions associated with the computers and storage
+devices in a data centre are covered above. As purpose built facilities,
+data centres can host more specialised equipment and benefit from
+economies of scale. They also have additional emissions sources beyond
+the individual servers they house.</p>
 <p>Data centre embodied emissions:</p>
 <ul>
 <li>
@@ -1558,6 +1585,10 @@ infrastructure such as switches and cables.</li>
 means they must have dedicated infrastructure for cooling. More
 information on this topic, in particular the water usage, is discussed
 below.</li>
+<li>
+<strong>electrical infrastructure</strong>: the high power demands
+of data centres can require construction of additional electrical
+infrastructure in the local area to support connection to the grid.</li>
 </ul>
 <p>There are additional sources of operational emissions as well:</p>
 <ul>
@@ -1572,8 +1603,8 @@ distribution and transformation.</li>
 <p>The energy efficiency of data centres is usually measured as their
 <strong>Power Usage Effectiveness (PUE)</strong>, and determines how
 much of the energy entering the data centre reaches the IT equipment
-used for servers and storage compared to the energy used for cooling and
-lighting.</p>
+used for servers and storage compared to the energy used for other
+purposes like cooling.</p>
 <p><span class="math display">\[
 \mathbf{PUE} = \frac{\text{Total Facility Power}}{\text{IT Equipment
 Power}}
@@ -1586,29 +1617,14 @@ every 1 watt used to power computational resources, an additional 0.59
 watts is spent on cooling and power distribution. Newer and larger data
 centres tend to be more efficient<sup>11</sup>, with a global average
 PUE of 1.41 in 2025<sup>11</sup>.</p>
-<p>Data centres consume around 2.5% of the UK’s electricity and the
-annual consumption is expected to increase by 4 times by
-2030<sup>9</sup>. In the U.S., data centres are predicted to use up to
-12% of the country’s electricity by 2028, a 3x increase from 4.4% in
-2025<sup>8</sup>.</p>
 <p>The operational emissions of data centers depends heavily on the grid
 carbon intensity, with lower emissions in renewable-powered regions and
 higher emissions in fossil-fuel-dominated regions.</p>
 <p>Despite the additional emissions sources, data centres have the
 ability to be far more energy efficient than the equivalent collection
-individual computers or storage devices. This is due to their scale and
-specialisation and the provision of infrastructure that can be shared
-between many users.</p>
-<p>Even still, it is wise to conduct due diligence checks on the data
-centres you aim to utilise. As you may have heard <a href="https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech" class="external-link">in
-the news</a>, the industry frequently tries to obscure its true carbon
-footprint in a number of ways. One such way is the use of renewable
-energy certificates (Recs), where a data centre company can make itself
-appear to purchase some percentage of its energy from renewable sources,
-despite that energy not reaching the facility. The companies frequently
-report ‘market-based’ emissions, which are manipulated by the inclusion
-of Recs, but look out for the ‘location-based’ emissions figure for a
-less misleading view of their carbon footprint.</p>
+of individual computers or storage devices. This is due to their scale
+and specialisation and the provision of infrastructure that can be
+shared between many users.</p>
 <table class="table">
 <colgroup>
 <col width="33%">
@@ -1774,6 +1790,53 @@ when considered collectively.</p>
 </div>
 </div>
 </div>
+<div class="section level3">
+<h3 id="data-centre-expansion-hyperscalers-and-ai">Data Centre Expansion, Hyperscalers and AI<a class="anchor" aria-label="anchor" href="#data-centre-expansion-hyperscalers-and-ai"></a>
+</h3>
+<figure><img src="https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg" alt="Cartoon showing a datacenter as a monster demanding more power." class="figure mx-auto d-block"><div class="figcaption">Data centers consume huge amounts of energy and
+water, which can be a risk for the environment. Image originally
+published at <a href="https://www.seattletimes.com/opinion/the-ai-energy-monster-is-coming-for-our-salmon-and-electricity/" class="external-link">The
+Seattle Times</a>.</div>
+</figure><p>Increasingly, data centres are appearing in the media in a negative
+light due to their power and water consumption. Data centres consume
+around 2.5% of the UK’s electricity and the annual consumption is
+expected to increase by 4 times by 2030<sup>8</sup>. In the U.S., data
+centres are predicted to use up to 12% of the country’s electricity by
+2028, a 3x increase from 4.4% in 2025<sup>9</sup>.</p>
+<p>Much of this expansion is driven by a relatively small number of tech
+companies. The compute demands of training and serving AI models is also
+driving a noticable increase. In the UK the Department of Science
+Innovation and Technology have projected a need for 6GW of AI ready data
+centre capacity by 2030<sup>13</sup> compared to overall current
+national demand of ~30-35 GW.</p>
+<p>Additionally there have been reports of tech companies obscuring and
+under-reporting the emissions associated with data centres. This <a href="https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech" class="external-link">Guardian
+article</a> for instance covers how, the industry frequently tries to
+obscure its true carbon footprint in a number of ways. One such way is
+the use of renewable energy certificates (Recs), where a data centre
+company can make itself appear to purchase some percentage of its energy
+from renewable sources, despite that energy not reaching the facility.
+The companies frequently report ‘market-based’ emissions, which are
+manipulated by the inclusion of Recs, but look out for the
+‘location-based’ emissions figure for a less misleading view of their
+carbon footprint.</p>
+</div>
+<div class="section level3">
+<h3 id="measuring-and-estimating-cloud-emissions">Measuring and Estimating Cloud Emissions<a class="anchor" aria-label="anchor" href="#measuring-and-estimating-cloud-emissions"></a>
+</h3>
+<p>If you’re making use of resources housed in a data centre you are
+unlikely to be able to directly measure device or component level power
+consumption. In many cases when consuming cloud based resources you may
+not even know what hardware is being used. In this case you’re heavily
+dependent of information provided by the service operator or third party
+estimates. Particularly in the case of cloud providers this can become
+highly complex with many factors at play.</p>
+<p>Some cloud providers do provide tooling for making exposing
+sustainability information. For example <a href="https://aws.amazon.com/sustainability/tools/console/" class="external-link">AWS
+Sustainability Console</a>, <a href="https://cloud.google.com/carbon-footprint?hl=en" class="external-link">Google Carbon
+Footprint</a> and the <a href="https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard" class="external-link">Microsoft
+Emissions Impact Dashboard</a>.</p>
+</div>
 </section><section><h2 class="section-heading" id="research-activities">Research Activities<a class="anchor" aria-label="anchor" href="#research-activities"></a>
 </h2>
 <hr class="half-width">
@@ -1890,20 +1953,30 @@ comparisons through proxy metrics.</p>
 modern digital research so below we’ve chosen a few examplars to look at
 in detail.</p>
 <div class="section level4">
-<h4 id="github">GitHub<a class="anchor" aria-label="anchor" href="#github"></a>
+<h4 id="code-hosting-and-continuous-integrationdeployment">Code Hosting and Continuous Integration/Deployment<a class="anchor" aria-label="anchor" href="#code-hosting-and-continuous-integrationdeployment"></a>
 </h4>
-<p>In a research study on <a href="https://arxiv.org/abs/2510.26413" class="external-link">Environmental Impact of CI/CD
-Pipelines</a> the authors estimates that the carbon footprint from
-GitHub Actions range from 150.5 MTCO₂e in the most optimistic scenario
-to 994.9 MTCO₂e in the most pessimistic scenario. The most likely
-scenario estimates are 456.9 MTCO₂e which is equivalent to the carbon
-captured by 7,615 urban trees in a year.</p>
-<p>The study also compares the carbon emissions of GitHub Actions with
-the emissions of quotidian activities.</p>
-<figure><img src="fig/github_actions_equivalent.png" alt="Comparison between the yearly carbon emissions of the GitHub Actions ecosystem and the emissions of quotidian activities." class="figure mx-auto d-block"><div class="figcaption">Comparison between the yearly carbon emissions
-of the GitHub Actions ecosystem and the emissions of quotidian
-activities</div>
-</figure>
+<p>The use of services such as GitHub and GitLab have become an
+indispensible component of modern software development. Notably these
+services provide access to compute resources to run Continous
+Integration/Deployment (CI/CD) workflows. It’s common to run these
+workflows in a “matrix” configuration across variables such as operating
+system and software version which can lead to large parallel
+computational workloads executing.</p>
+<p>CI/CD workflows are executed by servers acting as runners. Most
+services provide hosted runners for general use and support self-hosting
+a runner if you provide your own server. The latter case is amenable to
+the measurement and estimation methods discussed above. If using runners
+hosted by the service however, usually you will have no control or
+visibility over where workflows are executed or the underlying hardware
+they use. Direct measurement of energy usage in this case is not
+possible and there is insufficient information to use approaches like
+the Green Algorithms Calculator. Instead <a href="https://github.com/green-coding-solutions/eco-ci-energy-estimation" class="external-link">Eco
+CI</a> is a tool that has been developed to estimate the carbon
+emissions of CI/CD workflows. It supports GitHub and GitLab.</p>
+<p>To reduce emissions from CI/CD usage consider ways to reduce the
+number of workflow executions whilst maintaing strong quality assurance
+checks. Some strategies are explored in this <a href="https://doi.org/10.5281/zenodo.12754189" class="external-link">poster</a> from the
+Imperial Research Software Engineering team.</p>
 </div>
 <div class="section level4">
 <h4 id="generative-ai">Generative AI<a class="anchor" aria-label="anchor" href="#generative-ai"></a>
@@ -1924,8 +1997,8 @@ model, typically by providing a prompt. This refers to the energy
 required to transmit your prompt, generate the response and transmit it
 back to you.</li>
 </ul>
-<p>There are some important driving factors to bear in mind when
-interacting with LLMs that can drive emissions:</p>
+<p>There are some important factors to bear in mind when interacting
+with LLMs that drive emissions:</p>
 <ul>
 <li>
 <strong>Model size</strong>: Larger models typically require more
@@ -1941,6 +2014,13 @@ generated by the model can also impact energy usage, as longer responses
 require more computation. Reducing the length of the response by being
 more specific in your prompt might help.</li>
 </ul>
+<p>A useful tool to estimate the environmental impact of AI usage is <a href="https://ecologits.ai" class="external-link">EcoLogits</a>. It’s available as a Python
+package or an online version is <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">hosted
+by HuggingFace</a>. It is currently limited to text generation with
+Large Language Models ond only covers the inference stage. Whilst it
+supports as many open LLMs as possible it only has data for a limited
+number of proprietary LLMs where information is available about the
+model architecture.</p>
 </div>
 </div>
 <div class="section level3">
@@ -1950,7 +2030,7 @@ more specific in your prompt might help.</li>
 <li><a href="https://dl.acm.org/doi/10.1145/3630614.3630616" class="external-link">Swamit
 Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied
 Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9</a></li>
-<li><a href="https://www.seagate.com/content/dam/seagate/assets/esg/planet/product-sustainability/files/life-cycle-assessment-exos-x18.pdf" class="external-link">Based
+<li><a href="https://www.seagate.com/content/dam/seagate/assets/esg/planet/product-sustainability/images/exos-x18-sustainability-report/files/Exos-X18-18TB-Sustainability-Report-2023.pdf" class="external-link">Based
 on Seagate EXOS X18</a></li>
 <li><a href="https://www.fujifilm.com/files-holdings/en/sustainability/report/2020/sustainability_activity_report_2020_ff_sr_2020_all_a4_E.pdf" class="external-link">Based
 on LTO 9 - FUJIFILM. <em>Sustainability Report 2020</em>. 2020</a></li>
@@ -1966,7 +2046,7 @@ HDDs?</a></li>
 Decarbonisation - CO₂e Data Calculator</a></li>
 <li><a href="https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage" class="external-link">WholeGrain
 DIgital Report</a></li>
-<li><a href="https://www.neso.energy/neso-implements-electricity-grid-connection-reforms-unlock-investment-great-britain" class="external-link">National
+<li><a href="https://www.neso.energy/document/346791/download" class="external-link">National
 Energy System Operator</a></li>
 <li><a href="https://escholarship.org/uc/item/32d6m0d1" class="external-link">U.S. Department
 of Energy - 2024 Report on U.S. Data Center Energy Use</a></li>
@@ -1977,13 +2057,8 @@ confirms, 7 February 2024</a></li>
 AI, April 2025, p259</a></li>
 <li><a href="https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/" class="external-link">Sustainable
 computing in science - EMBL-EBI</a></li>
-<li>Poster on <a href="https://zenodo.org/records/12754189" class="external-link">Environmentally-aware use of
-GitHub Actions</a> and the <a href="https://github.com/ImperialCollegeLondon/game_of_life" class="external-link">associated
-GitHub repository</a>
-</li>
-<li>Blog post on <a href="https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/" class="external-link">Adopting
-a more rational use of Continuous Integration with GitHub
-Actions</a>.</li>
+<li><a href="https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf" class="external-link">Data
+centres: planning policy, sustainability and resiliance</a></li>
 </ol>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -2072,7 +2147,7 @@ development.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Scope 2</li>
@@ -2309,7 +2384,7 @@ analysis code</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>The electricity powering the lab Desktop (<strong>Scope
@@ -3235,7 +3310,7 @@ Miguel’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Training a model on the local workstations</li>
@@ -3265,7 +3340,7 @@ Miguel’s work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Updating GPUs and fileserver hardware</li>
