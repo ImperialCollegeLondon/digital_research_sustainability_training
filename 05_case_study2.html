@@ -252,7 +252,8 @@
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#collecting-information">Collecting information</a></li>
 <li><a href="#analysis">Analysis</a></li>
-<li><a href="#steps-to-reduce-emissions">Steps to reduce emissions</a></li>
+<li><a href="#taking-action">Taking action</a></li>
+<li><a href="#outcomes">Outcomes</a></li>
 <li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -345,7 +346,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Study 2 - Lab Scientist doing computational work</h1>
-        <p>Last updated on 2026-04-20 |
+        <p>Last updated on 2026-05-06 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/05_case_study2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -364,7 +365,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How does the increasing use of LLMs affect carbon foorprint and
+<ul><li>How does the increasing use of LLMs affect carbon footprint and
 energy efficiency?</li>
 <li>What strategies can minimise the carbon footprint of research data
 storage?</li>
@@ -398,41 +399,35 @@ Python scripts to analyse her data. The project Emma is working on is
 scheduled to run for 5 years.</p>
 <p>Emma’s set up:</p>
 <ul><li>Work laptop: modern and energy efficient laptop</li>
-<li>Data storage: Her research will generate approx 3.5 Tb for the
-duration of the project. She is planning to back up 2 copies of the raw
-data on different HDDs. In addition, she will generate approx. 400 GB of
-processed data every year, which will be used for active analyses, which
-she plans to store on different HDDs. While the project only runs for 5
-years,there is a 10 year data retention period to comply with her
-funding’s coniditions</li>
-</ul><p>Emma’s Workflow:</p>
+<li>Data storage: Her research will generate approx 3.5 Tb of raw data
+for the duration of the project. There will also be additional processed
+data products that she will work with regularly.</li>
+</ul><p>Emma’s current workflow:</p>
 <ul><li>She uses cloud-based LLMs to write her scripts for processing and
 analysing data. This often requires many queries and iterations.</li>
 <li>She keeps every version of her raw data on the HDDs, and rarely
 deletes old files.</li>
 <li>After pre-processing the raw data, she stores a copy of the
-processed data on different HDDs</li>
-<li>She runs her scripts on the lab Desktop station and scripts often
-take 12-16 hours to complete. Sometimes Emma leaves the Desktop running
-24/7 even over the weekends, so the scripts could finish running.</li>
+processed data on different HDDs.</li>
+<li>She runs her scripts on her laptop and scripts often take 6h to
+complete.</li>
 </ul><p>Emma is interested in reducing her digital carbon footprint and wants
 to optimise her computational workflow to balance scientific rigour with
 environmental responsibility.</p>
-<div id="challenge-1-identify-emissions" class="callout challenge">
+</section><section><h2 class="section-heading" id="collecting-information">Collecting information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
+<hr class="half-width"><div id="what-data-does-emma-need-to-understand-the-emissions-associated-with-her-software" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-identify-emissions" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Identify Emissions</h3>
+<div id="what-data-does-emma-need-to-understand-the-emissions-associated-with-her-software" class="callout-inner">
+<h3 class="callout-title">What data does Emma need to understand the
+emissions associated with her software?</h3>
 <div class="callout-content">
-<p>Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:</p>
-<ul><li>The electricity powering the lab Desktop during a 16-hour run</li>
-<li>The manufacturing of Emmas’s personal laptop</li>
-<li>The energy used by the LLM provider to write the data processing and
-analysis code</li>
-<li>The energy used by cloud-storage provider to store Emma’s data</li>
-<li>The external monitors used with the lab Desktop</li>
+<ul><li>What are the key aspects of her work that Emma could estimate
+emissions for?</li>
+<li>What methodologies could Emma use to estimate her emissions?</li>
+<li>What additional data would she need to collect in each case?</li>
 </ul></div>
 </div>
 </div>
@@ -443,218 +438,295 @@ analysis code</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ul><li>The electricity powering the lab Desktop (<strong>Scope
-2</strong>)</li>
-<li>The manufacturing of Emmas’s personal laptop (<strong>Scope
-3</strong>)</li>
-<li>The energy used by the LLM provider to write the data processing and
-analysis code (<strong>Scope 3</strong>)</li>
-<li>The energy used by cloud-storage provider to store Emma’s data
-(<strong>Scope 3</strong>)</li>
-<li>The external monitors used with the Lab Desktop (<strong>Scope
-2</strong>)</li>
+<ol style="list-style-type: decimal"><li>Data storage. If Emma has particular storage devices in mind she
+could look for PCF reports to get the embodied emissions and possibly a
+usage estimate. Such data is less readily available for storage devices
+however. In the absence of PCF data Emma could used some of the
+emissions estimates from sources such as those covered in episode 3. She
+will need to know the volume of data and the amount of time she’ll need
+to store it for.</li>
+<li>Use of LLMs. Tracking which model she uses, and how many queries she
+sends and the approximate size of the replies for use with the Hugging
+Face Ecologits calculator.</li>
+<li>Data processing. Looking for a PCF data sheet for her laptop will
+provide information about the embedded emissions. For the operational
+emissions she could choose between direct measurement with a power
+meter, use of a tool like codecarbon or estimation with the Green
+Algorithms Calculator. In the known context that operational emissions
+of laptops are low, it’s probably easiest to use the lowest effort
+method of the Green Algorithms calculator. She can always follow up with
+a more accurate method later if the initial estimate seems significant.
+To do this she’ll need an estimate of the CPU utilisation of her laptop
+and its specifications.</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Data storage </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>From her planned set of experiments and the a set of trial runs with
+the lab equipment Emma estimates that she’ll produce a total of 3.5 Tb
+of raw data. Her project is due to run for 5 years and there is a 10
+year data retention period afterwards to comply with her funding’s
+conditions.</p>
+<p>Based on her domain knowledge and previous experience she estimates
+that in addition to the raw data there will be around 400 GB of
+processed data products for each year of the project. These will be the
+main data used for her analyses which will take some time to complete
+and which she may want to revisit frequently.</p>
+<div class="section level3">
+<h3 id="llms-use">LLMs use<a class="anchor" aria-label="anchor" href="#llms-use"></a></h3>
+<p>Emma primarily interacts with an LLM via a browser chat window. She
+hasn’t paid much attention until now about which model she is using or
+how much she uses it. Checking now, the default model is GPT-5.4. She
+also keeps track of her usage during a session and finds that she sends
+30 queries.</p>
+</div>
+<div class="section level3">
+<h3 id="running-processing-and-analysis-scripts">Running processing and analysis scripts<a class="anchor" aria-label="anchor" href="#running-processing-and-analysis-scripts"></a></h3>
+<p>Emma is using her modern laptop and looks up the specifications for
+her model to get more accurate emissions. She finds that her laptop has
+a Core i5-1145G7 processor, with 4 CPU cores and 64 GB memory. Her
+analysis scripts are not parallelised so can only use up to 1 core. As
+she often leaves her scripts running overnight she’s not sure exactly
+how long they take. For the next run she does she adds a command to
+record the total runtime which is 6 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
+<hr class="half-width"><div id="emissions-from-emmas-current-workflow" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="emissions-from-emmas-current-workflow" class="callout-inner">
+<h3 class="callout-title">Emissions from Emma’s current workflow</h3>
+<div class="callout-content">
+<p>Based on the information Emma collected, what are the estimated
+emissions associated with her current workflow? What is the largest
+contributor to emissions out of Emma’s activities?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>It is easier to split Emma’s workflow into three main activities
+associated with carbon emissions: data storage, LLM use to write scripts
+and running her scripts.</p>
+<ul><li>
+<strong>data storage</strong>: Work out how much data Emma will
+produce for the duration of the project. This should include back up
+data and processed data.</li>
+<li>
+<strong>LLM use</strong>: use online tools like HuggingFace’s <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Ecologits
+calculator</a> to estimate emissions per query.</li>
+<li>
+<strong>running scripts</strong>: use online tools such as the <a href="https://calculator.green-algorithms.org/" class="external-link">Green-algorithms
+calculator</a> to find the emissions emitted by her laptop</li>
 </ul></div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="collecting-information">Collecting information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="data-storage">Data storage<a class="anchor" aria-label="anchor" href="#data-storage"></a></h3>
-<p>Emma is considering using differnt storage types after she heard that
-storing large amounts of data on HDDs might not be the most
-evironmentally friendly choice. She has heard from other colleagues that
-she could choose between hard drives (HDD), Solid State Drives (SDD),
-LTO magnetic tapes or cloud-based storage. However, she is unsure about
-the enivronmental impacts of these.</p>
-<p>She found the following information for the carbon footprint
-associated with the four storage types and found the following:</p>
-<ul><li>SDDs are the most carbon efficient when in operation, but their
-manufacturing produces significantly more emissions.</li>
-<li>HDDs have a lifespan of 5-10 years, similar to that of SDDs. Their
-embodied emissions are significantly lower than that of SDDs but
-operational emissions are higher.</li>
-<li>Tape storage has a longer lifespan (10-15 years), with modern ones
-reaching up to 30 years. However, moving and accessing data on a LTO
-tape is slow.</li>
-<li>Cloud storage’s associated emissions are estimated between 2-40 kg
-CO₂e/TB/year (according to a WholeGrain <a href="https://www.wholegraindigital.com/digitaldeclutter/#cloud-storage" class="external-link">report</a>
-and <a href="https://greenly.earth/en-gb/blog/industries/what-is-the-carbon-footprint-of-data-storage" class="external-link">Greenly</a>),
-but the value depends heavily on the data center’s efficiency and the
-region’s power grid. Embodied emissions are hard to estimate and depend
-on the hardware used by the provider (HDDs or SSDs). They are often
-included in the operational carbon footprint emissions.</li>
-</ul><p>The carbon emissions associated with the four storage types are
-summarised below:</p>
-<table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr><th align="left">Category</th>
-<th align="left">SDD</th>
-<th align="left">HDD</th>
-<th align="left">LTO tape</th>
-<th align="left">Cloud</th>
-</tr></thead><tbody><tr><td align="left"><strong>Embodied Carbon</strong></td>
-<td align="left">High (16-32 kg)<sup>1</sup></td>
-<td align="left">Moderate (2-4 kg)<sup>1</sup></td>
-<td align="left">Low (~0.07 kg)<sup>3</sup></td>
-<td align="left">Difficult to estimate</td>
-</tr><tr><td align="left"><strong>Operational Carbon</strong></td>
-<td align="left">Low (2-5 kg)<sup>1</sup></td>
-<td align="left">Moderate - High (2-16 kg)<sup>1,2</sup></td>
-<td align="left">Low (~0 kg)</td>
-<td align="left">Moderate - High (2-40 kg)</td>
-</tr><tr><td align="left"><strong>Lifespan</strong></td>
-<td align="left">5–10 years</td>
-<td align="left">5-10 years</td>
-<td align="left">30+ years</td>
-<td align="left">Depends on provider</td>
-</tr></tbody></table><p>* Emissions are in <strong>kg CO₂e per TB per year</strong></p>
-<p>Emma’s research produces 700 GB of raw data each year, and since her
-project will run for five years, she will accumulate 3.5 TB of raw data.
-Because she keeps two copies of all raw data, the total required storage
-for raw data comes to 7 TB. Beyond that, Emma generates an additional
-400 GB of processed data per year, adding up to 2 TB over the duration
-of the project. Altogether, Emma will need 9 TB of storage to keep both
-raw and processed data.</p>
-<p>Emma works out that storing the 9 TB data on HDDs will have
-associated carbon emissions approximately equal to <strong>108
-kgCO2e</strong> in combined embodied and operational emissions, based on
-the average values within the emissions ranges she identified.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Emma’s carbon estimates </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div class="accordion-body">
+<ul><li>
+<strong>Data storage</strong>:</li>
+</ul><p>Emma’s research will produce 3.5 TB of raw data for the duration of
+the project. Because she keeps two copies of all raw data, the total
+required storage for raw data comes to 7 TB. Beyond that, Emma will
+generate an additional 400 GB of processed data per year, adding up to 2
+TB over the duration of the project. Altogether, Emma will need 9 TB of
+storage to keep both raw and processed data.</p>
+<p>However, the data retention policy of 10 years beyond the end of the
+project means that the data must be stored for a total of 15 years.
+Given that the lifespan of HDDs can reach 10 years in best case
+scenario, Emma will have to replace the HDDs at least once.</p>
+<p><span class="math display">\[
+E_{HDDs} = E_{embodied}+ E_{operational} \\
+E_{HDDs} = (3 kgCO₂e/TB \times 9 TB + 9 kgCO₂e/TB \times 9 TB) \times
+15   \\
+E_{HDDs} = 1,620 kgCO₂e
+\]</span></p>
+<p>Storing the 9 TB data on HDDs will have associated carbon emissions
+approximately equal to <strong>1,620 kgCO₂e</strong> in combined
+embodied and operational emissions, based on the average values within
+the emissions ranges she identified.</p>
+<ul><li>
+<strong>LLM usage</strong>:</li>
+</ul><p>Emma consults HuggingFace’s <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Ecologits
+calculator</a> tool. It doesn’t have specific data for GPT-5.4 so uses
+the generic GPT-5 model estimate. She uses 30 as the number of queries
+but is not sure of the number of tokens that have been returned. She
+decides to use the largest response size (15000 tokens) with the
+understanding that this is an overestimate. This gives a emissions of
+10.8 gCO2e per query and running 30 queries generates <strong>0.324
+kgCO₂e</strong>. She considers this to be an <strong>upper bound
+estimate</strong> of the emissions per session. She also notes that this
+estimate doesn’t include emissions from model training. Assuming an
+average of 1 session per week over the 5 year course of the project that
+gives a total of <strong>84 kgCO₂e</strong>.</p>
+<ul><li>
+<strong>Running scripts</strong>:</li>
+</ul><p>Using the <a href="https://calculator.green-algorithms.org/" class="external-link">Green-algorithms
+calculator</a> with her CPU model running for 6 hours with 1 core to
+find that the emissions emitted by her laptop - 53.20 gCO₂e each time.
+If she runs the similar analyses weekly over the 5 year course of the
+project, the total emissions would be <strong>13.78 kgCo2e</strong>.</p>
 </div>
-<div class="section level3">
-<h3 id="llms-use">LLMs use<a class="anchor" aria-label="anchor" href="#llms-use"></a></h3>
-<p>Emma is also concerned about the carbon footprint of her increasing
-use of LLMs to write the Python code to process and analyse her data.
-While the exact carbon footprint of using LLMs is hard to quantify, she
-found the following:</p>
-<ul><li><p>The carbon emissions associated with LLM use come from model
-training emissions, inference calls (queries) emissions, and
-infrastructure and hardware emissions.</p></li>
-<li>
-<p>When it comes to programming-related queries, Emma found the
-following data:</p>
-<ul><li>some LLM models emit between 20% and 59% less emissions than human
-programmers (GPT-4o-mini), while other models can emit 5 to 19 times
-more carbon than human programmers (GPT4)<sup>1</sup></li>
-<li>the number of inference calls (queries) has a high correlation to
-the amount of carbon emissions <sup>1</sup></li>
-</ul></li>
-</ul><p>Based on her current workflow, Emma uses a reasoning model to write
-her scripts, often requiring more than 30 queries to the LLM to debug
-and obtain a script which produces correct results. Using HuggingFace’s
-<a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Ecologits
-calculator</a> tool, she finds that queries generating code using GPT-5
-model estimate approx. 10.8 gCO2e per query. In her case, running 30
-queries generates <strong>0.324 kgCO2e</strong>, assuming she only has
-to do this once.</p>
 </div>
-<div class="section level3">
-<h3 id="emissions-from-running-her-scripts">Emissions from running her scripts<a class="anchor" aria-label="anchor" href="#emissions-from-running-her-scripts"></a></h3>
-<p>Emma also begins estimating the carbon emissions associated with
-running her scripts. Since she cannot find the exact specifications of
-the old desktop, she uses a 0.3 kW <strong>power draw</strong>, a value
-she found commonly cited for older computer stations. However, she is
-still unable to find any information on the embodied carbon cost of the
-lab Desktop. To estimate operational emissions, she uses data from
-official UK grid sources (such as <a href="https://www.energydashboard.co.uk/live" class="external-link">EnergyDashboard</a>), and
-finds a <strong>grid carbon intensity</strong> of 194 gCO₂/kW on a day
-with overcast skies and mild winds, typical of the area she works
-in.</p>
-<p>She uses the information gathered to calculate the total emissions
-associated with running her scripts for 16 to a total of 0.931 kgCO2e.
-However, this number is probably going to be higher, as Emma is likely
-to run the script several times throughout the course. Assuming, she
-runs the scripts once a year, the total carbon emissions would be closer
-to approx. <strong>4.656 kgCO2e</strong>.</p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="greatest-source-of-carbon-emissions">Greatest source of carbon emissions<a class="anchor" aria-label="anchor" href="#greatest-source-of-carbon-emissions"></a></h3>
-<p>Based on her calculations, Emma concludes that storing her research
-data and running her Python scripts are the activities with the largest
-associated carbon emissions. Even so, the emissions linked to using LLMs
-to help write her code are not insignificant. With this in mind, Emma
-begins developing an improved research workflow to reduce her digital
-carbon footprint.</p>
+<p>Based on the calculations above, storing research data and using
+LLM’s are the activities with the largest associated carbon emissions.
+At around 1,700 kgCO2e these activities account to a quarter of the
+emissions per-capita in the UK,according to the <a href="https://www.iea.org/countries/united-kingdom/emissions" class="external-link">International
+Energy Association</a>. While lower in comparison, the emissions linked
+to using LLMs to help write her code are not insignificant and are
+equivalent to charging a smartphone <a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator#results" class="external-link">nearly
+7000 times</a>. With this in mind, Emma begins developing an improved
+research workflow to reduce her digital carbon footprint.</p>
 </div>
-</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
-<hr class="half-width"><p>She has heard that her institution provides a tape-based cold storage
+</section><section><h2 class="section-heading" id="taking-action">Taking action<a class="anchor" aria-label="anchor" href="#taking-action"></a></h2>
+<hr class="half-width"><div id="emissions-from-emmas-improved-workflow" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="emissions-from-emmas-improved-workflow" class="callout-inner">
+<h3 class="callout-title">Emissions from Emma’s improved workflow</h3>
+<div class="callout-content">
+<p>Based on the results of the carbon emissions associated with Emma’s
+current workflow, consider the following:</p>
+<ul><li>What is the simplest change Emma can make that would have the
+highest impact on her carbon emissions?</li>
+<li>How does that compare with other activities that Emma might be
+doing?</li>
+</ul></div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<p>Emma can improve her data storage strategy and use LTO-tape based
+facilities for cold storage and HDDs for data processing. She could also
+use a simpler LLM model.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="data-storage-changes">Data Storage Changes<a class="anchor" aria-label="anchor" href="#data-storage-changes"></a></h3>
+<p>She has heard that her institution provides a tape-based cold storage
 options located in two different campuses and which are intended for
 data that is not accessed very often. She decides to keep the two copies
 of the raw data on the LTO-tape based storage provided by her
 institution, with each copy being stored at a different site. This
 ensures the data is safe in case something happens with one of the
 storages. She decides to keep her processed data on HDDs, as she needs
-easy and fast data access for analyses.</p>
-<p>Emma also decides to switch to using her modern laptop to run her
-scripts to further reduce her carbon emissions. While the carbon
-footprint of using the LLM to generate her scripts is not as high as
-that associated with data storage and running her scripts, she decides
-to switch to a more simple LLM model, which is more suitable for the
-type of Python code she is generating.</p>
-<p>Emma now wants to quantify the difference in carbon emissions between
-her existing workflow (Scenario 1) and the improved one (Scenario
-2).</p>
-<div class="section level3">
-<h3 id="scenario-1-current-workflow">Scenario 1 (Current Workflow)<a class="anchor" aria-label="anchor" href="#scenario-1-current-workflow"></a></h3>
-<ul><li>Emma uses a reasoning model to write her scripts, requiring 30
-queries to debug.</li>
-<li>She backs up her raw and processed data (9 TB total) on HDDs.</li>
-<li>She runs her script on the old lab Desktop, which takes 16 hours to
-finish.</li>
-</ul><p>Based on the calculations Emma has already done above, the total
-carbon emissions associated with her current workflow are <strong>~113
-kgCO2.</strong></p>
-</div>
-<div class="section level3">
-<h3 id="scenario-2-improved-workflow">Scenario 2 (Improved Workflow)<a class="anchor" aria-label="anchor" href="#scenario-2-improved-workflow"></a></h3>
-<ul><li>Emma switches to GPT-40-mini, which has a lower carbon footprint per
-query, and since her computational requirements are fairly light.
-However, debugging now takes 50 queries.</li>
+easy and fast access for analyses.</p>
+<p>Based on the information she gained, Emma adopts a new workflow:</p>
+<ul><li>She switches to GPT-40-mini however after some experimentation she
+finds that her sessions now average closer to 50 queries.</li>
 <li>She keeps the two copies of raw data (7 TB) in the LTO-tape based
 facilities provided by her institution. She keeps the processed data (2
-TB) on HDDs for active work</li>
-<li>She runs her scripts on her modern laptop, which take 6h to
-finish.</li>
-</ul><p>Given all we know about Emma’s workflow, calculate the emissions
-associated with the current workflow and the improved workflow.</p>
-<div class="section level4">
-<h4 id="using-modern-laptop-instead-of-old-lab-desktop">Using modern laptop instead of old lab Desktop<a class="anchor" aria-label="anchor" href="#using-modern-laptop-instead-of-old-lab-desktop"></a></h4>
-<p>Emma is using her modern laptop and looks up the specifications for
-her model to get more more accurate emissions. She finds that her laptop
-has a Core i6-1145G7 process, with 4 CPU cores and 64 GB memory. <a href="https://calculator.green-algorithms.org/" class="external-link">She uses the
-Green-algorithms calculator</a> to find that her computer emits 53.20
-gCO2e each time she runs the script for 6 hours. If she runs the script
-once every year, the total emissions would be <strong>0.266
-kgCo2e</strong>.</p>
+TB) on HDDs for active work.</li>
+</ul><div id="challenge4" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div class="section level4">
-<h4 id="new-data-storage-strategy">New data storage strategy<a class="anchor" aria-label="anchor" href="#new-data-storage-strategy"></a></h4>
-<p>Given that magnetic tape has negligible emissions when idle, we can
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Given all we know about Emma’s new workflow, calculate the emissions
+associated with Emma’s work. How do they compare to Emma’s previous
+workflow?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<ul><li>
+<strong>data storage</strong>: part of Emma’s workflow would be
+stored on LTO-tape and part on HDD This should include back up data and
+processed data. Given that magnetic tape has negligible emissions when
+idle, we can assume that the total emissions from storing data on tape
+come from embodied emissions, estimated at ~0.07 kgCO₂e per TB.</li>
+<li>
+<strong>LLM use</strong>: use online tools like HuggingFace’s <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Ecologits
+calculator</a> to estimate emissions per query.</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Emma’s improved workflow carbon estimates </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div class="accordion-body">
+<ul><li>
+<strong>Hybrid data storage</strong>:</li>
+</ul><p>Given that magnetic tape has negligible emissions when idle, we can
 assume that the total emissions from storing data on tape come from
-embodied emissions, estimated at ~0.07 kgCO₂ per TB. Keeping the two
-copies of raw data (7 GB) in the institution’s LTO‑tape storage
+embodied emissions, estimated at ~0.07 kgCO₂e per TB. Keeping the two
+copies of raw data (7 TB) in the institution’s LTO‑tape storage
 facilities would therefore generate:</p>
 <p><span class="math display">\[
-E_{tape storage} = 0.07 kgCO₂e/TB/year \times 7 TB \\
-E_{tape storage}  = 0.49 kgCO₂e/year
+E_{tape storage} = 0.07 kgCO₂e/TB \times 7 TB \times 15 years \\
+E_{tape storage}  = 7.35 kgCO₂e
 \]</span></p>
 <p>Keeping the 2 GB of processed data on HDDs would generate:</p>
 <p><span class="math display">\[
-E_{HDDs} =  3 kgCO₂e/TB/year \times 2 TB + 9 kgCO₂e/TB/year \times 2
-TB   \\
-E_{HDDs}  = 24 kgCO₂e/year
+E_{HDDs} =  (3 kgCO₂e/TB \times 2 TB + 9 kgCO₂e/TB \times 2 TB) \times
+15 years   \\
+E_{HDDs}  = 360 kgCO₂e
+E
 \]</span></p>
 <p>Therefore, the total costs associated with storing Emma’s research
-data would be <strong>24.49 kgCO₂e</strong>.</p>
-</div>
-<div class="section level4">
-<h4 id="switching-to-a-simpler-llm-model">Switching to a simpler LLM model<a class="anchor" aria-label="anchor" href="#switching-to-a-simpler-llm-model"></a></h4>
-<p>Emma is planning to switch from a reasoning model to a smaller LLM
+data would be <strong>367.35 kgCO₂e</strong>.</p>
+<ul><li>
+<strong>Simpler LLM model</strong>:</li>
+</ul><p>Emma is planning to switch from a reasoning model to a smaller LLM
 model, GPT4-0-mini, for which emissions are estimated to be around 562
 mgCO₂e per query.</p>
 <p><span class="math display">\[
-E_{LLM} = 0.562 gCO₂e/query \times 50 queries \\
-E_{LLM} = 0.028 kgCO₂e \\
+E_{LLM} = 0.562 gCO₂e/query \times 50 queries \times 52 weeks \times 5
+years \\
+E_{LLM} = 7.3 kgCO₂e \\
 \]</span></p>
 <p>The total emissions associated with using the simpler LLM would be
-approx. <strong>0.028 kgCO₂e</strong>.</p>
+approx. <strong>7.3 kgCO₂e</strong>.</p>
 <p>A comparison of the emissions associated with both scenarios can be
 found below:</p>
 <table class="table"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup><thead><tr><th align="left"></th>
@@ -662,28 +734,55 @@ found below:</p>
 <th align="left"><strong>Scenario 2 (Improved Workflow)</strong></th>
 <th align="left">Change</th>
 </tr></thead><tbody><tr><td align="left">Emissions Storage (kgCO₂e)</td>
-<td align="left">108 kg/year</td>
-<td align="left">24.49 kg/year</td>
+<td align="left">1,620</td>
+<td align="left">367.35</td>
 <td align="left">HDDs only -&gt; LTO tape + HDDs</td>
-</tr><tr><td align="left">Emissions Computing (kgCO₂e)</td>
-<td align="left">4.656 kg total</td>
-<td align="left">0.266 kg total</td>
-<td align="left">old lab Desktop -&gt; modern laptop</td>
 </tr><tr><td align="left">Emissions LLM (kgCO₂e)</td>
-<td align="left">0.324 kg</td>
-<td align="left">0.028 kg</td>
+<td align="left">84</td>
+<td align="left">7.3</td>
 <td align="left">GPT-5 -&gt; GPT-4-o-mini</td>
-</tr></tbody></table><p>Switching to the new, improved workflow would result in a six-fold
-reduction in Emma’s carbon emissions. Particularly, moving from storing
-data on HDDs to a hybrid storing approach that includes both HDDs and
-LTO-tapes has the greatest impact on lowering emissions.</p>
+</tr></tbody></table></div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="steps-to-reduce-emissions">Steps to reduce emissions<a class="anchor" aria-label="anchor" href="#steps-to-reduce-emissions"></a></h2>
-<hr class="half-width"><p>Emma is happy with her carbon footprint after adopting the new
-workflow. Building on this initial success, she has also identified
-several additional strategies to further minimise her digital carbon
-footprint:</p>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="outcomes">Outcomes<a class="anchor" aria-label="anchor" href="#outcomes"></a></h2>
+<hr class="half-width"><!-- markdownlint-disable-next-line line-length --><figure><img src="fig/case_study2_outcomes.png" alt="A bar chart comparing the emissions from data storage, LLM usage and data processing before and after implementation of emissions reduction measures" class="figure mx-auto d-block"><div class="figcaption">Carbon emissions for different research actions
+comparing pre- and post-intervention</div>
+</figure><p>Adopting the improved workflow would result in a five-fold reduction
+in Emma’s digital carbon emissions. Particularly, moving from storing
+data on HDDs to a hybrid storage approach that includes both HDDs and
+LTO-tapes has the greatest impact on lowering emissions, saving around
+1,250 kgCO2e, which is equivalent to the total annual
+electricity-related emissions of three average UK households.</p>
+<p>While these improvements are substantial, they represent only one
+piece of a larger puzzle. For a life scientist, the total work-related
+emissions typically range from 4 to 15 tCO2e annually <sup>2</sup>.
+These numbers are driven by carbon intensive activities, such as
+international travel, laboratory heating, ventilation and AC systems,
+and the heavy use of chemical reagents and single-use equipment. Emma
+therefore also resolves to look at her lab based research activities for
+emissions reductions.</p>
+<div id="further-reducing-emmas-emissions" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="further-reducing-emmas-emissions" class="callout-inner">
+<h3 class="callout-title">Further reducing Emma’s emissions</h3>
+<div class="callout-content">
+<p>Identify additional strategies that Emma could implement to further
+minimise her digital carbon footprint.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div class="accordion-body">
 <ul><li>Schedule to run her scripts for then the grid is cleanest</li>
 <li>Use compression technique to further reduce the size of her stored
 data</li>
@@ -696,8 +795,16 @@ requirements</li>
 (open-source Python library to estimate the carbon footprint of
 inference queries made to LLMs) and online LLM carbon emissions
 leaderboards</li>
-</ul></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><ol style="list-style-type: decimal"><li><a href="https://www.nature.com/articles/s41598-025-24658-5" class="external-link">Woo,
+</ul></div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ol style="list-style-type: decimal"><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9986813/" class="external-link">Winter
+N,The paradox of the life sciences: How to address climate change in the
+lab: How to address climate change in the la. doi:
+10.15252/embr.202256683</a></li>
+<li><a href="https://www.nature.com/articles/s41598-025-24658-5" class="external-link">Woo,
 N.H. A comparative study of AI and human programming on environmental
 sustainability. Sci Rep 15, 39182 (2025).
 https://doi.org/10.1038/s41598-025-24658-5</a></li>
@@ -764,7 +871,7 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/05_case_study2.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/05_case_study2.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-04-20",
+  "dateModified": "2026-05-06",
   "datePublished": "2026-05-06"
 }
 
