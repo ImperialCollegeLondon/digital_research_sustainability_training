@@ -49,7 +49,7 @@ emission reduction measures appropriately.
 
 ::::::::::::::::::::::::::::::: solution
 
-1. Use of laptop for development. Embodied emissions of the laptop should be readily
+1. **Use of laptop for development**: Embodied emissions of the laptop should be readily
    findable in a PCF sheet. As her laptop underpins all of her work however it wouldn't
    be appropriate to ascribe the full embodied emissions to her package. She could
    ascribe a proportion of the embodied emissions to development of the package.
@@ -57,9 +57,9 @@ emission reduction measures appropriately.
    laptop with a power meter but given the proportionally low operational emissions of
    consumer electronic devices a rough calculation using the Green Algorithms Calculator
    would likely be sufficient.
-1. Use of LLMs. Tracking which model she uses, and how many queries she sends and the
+1. **Use of LLMs**: Tracking which model she uses, and how many queries she sends and the
    approximate size of the replies for use with the Hugging Face Ecologits calculator.
-1. Execution of the package. Celia's software is used by many different users on a
+1. **Execution of the package**: Celia's software is used by many different users on a
    variety of systems. It's unlikely to be practical to get direct energy measurements
    in this case. More practically she could make use of the [Green Algorithms
    Calculator]. She should try and get as much detail as possible from users about how
@@ -68,7 +68,7 @@ emission reduction measures appropriately.
    extrapolate to get a rough estimate. Estimating the embodied emissions for all of the
    machines the code is running on would be a potentially large job so she might want to
    put that out of scope.
-1. Use of GitHub actions. Information about how often her workflows run and how long
+1. **Use of GitHub actions**: Information about how often her workflows run and how long
    they take to execute. She could also consider adding ECO CI to get emissions
    estimates created for her.
 
@@ -117,7 +117,7 @@ all 20 cores.
 [HP Z2 Tower G1i Workstation]: https://www.hp.com/gb-en/shop/product.aspx?id=8T229EA&opt=ABU&sel=DTP
 
 From individuals she's in contact with, conversations she's had at conferences, mentions
-in academic papers and a workshop she ran recently Celia estimates that her code has
+in academic papers and a workshop she ran recently, Celia estimates that her code has
 around 30 regular users outside of her own research group.
 
 :::::::::::::::::::::::::::::::::::::::
@@ -134,7 +134,7 @@ Celia's emissions from different activities?
 ::::::::::::::::::::::: solution
 
 - Software Development - From the model of her laptop she is able to find the PCF
-  datasheet from the manufacterer - [HP EliteBook 840 G9 PCF Sheet]. This gives a total
+  datasheet from the manufacturer - [HP EliteBook 840 G9 PCF Sheet]. This gives a total
   of 176 kgCO₂e. Assuming a 5 year lifespan of the laptop and a total weekly usage of 40
   hours she calculates the weekly proportion of embodied emissions to be 338 gCO₂e. She
   uses the Green Algorithms Calculator to estimate the operational emissions. The Green
@@ -174,8 +174,7 @@ are negligible.
 
 ## Measures to reduce emissions
 
-What measures can Celia take to redure to reduce the emissions from usage of her
-software?
+What measures can Celia take to reduce the emissions from the usage of her software?
 
 ::::::::::::::::::::::: solution
 
@@ -204,11 +203,13 @@ of her code base.
 
 ### Code Optimisation
 
-Optimize the code itself to make more effective use of available computational
-resources. Celia uses a profiler with her code to identify areas where the code could be
-optimised. She identifies the areas of the code where the bulk of the computation is
-performed. After some experimentation she finds a way to improve use of SIMD in a key
-calculation. In her tests this gives a 5% performance boost to the code.
+Celia uses a profiler with her code to identify areas where the code could be optimised.
+She identifies the areas of the code where the bulk of the computation is performed.
+After some experimentation she finds a way to improve use of SIMD in a key calculation.
+Furthermore, she replaces the use of the `pandas` library with `polars` and reverses the
+order of a conditional statement and a loop deep within the code, so that the former is
+not checked several times unnecessarily. In her tests this gives a 7% performance boost
+to the code.
 
 Her code also runs in parallel across multiple cores. Her profiling helps her to
 identify that work is not being evenly distributed between cores leaving some cores idle
@@ -240,6 +241,11 @@ early before significant computation has occured.
 Again it's difficult to estimate the impact of this work but when these changes were
 released Celia is contacted by several users confused by the new errors. This suggests
 the changes are catching at least some errors.
+
+### Hardware Usage
+
+She decides to keep using the laptop for as long as its lifespan, instead of replacing
+it too soon.
 
 ### Other
 
