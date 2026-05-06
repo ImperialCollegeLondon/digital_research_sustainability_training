@@ -114,8 +114,8 @@ changed based on how the packages have updated.
 
 ## Pull Request and Review Management
 
-Because our lessons execute code, pull requests are a secruity risk for any
-lesson and thus have security measures associted with them. **Do not merge any
+Because our lessons execute code, pull requests are a security risk for any
+lesson and thus have security measures associated with them. **Do not merge any
 pull requests that do not pass checks and do not have bots commented on them.**
 
 This series of workflows all go together and are described in the following 
@@ -144,7 +144,7 @@ will allow maintainers to determine if it is safe to run the
 
 **Note of caution:** This workflow runs arbitrary code by anyone who creates a
 pull request. GitHub has safeguarded the token used in this workflow to have no
-priviledges in the repository, but we have taken precautions to protect against
+privileges in the repository, but we have taken precautions to protect against
 spoofing.
 
 This workflow is triggered with every push to a pull request. If this workflow
@@ -155,7 +155,7 @@ started.
 The first step of this workflow is to check if it is valid (e.g. that no
 workflow files have been modified). If there are workflow files that have been
 modified, a comment is made that indicates that the workflow is not run. If 
-both a workflow file and lesson content is modified, an error will occurr.
+both a workflow file and lesson content is modified, an error will occur.
 
 The second step (if valid) is to build the generated content from the pull
 request. This builds the content and uploads three artifacts:
@@ -194,5 +194,5 @@ pull request number for the next action
 
 ### Remove Pull Request Branch (pr-post-remove-branch.yaml)
 
-Tiggered by `pr-close-signal.yaml`. This removes the temporary branch associated with
+Triggered by `pr-close-signal.yaml`. This removes the temporary branch associated with
 the pull request (if it was created).

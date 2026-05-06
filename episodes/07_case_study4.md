@@ -40,7 +40,7 @@ His primary responsibilities are:
 
 - The deployment of cutting edge deep learning models
 - The curation and storing of large datasets
-- Periodic maintainance of models to add features and prevent model drift
+- Periodic maintenance of models to add features and prevent model drift
 
 To do his work, Miguel also purchases and maintains top-of-the-line GPU and fileservers,
 whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
@@ -100,13 +100,13 @@ most of them from datasheets and documentation. Knowing that FLOPs/Watt is a poo
 surrogate for total power usage in deep learning, he consults public datasets measuring
 whole-system power usage during inference, such as the
 [MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) dataset. He is
-able to find the hardware configuration of an acceptible provider, and notes that
+able to find the hardware configuration of an acceptable provider, and notes that
 $Samples/Joule = (Samples/s)/(Watts) ≈ 9.89$.
 
 Alongside this, he considers a second option: whilst his personal workstation's GPU is
 far from cutting-edge, it is by no means obsolete. He knows from experience that newer
 does not automatically mean greener, and keeps in mind during pre-job analysis, looking
-for oppurtunities to make the model lean enough to run on his GPU.
+for opportunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 

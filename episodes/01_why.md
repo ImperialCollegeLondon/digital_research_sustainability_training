@@ -131,7 +131,7 @@ estimates.
 
 As researchers, we have a responsibility to consider the environmental impact of our
 work and take steps to reduce it. This begins with `mindful computing`, a term which
-describes a more concious approach to planning, running and managing digital tasks to
+describes a more conscious approach to planning, running and managing digital tasks to
 ensure that scientific advances don't produce more emissions than needed. Adopting this
 mindset could look different to everyone. For example, choosing a datacenter in a region
 powered by renewable energy can significantly reduce a project's carbon footprint.

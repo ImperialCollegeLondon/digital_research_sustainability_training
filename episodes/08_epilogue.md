@@ -20,8 +20,8 @@ exercises: 15 # exercise time in minutes
 
 ## Summary
 
-These materials have introduced the relationship between digitial research activities
-and sustainability. Digital infrastructure is increasingly becoming a more prominent
+These materials have introduced the relationship between digital research activities and
+sustainability. Digital infrastructure is increasingly becoming a more prominent
 component of global emissions with research as a significant contributor.
 
 We have looked at ways to measure and understand the energy usage and emissions

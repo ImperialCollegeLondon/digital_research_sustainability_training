@@ -32,7 +32,7 @@ emissions.
 
 ## Computers
 
-Computers have become an indispensible component of modern life as well as digital
+Computers have become an indispensable component of modern life as well as digital
 research. These include everyday devices such as a laptop, desktops or phones as well as
 servers that are accessed remotely.
 
@@ -91,7 +91,7 @@ The nature of both operational and embodied energy usage highlights the importan
 utilisation in relation to computing hardware. The embodied emissions of a device are a
 fixed overhead, so the more computational work that is carried out over the lifetime of
 a device the more efficiently that overhead has been invested. Similarly, as there is a
-mimimum power draw associated with idle usage, as utilisation of a device increases the
+minimum power draw associated with idle usage, as utilisation of a device increases the
 power draw per unit of computational work decreases.
 
 ::::::::::::::::::::::::::::::::::
@@ -420,7 +420,7 @@ to be present in most of them are:
 - Other work related activities
     - Send emails
     - Meet colleagues via Teams or Zoom
-    - Store some office documents in Onedrive, Dropbox or similiar
+    - Store some office documents in Onedrive, Dropbox or similar
 - Personal activities
     - Use instant message apps with family and friends
     - Send personal emails
@@ -457,7 +457,7 @@ data centres are predicted to use up to 12% of the country's electricity by 2028
 increase from 4.4% in 2025^9^.
 
 Much of this expansion is driven by a relatively small number of tech companies. The
-compute demands of training and serving AI models is also driving a noticable increase.
+compute demands of training and serving AI models is also driving a noticeable increase.
 In the UK the Department of Science Innovation and Technology have projected a need for
 6GW of AI ready data centre capacity by 2030^13^ compared to overall current national
 demand of ~30-35 GW.
@@ -511,7 +511,7 @@ Factors to consider:
   individual desktops or laptops.
 - **Computational Architectures** have become increasingly diverse in recent years both
   for CPUs and for accelerators (e.g. GPUs). Computational problems can have very
-  different electricity comsumption depending on the architecture used so choosing the
+  different electricity consumption depending on the architecture used so choosing the
   right one can be very impactful.
 - **Doing less computation** is also worth considering. This can take the form of
   planning computational workloads carefully to minimise resource usage or limiting work
@@ -545,7 +545,7 @@ Factors to consider (to be expanded):
   storage)^12^.
 - Use compression and efficient file formats to reduce storage requirements
 - Consider cleaning and preprocessing data locally before storing.
-- Choose storage options designed for infrequent access when appropiate.
+- Choose storage options designed for infrequent access when appropriate.
 
 ::::::::::::::::::::::::::: callout
 
@@ -579,13 +579,13 @@ on information from the service provider or make relative comparisons through pr
 metrics.
 
 It's not possible to comprehensively cover the services used in modern digital research
-so below we've chosen a few examplars to look at in detail.
+so below we've chosen a few exemplars to look at in detail.
 
 #### Code Hosting and Continuous Integration/Deployment
 
-The use of services such as GitHub and GitLab have become an indispensible component of
+The use of services such as GitHub and GitLab have become an indispensable component of
 modern software development. Notably these services provide access to compute resources
-to run Continous Integration/Deployment (CI/CD) workflows. It's common to run these
+to run Continuous Integration/Deployment (CI/CD) workflows. It's common to run these
 workflows in a "matrix" configuration across variables such as operating system and
 software version which can lead to large parallel computational workloads executing.
 
@@ -602,7 +602,7 @@ workflows. It supports GitHub and GitLab.
 [Eco CI]: https://github.com/green-coding-solutions/eco-ci-energy-estimation
 
 To reduce emissions from CI/CD usage consider ways to reduce the number of workflow
-executions whilst maintaing strong quality assurance checks. Some strategies are
+executions whilst maintaining strong quality assurance checks. Some strategies are
 explored in this [poster][evironmentally-aware-github-actions] from the Imperial
 Research Software Engineering team.
 
@@ -635,7 +635,7 @@ the response by being more specific in your prompt might help.
 A useful tool to estimate the environmental impact of AI usage is [EcoLogits]. It's
 available as a Python package or an online version is [hosted by
 HuggingFace][huggingface-ecologits]. It is currently limited to text generation with
-Large Language Models ond only covers the inference stage. Whilst it supports as many
+Large Language Models and only covers the inference stage. Whilst it supports as many
 open LLMs as possible it only has data for a limited number of proprietary LLMs where
 information is available about the model architecture.
 
@@ -656,4 +656,4 @@ information is available about the model architecture.
 10. [Uptime Institute, Large data centres are mostly more efficient, analysis confirms, 7 February 2024](https://journal.uptimeinstitute.com/large-data-centres-are-mostly-more-efficient-analysis-confirms/)
 11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
 12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
-13. [Data centres: planning policy, sustainability and resiliance](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
+13. [Data centres: planning policy, sustainability and resilience](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
