@@ -422,13 +422,13 @@ to be present in most of them are:
     - Meet colleagues via Teams or Zoom
     - Store some office documents in Onedrive, Dropbox or similiar
 - Personal activities
-    - Use instant message apps with familly and friends
+    - Use instant message apps with family and friends
     - Send personal emails
     - Stream music or films
     - Check social media
     - Order food
     - Buy items in online shops
-    - Read newspapers online, blogposts or similar
+    - Read online newspapers, blogposts or similar
     - Check the weather forecast
     - Check Google Maps or other similar applications
     - Review your bank account
