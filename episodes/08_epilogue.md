@@ -33,14 +33,28 @@ The case studies have provided an opportunity to apply this knowledge in the con
 more realistic scenarios where imperfect information and practical constraints come into
 play.
 
+::::::::::::::::::::::::::::::::::::: instructor
+
+Depending on time this final exercise can be run within the session, in groups or
+individually and attendees invited to feedback. If short on time it can be given as a
+takeaway.
+
+The exercise is deliberately open-ended to let attendees approach it however they see
+fit.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::: exercise
 
 ## Sustainability in your Research
 
-Making use of materials in this course, consider the impact of your own research work.
-What methodoligies might you use to measure or estimate emissions? What additional data
-might you need to gather? Which aspects of your work generate the most emissions? What
-changes could you make to reduce emissions? Try to categorise any potential changes both
-in terms of the effort and the impact.
+Making use of the materials in this course, consider the impact of your own research
+work. Here are some questions to help you get started.
+
+- What methodoligies might you use to measure or estimate emissions?
+- What additional data might you need to gather?
+- Which aspects of your work generate the most emissions?
+- What changes could you make to reduce emissions?
+- Can you categorise potential changes both in terms of effort and impact?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
