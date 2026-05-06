@@ -326,7 +326,7 @@ as **Scope 1**, **Scope 2**, or **Scope 3**.
 | 2. Running simulations on a cloud provider | **Scope 3** | You are using a service but don't own the servers |
 | 3. Conference travel | **Scope 3** | The airline owns the plane |
 | 4. University-owned car | **Scope 1** | Direct emissions by the institution |
-| 5. Recycling an old laptop | **Scope 3** | Downstream emissions from the laptop 'end-of-life |
+| 5. Recycling an old laptop | **Scope 3** | Downstream emissions from the laptop's end-of-life |
 | 6. Leaking Ultra-low temperature (ULT) freezer | **Scope 1** | Direct emissions from leakage of equipment owned by the lab |
 
 :::::::::::::::::::::::::::::::::

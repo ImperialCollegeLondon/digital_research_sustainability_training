@@ -91,13 +91,15 @@ embodied emissions in his analysis.
 
 Delivery of the rest of this material is intended to go in two phases:
 
-1. Have attendees complete the "Estimating Emissions" challenge. This is best done in
-   groups. Have attendees report back on what they've come up with.
+1. Attendees are expected to complete the "Estimating Emissions" challenge. This is best
+   done in groups. After the group task, attendees can report back on what they've come
+   up with.
 
-1. Then have attendees open the spoiler tag - "Hugh's estimates". This section provides
+1. Then attendees can open the spoiler tag - "Hugh's estimates". This section provides
    the "canonical" outcome of Hugh's emissions estimates and further develops the
-   scenario so that reductions in emissions can be considered. Recommend that the groups
-   from above look through the section together and complete the embedded challenge.
+   scenario so that reductions in emissions can be considered. It is recommended that
+   the groups from above look through the section together and complete the embedded
+   challenge.
 
 ::::::::::::::::::::::::::::::::::::::::::
 
@@ -114,9 +116,9 @@ collect?
 Hugh needs two things.
 
 1. An estimate of his resource usage over a year. It may be possible to reconstruct this
-   from historical data or he may have to monitor his usage for a period and then
-   extrapolate to annual usage from there. To simplify this he can focus on only his
-   main simulation campaigns and exclude any data analysis workloads. Key data he'll
+   from historical data or he may have to monitor his usage for a period of time and
+   then extrapolate to annual usage from there. To simplify this he can focus on only
+   his main simulation campaigns and exclude any data analysis workloads. Key data he'll
    want to track includes CPU-hours and Gb-hours of memory usage.
 1. A method to estimate emissions from his usage. For LANCER this is straightforward
    using the tooling that's supplied for the cluster. Making an estimate for DRAGONFLY
