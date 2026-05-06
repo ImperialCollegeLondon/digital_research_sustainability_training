@@ -34,89 +34,86 @@ Emma is a researcher in a biology lab and was tasked with analysing genomic sequ
 Emma's set up:
 
 - Work laptop: modern and energy efficient laptop
-- Data storage: Her research will generate approx 3.5 Tb for the duration of the project.
-  She is planning to back up 2 copies of the raw data on different HDDs. In addition,
-  she will generate approx. 400 GB of processed data every year, which will be used for
-  active analyses, which she plans to store on different HDDs. While the project only
-  runs for 5 years,there is a 10 year data retention period to comply with her funding's
-  conditions
+- Data storage: Her research will generate approx 3.5 Tb of raw data for the duration of
+  the project. There will also be additional processed data products that she will work
+  with regularly.
 
-Emma's workflow:
+Emma's current workflow:
 
 - She uses cloud-based LLMs to write her scripts for processing and analysing data.
-This often requires many queries and iterations.
+  This often requires many queries and iterations.
 - She keeps every version of her raw data on the HDDs, and rarely deletes old files.
 - After pre-processing the raw data, she stores a copy of the processed data on
- different HDDs.
+  different HDDs.
 - She runs her scripts on her laptop and scripts often take 6h to complete.
 
 Emma is interested in reducing her digital carbon footprint and wants to optimise
  her computational workflow to balance scientific rigour with environmental
  responsibility.
 
+## Collecting information
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Identify Emissions
+### What data does Emma need to understand the emissions associated with her software?
 
-Sort the items below into Scope 1, Scope 2 or Scope 3 emissions:
+- What are the key aspects of her work that Emma could estimate emissions for?
+- What methodologies could Emma use to estimate her emissions?
+- What additional data would she need to collect in each case?
 
-- The electricity powering Emma's laptop
-- The manufacturing of Emmas's laptop
-- The energy used by the LLM provider to write the data processing and analysis code
-- The energy used by cloud-storage provider to store Emma's data
-- The external monitors used with the laptop
+::::::::::::::::::::::::::::::: solution
 
-:::::::::::::::::::::::: solution
+1. Data storage. If Emma has particular storage devices in mind she could look for PCF
+   reports to get the embodied emissions and possibly a usage estimate. Such data is
+   less readily available for storage devices however. In the absence of PCF data Emma
+   could used some of the emissions estimates from sources such as those covered in
+   episode 3. She will need to know the volume of data and the amount of time she'll
+   need to store it for.
+1. Use of LLMs. Tracking which model she uses, and how many queries she sends and the
+   approximate size of the replies for use with the Hugging Face Ecologits calculator.
+1. Data processing. Looking for a PCF data sheet for her laptop will provide information
+   about the embedded emissions. For the operational emissions she could choose between
+   direct measurement with a power meter, use of a tool like codecarbon or estimation
+   with the Green Algorithms Calculator. In the known context that operational emissions
+   of laptops are low, it's probably easiest to use the lowest effort method of the
+   Green Algorithms calculator. She can always follow up with a more accurate method
+   later if the initial estimate seems significant. To do this she'll need an estimate
+   of the CPU utilisation of her laptop and its specifications.
 
-- The electricity powering Emma's laptop (**Scope 2**)
-- The manufacturing of Emmas's laptop (**Scope 3**)
-- The energy used by the LLM provider to write the data processing and analysis code
-(**Scope 3**)
-- The energy used by cloud-storage provider to store Emma's data (**Scope 3**)
-- The external monitors used with the laptop (**Scope 2**)
-
-:::::::::::::::::::::::::::::::::
-
+::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Collecting information
+::::::::::::::::::::::::::::::  spoiler
 
 ### Data storage
 
-Emma is considering using different storage types after she heard that
- storing large amounts of data on HDDs might not be the most environmentally friendly
- option. She has learnt from colleagues that she could choose between hard drives
- (HDD), Solid State Drives (SDD), LTO magnetic tapes or cloud-based storage. However,
-  she is unsure about their different environmental impacts.
+From her planned set of experiments and the a set of trial runs with the lab equipment
+Emma estimates that she'll produce a total of 3.5 Tb of raw data. Her project is due to
+run for 5 years and there is a 10 year data retention period afterwards to comply with
+her funding's conditions.
 
-Emma did some research on the above storage types and used the table below summarising
- their emissions below to calculate the carbon footprint of storing her project's data:
-
-| Category | SDD | HDD | LTO tape | Cloud |
-| :--- | :--- | :--- | :--- | :--- |
-| **Embodied Carbon** | High (16-32 kg) | Moderate (2-4 kg) | Low (~0.07 kg) | Difficult to estimate |
-| **Operational Carbon** | Low (2-5 kg) | Moderate - High (2-16 kg) | Low (~0 kg) | Moderate - High (2-40 kg) |
-| **Lifespan** | 5–10 years | 5-10 years | 30+ years | Depends on provider |
-
-\* Emissions are in **kg CO₂e per TB per year**
+Based on her domain knowledge and previous experience she estimates that in addition to
+the raw data there will be around 400 GB of processed data products for each year of the
+project. These will be the main data used for her analyses which will take some time to
+complete and which she may want to revisit frequently.
 
 ### LLMs use
 
- Emma is currently using a reasoning model by a public provider. While the exact carbon
- footprint of using LLMs is hard to quantify, she found the following regarding programming-related
-  queries:
-
-- some LLM models emit between 20% and 59% less emissions than human programmers
-(GPT-4o-mini), while other models can emit 5 to 19 times more carbon than human programmers
-(GPT4)^1^
-- the number of inference calls (queries) has a high correlation to the amount
-of carbon emissions ^1^
+Emma primarily interacts with an LLM via a browser chat window. She hasn't paid much
+attention until now about which model she is using or how much she uses it. Checking
+now, the default model is GPT-5.4. She also keeps track of her usage during a session
+and finds that she sends 30 queries.
 
 ### Running processing and analysis scripts
 
-Emma is using her modern laptop and looks up the specifications for her model to get more
- more accurate emissions. She finds that her laptop has a Core i6-1145G7 process, with 4
- CPU cores and 64 GB memory.
+Emma is using her modern laptop and looks up the specifications for her model to get
+more accurate emissions. She finds that her laptop has a Core i5-1145G7 processor, with
+4 CPU cores and 64 GB memory. Her analysis scripts are not parallelised so can only use
+up to 1 core. As she often leaves her scripts running overnight she's not sure exactly
+how long they take. For the next run she does she adds a command to record the total
+runtime which is 6 hours.
+
+::::::::::::::::::::::::::::::::::::::::
 
 ## Analysis
 
@@ -150,7 +147,7 @@ This should include back up data and processed data.
 - **LLM use**: use online tools like HuggingFace's [Ecologits calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
 to estimate emissions per query.
 - **running scripts**: use online tools such as the [Green-algorithms calculator](https://calculator.green-algorithms.org/)
-to find that the emissions emitted by her laptop
+to find the emissions emitted by her laptop
 
 ::::::::::::::::::::::::::::::::::::::::
 
@@ -179,36 +176,42 @@ E_{HDDs} = 1,620 kgCO₂e
 $$
 
 Storing the 9 TB data on HDDs will have associated carbon emissions
-approximately equal to **1,620 kgCO2e** in combined embodied and operational emissions,
+approximately equal to **1,620 kgCO₂e** in combined embodied and operational emissions,
 based on the average values within the emissions ranges she identified.
 
 - **LLM usage**:
 
-Emma uses a reasoning model to write her scripts,
-often requiring more than 30 queries to the LLM to debug and obtain a script which
-produces correct results. Using HuggingFace's [Ecologits calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
-tool, we find that queries generating code using GPT-5 model estimate approx.
-10.8 gCO2e per query. In her case, running 30 queries generates **0.324 kgCO2e**,
-assuming she only has to do this once over the course of the project.
+Emma consults HuggingFace's [Ecologits
+calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator) tool. It
+doesn't have specific data for GPT-5.4 so uses the generic GPT-5 model estimate. She
+uses 30 as the number of queries but is not sure of the number of tokens that have been
+returned. She decides to use the largest response size (15000 tokens) with the
+understanding that this is an overestimate. This gives a emissions of 10.8 gCO2e per
+query and running 30 queries generates **0.324 kgCO₂e**. She considers this to be an
+**upper bound estimate** of the emissions per session. She also notes that this estimate
+doesn't include emissions from model training. Assuming an average of 1 session per week
+over the 5 year course of the project that gives a total of **84 kgCO₂e**.
 
 - **Running scripts**:
 
-Use the [Green-algorithms calculator](https://calculator.green-algorithms.org/)
-to find that the emissions emitted by her laptop-  53.20 gCO2e each time she runs
-the script for 6 hours. If she runs the script once every year, the total emissions
-would be **0.266 kgCo2e**.
+Using the [Green-algorithms calculator](https://calculator.green-algorithms.org/) with
+her CPU model running for 6 hours with 1 core to find that the emissions emitted by her
+laptop - 53.20 gCO₂e each time. If she runs the similar analyses weekly over the 5 year
+course of the project, the total emissions would be **13.78 kgCo2e**.
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
 ### Greatest source of carbon emissions
 
-Based on the calculations above, storing research data and running
-Python scripts are the activities with the largest associated carbon emissions. At around
-1,900 kgCO2e these activities account to a quarter of the emissions per-capita in the
-UK,according to the [International Energy Association](https://www.iea.org/countries/united-kingdom/emissions).
-While lower in comparison, the emissions linked to using LLMs to help write her code
-are not insignificant and are equivalent to charging a smartphone [27 times](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator#results).
-With this in mind, Emma begins developing an improved research workflow to reduce her digital
+Based on the calculations above, storing research data and using LLM's are the
+activities with the largest associated carbon emissions. At around 1,700 kgCO2e these
+activities account to a quarter of the emissions per-capita in the UK,according to the
+[International Energy
+Association](https://www.iea.org/countries/united-kingdom/emissions). While lower in
+comparison, the emissions linked to using LLMs to help write her code are not
+insignificant and are equivalent to charging a smartphone [nearly 7000
+times](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator#results). With
+this in mind, Emma begins developing an improved research workflow to reduce her digital
 carbon footprint.
 
 ## Taking action
@@ -244,20 +247,21 @@ model.
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-### New data storage strategy
+### Data Storage Changes
 
-She has heard that her institution provides a tape-based cold storage options located
- in two different campuses and which are intended for data that is not accessed very often.
- She decides to keep the two copies of the raw data on the LTO-tape based storage
- provided by her institution, with each copy being stored at a different site. This
- ensures the data is safe in case something happens with one of the storages. She decides
- to keep her processed data on HDDs, as she needs easy and fast access for analyses.
+She has heard that her institution provides a tape-based cold storage options located in
+two different campuses and which are intended for data that is not accessed very often.
+She decides to keep the two copies of the raw data on the LTO-tape based storage
+provided by her institution, with each copy being stored at a different site. This
+ensures the data is safe in case something happens with one of the storages. She decides
+to keep her processed data on HDDs, as she needs easy and fast access for analyses.
 
 Based on the information she gained, Emma adopts a new workflow:
 
-- She switches to GPT-40-mini. however, debugging now takes 50 queries.
+- She switches to GPT-40-mini however after some experimentation she finds that her
+  sessions now average closer to 50 queries.
 - She keeps the two copies of raw data (7 TB) in the LTO-tape based facilities provided
- by her institution. She keeps the processed data (2 TB) on HDDs for active work.
+  by her institution. She keeps the processed data (2 TB) on HDDs for active work.
 
 :::::::::::::::::::::::::::::::::: challenge
 
@@ -270,7 +274,7 @@ work. How do they compare to Emma's previous workflow?
 This should include back up data and processed data.
 Given that magnetic tape has negligible emissions when idle, we can assume that the
  total emissions from storing data on tape come from embodied emissions, estimated at
- ~0.07 kgCO₂ per TB.
+ ~0.07 kgCO₂e per TB.
 - **LLM use**: use online tools like HuggingFace's [Ecologits calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
 to estimate emissions per query.
 
@@ -286,7 +290,7 @@ to estimate emissions per query.
 
 Given that magnetic tape has negligible emissions when idle, we can assume that the
 total emissions from storing data on tape come from embodied emissions, estimated at
-~0.07 kgCO₂ per TB. Keeping the two copies of raw data (7 GB) in the institution’s
+~0.07 kgCO₂e per TB. Keeping the two copies of raw data (7 TB) in the institution’s
   LTO‑tape storage facilities would therefore generate:
 
 $$
@@ -311,34 +315,38 @@ Emma is planning to switch from a reasoning model to a smaller LLM model,
 GPT4-0-mini, for which emissions are estimated to be around 562 mgCO₂e per query.
 
 $$
-E_{LLM} = 0.562 gCO₂e/query \times 50 queries \\
-E_{LLM} = 0.028 kgCO₂e \\
+E_{LLM} = 0.562 gCO₂e/query \times 50 queries \times 52 weeks \times 5 years \\
+E_{LLM} = 7.3 kgCO₂e \\
 $$
 
-The total emissions associated with using the simpler LLM would be approx. **0.028 kgCO₂e**.
+The total emissions associated with using the simpler LLM would be approx. **7.3 kgCO₂e**.
 
 A comparison of the emissions associated with both scenarios can be found below:
 
 | | **Scenario 1 (Current Workflow)** | **Scenario 2 (Improved Workflow)** | Change |
 | :--- | :--- | :--- | :--- |
 | Emissions Storage (kgCO₂e) | 1,620 | 367.35 | HDDs only -> LTO tape + HDDs |
-| Emissions LLM (kgCO₂e) | 0.324 | 0.028 | GPT-5 -> GPT-4-o-mini |
+| Emissions LLM (kgCO₂e) | 84 | 7.3 | GPT-5 -> GPT-4-o-mini |
 
 ::::::::::::::::::::::::::::::::::::::::::::
 
-## Conclusion
+## Outcomes
+
+<!-- markdownlint-disable-next-line line-length -->
+![Carbon emissions for different research actions comparing pre- and post-intervention](fig/case_study2_outcomes.png){alt='A bar chart comparing the emissions from data storage, LLM usage and data processing before and after implementation of emissions reduction measures'}
 
 Adopting the improved workflow would result in a five-fold reduction in Emma’s digital
-carbon emissions.  Particularly, moving from storing data on HDDs to a hybrid storing
-approach that includes both HDDs and LTO-tapes has the greatest impact on lowering emissions,
-saving around 1,250 kgCO2e, which is equivalent to the total annual electricity-related
-emissions of three average UK households.
+carbon emissions. Particularly, moving from storing data on HDDs to a hybrid storage
+approach that includes both HDDs and LTO-tapes has the greatest impact on lowering
+emissions, saving around 1,250 kgCO2e, which is equivalent to the total annual
+electricity-related emissions of three average UK households.
 
 While these improvements are substantial, they represent only one piece of a larger
-puzzle. For a life scientist, the total work-related emissions typically range from
-4 to 15 tCO2e annually ^2^. These numbers are driven by carbon intensive activities,
- such as international travel, laboratory heating, ventilation and AC systems,
- and the heavy use of chemical reagents and single-use equipment.
+puzzle. For a life scientist, the total work-related emissions typically range from 4 to
+15 tCO2e annually ^2^. These numbers are driven by carbon intensive activities, such as
+international travel, laboratory heating, ventilation and AC systems, and the heavy use
+of chemical reagents and single-use equipment. Emma therefore also resolves to look at
+her lab based research activities for emissions reductions.
 
 :::::::::::::::::::::::::::::::::: challenge
 
