@@ -12,7 +12,7 @@ exercises: 10 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Introduce a representative research case study relating to High Peformance Computing.
+- Introduce a representative research case study relating to High Performance Computing.
 - Explore ways to measure and estimate carbon emissions from High Performance Computing
   clusters.
 - Explore ways to reduce the carbon emissions associated with a given workload.
@@ -27,7 +27,7 @@ computational resources far beyond that of a single machine so he makes use of a
 of High Performance Computing facilities.
 
 Hugh is working on several different research questions that requires the use of
-different simulation softwares. Choice of which software to use is usually driven by
+different simulation software. Choice of which software to use is usually driven by
 existing research data and the capabilities of different codes. Whilst he often makes
 use of software that has been pre-installed by system administrators, he sometimes has
 to compile packages himself.
@@ -46,7 +46,7 @@ unknown time. Almost all of his workloads run for at least 48 hours.
 
 ## Collecting Information
 
-Hugh starts by doing some background reasearch about the two clusters he uses.
+Hugh starts by doing some background research about the two clusters he uses.
 
 DRAGONFLY is a cluster based in London. It doesn't publish any sustainability
 information. The documentation pages provide some lists of the available hardware but
@@ -238,7 +238,7 @@ For focussing his future actions and exploration:
 - Hugh spends the most CPU-hours on LANCER.
 - Hugh spends the most CPU-hours using GROMINZ.
 
-The 15,000 wasted CPU-hours are also a good focus as the associated emmisions were
+The 15,000 wasted CPU-hours are also a good focus as the associated emissions were
 non-productive.
 
 There are many steps Hugh could take to reduce emissions. Keep a record of the ideas
