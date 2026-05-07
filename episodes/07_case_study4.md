@@ -116,7 +116,7 @@ helping him to choose a favourite.
 Alongside this, he considers a second option: whilst his personal workstation's GPU is
 far from cutting-edge, it is by no means obsolete. He knows from experience that newer
 does not automatically mean greener, and keeps this in mind during pre-job analysis,
-looking for oppurtunities to make the model lean enough to run on his GPU.
+looking for opportunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 
@@ -157,9 +157,9 @@ He begins experimenting, appending the new bounding-box head and starting traini
 keeping the trainable parameters in the body fixed, and gradually relaxing them as
 training progresses. He modifies the training script to back up training state after
 each epoch, to avoid starting again on software crash or hardware failure. He is able
-to greatly increase convergence rate with a moderate increase in required memory
+to greatly increase the convergence rate with a moderate increase in required memory
 ($k = 2$ in the memory equations) using the more sophisticated Adam optimiser, and
-further improves it by adding learning rate decay. With convergence rate noticeably
+further improves it by adding a learning rate decay. With the convergence rate noticeably
 increased, he adds logic to terminate early once the model's loss function converges.
 The 32-bit floating-point numbers for activation state and gradients are switched to
 16-bit, increasing operator speed and halving the memory required for both.
