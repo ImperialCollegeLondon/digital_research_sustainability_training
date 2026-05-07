@@ -25,10 +25,8 @@ Environmental sustainability refers to the need for human activity to be balance
 the long term health of the planet and availability of natural resources. There are many
 issues that can impact environmental sustainability:
 
-- Greenhouse gas emissions.
-- Potable water usage.
-- Waste and pollution.
-- Biodiversity.
+<!-- markdownlint-disable-next-line line-length -->
+![Placeholder image - Challenges of environmental sustainability](https://i.pinimg.com/736x/6c/f9/62/6cf962d6976c08ae2ba94f412e8d1d4c.jpg){alt="Picture showing some challenges of environmental sustainability, including greenhouse gas emissions, potable water usage, waste and pollution, and loss of biodiversity, among others"}
 
 The most pressing sustainability challenge facing the world is the emission of
 greenhouse gases driving the climate emergency. For this reason we will primarily focus
@@ -42,7 +40,7 @@ equivalent emitted quantity of Carbon Dioxide (CO₂).
 [Climate change and global warming](https://weather.metoffice.gov.uk/climate-change/effects-of-climate-change)
 have become pressing issues in recent years. A primary cause of these phenomena is the
 increase in greenhouse gas emissions in the atmosphere. Greenhouse gases (for example,
-carbon dioxide (CO₂) are responsible for trapping heat in the Earth's
+carbon dioxide) are responsible for trapping heat in the Earth's
 atmosphere, leading to rising global temperatures. These gases are emitted from various
 human activities, including the burning of fossil fuels, deforestation, and industrial
 processes.
@@ -74,11 +72,28 @@ of the electricity being used can help identify the best times to use energy, an
 reduce the carbon emissions.
 
 - **Net zero** refers to the balance between the amount of "all" the [greenhouse gases](https://www.nationalgrid.com/stories/energy-explained/what-are-greenhouse-gases)
-(like carbon dioxide (CO2), methane or sulphur dioxide) emitted and the amount removed
+(like carbon dioxide, methane or sulphur dioxide) emitted and the amount removed
 from the atmosphere. Hence, achieving net zero has a much wider scope and requires going
 further than just reducing carbon emissions.
 
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: instructor
+
+To make the audience reflect a little bit before diving into the content, run a
+poll with the following questions:
+
+- What do you think the main contributors are to the emissions of digital research?
+  Multiple choice or open question, depending on how close we want answers to be. If
+  a multiple choice question, the options could be:
+    - Manufacture of physical devices (laptops, servers, etc)
+    - Running jobs in high performance computing facilities
+    - Developing and running software locally in laptops and workstations
+    - Using AI to assist research and everyday tasks
+    - Using cloud resources (cloud storage, continuous integration services, etc)
+- What comes to mind when thinking about mindful computing? Open question.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## The role of digital research
 
@@ -111,9 +126,12 @@ activity, but a myriad small activities, practices, tools and processes that, wh
 individually do not represent a big challenge, their sheer amount results in the above
 estimates.
 
+<!-- markdownlint-disable-next-line line-length -->
+![Placeholder image - Mindful computing and what it means for different people (use Rae's interpretation of the following paragraph)](https://img.freepik.com/premium-photo/mindful-computing-holographic-brain-integration_153608-14859.jpg){alt="TBC"}
+
 As researchers, we have a responsibility to consider the environmental impact of our
 work and take steps to reduce it. This begins with `mindful computing`, a term which
-describes a more concious approach to planning, running and managing digital tasks to
+describes a more conscious approach to planning, running and managing digital tasks to
 ensure that scientific advances don't produce more emissions than needed. Adopting this
 mindset could look different to everyone. For example, choosing a datacenter in a region
 powered by renewable energy can significantly reduce a project's carbon footprint.

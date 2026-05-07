@@ -40,7 +40,7 @@ His primary responsibilities are:
 
 - The deployment of cutting edge deep learning models
 - The curation and storing of large datasets
-- Periodic maintainance of models to add features and prevent model drift
+- Periodic maintenance of models to add features and prevent model drift
 
 To do his work, Miguel also purchases and maintains top-of-the-line GPU and fileservers,
 whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated

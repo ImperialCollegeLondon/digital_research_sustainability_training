@@ -4,3 +4,9 @@ repos:
     hooks:
       - id: markdownlint-fix
         exclude: "(CODE_OF_CONDUCT.md|LICENSE.md|CONTRIBUTING.md|links.md|workflows)"
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+        args: [-I, .codespell_ignore.txt]
+        exclude: "(CITATION.cff)"
