@@ -18,8 +18,8 @@ exercises: 10 # exercise time in minutes
 
 - Explain what energy and power are
 - Explain how energy is produced
-- Explain what low-carbon energy sources are and how they opperate
-- Explain what embeded carbon is
+- Explain what low-carbon energy sources are and how they operate
+- Explain what embodied carbon is
 - Use the greenhouse gas (GHG) protocol to estimate carbon emissions
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -40,7 +40,7 @@ as well.
 ## Joules, kilowatts and kilowatt-hours
 
 The units used for power and energy can be confusing, particularly kilowatt-hours as a
-unit of energy. A useful relation to bear in mind is that $1 W = 1 J/s$. By multipling
+unit of energy. A useful relation to bear in mind is that $1 W = 1 J/s$. By multiplying
 watts by another unit of time we recover units of energy with a scaling factor.
 
 Kilowatt-hours are commonly used because they tend to work out nicely for everyday
@@ -225,14 +225,14 @@ increase in supply.
 
 The above graph demonstrates how carbon intensity can vary throughout the year in the
 UK. For the UK season is not a strong driver of carbon intensity. It is interesting to
-observe that the mimimum and maximum carbon intensity of the grid can vary between ~50
+observe that the minimum and maximum carbon intensity of the grid can vary between ~50
 gCO₂/kWh and ~250 gCO₂/kWh, a factor of five.
 
 :::::::::::::::::::::::::: callout
 
 ## Carbon Intensity Forecasts
 
-For the UK there are publically available forecasts for the carbon intensity available
+For the UK there are publicly available forecasts for the carbon intensity available
 at <https://carbonintensity.org.uk>.
 
 ::::::::::::::::::::::::::::::::::
