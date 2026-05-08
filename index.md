@@ -41,7 +41,7 @@ This lesson will be of interest to a wide range of audience, including:
 
 By attending this course, you will be able to better understand the carbon impact of
 your digital research activitiesm and potential ways to reduce that impact. No prior
-knowledhe of digital research sustainability is requied.
+knowledhe of digital research sustainability is required.
 
 ::::::::::::::::::::::::::
 
