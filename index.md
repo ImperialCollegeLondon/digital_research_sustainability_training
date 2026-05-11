@@ -61,6 +61,9 @@ More details: <https://www.software.ac.uk/GreenDiSC>
 
 ::::::::::::::::::::::::::
 
+Development of this training material has been supported by Research England Research
+Culture funding provided through Imperial College London.
+
 This lesson is built with [The Carpentries Workbench][workbench].
 
 [workbench]: https://carpentries.github.io/sandpaper-docs
