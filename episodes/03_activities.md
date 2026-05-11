@@ -6,17 +6,27 @@ exercises: 20 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What digital research activities can have sustainability issues?
-- How do different types of data storage (local vs cloud) contribute to carbon emissions?
-- What factors influence the energy and power consumption of digital research workflows?
+- What are the main sources of carbon emissions from computers, storage devices, and
+  data centres?
+- How do embodied and operational emissions compare for different types of hardware and
+  storage technologies?
+- What factors influence whether data centre computing is more or less carbon intensive
+  than local computing?
+- How can research data management practices and computational services contribute to
+  carbon emissions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Identify which aspects of a research workflow are most carbon‑intensive and why.
-- Explain how different storage technologies (SSD, HDD, LTO tape) differ in embodied and
- operational carbon emissions.
+- Analyze the trade-offs between embodied and operational emissions for different
+  computing and storage technologies.
+- Calculate carbon emissions from personal devices and research workflows using
+  appropriate tools.
+- Evaluate the carbon efficiency of different research infrastructure choices, including
+  local versus cloud computing and various storage strategies.
+- Identify strategies to reduce emissions from research activities, including code
+  optimization, data management plans, and carbon-aware computing.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

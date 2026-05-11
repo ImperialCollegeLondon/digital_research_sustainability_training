@@ -6,15 +6,25 @@ exercises: 15 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What has been covered in the course?
-- How can these materials be applied in your own work?
+- What are the key concepts and strategies covered in this course for reducing carbon
+  emissions in digital research?
+- How can the measurement and estimation methodologies learned in this course be applied
+  to your own research?
+- What are the most impactful changes you can make to reduce emissions in your specific
+  research context?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Summarise course materials.
-- Apply course materials to your own work.
+- Summarize the main sources of carbon emissions in digital research and evidence-based
+  strategies to reduce them.
+- Analyze your own research workflows to identify emission sources and prioritize
+  reduction opportunities based on effort and impact.
+- Develop a practical plan to measure, estimate, and reduce carbon emissions in your own
+  research activities.
+- Evaluate potential emission reduction measures for your work in terms of feasibility,
+  effort required, and likely impact.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
