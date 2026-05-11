@@ -7,8 +7,8 @@ research practices involve a number of activities that can lead to carbon emissi
 This lesson is designed to identify such activities and provide practical ways to
 reduce the emissions.
 
-We will use case studies to explore the carbon impact of digital research actiivities
-and in four different contexts. Each case study will include some action items that
+We will use case studies to explore the carbon impact of digital research activities
+in four different contexts. Each case study will include some action items that
 can be implemented to reduce the associated emissions.
 
 After completing this lesson, you should be able to:
@@ -40,8 +40,8 @@ This lesson will be of interest to a wide range of audience, including:
 - Researchers who use GPUs
 
 By attending this course, you will be able to better understand the carbon impact of
-your digital research activitiesm and potential ways to reduce that impact. No prior
-knowledhe of digital research sustainability is required.
+your digital research activities and potential ways to reduce that impact. No prior
+knowledge of digital research sustainability is required.
 
 ::::::::::::::::::::::::::
 
@@ -54,7 +54,7 @@ Digital Sustainability Certification](https://www.software.ac.uk/GreenDiSC).
 ## Green DiSC Digital Sustainability Certification
 
 Green DiSC is the first open-access certification scheme which provides a roadmap for
-research groups, computing teams, and institutions who want to tackle the environmental
+research groups, computing teams, and institutions who want to reduce the environmental
 impacts of their computing activities.
 
 More details: <https://www.software.ac.uk/GreenDiSC>
