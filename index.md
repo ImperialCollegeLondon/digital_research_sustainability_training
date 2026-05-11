@@ -45,6 +45,22 @@ knowledhe of digital research sustainability is required.
 
 ::::::::::::::::::::::::::
 
+The materials in this lesson are inspired from the [Green Software
+Foundation](https://greensoftware.foundation/) courses and the [Green DiSC
+Digital Sustainability Certification](https://www.software.ac.uk/GreenDiSC).
+
+:::::::::::::::::: callout
+
+## Green DiSC Digital Sustainability Certification
+
+Green DiSC is the first open-access certification scheme which provides a roadmap for
+research groups, computing teams, and institutions who want to tackle the environmental
+impacts of their computing activities.
+
+More details: https://www.software.ac.uk/GreenDiSC
+
+::::::::::::::::::::::::::
+
 This lesson is built with [The Carpentries Workbench][workbench].
 
 [workbench]: https://carpentries.github.io/sandpaper-docs
