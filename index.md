@@ -57,7 +57,7 @@ Green DiSC is the first open-access certification scheme which provides a roadma
 research groups, computing teams, and institutions who want to tackle the environmental
 impacts of their computing activities.
 
-More details: https://www.software.ac.uk/GreenDiSC
+More details: <https://www.software.ac.uk/GreenDiSC>
 
 ::::::::::::::::::::::::::
 
