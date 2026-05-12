@@ -452,14 +452,14 @@ with the Hugging Face Ecologits calculator.</li>
 <strong>Execution of the package</strong>: Celia’s software is used
 by many different users on a variety of systems. It’s unlikely to be
 practical to get direct energy measurements in this case. More
-practically she could make use of the [Green Algorithms Calculator]. She
-should try and get as much detail as possible from users about how much
-they use the software and with what hardware. She’s unlikely to be able
-to get information from all users but if she can get a representative
-sample then she could extrapolate to get a rough estimate. Estimating
-the embodied emissions for all of the machines the code is running on
-would be a potentially large job so she might want to put that out of
-scope.</li>
+practically she could make use of the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a>. She should try and get as much detail as possible from
+users about how much they use the software and with what hardware. She’s
+unlikely to be able to get information from all users but if she can get
+a representative sample then she could extrapolate to get a rough
+estimate. Estimating the embodied emissions for all of the machines the
+code is running on would be a potentially large job so she might want to
+put that out of scope.</li>
 <li>
 <strong>Use of GitHub actions</strong>: Information about how often
 her workflows run and how long they take to execute. She could also
@@ -492,10 +492,10 @@ is an HP EliteBook 840 G9.</p>
 been using GitHub Actions for continuous integration and testing.
 Workflows run on any push to a branch, when a pull request is opened and
 when a release is created. Looking over the last week, all of her
-workflows together have a runtime of around 2940 seconds. She adds ECO
-CI to her workflow and runs notes its output over a few trial runs. The
-average of her trial runs is around 1 gCO₂e for a workflow that runs for
-500 seconds. This includes the operational and embedded estimates.</p>
+workflows together have a runtime of around 2940 seconds. She adds <a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO CI</a> to her
+workflow and runs notes its output over a few trial runs. The average of
+her trial runs is around 1 gCO₂e for a workflow that runs for 500
+seconds. This includes the operational and embedded estimates.</p>
 </div>
 <div class="section level3">
 <h3 id="llm-use">LLM Use<a class="anchor" aria-label="anchor" href="#llm-use"></a></h3>
@@ -542,8 +542,9 @@ can you create for Celia’s emissions from different activities?</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ul><li>Software Development - From the model of her laptop she is able to
-find the PCF datasheet from the manufacturer - <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">HP
+<ol style="list-style-type: decimal"><li>
+<strong>Software Development</strong>: From the model of her laptop
+she is able to find the PCF datasheet from the manufacturer - <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">HP
 EliteBook 840 G9 PCF Sheet</a>. This gives a total of 176 kgCO₂e.
 Assuming a 5 year lifespan of the laptop and a total weekly usage of 40
 hours she calculates the weekly proportion of embodied emissions to be
@@ -554,21 +555,27 @@ processor and provides it. To get the CPU utilisation she decides to err
 on the side of caution and assume her development activities use a full
 CPU core for the full 20 hours she spends developing. This provides an
 estimate of 58 gCO₂e per week.</li>
-<li>Software Usage - Celia has enough details to estimate her groups
-activities using the Green Algorithms calculator. Doing for this the
-known runtime and hardware of her research group this provides an
-estimate of 569.61 gCO₂e per week. To estimate the impact of other users
-of her software she could consider using number as a reference although
-it might make for a pretty rough estimate. This would give an estimate
-of around 17 kgCO₂e per week of operational emissions. Celia decides to
-leave out the embodied component of the analysis as she doesn’t know
-enough about what hardware is being used to run her code.</li>
-<li>GitHub Actions - Given she has an estimate for a workflow of 500
-seconds she chooses to simply scale this up to the full runtime of 1640
-seconds. This gives an estimate of around 6 gCO₂e per week.</li>
-<li>LLM use - Using the HuggingFace EcoLogits calculator Celia estimates
-her weekly usage at around 1 gCO₂e.</li>
-</ul></div>
+<li>
+<strong>Software Usage</strong>: Celia has enough details to
+estimate her groups activities using the Green Algorithms calculator.
+Doing for this the known runtime and hardware of her research group this
+provides an estimate of 569.61 gCO₂e per week. To estimate the impact of
+other users of her software she could consider using number as a
+reference although it might make for a pretty rough estimate. This would
+give an estimate of around 17 kgCO₂e per week of operational emissions.
+Celia decides to leave out the embodied component of the analysis as she
+doesn’t know enough about what hardware is being used to run her
+code.</li>
+<li>
+<strong>GitHub Actions</strong>: Given she has an estimate for a
+workflow of 500 seconds she chooses to simply scale this up to the full
+runtime of 1640 seconds. This gives an estimate of around 6 gCO₂e per
+week.</li>
+<li>
+<strong>LLM use</strong>: Using the <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">HuggingFace
+EcoLogits calculator</a> Celia estimates her weekly usage at around 1
+gCO₂e.</li>
+</ol></div>
 </div>
 </div>
 </div>

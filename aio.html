@@ -673,7 +673,7 @@ so running it for an hour gives 1 kWh of electrical energy used.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answers </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>A - 0.2 kW x 0.2 hours = 0.04 kWh</li>
@@ -865,7 +865,7 @@ meet demand)?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The marginal source is the most expensive source needed to meet
 demand. On days with lower intensity the marginal power source is
@@ -1037,7 +1037,7 @@ following activities as <strong>Scope 1</strong>, <strong>Scope
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer Key </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <table class="table">
 <colgroup>
@@ -2214,14 +2214,14 @@ with the Hugging Face Ecologits calculator.</li>
 <strong>Execution of the package</strong>: Celia’s software is used
 by many different users on a variety of systems. It’s unlikely to be
 practical to get direct energy measurements in this case. More
-practically she could make use of the [Green Algorithms Calculator]. She
-should try and get as much detail as possible from users about how much
-they use the software and with what hardware. She’s unlikely to be able
-to get information from all users but if she can get a representative
-sample then she could extrapolate to get a rough estimate. Estimating
-the embodied emissions for all of the machines the code is running on
-would be a potentially large job so she might want to put that out of
-scope.</li>
+practically she could make use of the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a>. She should try and get as much detail as possible from
+users about how much they use the software and with what hardware. She’s
+unlikely to be able to get information from all users but if she can get
+a representative sample then she could extrapolate to get a rough
+estimate. Estimating the embodied emissions for all of the machines the
+code is running on would be a potentially large job so she might want to
+put that out of scope.</li>
 <li>
 <strong>Use of GitHub actions</strong>: Information about how often
 her workflows run and how long they take to execute. She could also
@@ -2257,10 +2257,10 @@ is an HP EliteBook 840 G9.</p>
 been using GitHub Actions for continuous integration and testing.
 Workflows run on any push to a branch, when a pull request is opened and
 when a release is created. Looking over the last week, all of her
-workflows together have a runtime of around 2940 seconds. She adds ECO
-CI to her workflow and runs notes its output over a few trial runs. The
-average of her trial runs is around 1 gCO₂e for a workflow that runs for
-500 seconds. This includes the operational and embedded estimates.</p>
+workflows together have a runtime of around 2940 seconds. She adds <a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO CI</a> to her
+workflow and runs notes its output over a few trial runs. The average of
+her trial runs is around 1 gCO₂e for a workflow that runs for 500
+seconds. This includes the operational and embedded estimates.</p>
 </div>
 <div class="section level3">
 <h3 id="llm-use">LLM Use<a class="anchor" aria-label="anchor" href="#llm-use"></a>
@@ -2313,9 +2313,10 @@ can you create for Celia’s emissions from different activities?</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ul>
-<li>Software Development - From the model of her laptop she is able to
-find the PCF datasheet from the manufacturer - <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">HP
+<ol style="list-style-type: decimal">
+<li>
+<strong>Software Development</strong>: From the model of her laptop
+she is able to find the PCF datasheet from the manufacturer - <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">HP
 EliteBook 840 G9 PCF Sheet</a>. This gives a total of 176 kgCO₂e.
 Assuming a 5 year lifespan of the laptop and a total weekly usage of 40
 hours she calculates the weekly proportion of embodied emissions to be
@@ -2326,21 +2327,27 @@ processor and provides it. To get the CPU utilisation she decides to err
 on the side of caution and assume her development activities use a full
 CPU core for the full 20 hours she spends developing. This provides an
 estimate of 58 gCO₂e per week.</li>
-<li>Software Usage - Celia has enough details to estimate her groups
-activities using the Green Algorithms calculator. Doing for this the
-known runtime and hardware of her research group this provides an
-estimate of 569.61 gCO₂e per week. To estimate the impact of other users
-of her software she could consider using number as a reference although
-it might make for a pretty rough estimate. This would give an estimate
-of around 17 kgCO₂e per week of operational emissions. Celia decides to
-leave out the embodied component of the analysis as she doesn’t know
-enough about what hardware is being used to run her code.</li>
-<li>GitHub Actions - Given she has an estimate for a workflow of 500
-seconds she chooses to simply scale this up to the full runtime of 1640
-seconds. This gives an estimate of around 6 gCO₂e per week.</li>
-<li>LLM use - Using the HuggingFace EcoLogits calculator Celia estimates
-her weekly usage at around 1 gCO₂e.</li>
-</ul>
+<li>
+<strong>Software Usage</strong>: Celia has enough details to
+estimate her groups activities using the Green Algorithms calculator.
+Doing for this the known runtime and hardware of her research group this
+provides an estimate of 569.61 gCO₂e per week. To estimate the impact of
+other users of her software she could consider using number as a
+reference although it might make for a pretty rough estimate. This would
+give an estimate of around 17 kgCO₂e per week of operational emissions.
+Celia decides to leave out the embodied component of the analysis as she
+doesn’t know enough about what hardware is being used to run her
+code.</li>
+<li>
+<strong>GitHub Actions</strong>: Given she has an estimate for a
+workflow of 500 seconds she chooses to simply scale this up to the full
+runtime of 1640 seconds. This gives an estimate of around 6 gCO₂e per
+week.</li>
+<li>
+<strong>LLM use</strong>: Using the <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">HuggingFace
+EcoLogits calculator</a> Celia estimates her weekly usage at around 1
+gCO₂e.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2597,7 +2604,7 @@ emissions for?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Data storage. If Emma has particular storage devices in mind she
@@ -2630,7 +2637,7 @@ and its specifications.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Data storage </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>From her planned set of experiments and the a set of trial runs with
 the lab equipment Emma estimates that she’ll produce a total of 3.5 Tb
@@ -2688,7 +2695,7 @@ contributor to emissions out of Emma’s activities?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>It is easier to split Emma’s workflow into three main activities
 associated with carbon emissions: data storage, LLM use to write scripts
@@ -2714,7 +2721,7 @@ calculator</a> to find the emissions emitted by her laptop</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Emma’s carbon estimates </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <ul>
 <li>
@@ -2809,7 +2816,7 @@ doing?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Emma can improve her data storage strategy and use LTO-tape based
 facilities for cold storage and HDDs for data processing. She could also
@@ -2856,7 +2863,7 @@ workflow?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul>
 <li>
@@ -2878,7 +2885,7 @@ calculator</a> to estimate emissions per query.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Emma’s improved workflow carbon estimates </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <ul>
 <li>
@@ -2988,7 +2995,7 @@ minimise her digital carbon footprint.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <ul>
 <li>Schedule to run her scripts for then the grid is cleanest</li>
@@ -3167,7 +3174,7 @@ additional data would he need to collect?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Hugh needs two things.</p>
 <ol style="list-style-type: decimal">
@@ -3197,7 +3204,7 @@ more approximate but is still useful to have.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh’s Estimates </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>For the next two weeks Hugh keeps track of the workloads that he runs
 on the different clusters. He tracks the total CPU-hours spent on
@@ -3287,7 +3294,7 @@ for each of the simulation codes.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Taking GROMINZ as an example:</p>
 <p><span class="math display">\[
@@ -3407,7 +3414,7 @@ practices.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>For focussing his future actions and exploration:</p>
 <ul>
@@ -3428,7 +3435,7 @@ section.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh Takes Action </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Based on the data gathered above Hugh observes:</p>
 <ul>
