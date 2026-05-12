@@ -6,16 +6,27 @@ exercises: 10 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are the sustainability considerations related to High Performance Computing?
+- What are the key sources of carbon emissions when using High Performance Computing
+  facilities?
+- How can HPC users estimate emissions when clusters provide different levels of carbon
+  monitoring tools?
+- What strategies can reduce carbon emissions from HPC workloads without compromising
+  research throughput?
+- How do workload optimization, resource selection, and job management affect carbon
+  emissions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Introduce a representative research case study relating to High Performance Computing.
-- Explore ways to measure and estimate carbon emissions from High Performance Computing
-  clusters.
-- Explore ways to reduce the carbon emissions associated with a given workload.
+- Collect usage data across multiple HPC facilities and estimate associated carbon
+  emissions using available tools and approximation methods.
+- Analyze HPC workload patterns to identify wasted computation, optimization
+  opportunities, and hardware efficiency differences.
+- Evaluate trade-offs between computational speed and resource efficiency through
+  benchmarking studies.
+- Implement emission reduction strategies including code compilation optimization,
+  workload benchmarking, better job validation, and strategic resource allocation.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
