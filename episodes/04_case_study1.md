@@ -110,9 +110,8 @@ operational and embedded estimates.
 
 For creating inline documentation for her code, Celia has been using AI coding agents.
 While she is not using them frequently, she notices that on an average, she writes
-approximately 20 prompts to the agents every week. She takes note of the agent she uses
-
-- GPT-5 mini - and that it typically provides short responses.
+approximately 20 prompts to the agents every week. She takes note of the agent she uses,
+GPT-5 mini, and that it typically provides short responses.
 
 ### Software Usage
 
