@@ -6,17 +6,24 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are the sustainability considerations related to research software development?
+- What are the main sources of carbon emissions in research software development and
+  deployment?
+- How can a Research Software Engineer measure and estimate emissions from software
+  development, CI/CD workflows, LLM usage, and software execution?
+- What strategies can reduce carbon emissions from widely-used research software?
+- How do emissions from software usage compare to emissions from software development?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Introduce a representative research case study relating to research software
-  development.
-- Explore ways to measure and estimate carbon emissions from research software
-  development.
-- Explore ways to reduce the carbon emissions associated with a given workload.
+- Collect and organize data needed to estimate carbon emissions across the software
+  development lifecycle, including development, testing, and user execution.
+- Calculate carbon emissions from different activities using appropriate tools.
+- Analyze emissions data to identify the most significant sources and prioritize
+  reduction efforts.
+- Design and implement emission reduction strategies including code optimization,
+  improved user documentation, and better error handling.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
