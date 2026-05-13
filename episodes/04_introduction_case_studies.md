@@ -1,7 +1,7 @@
 ---
 title: 'Introduction to the Case Studies'
-teaching: 20
-exercises: 10
+teaching: 5
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
