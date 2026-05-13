@@ -61,7 +61,7 @@ fit.
 Making use of the materials in this course, consider the impact of your own research
 work. Here are some questions to help you get started.
 
-- What methodoligies might you use to measure or estimate emissions?
+- What methodologies might you use to measure or estimate emissions?
 - What additional data might you need to gather?
 - Which aspects of your work generate the most emissions?
 - What changes could you make to reduce emissions?

@@ -328,7 +328,7 @@ between speed and efficiency.
 ## Outcomes
 
 <!-- markdownlint-disable-next-line line-length -->
-![Carbon emissions from each cluter comparing pre- and post-intervention](fig/case_study3_outcomes.png){alt='A bar chart comparing the emissions from DRAGONFLY and LANCER before and after implementation of emissions reduction measures'}
+![Carbon emissions from each cluster comparing pre- and post-intervention](fig/case_study3_outcomes.png){alt='A bar chart comparing the emissions from DRAGONFLY and LANCER before and after implementation of emissions reduction measures'}
 
 Putting all of the above steps together Hugh estimates that he can reduce his overall
 use of CPU-hours by 25% across both clusters. This would result in a saving of ~36 kgCO2

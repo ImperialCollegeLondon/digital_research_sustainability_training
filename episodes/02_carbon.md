@@ -256,7 +256,7 @@ Energy System Operator]. Data was sourced from the [UK Carbon Intensity API] and
 
 ## Embodied carbon and carbon awareness
 
-So far we've focussed on the relationship between carbon emissions and electricity
+So far we've focused on the relationship between carbon emissions and electricity
 usage. This is relevant to the operation of equipment used in digital research and is
 usually the dominant component of the **operational carbon**. Another key source to
 consider however are **embodied emissions**.
@@ -359,7 +359,7 @@ Data assumptions and calculations:
 - Grid intensity: 0.136 kgCO₂/kW as the average intensity grid in England in February 2026^1^
 - Long-haul flight emission: based on a return flight in Economy class from London
  Heathrow to New York JFK, according to MyClimate calculator [tool](https://co2.myclimate.org/en/portfolios?calculation_id=8535150)
-- Fume Hoods: Based on an electrity consumption of 34,871 kWh/year ^2^
+- Fume Hoods: Based on an electricity consumption of 34,871 kWh/year ^2^
 - Ultra-low Freezer: Based on a energy consumption of up to 25 kWh/day (8,900 kWh/year)
  of traditional cascade refrigeration systems ^3^.
 - Household energy consumption: based on Ofgem estimate of typical household consumption

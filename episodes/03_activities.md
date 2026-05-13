@@ -518,7 +518,7 @@ centre.
 
 ::::::::::::::::::::::::::: challenge
 
-## Miniming emissions from computation
+## Minimising emissions from computation
 
 What are relevant considerations that can help to minimise the emissions associated with
 computational workloads?
@@ -566,7 +566,7 @@ research organisations will provide dedicated storage services for research data
 
 ::::::::::::::::::::::::::: challenge
 
-### Miniming emissions from data storage
+### Minimising emissions from data storage
 
 What are relevant considerations that can help to minimise the emissions associated with
 data storage?
