@@ -61,4 +61,3 @@ Nominate someone from your group to provide a brief overview to the class of wha
 
 - Any actions that you found particularly useful?
 - Any other aspects of the respective research scenario that you think would be carbon intensive?
-
