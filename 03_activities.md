@@ -516,7 +516,14 @@ The primary infrastructure required to carry out these activities is access to
 computation. This can be provided by a laptop, desktop or a server hosted in a data
 centre.
 
-Factors to consider:
+::::::::::::::::::::::::::: challenge
+
+## Miniming emissions from computation
+
+What are relevant considerations that can help to minimise the emissions associated with
+computational workloads?
+
+::::::::::::::::::::::: solution
 
 - **Embodied and operational emissions** are both key contributors. Optimally, a given
   amount of compute should be provided by the minimum associated embodied emissions.
@@ -543,6 +550,10 @@ Factors to consider:
   workload intensity responsive to carbon intensity forecasts to minimise operational
   emissions.
 
+::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::
+
 ### Research Data Management
 
 #### Storing Data
@@ -553,7 +564,14 @@ storage has a number of advantages, including greater control over data, predict
 access speeds, and the ability to power equipment down when not in use. Typically
 research organisations will provide dedicated storage services for research data.
 
-Factors to consider (to be expanded):
+::::::::::::::::::::::::::: challenge
+
+### Miniming emissions from data storage
+
+What are relevant considerations that can help to minimise the emissions associated with
+data storage?
+
+::::::::::::::::::::::: solution
 
 - Delete unused or redundant data and avoid unnecessary replication.
 - Keep frequently accessed data on faster storage (SSDs) and move "cold"
@@ -563,15 +581,19 @@ Factors to consider (to be expanded):
 - Consider cleaning and preprocessing data locally before storing.
 - Choose storage options designed for infrequent access when appropriate.
 
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::: callout
 
 #### Data Management Plans
 
 The best time to think about how to manage you data is before you collect or generate
-it. This is the purpose of a Data Management Plan (DMP), a document that describes how you
-will handle your data during and after a research project. DMPs are often required by
-funding agencies and research institutions, but they are also a good practice to ensure
-that your data is well organised, documented and preserved.
+it. This is the purpose of a Data Management Plan (DMP), a document that describes how
+you will handle your data during and after a research project. DMPs are often required
+by funding agencies and research institutions, but they are also a good practice to
+ensure that your data is well organised, documented and preserved.
 
 In addition to being a good scientific practice, DMPs can also help you to reduce
 the carbon footprint of your data. Tracking and monitoring your data in this manner
