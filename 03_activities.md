@@ -354,6 +354,15 @@ suggest that medium-size data centres consume more than 1 million litres of wate
 day, while for large data centres, this number jumps to about 23 million litres per day,
 equivalent to the daily usage of about 50,000 households in the US.
 
+While not as commonly available as the Power Usage Effectiveness (PUE), some data
+centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
+per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
+most common values are around 1.9 l/kWh.
+
+::::::::::::::::::::::::::::::: callout
+
+### Use of water in data centres
+
 Except in cooler locations where natural or air-only cooling ("free cooling") can be
 enough to extract all the heat generated during computation from the data centres, in
 most cases, some level of water-based cooling is required. There are two broad methods
@@ -367,10 +376,7 @@ contact with the processing unit. [Direct-to-chip liquid cooling and immersive l
 are two server liquid cooling technologies that dissipate heat while significantly
 reducing water consumption, but at a much higher cost and technical complexity.
 
-While not as commonly available as the Power Usage Effectiveness (PUE), some data
-centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
-per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
-most common values are around 1.9 l/kWh.
+:::::::::::::::::::::::::::::::::::::::
 
 [Recent studies]: https://www.eesi.org/articles/view/data-centers-and-water-consumption
 [Direct-to-chip liquid cooling and immersive liquid cooling]: https://www.datacenterdynamics.com/en/analysis/an-introduction-to-liquid-cooling-in-the-data-center/
