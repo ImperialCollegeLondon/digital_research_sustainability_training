@@ -19,7 +19,7 @@ exercises: 0
 
 ## Introduction
 
-The next episodes introduce 4 case studies of personas performing worried about
+The next episodes introduce 4 case studies of personas worried about
 the carbon emissions of their digital research. In all cases, they want to identify
 what those emissions are, quantify them and consider what steps they can take in
 order to minimise them.
@@ -59,7 +59,7 @@ in the case studies.
 
 Depending on the setting, the groups and the case study for each group might have been
 pre-assigned. If so, inform the participands accordingly, otherwise it will make sense
-to let them choose whatever group they want. Working on a topic that feels closes
+to let them choose whatever group they want. Working on a topic that feels familiar
 will make them get the most of the activity, as they can learn specific things that
 day can apply to their daily work.
 
@@ -73,5 +73,6 @@ and to guide them if they get stuck in any of the challenges.
 Nominate someone from your group to provide a brief overview to the class of what
 you all discovered. This could include topics like:
 
-- Any actions that you found particularly useful?
+- What were the main contributors to emissions from your scenario?
+- What were the key steps taken to reduce emissions?
 - Any other aspects of the respective research scenario that you think would be carbon intensive?
