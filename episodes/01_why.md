@@ -107,7 +107,7 @@ poll with the following questions:
 ## The role of digital research
 
 Digital research is one of the contributors of greenhouse gas emissions and involves a
-wide range of activities, including:
+wide range of activities that lead to these emissions, including:
 
 - the use of software for data analysis, simulations and machine learning
 - the storage of data
