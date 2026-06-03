@@ -73,17 +73,18 @@ but the kind of emissions removed and the scale are different.
 - **Carbon neutral** requires taking action to reduce carbon emissions and offsetting
 any remaining emissions, of a given activity. Offsetting is the process of compensating
 for carbon emissions by investing in projects that reduce or remove an equivalent
-amount of carbon from the atmosphere, such as planting trees or investing in renewable
-energy projects. Usually organisations would first begin by reducing their carbon
-emissions as much as possible, and then offset the remaining emissions. For example,
-monitoring the [carbon intensity](https://www.nationalgrid.com/stories/energy-explained/what-is-carbon-intensity)
+amount of carbon from the atmosphere. Usually organisations would first begin by reducing
+their carbon emissions as much as possible, and then offset the remaining emissions. For
+example, monitoring the [carbon intensity](https://www.nationalgrid.com/stories/energy-explained/what-is-carbon-intensity)
 of the electricity being used can help identify the best times to use energy, and hence
 reduce the carbon emissions.
 
 - **Net zero** refers to the balance between the amount of "all" the [greenhouse gases](https://www.nationalgrid.com/stories/energy-explained/what-are-greenhouse-gases)
 (like carbon dioxide, methane or sulphur dioxide) emitted and the amount removed
-from the atmosphere. Hence, achieving net zero has a much wider scope and requires going
-further than just reducing carbon emissions.
+from the atmosphere. Net zero uses offsets that truly absorb emissions e.g. tree planting,
+which is more robust and the emissions actually reach 0, whereas with carbon neutral you
+can offset by supporting reductions elsewhere. Hence, achieving net zero has a much wider
+scope and requires going further than just reducing carbon emissions.
 
 :::::::::::::::::::::::::::::::::
 
