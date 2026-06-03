@@ -231,10 +231,10 @@ using her package by 6%.
 
 ### Reducing Wasted Runs
 
-- Celia takes a pass at **improving the error handling and input validation** in her code to
-reduce the likelihood of running into errors that lead to repeated runs of the code. She
-implements a new configuration validation approach. She ways to catch some failure modes
-early before significant computation has occurred.
+- Celia takes a pass at **improving the error handling and input validation** in her
+code to reduce the likelihood of running into errors that lead to repeated runs of
+the code. She implements a new configuration validation approach. She ways to
+catch some failure modes early before significant computation has occurred.
 - Again it's difficult to estimate the impact of this work but when these changes were
 released Celia is contacted by several users confused by the new errors. This suggests
 the changes are catching at least some errors.
