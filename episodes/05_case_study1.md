@@ -138,9 +138,9 @@ Celia's emissions from different activities?
 
 ::::::::::::::::::::::: solution
 
-Celia estimates emissions from different activities:
+Celia can estimates emissions from different activities:
 
-### Software Development
+### Emissions from software development
 
 - From the model of her laptop she is able to find the PCF
   datasheet from the manufacturer - [HP EliteBook 840 G9 PCF Sheet]. This gives a total
@@ -153,18 +153,18 @@ Celia estimates emissions from different activities:
   CPU core for the full 20 hours she spends developing. This provides an estimate of 58
   gCO₂e per week.
 
-### GitHub Actions
+### GitHub actions workflows
 
 Given she has an estimate for a workflow of 500 seconds she chooses to simply scale
 this up to the full runtime of 1640 seconds. This gives an estimate of around 6 gCO₂e
 per week.
 
-### LLM Use
+### Emissions from LLM usage
 
 Using the [HuggingFace EcoLogits calculator] Celia estimates her weekly
 usage at around 1 gCO₂e.
 
-### Software Usage
+### Emissions from software usage
 
 - Celia has enough details to estimate her groups activities using the Green Algorithms
 calculator. Doing for this the known runtime and hardware of her research group this
