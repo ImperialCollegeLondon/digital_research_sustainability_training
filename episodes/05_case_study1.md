@@ -1,7 +1,7 @@
 ---
 title: 'Case Study 1 - Research Software Engineer'
 teaching: 0
-exercises: 30
+exercises: 60
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -48,7 +48,7 @@ emission reduction measures appropriately.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Data exploration (10 minutes)
+### Data exploration (20 minutes)
 
 What data does Celia need to understand the emissions associated with her software?
 
@@ -131,7 +131,7 @@ usage.
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Estimating emissions (10 minutes)
+## Estimating emissions (20 minutes)
 
 With the information provided in the previous section what estimates can you create for
 Celia's emissions from different activities?
@@ -191,7 +191,7 @@ are negligible.
 
 :::::::::::::::::::::::::::::::::: challenge
 
-## Measures to reduce emissions (10 minutes)
+## Measures to reduce emissions (20 minutes)
 
 What measures can Celia take to reduce the emissions from the usage of her software?
 
@@ -253,7 +253,7 @@ usage of her package.
 
 ::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::
 
 ## Outcomes
 
