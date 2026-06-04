@@ -50,77 +50,96 @@ emission reduction measures appropriately.
 
 ### Data exploration (20 minutes)
 
-What data does Celia need to understand the emissions associated with her software?
+Celia decides to learn more about each of the emission sources, she inspects
+the following areas of her work:
 
-- What are the key aspects of her work that Celia could estimate emissions for?
-- What methodologies could Celia use to estimate her emissions?
-- What additional data would she need to collect in each case?
+1. The hardware she uses for software development
+1. Use of GitHub Actions for continuous integration and testing
+1. Use of LLMs
+1. Users of her package
 
-::::::::::::::::::::::::::::::: solution
+For each of these areas, what data and tools/methodologies does Celia need to
+collect information on the emissions associated with her software?
 
-## Celia Collects Information
+:::::::::::::::: hint
 
-### Software Development
+Use the following questions to guide your exploration of each of these areas:
 
-Celia decides to learn more about each of the emission sources, starting with inspecting
-the hardware she uses for package development:
+### Hardware
 
-- As her laptop (an HP EliteBook 840 G9) underpins all of her work however it
-    wouldn't be appropriate to ascribe the full embodied emissions to her package only,
-    and should take into account the emissions from her laptop itself.
-- On an average, she uses her laptop for 20 hours per week for the software
-    development intermixed with other tasks.
-- She observes that the development process is not particularly computationally
-    intensive as she mostly works with an Integrated Development Environment and runs
-    the test suite occasionally.
-- Regarding the operational emissions she could attempt direct measurement of her
-   laptop with a power meter but given the proportionally low operational emissions of
-   consumer electronic devices a rough calculation using the [Green Algorithms Calculator]
-   would likely be sufficient.
-- Embodied emissions of the laptop should be readily findable in its PCF sheet.
-
-[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
+- Look up the specifications of her laptop. Also note how much time she spends using
+it for software development.
+- Is the development process computationally intensive?
+- Can the Product Carbon Footprint (PCF) datasheet be found for her laptop?
+- Can a tool like the [Green Algorithms Calculator] help with estimating any of
+    the emissions?
 
 ### GitHub Actions
 
-To ensure that her software package follows best practices, she has been using GitHub
-Actions for continuous integration and testing. She collects information about how
-often her workflows run and how long they take to execute.:
+- Does she have data on how often her workflows run and how long they take to execute?
+- Can she use a tool like [ECO CI] to estimate the emissions from her workflows?
+
+### LLM Use
+
+- Does she have data on how often she uses LLMs and which ones she uses?
+- Can she use a tool like the [Hugging Face Ecologits calculator] to estimate
+the emissions from her LLM usage?
+
+### Software Usage
+
+- Who are the users of her package and what hardware are they using to run it?
+- How long are they running her package for?
+
+[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
+[ECO CI]: https://www.green-coding.io/products/eco-ci/
+[Hugging Face Ecologits calculator]: https://huggingface.co/spaces/genai-impact/ecologits-calculator
+:::::::::::::::::::::
+
+::::::::::::::::::::::::::::::: solution
+
+Details on the data Celia collects for each of these areas are provided below.
+
+### Hardware used
+
+- Laptop used is an HP EliteBook 840 G9. She uses it for around 20 hours per week
+for software development intermixed with other tasks.
+- The development process is **not particularly computationally intensive** as she
+mostly works with an Integrated Development Environment and runs the test suite occasionally.
+- **Embodied emissions** of the laptop are available in its PCF sheet.
+- **Operational emissions** can be estimated using the Green Algorithms
+    Calculator. _Note_: A direct measurement of the power consumption of the laptop
+    with a power meter could also be possible but given the relatively low emissions
+    from consumer electronic devices, a rough calculation using the Green Algorithms
+    Calculator is likely sufficient.
+
+### Use of GitHub Actions
 
 - Workflows run on any push to a branch, when a pull request is opened and when a
 release is created.
 - Looking over the last week, all of her workflows together have a runtime of around
 2940 seconds.
-- She adds [ECO CI] to her workflow and runs notes its output over a few trial runs.
-- The average of her trial runs is around 1 gCO₂e for a workflow that runs for 500
-seconds. This includes the operational and embedded estimates.
+- She adds ECO CI to her workflow and notes that the estimate for a workflow that
+runs for 500 seconds is around 1 gCO₂e (including both operational and embedded emissions).
 
-[ECO CI]: https://www.green-coding.io/products/eco-ci/
+### Use of LLMs
 
-### LLM Use
+- Uses GPT-5 mini for creating inline documentation for her code.
+- On an average, she writes approximately 20 prompts to the agents every week.
+- This particular agent typically provides short responses.
+- Uses the [Hugging Face Ecologits calculator] to estimate the emissions from her
+usage.
 
-- For creating inline documentation for her code, Celia has been using AI coding agents.
-- While she is not using them frequently, she notices that on an average, she writes
-approximately 20 prompts to the agents every week.
-- She takes note of the agent she uses, GPT-5 mini, and that it typically provides
-short responses.
-- To estimate the emissions from the use of the LLMs, she uses the [Hugging Face
-Ecologits calculator]
+### Users of the software package
 
-[Hugging Face Ecologits calculator]: https://huggingface.co/spaces/genai-impact/ecologits-calculator
-
-### Software Usage
-
-Finally, Celia reaches out to her research group members who are users of her package.
-
-- They are able to provide her with the full specification of the machine they are
-using - an [HP Z2 Tower G1i Workstation].
-- They run the package for around 18 hours a week using all the 20 cores.
+- Members of her research group are the main users of her package. They are able
+to provide her with the full specification of the machine they are using - an
+[HP Z2 Tower G1i Workstation]. They run the package for around 18 hours a week using
+all the 20 cores.
 - From individuals she's in contact with, conversations she's had at conferences, mentions
 in academic papers and a workshop she ran recently, Celia estimates that her code has
 around 30 regular users outside of her own research group.
-- For the other users of her package, it is difficult to get detailed information on their
-usage.
+- For the other users of her package, it is difficult to get detailed information
+    on their usage.
 
 [HP Z2 Tower G1i Workstation]: https://www.hp.com/gb-en/shop/product.aspx?id=8T229EA&opt=ABU&sel=DTP
 
@@ -134,26 +153,36 @@ usage.
 ## Estimating emissions (20 minutes)
 
 With the information provided in the previous section what estimates can you create for
-Celia's emissions from different activities?
+Celia's emissions from different activities (hardware used, GitHub actions, LLM
+usage, and software usage)?
+
+:::::::::::::::: hint
+
+| Activity | Hint |
+| --- | --- |
+| Hardware | Use the PCF datasheet provided by the laptop manufacturer and consider the laptop's lifespan and weekly usage to calculate the embodied emissions. For the operational emissions use the Green Algorithms Calculator. |
+| GitHub Actions | Scale the estimate from ECO CI to the full runtime of the workflows. |
+| LLM Use | Use the Hugging Face Ecologits calculator to estimate the emissions. |
+| Software Usage | Use the Green Algorithms Calculator to estimate the emissions from the users in her research group. Think about how might you estimate the emissions from other users of her package given the lack of detailed information on their usage? |
+
+:::::::::::::::::::::
 
 ::::::::::::::::::::::: solution
 
-Celia can estimates emissions from different activities:
+Celia's estimates for the emissions from different activities are as follows:
 
-### Emissions from software development
+### Hardware emissions
 
-- From the model of her laptop she is able to find the PCF
-  datasheet from the manufacturer - [HP EliteBook 840 G9 PCF Sheet]. This gives a total
-  of 176 kgCO₂e. Assuming a 5 year lifespan of the laptop and a total weekly usage of 40
-  hours she calculates the weekly proportion of embodied emissions to be 338 gCO₂e.
-- She uses the Green Algorithms Calculator to estimate the operational emissions. The Green
-  Algorithms calculator doesn't have data for her exact CPU model so she looks up the
-  Thermal Design Power of the processor and provides it. To get the CPU utilisation she
-  decides to err on the side of caution and assume her development activities use a full
-  CPU core for the full 20 hours she spends developing. This provides an estimate of 58
-  gCO₂e per week.
+- The [PCF datasheet for the HP EliteBook 840 G9] gives a total of 176 kgCO₂e. Assuming
+a 5 year lifespan of the laptop and a total weekly usage of 40 hours she calculates
+the weekly proportion of embodied emissions to be 338 gCO₂e.
+- The Green Algorithms calculator doesn't have data for her exact CPU model so she
+looks up the Thermal Design Power of the processor and provides it. To get the
+CPU utilisation she   decides to err on the side of caution and assume her development
+activities use a full CPU core for the full 20 hours she spends developing. This
+provides an estimate of 58 gCO₂e of operational emissions per week.
 
-### GitHub actions workflows
+### Emissions from GitHub Actions
 
 Given she has an estimate for a workflow of 500 seconds she chooses to simply scale
 this up to the full runtime of 1640 seconds. This gives an estimate of around 6 gCO₂e
@@ -161,10 +190,10 @@ per week.
 
 ### Emissions from LLM usage
 
-Using the [HuggingFace EcoLogits calculator] Celia estimates her weekly
-usage at around 1 gCO₂e.
+Using the Hugging Face EcoLogits calculator Celia estimates the emissions from her
+weekly LLMs usage to be around 1 gCO₂e.
 
-### Emissions from software usage
+### Emissions from the users of the software package
 
 - Celia has enough details to estimate her groups activities using the Green Algorithms
 calculator. Doing for this the known runtime and hardware of her research group this
@@ -176,7 +205,6 @@ would give an estimate of around 17 kgCO₂e per week of operational emissions.
 enough about what hardware is being used to run her code.
 
 [HP EliteBook 840 G9 PCF Sheet]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068
-[HuggingFace EcoLogits calculator]: https://huggingface.co/spaces/genai-impact/ecologits-calculator
 
 :::::::::::::::::::::::
 
@@ -189,18 +217,13 @@ her package are the most significant. She also anticipates these growing over ti
 the growing popularity of her package. The emissions from GitHub actions and LLM usage
 are negligible.
 
-:::::::::::::::::::::::::::::::::: challenge
+::::::::::::::::::::::::::: discussion
 
 ## Measures to reduce emissions (20 minutes)
 
-What measures can Celia take to reduce the emissions from the usage of her software?
-
-::::::::::::::::::::::: solution
-
-## Celia Takes Action
-
 Celia identifies several ways she can improve the emissions associated with usage
-of her code base:
+of her code base as mentioned below. In your groups discuss the potential impact of
+these measures and any other measures you think could be implemented.
 
 ### Code Optimisation
 
@@ -251,9 +274,7 @@ optional dependency in her code base so that it can report the carbon emissions 
 code is run. This allows her more easily to track the emissions associated with the
 usage of her package.
 
-::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::
 
 ## Outcomes
 
