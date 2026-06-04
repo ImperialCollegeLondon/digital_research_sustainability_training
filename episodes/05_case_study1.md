@@ -204,7 +204,6 @@ would give an estimate of around 17 kgCO₂e per week of operational emissions.
 - Celia decides to leave out the embodied component of the analysis as she doesn't know
 enough about what hardware is being used to run her code.
 
-[HP EliteBook 840 G9 PCF Sheet]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068
 
 :::::::::::::::::::::::
 
