@@ -66,25 +66,22 @@ zero](https://commonslibrary.parliament.uk/research-briefings/cbp-9888/) by 2050
 
 ### Carbon neutral vs net zero
 
-The terms **carbon neutral** and **net zero** are often used interchangeably, but they have
-different meanings. They both refer to removing harmful emissions from the atmosphere,
-but the kind of emissions removed and the scale are different.
+The terms **carbon neutral** and **net zero** are often used interchangeably, but they
+have different meanings. They both refer to removing harmful emissions from the
+atmosphere, but the kind of emissions removed and the scale are different.
 
 - **Carbon neutral** requires taking action to reduce carbon emissions and offsetting
 any remaining emissions, of a given activity. Offsetting is the process of compensating
-for carbon emissions by investing in projects that reduce or remove an equivalent
-amount of carbon from the atmosphere. Usually organisations would first begin by reducing
-their carbon emissions as much as possible, and then offset the remaining emissions. For
-example, monitoring the [carbon intensity](https://www.nationalgrid.com/stories/energy-explained/what-is-carbon-intensity)
-of the electricity being used can help identify the best times to use energy, and hence
-reduce the carbon emissions.
+for carbon emissions by investing in projects that reduce emissions in an equivalent
+amount elsewhere. Usually organisations would first begin by reducing their carbon
+emissions as much as possible, and then offset the remaining emissions.
 
-- **Net zero** refers to the balance between the amount of "all" the [greenhouse gases](https://www.nationalgrid.com/stories/energy-explained/what-are-greenhouse-gases)
-(like carbon dioxide, methane or sulphur dioxide) emitted and the amount removed
-from the atmosphere. Net zero uses offsets that truly absorb emissions e.g. tree planting,
-which is more robust and the emissions actually reach 0, whereas with carbon neutral you
-can offset by supporting reductions elsewhere. Hence, achieving net zero has a much wider
-scope and requires going further than just reducing carbon emissions.
+- **Net zero** refers to the balance between the amount of **all** the
+[greenhouse gases](https://www.nationalgrid.com/stories/energy-explained/what-are-greenhouse-gases)
+emitted and the amount removed from the atmosphere. Net zero uses offsets that **truly
+absorb emissions** e.g. tree planting, which is more robust as the net emissions can
+actually reach 0. Hence, achieving net zero has a much wider scope and requires going
+further than just reducing carbon emissions.
 
 :::::::::::::::::::::::::::::::::
 
@@ -164,12 +161,14 @@ describes a more conscious approach to planning, running and managing digital ta
 ensure that scientific advances don't produce more emissions than needed. Adopting this
 mindset could look different to everyone.
 
-For example, choosing a datacenter in a region powered by renewable energy can significantly
-reduce a project's carbon footprint. Another example is storage data management, where
-small steps such as deleting unused data or compressing data can reduce the carbon associated
-with long-term storage. Mindful computing can also be applied to analyses tasks, by using
-incremental processing or requesting the right GPU/CPU resources when using High Performance
-Computing.
+A few examples of what mindful computing could mean are:
+
+- choosing a datacenter in a region powered by renewable energy can significantly
+  reduce a project's carbon footprint
+- careful storage data management, where small steps such as deleting unused data or
+  compressing data can reduce the carbon associated with long-term storage
+- using incremental processing or requesting the right GPU/CPU resources when using High
+  Performance Computing.
 
 The purpose of this course is to explore how to measure and estimate the carbon emissions
 from digital research activities, what are the sources of these emissions, and what are
