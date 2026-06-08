@@ -43,7 +43,7 @@ emissions.
 ## Computers
 
 Computers have become an indispensable component of modern life as well as digital
-research. These include everyday devices such as a laptop, desktops or phones as well as
+research. These include everyday devices such as laptops, desktops or phones as well as
 servers that are accessed remotely.
 
 Computers draw electricity during use and also produce considerable embodied emissions
@@ -55,8 +55,8 @@ and reduce them is very different.
 
 Embodied carbon emissions **do not change** once the machine is in your hands: they only
 depend on the manufacturing and transport process. However, **embodied carbon emissions
-per year** are reduced the more years the machine is in use. Hence, the longer the
-lifetime of the machine, the lower their embodied carbon footprint per year.
+per year** are reduced the more years the machine is in use. Hence, **the longer the
+lifetime of the machine, the lower their embodied carbon footprint per year**.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -76,22 +76,18 @@ The operational emissions of a device depend on its design and performance, but 
 _how_, _when_ and _where_ it is used. For this reason, it is useful to consider
 energy usage first as a proxy for carbon emissions.
 
-The power consumption of digital devices can be split into idle and usage-based
-consumption. Idle consumption is incurred when a device is powered but not carrying out
-any particular operation. Additional energy is consumed as the computational load placed
-on the device is increased. In particular, components like CPUs, GPUs and memory will
-draw additional electricity and cooling systems may have to work harder to remove excess
-heat.
+The power consumption of digital devices can be split into:
 
-There are a number of factors that affect operational power usage:
+- **idle consumption**: device is powered but not carrying out
+any particular operation
 
-- Age: Modern computers have generally more advanced technology that makes them more
-  energy-efficient than older ones.
-- Type: Laptops are typically more energy efficient than desktops.
-- Power management settings: That control when to go to sleep after a time of
-  inactivity, or control the CPU frequency, etc.
-- Peripherals: Especially, monitors, but also printers can also consume large amounts of
-  energy.
+- **usage-based consumption**: computational load placed is
+increased (components like
+CPUs, GPUs and memory will
+draw additional electricity -> cooling systems may have to work harder)
+
+<!-- markdownlint-disable-next-line line-length -->
+![Factors that affect operational emissions](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions'}
 
 :::::::::::::::::::::::::: callout
 
@@ -99,9 +95,9 @@ There are a number of factors that affect operational power usage:
 
 The nature of both operational and embodied energy usage highlights the importance of
 utilisation in relation to computing hardware. The embodied emissions of a device are a
-fixed overhead, so the more computational work that is carried out over the lifetime of
-a device the more efficiently that overhead has been invested. Similarly, as there is a
-minimum power draw associated with idle usage, as utilisation of a device increases the
+fixed overhead, so **the more computational work that is carried out over the lifetime of
+a device the more efficiently that overhead has been invested**. Similarly, as there is
+a minimum power draw associated with idle usage, as utilisation of a device increases the
 power draw per unit of computational work decreases.
 
 ::::::::::::::::::::::::::::::::::
@@ -166,6 +162,9 @@ out its embodied carbon emissions.
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 #### Operational Emissions
+
+<!-- markdownlint-disable-next-line line-length -->
+![Ways to measure operational carbon emissions](fig/ep3_carbon_estimations.png){alt='Calculating operational emissions'}
 
 The most direct and accurate option to get the idle energy usage of a consumer device is
 to use a plug in power meter. There are many models, but most will provide both the
@@ -267,10 +266,6 @@ While the numbers vary depending on manufacturers and reporting available, it is
 considered that SSDs have a higher carbon debt per unit of storage than HDDs^4^.
 However, recent data suggests that the difference for enterprise-grade drives is shrinking,
 and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
-While the numbers vary depending on manufacturers and reporting available, it is
-generally considered that SSDs have a higher 'carbon debt` per unit of storage than
-HDDs^4^. However, recent data suggests that the difference for enterprise-grade drives
-is shrinking, and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
 
 SSDs allow data to be accessed almost instantly and are typically 10–100× faster than
 HDDs. LTO tapes offer the slowest access speeds, but they remain the preferred option
@@ -282,7 +277,7 @@ efficiency.
 ## Data Centres
 
 Beyond personal computing devices like laptops and PC's, much computing infrastructure
-is now accessed remotely. In this case the computers are generally hosted in a data
+is now accessed remotely. In this case, the computers are generally hosted in a data
 centre, a large industrial facility that can contain thousands of servers and the
 supporting infrastructure required to allow remote access.
 
@@ -290,6 +285,9 @@ The carbon emissions associated with the computers and storage devices in a data
 are covered above. As purpose built facilities, data centres can host more specialised
 equipment and benefit from economies of scale. They also have additional emissions
 sources beyond the individual servers they house.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Data Centers Carbon Emissions](fig/ep3_datacenter.png){alt='Embdied and operational emissions of data centers'}
 
 Data centre embodied emissions:
 
