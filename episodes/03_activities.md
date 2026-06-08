@@ -43,7 +43,7 @@ emissions.
 ## Computers
 
 Computers have become an indispensable component of modern life as well as digital
-research. These include everyday devices such as laptops, desktops or phones as well as
+research. These include everyday devices such as laptops, desktops or phones, as well as
 servers that are accessed remotely.
 
 Computers draw electricity during use and also produce considerable embodied emissions
@@ -123,14 +123,14 @@ dominate.
 #### Embodied Emissions
 
 Finding the embodied emissions of a device relies on information provided by the
-manufacturer. The regulatory environment is evolving however increasingly there are
+manufacturer. The regulatory environment is evolving; however, increasingly, there are
 legal requirements for manufacturers to publish Product Carbon Footprint (PCF) data for
 their products. Information can be easily found by searching the internet for "PCF" and
 the manufacturer's name.
 
 ::::::::::::::::::::: callout
 
-We'll see some example PCF sheets below however it's important to note that different
+We'll see some example PCF sheets below. However it's important to note that different
 manufacturers can use different methodologies and assumptions. This means it is not
 advised to directly compare PCF data between manufacturers.
 
@@ -251,7 +251,7 @@ can make it difficult to directly measure their power usage. Whilst some manufac
 do report sustainability data this is highly variable. In some cases storage device data
 may be included as a component of the PCF data for a complete system.
 
-Given the general paucity of data there have been some studies that attempt to estimate
+Given the general paucity of data, there have been some studies that attempt to estimate
 emissions from different storage media. We've summarised some useful estimates below:
 
 | Category | SSD | HDD | LTO tape |
@@ -556,11 +556,14 @@ computational workloads?
 
 #### Storing Data
 
-Generally when presented with a choice between buying your own storage devices or using
-a storage service, it will be more sustainable to use the latter. That said, local
-storage has a number of advantages, including greater control over data, predictable
-access speeds, and the ability to power equipment down when not in use. Typically
-research organisations will provide dedicated storage services for research data.
+Shared storage services can often be more sustainable than dedicated storage
+hardware because they can have higher resource utilisation and benefit from
+economies of scale. However, the relative sustainability of each approach
+depends on factors such as utilisation, hardware efficiency, and the source
+of electricity used to power the infrastructure. Local storage has several advantages,
+including greater control over data, predictable access speeds, and the ability to power
+equipment down when not in use. Typically, research organisations will provide
+dedicated storage services for research data.
 
 ::::::::::::::::::::::::::: challenge
 
@@ -587,8 +590,8 @@ data storage?
 
 #### Data Management Plans
 
-The best time to think about how to manage you data is before you collect or generate
-it. This is the purpose of a Data Management Plan (DMP), a document that describes how
+**The best time to think about how to manage you data is before you collect or generate
+it.** This is the purpose of a Data Management Plan (DMP), a document that describes how
 you will handle your data during and after a research project. DMPs are often required
 by funding agencies and research institutions, but they are also a good practice to
 ensure that your data is well organised, documented and preserved.
@@ -620,18 +623,18 @@ so below we've chosen a few exemplars to look at in detail.
 #### Code Hosting and Continuous Integration/Deployment
 
 The use of services such as GitHub and GitLab have become an indispensable component of
-modern software development. Notably these services provide access to compute resources
+modern software development. Notably, these services provide access to compute resources
 to run Continuous Integration/Deployment (CI/CD) workflows. It's common to run these
-workflows in a "matrix" configuration across variables such as operating system and
-software version which can lead to large parallel computational workloads executing.
+workflows in a "matrix" configuration across variables, such as operating system and
+software version, which can lead to large parallel computational workloads executing.
 
 CI/CD workflows are executed by servers acting as runners. Most services provide hosted
 runners for general use and support self-hosting a runner if you provide your own
 server. The latter case is amenable to the measurement and estimation methods discussed
-above. If using runners hosted by the service however, usually you will have no control
+above. If using runners hosted by the service, however, you usually will have no control
 or visibility over where workflows are executed or the underlying hardware they use.
-Direct measurement of energy usage in this case is not possible and there is
-insufficient information to use approaches like the Green Algorithms Calculator. Instead
+Direct measurement of energy usage in this case is not possible, and there is
+insufficient information to use approaches like the Green Algorithms Calculator. Instead,
 [Eco CI] is a tool that has been developed to estimate the carbon emissions of CI/CD
 workflows. It supports GitHub and GitLab.
 
