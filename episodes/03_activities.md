@@ -112,8 +112,8 @@ emphasises the importance of maximising the lifetime of these devices.
 
 For enterprise servers that have a much greater maximum operational power draw, the
 balance can vary due to a number of factors, not least the carbon intensity of the
-electricity used to power them and their utilisation. As the carbon intensity of
-electricity falls over time however embodied emissions are expected to increasingly
+electricity used to power them and their utilisation. However, as  the carbon intensity
+of electricity falls over time, embodied emissions are expected to increasingly
 dominate.
 
 ::::::::::::::::::::::::::::::::::
@@ -130,7 +130,7 @@ the manufacturer's name.
 
 ::::::::::::::::::::: callout
 
-We'll see some example PCF sheets below. However it's important to note that different
+We'll see some example PCF sheets below. However, it's important to note that different
 manufacturers can use different methodologies and assumptions. This means it is not
 advised to directly compare PCF data between manufacturers.
 
