@@ -87,7 +87,7 @@ CPUs, GPUs and memory will
 draw additional electricity -> cooling systems may have to work harder)
 
 <!-- markdownlint-disable-next-line line-length -->
-![Factors that affect operational emissions](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions'}
+![Factors that affect the operational emissions associated with a device.](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions including age, type, power management settings and peripherals.'}
 
 :::::::::::::::::::::::::: callout
 
@@ -164,7 +164,9 @@ out its embodied carbon emissions.
 #### Operational Emissions
 
 <!-- markdownlint-disable-next-line line-length -->
-![Ways to measure operational carbon emissions](fig/ep3_carbon_estimations.png){alt='Calculating operational emissions'}
+![Ways to measure the operational carbon emissions associated with a device, including direct measurement
+ and estimation methods.](fig/ep3_carbon_estimations.png){alt='Ways to
+calculate carbon emissions.'}
 
 The most direct and accurate option to get the idle energy usage of a consumer device is
 to use a plug in power meter. There are many models, but most will provide both the
@@ -287,7 +289,8 @@ equipment and benefit from economies of scale. They also have additional emissio
 sources beyond the individual servers they house.
 
 <!-- markdownlint-disable-next-line line-length -->
-![Data Centers Carbon Emissions](fig/ep3_datacenter.png){alt='Embdied and operational emissions of data centers'}
+![Data Centers Carbon Emissions Sources](fig/ep3_datacenter.png){alt='Sources of embodied and operational
+carbon emissions for data centers'}
 
 Data centre embodied emissions:
 
