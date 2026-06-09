@@ -6,16 +6,25 @@ exercises: 0 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are the "net zero" goals?
-- What is digital research?
-- Why is minimising "carbon to science" important?
+- What are the net zero goals and why are they important for addressing climate change?
+- How does digital research contribute to greenhouse gas emissions, and what is the
+  scale of this contribution?
+- What is mindful computing and how can it be applied to reduce carbon emissions in
+  research?
+- Why is it important for researchers to consider the environmental impact of their
+  digital activities?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the big picture for reducing carbon emissions
-- Explain how that applies to digital research
+- Explain the context of net zero goals and the distinction between carbon neutral and
+  net zero.
+- Identify the main contributors to carbon emissions in digital research infrastructure.
+- Describe the concept of mindful computing and its relevance to sustainable research
+  practices.
+- Justify why researchers have a responsibility to minimize carbon emissions from their
+  digital activities.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

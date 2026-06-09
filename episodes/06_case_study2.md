@@ -6,20 +6,26 @@ exercises: 4
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How does the increasing use of LLMs affect carbon footprint and energy efficiency?
-- What strategies can minimise the carbon footprint of research data storage?
-- How does relying on old hardware prevent a modern research lab from being energy efficient?
+- What are the main carbon emission sources for a researcher conducting computational
+  data analysis?
+- How do data storage choices impact long-term carbon emissions in research projects?
+- What are the trade-offs between using different LLM models for generating research
+  code?
+- How can hybrid storage strategies reduce carbon emissions while maintaining data
+  accessibility?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Introduce a representative case study relating to carbon emissions in typical computational
-lab workflows
-- Identify tools and resources to help estimate emissions associated with daily
- computational research tasks
-- Quantify carbon emissions associated with using LLMs to generate Python scripts
-- Quantify carbon emissions associated with storing research data
+- Estimate carbon emissions from data storage, LLM usage, and computational processing
+  using appropriate methodologies.
+- Compare the carbon footprint of different storage technologies and LLM models across
+  project timescales.
+- Evaluate the relative contribution of different activities to total research emissions
+  and identify priorities for intervention.
+- Design an improved workflow incorporating cold storage strategies and appropriate LLM
+  selection to achieve significant emission reductions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

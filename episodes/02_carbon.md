@@ -6,21 +6,23 @@ exercises: 10 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What is energy?
-- What is power?
-- How power and energy relate to carbon emissions?
-- What other sources of carbon involve digital research?
-- How do we calculate carbon emissions?
+- What is the difference between energy and power, and how are they measured?
+- How does carbon intensity of electricity vary throughout the day and year, and what
+  causes this variation?
+- What is the difference between embodied carbon and operational carbon emissions?
+- How does the Greenhouse Gas (GHG) Protocol categorize different types of emissions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain what energy and power are
-- Explain how energy is produced
-- Explain what low-carbon energy sources are and how they operate
-- Explain what embodied carbon is
-- Use the greenhouse gas (GHG) protocol to estimate carbon emissions
+- Calculate energy consumption and power usage using appropriate units.
+- Explain how the energy mix affects grid carbon intensity and why renewable sources are
+  prioritized when available.
+- Distinguish between embodied and operational carbon emissions, and classify emissions
+  using the GHG Protocol’s three scopes.
+- Apply the concept of demand shifting to reduce carbon emissions by timing
+  computational work during low carbon intensity periods.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

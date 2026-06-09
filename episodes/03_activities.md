@@ -6,17 +6,27 @@ exercises: 20 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What digital research activities can have sustainability issues?
-- How do different types of data storage (local vs cloud) contribute to carbon emissions?
-- What factors influence the energy and power consumption of digital research workflows?
+- What are the main sources of carbon emissions from computers, storage devices, and
+  data centres?
+- How do embodied and operational emissions compare for different types of hardware and
+  storage technologies?
+- What factors influence whether data centre computing is more or less carbon intensive
+  than local computing?
+- How can research data management practices and computational services contribute to
+  carbon emissions?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Identify which aspects of a research workflow are most carbon‑intensive and why.
-- Explain how different storage technologies (SSD, HDD, LTO tape) differ in embodied and
- operational carbon emissions.
+- Analyze the trade-offs between embodied and operational emissions for different
+  computing and storage technologies.
+- Calculate carbon emissions from personal devices and research workflows using
+  appropriate tools.
+- Evaluate the carbon efficiency of different research infrastructure choices, including
+  local versus cloud computing and various storage strategies.
+- Identify strategies to reduce emissions from research activities, including code
+  optimization, data management plans, and carbon-aware computing.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -344,6 +354,15 @@ suggest that medium-size data centres consume more than 1 million litres of wate
 day, while for large data centres, this number jumps to about 23 million litres per day,
 equivalent to the daily usage of about 50,000 households in the US.
 
+While not as commonly available as the Power Usage Effectiveness (PUE), some data
+centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
+per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
+most common values are around 1.9 l/kWh.
+
+::::::::::::::::::::::::::::::: callout
+
+### Use of water in data centres
+
 Except in cooler locations where natural or air-only cooling ("free cooling") can be
 enough to extract all the heat generated during computation from the data centres, in
 most cases, some level of water-based cooling is required. There are two broad methods
@@ -357,10 +376,7 @@ contact with the processing unit. [Direct-to-chip liquid cooling and immersive l
 are two server liquid cooling technologies that dissipate heat while significantly
 reducing water consumption, but at a much higher cost and technical complexity.
 
-While not as commonly available as the Power Usage Effectiveness (PUE), some data
-centres provide a [Water Usage Effectiveness (WUE)] that measures how much water is used
-per kWh of energy used. The ideal cases is 0 l/kWh, where no water at all is used, but
-most common values are around 1.9 l/kWh.
+:::::::::::::::::::::::::::::::::::::::
 
 [Recent studies]: https://www.eesi.org/articles/view/data-centers-and-water-consumption
 [Direct-to-chip liquid cooling and immersive liquid cooling]: https://www.datacenterdynamics.com/en/analysis/an-introduction-to-liquid-cooling-in-the-data-center/
@@ -500,7 +516,14 @@ The primary infrastructure required to carry out these activities is access to
 computation. This can be provided by a laptop, desktop or a server hosted in a data
 centre.
 
-Factors to consider:
+::::::::::::::::::::::::::: challenge
+
+## Miniming emissions from computation
+
+What are relevant considerations that can help to minimise the emissions associated with
+computational workloads?
+
+::::::::::::::::::::::: solution
 
 - **Embodied and operational emissions** are both key contributors. Optimally, a given
   amount of compute should be provided by the minimum associated embodied emissions.
@@ -527,6 +550,10 @@ Factors to consider:
   workload intensity responsive to carbon intensity forecasts to minimise operational
   emissions.
 
+::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::
+
 ### Research Data Management
 
 #### Storing Data
@@ -537,7 +564,14 @@ storage has a number of advantages, including greater control over data, predict
 access speeds, and the ability to power equipment down when not in use. Typically
 research organisations will provide dedicated storage services for research data.
 
-Factors to consider (to be expanded):
+::::::::::::::::::::::::::: challenge
+
+### Miniming emissions from data storage
+
+What are relevant considerations that can help to minimise the emissions associated with
+data storage?
+
+::::::::::::::::::::::: solution
 
 - Delete unused or redundant data and avoid unnecessary replication.
 - Keep frequently accessed data on faster storage (SSDs) and move "cold"
@@ -547,15 +581,19 @@ Factors to consider (to be expanded):
 - Consider cleaning and preprocessing data locally before storing.
 - Choose storage options designed for infrequent access when appropriate.
 
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::: callout
 
 #### Data Management Plans
 
 The best time to think about how to manage you data is before you collect or generate
-it. This is the purpose of a Data Management Plan (DMP), a document that describes how you
-will handle your data during and after a research project. DMPs are often required by
-funding agencies and research institutions, but they are also a good practice to ensure
-that your data is well organised, documented and preserved.
+it. This is the purpose of a Data Management Plan (DMP), a document that describes how
+you will handle your data during and after a research project. DMPs are often required
+by funding agencies and research institutions, but they are also a good practice to
+ensure that your data is well organised, documented and preserved.
 
 In addition to being a good scientific practice, DMPs can also help you to reduce
 the carbon footprint of your data. Tracking and monitoring your data in this manner
