@@ -39,58 +39,65 @@ performs must be carefully planned in advance, as mistakes are costly.
 His primary responsibilities are:
 
 - The deployment of cutting edge deep learning models
-- The curation and storing of large datasets
 - Periodic maintenance of models to add features and prevent model drift
+- The curation and storing of large datasets
 
-To do his work, Miguel also purchases and maintains top-of-the-line GPU and fileservers,
-whilst safely disposing retired equipment. The largest jobs are offloaded to a dedicated
-cloud GPU cluster, and datasets are periodically backed up in the cloud.
+To do his work, Miguel often trains and fine-tunes models on his local GPU-equipped
+workstation when the job is small enough, and offloads larger jobs to dedicated cloud
+GPU compute providers.
 
 Miguel is tasked with deploying a new model to the cloud, based on the architecture of
-an existing model he deployed last year. The existing model performs simple detection of
-cats in images, but the new model must produce bounding boxes.
+an existing model he deployed last year. The existing model was trained with vast
+quantities of real animal images, and is already quite competent at feline-based image
+processing. It performed simple detection of cats in images, but the new model must
+produce bounding boxes.
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Identify Scope 2 Emissions
-
-What Scope 2 emissions under the GHG protocol can you identity from Miguel's work?
-
-:::::::::::::::::::::::: solution
-
-- Training a model on the local workstations
-- Training and deploying a model to the cloud
-- Running local dataset backup servers
-- Dataset cloud backups
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Identify Scope 3 Emissions
-
-What Scope 3 emissions under the GHG protocol can you identity from Miguel's work?
-
-:::::::::::::::::::::::: solution
-
-- Updating GPUs and fileserver hardware
-- Disposal of retired hardware
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+He realises that his workstation's GPU will not have enough memory to train the model
+with a reasonable batch size in its current form, so he will aim to offload the training
+job to a cloud GPU compute provider. Development and fine-tuning will still be possible
+using a very small batch size.
 
 ## Collecting Information
 
-Miguel finds that the previous model was highly trained with vast quantities of real
-animal images, and is already quite competent at feline-based image processing. It may
-not be necessary to train the model from scratch if transfer learning can be utilised.
-He takes a look at the model's architecture, and notes that it is very large for its
-stated purpose, with many channels per convolutional layer, and very wide fully
-connected layers in the head. He realises that his workstation's GPUs will not have
-enough memory to train the model efficiently in its current form.
+::::::::::::::::::::::::::::::::::::: challenge
+
+### How can Miguel determine the carbon footprint of this job?
+
+- What are the main sources of carbon emissions that Miguel can find estimates for?
+- What methods can be uses to estimate these emissions?
+- Where can Miguel find the data required for the estimations?
+
+::::::::::::::::::::::::::::::: solution
+
+1. **Local development**: The power usage of his personal workstation can be measured
+   locally with hardware and software monitoring tools.
+1. **Cloud deployment**: Many providers offer energy usage reporting infrastructure for
+   live jobs, and local data may also be extrapolated. Data from training the previous
+   (similar) model may also be used as surrogate data for the new model. Various power
+   benchmarks also exist for representative models and systems.
+
+::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: spoiler
+
+## Miguel Collects Information
+
+### Local Development
+
+Whilst his personal workstation's GPU is far from cutting-edge, it is by no means
+obsolete.
+
+TODO: try a small run
+
+### Cloud Deployment
+
+TODO: extrapolate small run, and select provider using MLPerf Power
+
+:::::::::::::::::::::::::::::::::::::::
+
+## Collecting Information (OLD)
 
 For rough comparison, he approximates the environmental impact of retraining the model
 based on the impact of training the original model. He remembers that the previous job
@@ -105,18 +112,12 @@ Using the [Green Algorithms Calculator](https://calculator.green-algorithms.org/
 estimates that $30.57$ kWh of energy was required to train the model, with a carbon
 footprint of $7.06$ kgCO2e.
 
-Miguel's first option is familiar to him: offload the work to a cloud GPU compute
-provider. In his searches, he is able to find the hardware configuration for several
+In his searches, he is able to find the hardware configuration for several
 candidates by looking in documentation and datasheets. He consults the
 [MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) datasets of
 whole-system inference power usage, and finds the energy efficiency for representaive ML
 models $Samples/Joule = (Samples/second)/Watts$ for some of the candidate datacentres,
 helping him to choose a favourite.
-
-Alongside this, he considers a second option: whilst his personal workstation's GPU is
-far from cutting-edge, it is by no means obsolete. He knows from experience that newer
-does not automatically mean greener, and keeps this in mind during pre-job analysis,
-looking for opportunities to make the model lean enough to run on his GPU.
 
 ## Analysis
 
@@ -170,11 +171,13 @@ speed on similar hardware. Plugging the new runtime estimate of 10 hours into th
 estimated energy usage is $4.25$ kWh, with a carbon footprint of $0.98$ kgCO2e from
 these changes alone.
 
-Revisiting the earlier issue of model size, Miguel wonders if the model can be pruned
-to enable training on his workstation, instead of relying on the cloud provider. Noting
-again that the model is very large for its stated purpose, Miguel adds L1 (Lasso)
-regularisation to reduce redundant activation, allowing many (now-unused) activation
-units to be removed from the model entirely, resulting in a $20\%$ memory saving.
+Miguel takes another look at the model's architecture, and notes that it is very large
+for its stated purpose, with many channels per convolutional layer, and very wide fully
+connected layers in the head. He Miguel wonders if the model can be pruned to enable
+training on his workstation, instead of relying on the cloud provider. Noting again that
+the model is very large for its stated purpose, Miguel adds L1 (Lasso) regularisation to
+reduce redundant activation, allowing many (now-unused) activation units to be removed
+from the model entirely, resulting in a $20\%$ memory saving.
 
 With the model now small enough to run efficiently on his workstation, Miguel runs
 a short test-run to check that all is well before the main training run. He notes that
