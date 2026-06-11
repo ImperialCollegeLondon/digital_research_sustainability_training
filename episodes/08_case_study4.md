@@ -71,10 +71,10 @@ using a very small batch size.
 
 1. **Local development**: The power usage of his personal workstation can be measured
    locally with hardware and software monitoring tools.
-1. **Cloud deployment**: Many providers offer energy usage reporting infrastructure for
-   live jobs, and local data may also be extrapolated. Data from training the previous
-   (similar) model may also be used as surrogate data for the new model. Various power
-   benchmarks also exist for representative models and systems.
+1. **Cloud deployment**: Data from training the previous (similar) model may be used as
+   surrogate data for the new model. Some cloud providers offer power reporting for live
+   jobs, and local data may also be extrapolated. Various power benchmarks exist for
+   various representative models and datacentre hardware.
 
 ::::::::::::::::::::::::::::::::::::::::
 
@@ -89,11 +89,19 @@ using a very small batch size.
 Whilst his personal workstation's GPU is far from cutting-edge, it is by no means
 obsolete.
 
-TODO: try a small run
+TODO: monitoring hardware
+
+TODO: monitoring software
+
+TODO: extrapolate small run
 
 ### Cloud Deployment
 
-TODO: extrapolate small run, and select provider using MLPerf Power
+TODO: data from previous model
+
+TODO: job energy reporting from providers
+
+TODO: select provider using MLPerf Power
 
 :::::::::::::::::::::::::::::::::::::::
 
