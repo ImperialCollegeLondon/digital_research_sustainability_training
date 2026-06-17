@@ -27,7 +27,7 @@ exercises: 10 # exercise time in minutes
 
 ## Scenario
 
-Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an
+![Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an
 applied computational neuroscience department, whose applications make heavy use of
 heterogeneous compute hardware such as GPUs and neuromorphic processors. While the use
 of this hardware is crucial for demanding [single instruction multiple data (SIMD)](
@@ -35,6 +35,9 @@ https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) tasks, he is mi
 that his domain of work is often disproportionately carbon-intensive. The sheer size of
 the models, and the vast amounts of data used to train them, mean that any procedure he
 performs must be carefully planned in advance, as mistakes are costly.
+](fig/case_study4_banner.jpg){alt="A large banner with multiple components showing
+Miguel working on his research with pictoral representations of a machine learning model
+identifying images of cats."}
 
 His primary responsibilities are:
 
