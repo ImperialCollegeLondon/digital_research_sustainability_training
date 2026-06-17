@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">50%</div>
+    <div class="progress-bar incubator" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">45%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -350,7 +350,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Study 1 - Research Software Engineer</h1>
-        <p>Last updated on 2026-05-14 |
+        <p>Last updated on 2026-06-17 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/05_case_study1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -416,20 +416,40 @@ these emissions.</p>
 of the code base versus its usage. She should look at how to estimate
 these then focus her emission reduction measures appropriately.</p>
 </section><section><h2 class="section-heading" id="collecting-information">Collecting Information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
-<hr class="half-width"><div id="what-data-does-celia-need-to-understand-the-emissions-associated-with-her-software" class="callout challenge">
+<hr class="half-width"><div id="data-exploration-20-minutes" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="what-data-does-celia-need-to-understand-the-emissions-associated-with-her-software" class="callout-inner">
-<h3 class="callout-title">What data does Celia need to understand the
-emissions associated with her software?</h3>
+<div id="data-exploration-20-minutes" class="callout-inner">
+<h3 class="callout-title">Data exploration (20 minutes)</h3>
 <div class="callout-content">
-<ul><li>What are the key aspects of her work that Celia could estimate
-emissions for?</li>
-<li>What methodologies could Celia use to estimate her emissions?</li>
-<li>What additional data would she need to collect in each case?</li>
+<p>Celia decides to learn more about each of the emission sources, she
+inspects the following areas of her work:</p>
+<ol style="list-style-type: decimal"><li>Development of the software package</li>
+<li>Use of GitHub Actions for continuous integration and testing</li>
+<li>Use of LLMs (online)</li>
+<li>Execution of the software by end users.</li>
+</ol><p>For each of these areas, how could Celia estimate or measure the
+associated emissions? What data would she need to collect in each
+case?</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<ul><li>Remember to consider both the embodied and operational components of
+the emissions.</li>
+<li>Depending on the information she is able to collect some
+methodologies may be impractical.</li>
+<li>Consider how carbon intensity values should be used.</li>
 </ul></div>
+</div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -439,104 +459,179 @@ emissions for?</li>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>
-<strong>Use of laptop for development</strong>: Embodied emissions
-of the laptop should be readily findable in a PCF sheet. As her laptop
-underpins all of her work however it wouldn’t be appropriate to ascribe
-the full embodied emissions to her package. She could ascribe a
-proportion of the embodied emissions to development of the package.
-Regarding the operational emissions she could attempt direct measurement
-of her laptop with a power meter but given the proportionally low
-operational emissions of consumer electronic devices a rough calculation
-using the Green Algorithms Calculator would likely be sufficient.</li>
-<li>
-<strong>Use of LLMs</strong>: Tracking which model she uses, and how
-many queries she sends and the approximate size of the replies for use
-with the Hugging Face Ecologits calculator.</li>
-<li>
-<strong>Execution of the package</strong>: Celia’s software is used
-by many different users on a variety of systems. It’s unlikely to be
-practical to get direct energy measurements in this case. More
-practically she could make use of the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
-Calculator</a>. She should try and get as much detail as possible from
-users about how much they use the software and with what hardware. She’s
-unlikely to be able to get information from all users but if she can get
-a representative sample then she could extrapolate to get a rough
-estimate. Estimating the embodied emissions for all of the machines the
-code is running on would be a potentially large job so she might want to
-put that out of scope.</li>
-<li>
-<strong>Use of GitHub actions</strong>: Information about how often
-her workflows run and how long they take to execute. She could also
-consider adding ECO CI to get emissions estimates created for her.</li>
-</ol></div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Celia Collects Information </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
-<div class="accordion-body">
 <div class="section level3">
 <h3 id="software-development">Software Development<a class="anchor" aria-label="anchor" href="#software-development"></a></h3>
-<p>Celia decides to learn more about each of the emission sources,
-starting with inspecting the hardware she uses for package development.
-She primarily works on her laptop, on an average, using it for 20 hours
-per week for the software development intermixed with other tasks. She
-observes that the development process is not particularly
-computationally intensive as she mostly works with an Integrated
-Development Environment and runs the test suite occasionally. Her laptop
-is an HP EliteBook 840 G9.</p>
-</div>
+<ul><li>Celia should consider all of the hardware that she uses to develop
+her software.</li>
+<li>For the embodied emissions she should consider the source the device
+(was it newly purchased, refurbished, inherited from another group
+member?), its age, and try to get information from the manufacturer’s
+Product Carbon Footprint (PCF) datasheet.</li>
+<li>For the operational emissions, if using local hardware, Celia could
+use a power meter to measure the power used during development. Given
+the general skew towards embodied emissions in consumer devices though
+its less important to be precise with this value. Bearing this in mind
+she could use a simpler method to estimate such as the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a>, or taking a proportion of embodied emissions. In any
+case it would be useful to track how much time she spends doing
+development and the amount of computational work involved. She can use
+the measured or estimated power usage with a local carbon intensity
+value to get emissions.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="github-actions">GitHub Actions<a class="anchor" aria-label="anchor" href="#github-actions"></a></h3>
-<p>To ensure that her software package follows best practices, she has
-been using GitHub Actions for continuous integration and testing.
-Workflows run on any push to a branch, when a pull request is opened and
-when a release is created. Looking over the last week, all of her
-workflows together have a runtime of around 2940 seconds. She adds <a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO CI</a> to her
-workflow and runs notes its output over a few trial runs. The average of
-her trial runs is around 1 gCO₂e for a workflow that runs for 500
-seconds. This includes the operational and embedded estimates.</p>
-</div>
+<ul><li>Celia should check where her workflows are running. If using
+self-hosted runners it may be possible to get information about the
+hardware and utilisation. More likely however in the case of GitHub
+hosted runners it will be difficult or impossible find to such
+information.</li>
+<li>One data point that is easy to collect is the total runtime of her
+workflows over a given period. Using assumptions about hardware and
+utilisation she could use this with the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a> but these values would be very approximate and would not
+account for embodied emissions.</li>
+<li>
+<a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO CI</a> is
+a specialist tool that could be added to her workflows to get better
+estimates with less work!</li>
+</ul></div>
 <div class="section level3">
 <h3 id="llm-use">LLM Use<a class="anchor" aria-label="anchor" href="#llm-use"></a></h3>
-<p>For creating inline documentation for her code, Celia has been using
-AI coding agents. While she is not using them frequently, she notices
-that on an average, she writes approximately 20 prompts to the agents
-every week. She takes note of the agent she uses, GPT-5 mini, and that
-it typically provides short responses.</p>
-</div>
+<ul><li>The simplest method would be to use the <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Hugging
+Face Ecologits calculator</a>. The key information to track here is
+which models are used and ideally the number of tokens generated during
+use. In practice, getting token counts is not straightforward so
+tracking the number of queries and the length of the responses would be
+sufficient.</li>
+<li>One alternative might be to make some assumptions about the amount
+of compute required per response and the hardware used and plugging this
+into the <a href="https://calculator.green-algorithms.org/" class="external-link">Green
+Algorithms Calculator</a>.</li>
+<li>Another alternative might be to run a local LLM and measure the
+power usage but this would be a lot of work and of dubious
+accuracy.</li>
+<li>Note that none of the above methods account for training emissions.
+In practice there is poor data available for this and it’s not clear
+what proportion of the training emissions it would make sense to
+associate with Celia’s usage.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="software-usage">Software Usage<a class="anchor" aria-label="anchor" href="#software-usage"></a></h3>
-<p>Finally, Celia reaches out to her research group members who are
-users of her package. They are able to provide her with the full
-specification of the machine they are using - an <a href="https://www.hp.com/gb-en/shop/product.aspx?id=8T229EA&amp;opt=ABU&amp;sel=DTP" class="external-link">HP
-Z2 Tower G1i Workstation</a>. They run the package for around 18 hours a
-week using all 20 cores.</p>
-<p>From individuals she’s in contact with, conversations she’s had at
-conferences, mentions in academic papers and a workshop she ran
-recently, Celia estimates that her code has around 30 regular users
-outside of her own research group.</p>
-</div>
+<ul><li>In order to make comparable estimates for both her local and the
+remote groups’ usage Celia should try and use a consistent methodology
+for both.</li>
+<li>She could measure the energy usage (using a power meter or <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a>) from some
+local runs and use this as a basis for estimating remote runs (assuming
+they’re running on similar hardware).</li>
+<li>Alternatively, as she is likely to be making a lot of assumptions
+anyway she could use the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a> to get ballpark estimates for local and remote usage. She
+will have to consider carefully what carbon intensity value(s) to use,
+assuming an average may make the most sense.</li>
+<li>In either case she should collect as much information as possible
+about the hardware being used for both local and remote usage as well as
+information about how often the software is run and for how long. It
+should be relatively easy to get this information for local usage and
+she may be able to get information from some remote users.</li>
+<li>Similarly, for embedded emissions she could assume the local
+hardware to be representative of the remote usage or use some generic
+average values. Practically, as the software may be used on a variety of
+hardware, she could also treat embodied emissions as out of scope.</li>
+</ul></div>
 </div>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
-<hr class="half-width"><div id="estimating-emissions" class="callout challenge">
+<hr class="half-width"><div id="estimating-emissions-20-minutes" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="estimating-emissions" class="callout-inner">
-<h3 class="callout-title">Estimating emissions</h3>
+<div id="estimating-emissions-20-minutes" class="callout-inner">
+<h3 class="callout-title">Estimating emissions (20 minutes)</h3>
 <div class="callout-content">
-<p>With the information provided in the previous section what estimates
-can you create for Celia’s emissions from different activities?</p>
+<p>Initially Celia decides to use some simple estimation methodologies
+with some readily available data. Using the information and methodolgies
+provided below produce an estimate for the carbon emissons for each of
+Celia’s activities.</p>
+<div class="section level3">
+<h3 id="software-development-1">Software Development<a class="anchor" aria-label="anchor" href="#software-development-1"></a></h3>
+<ul><li>Celia exclusively uses a laptop for development - an HP EliteBook
+840 G9 - that was newly purchased for the project. She estimates that
+she uses it for around 20 hours per week for software development
+intermixed with other tasks.</li>
+<li>The development process is <strong>not particularly computationally
+intensive</strong> as she mostly works with an Integrated Development
+Environment and runs the test suite occasionally.</li>
+</ul><p><strong>Use the PCF sheet for the laptop and the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a> to estimate the emissions associated with software
+development. You will have to make some assumptions and decide how to
+deal with the mixed use of the laptop.</strong></p>
+</div>
+<div class="section level3">
+<h3 id="use-of-github-actions">Use of GitHub Actions<a class="anchor" aria-label="anchor" href="#use-of-github-actions"></a></h3>
+<ul><li>Celia’s workflows run on any push to a branch, when a pull request
+is opened and when a release is created.</li>
+<li>The workflows run on GitHub hosted runners.</li>
+<li>Looking over the last week, all of her workflows together have a
+runtime of around 2940 seconds.</li>
+<li>She adds <a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO
+CI</a> to her workflow and notes that the estimate for a workflow that
+runs for 500 seconds is around 1 gCO₂e (including both operational and
+embedded emissions).</li>
+</ul><p><strong>Use the <a href="https://www.green-coding.io/products/eco-ci/" class="external-link">ECO CI</a> value to
+estimate emissions for all of Celia’s workflows.</strong></p>
+</div>
+<div class="section level3">
+<h3 id="use-of-llms">Use of LLMs<a class="anchor" aria-label="anchor" href="#use-of-llms"></a></h3>
+<ul><li>Celia uses GPT-5 mini for creating inline documentation for her
+code.</li>
+<li>On an average, she writes approximately 20 prompts to the agents
+every week.</li>
+<li>This particular agent typically provides short responses.</li>
+</ul><p><strong>Use the <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">Hugging
+Face Ecologits Calculator</a> to estimate emissions for her LLM
+queries.</strong></p>
+</div>
+<div class="section level3">
+<h3 id="use-of-the-software-package">Use of the Software Package<a class="anchor" aria-label="anchor" href="#use-of-the-software-package"></a></h3>
+<ul><li>Members of Celia’s research group are users of her package. They are
+able to provide her with the full specification of the machine they are
+using - an [HP Z2 Tower G1i Workstation]. They run the package for
+around 18 hours a week using all the 20 cores.</li>
+<li>From individuals she’s in contact with, conversations she’s had at
+conferences, mentions in academic papers and a workshop she ran
+recently, Celia estimates that her code has around 30 regular users
+outside of her own research group.</li>
+<li>For the other users of her package, it is difficult to get detailed
+information on their level of usage or hardware.</li>
+</ul><p><strong>Using the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a> estimate the emissions from execution of the software
+package.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
+</button>
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div class="accordion-body">
+<ul><li>You will have to make some assumptions in order to make some
+calculations.</li>
+<li>When calculating the contribution from embodied emissions of the
+laptop how can you account for the mixed use of the device?</li>
+<li>If the CPU model is not available in the Green Algorithms Calculator
+then you can choose “I can’t find my CPU” and provide the requested
+hardware specifications.</li>
+<li>What assumptions could you make to estimate emissions from users of
+the package outside Celia’s research group?</li>
+<li>To allow comparison, aim for emissions estimates over a consistent
+time period for each category.</li>
+</ul></div>
 </div>
 </div>
 </div>
@@ -547,40 +642,48 @@ can you create for Celia’s emissions from different activities?</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>
-<strong>Software Development</strong>: From the model of her laptop
-she is able to find the PCF datasheet from the manufacturer - <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">HP
-EliteBook 840 G9 PCF Sheet</a>. This gives a total of 176 kgCO₂e.
+<p>Celia’s estimates for the emissions from different activities are as
+follows:</p>
+<div class="section level3">
+<h3 id="hardware-emissions">Hardware emissions<a class="anchor" aria-label="anchor" href="#hardware-emissions"></a></h3>
+<ul><li>The <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c09266068" class="external-link">PCF
+datasheet for the HP EliteBook 840 G9</a> gives a total of 176 kgCO₂e.
 Assuming a 5 year lifespan of the laptop and a total weekly usage of 40
 hours she calculates the weekly proportion of embodied emissions to be
-338 gCO₂e. She uses the Green Algorithms Calculator to estimate the
-operational emissions. The Green Algorithms calculator doesn’t have data
-for her exact CPU model so she looks up the Thermal Design Power of the
-processor and provides it. To get the CPU utilisation she decides to err
-on the side of caution and assume her development activities use a full
-CPU core for the full 20 hours she spends developing. This provides an
-estimate of 58 gCO₂e per week.</li>
-<li>
-<strong>Software Usage</strong>: Celia has enough details to
-estimate her groups activities using the Green Algorithms calculator.
-Doing for this the known runtime and hardware of her research group this
-provides an estimate of 569.61 gCO₂e per week. To estimate the impact of
-other users of her software she could consider using number as a
-reference although it might make for a pretty rough estimate. This would
-give an estimate of around 17 kgCO₂e per week of operational emissions.
-Celia decides to leave out the embodied component of the analysis as she
-doesn’t know enough about what hardware is being used to run her
+338 gCO₂e.</li>
+<li>The Green Algorithms calculator doesn’t have data for her exact CPU
+model so she looks up the Thermal Design Power of the processor and
+provides it. To get the CPU utilisation she decides to err on the side
+of caution and assume her development activities use a full CPU core for
+the full 20 hours she spends developing. This provides an estimate of 58
+gCO₂e of operational emissions per week.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="emissions-from-github-actions">Emissions from GitHub Actions<a class="anchor" aria-label="anchor" href="#emissions-from-github-actions"></a></h3>
+<ul><li>Given she has an estimate for a workflow of 500 seconds she chooses
+to simply scale this up to the full runtime of 1640 seconds. This gives
+an estimate of around 6 gCO₂e per week.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="emissions-from-llm-usage">Emissions from LLM usage<a class="anchor" aria-label="anchor" href="#emissions-from-llm-usage"></a></h3>
+<ul><li>Using the Hugging Face EcoLogits calculator Celia estimates the
+emissions from her weekly LLMs usage to be around 1 gCO₂e.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="emissions-from-the-users-of-the-software-package">Emissions from the users of the software package<a class="anchor" aria-label="anchor" href="#emissions-from-the-users-of-the-software-package"></a></h3>
+<ul><li>Celia has enough details to estimate her groups activities using the
+Green Algorithms calculator. Doing this for the known runtime and
+hardware of her research group this provides an estimate of 569.61 gCO₂e
+per week.</li>
+<li>To estimate the impact of other users of her software she could
+consider using this number as a reference although it might make for a
+pretty rough estimate. This would give an estimate of around 17 kgCO₂e
+per week of operational emissions.</li>
+<li>Celia decides to leave out the embodied component of the analysis as
+she doesn’t know enough about what hardware is being used to run her
 code.</li>
-<li>
-<strong>GitHub Actions</strong>: Given she has an estimate for a
-workflow of 500 seconds she chooses to simply scale this up to the full
-runtime of 1640 seconds. This gives an estimate of around 6 gCO₂e per
-week.</li>
-<li>
-<strong>LLM use</strong>: Using the <a href="https://huggingface.co/spaces/genai-impact/ecologits-calculator" class="external-link">HuggingFace
-EcoLogits calculator</a> Celia estimates her weekly usage at around 1
-gCO₂e.</li>
-</ol></div>
+</ul></div>
+</div>
 </div>
 </div>
 </div>
@@ -590,106 +693,76 @@ associated with usage of her package are the most significant. She also
 anticipates these growing over time given the growing popularity of her
 package. The emissions from GitHub actions and LLM usage are
 negligible.</p>
-<div id="measures-to-reduce-emissions" class="callout challenge">
+<div id="measures-to-reduce-emissions-20-minutes" class="callout discussion">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="measures-to-reduce-emissions" class="callout-inner">
-<h3 class="callout-title">Measures to reduce emissions</h3>
+<span class="callout-header">Discussion</span>
+<div id="measures-to-reduce-emissions-20-minutes" class="callout-inner">
+<h3 class="callout-title">Measures to reduce emissions (20 minutes)</h3>
 <div class="callout-content">
-<p>What measures can Celia take to reduce the emissions from the usage
-of her software?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
-<div class="accordion-body">
-<p>To reduce the emissions associated with the development and usage of
-her software package, Celia can take the following measures:</p>
-<ul><li>She could consider <a href="https://step-up.ac.uk/blog/2026-03-31-profile-optimise-py/" class="external-link">profiling
-and optimising</a> her code base.</li>
-<li>Making note the repetitive questions her package users might have
-and creating a detailed user guide that includes instructions on how to
-make the most efficient use of her package.</li>
-</ul><p>There are many steps Celia could take to reduce emissions. Keep a
-record of the ideas you’ve had and compare them with those in the next
-section.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Celia Takes Action </h3>
-</button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
-<div class="accordion-body">
 <p>Celia identifies several ways she can improve the emissions
-associated with usage of her code base.</p>
+associated with usage of her code base as mentioned below. In your
+groups discuss any other measures you think could be implemented and
+what impact they might have. What steps could Celia take to get better
+data to refine the emissions estimates she’s made so far?</p>
 <div class="section level3">
 <h3 id="code-optimisation">Code Optimisation<a class="anchor" aria-label="anchor" href="#code-optimisation"></a></h3>
-<p>Celia uses a profiler with her code to identify areas where the code
-could be optimised. She identifies the areas of the code where the bulk
-of the computation is performed. After some experimentation she finds a
-way to improve use of SIMD in a key calculation. Furthermore, she
-replaces the use of the <code>pandas</code> library with
-<code>polars</code> and reverses the order of a conditional statement
-and a loop deep within the code, so that the former is not checked
-several times unnecessarily. In her tests this gives a 7% performance
-boost to the code.</p>
-<p>Her code also runs in parallel across multiple cores. Her profiling
+<ul><li>Celia <strong>uses a profiler</strong> with her code to identify
+areas where the code could be optimised. She identifies the areas of the
+code where the bulk of the computation is performed. After some
+experimentation she finds a way to improve use of SIMD in a key
+calculation.</li>
+<li>Furthermore, she replaces the use of the <code>pandas</code> library
+with <code>polars</code> and reverses the order of a conditional
+statement and a loop deep within the code, so that the former is not
+checked several times unnecessarily. In her tests this gives a 7%
+performance boost to the code.</li>
+<li>Her code also runs in parallel across multiple cores. Her profiling
 helps her to identify that work is not being evenly distributed between
 cores leaving some cores idle whilst they wait for others to finish. She
 implements a new algorithm to partition work between the cores and with
-an overall 10% improvement in runtimes.</p>
-<p>Combined these steps reduce the computational resource usage of her
-code by 15%.</p>
-</div>
+an overall 10% improvement in runtimes.</li>
+<li>Combined these steps reduce the computational resource usage of her
+code by 17%.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="user-support">User Support<a class="anchor" aria-label="anchor" href="#user-support"></a></h3>
-<p>The users of her package (members of her research group) have been
+<ul><li>The users of her package (members of her research group) have been
 asking her for help with optimising the performance of the code. She
 provides them with some tips on how to optimise the performance of the
-code when they run it on their local machines. Additionally, she creates
-a detailed user guide that includes instructions on how to make the most
-efficient use of her package, including tips on how to optimise the
-performance of the code when running it on different hardware
-configurations.</p>
-<p>Whilst it’s difficult to estimate the overall impact of this work,
+code when they run it on their local machines. Additionally, she
+<strong>creates a detailed user guide</strong> that includes
+instructions on how to make the most efficient use of her package,
+including tips on how to optimise the performance of the code when
+running it on different hardware configurations.</li>
+<li>Whilst it’s difficult to estimate the overall impact of this work,
 with her help the members of her research group that Celia works with
-were able to improve throughput when using her package by 6%.</p>
-</div>
+were able to improve throughput when using her package by 6%.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="reducing-wasted-runs">Reducing Wasted Runs<a class="anchor" aria-label="anchor" href="#reducing-wasted-runs"></a></h3>
-<p>Celia takes a pass at improving the error handling and input
-validation in her code to reduce the likelihood of running into errors
-that lead to repeated runs of the code. She implements a new
+<ul><li>Celia takes a pass at <strong>improving the error handling and input
+validation</strong> in her code to reduce the likelihood of running into
+errors that lead to repeated runs of the code. She implements a new
 configuration validation approach. She ways to catch some failure modes
-early before significant computation has occurred.</p>
-<p>Again it’s difficult to estimate the impact of this work but when
+early before significant computation has occurred.</li>
+<li>Again it’s difficult to estimate the impact of this work but when
 these changes were released Celia is contacted by several users confused
 by the new errors. This suggests the changes are catching at least some
-errors.</p>
-</div>
+errors.</li>
+</ul></div>
 <div class="section level3">
 <h3 id="hardware-usage">Hardware Usage<a class="anchor" aria-label="anchor" href="#hardware-usage"></a></h3>
-<p>She decides to keep using the laptop for as long as its lifespan,
-instead of replacing it too soon.</p>
+<p>She decides to <strong>keep using the laptop for as long as its
+lifespan</strong>, instead of replacing it too soon.</p>
 </div>
 <div class="section level3">
 <h3 id="other">Other<a class="anchor" aria-label="anchor" href="#other"></a></h3>
 <p>Celia also integrates the <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a> as an optional
 dependency in her code base so that it can report the carbon emissions
-when the code is run. This allows her more easily to track the emissions
+when the code is run. This allows her to more easily track the emissions
 associated with the usage of her package.</p>
-</div>
 </div>
 </div>
 </div>
@@ -712,6 +785,12 @@ around 175 kgCO₂e.</p>
 impacts.</li>
 <li>Measuring and estimating carbon emissions from research software
 development is important for identifying areas for improvement.</li>
+<li>GitHub Actions and LLMs should be used judiciously to avoid
+unnecessary emissions.</li>
+<li>Performance profiling can be a useful tool for identifying areas of
+code that could be optimised to reduce emissions.</li>
+<li>Providing good user documentation and support can help users to make
+more efficient use of software, reducing emissions from usage.</li>
 </ul></div>
 </div>
 </div>
@@ -779,8 +858,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/05_case_study1.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/05_case_study1.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-05-14",
-  "datePublished": "2026-06-16"
+  "dateModified": "2026-06-17",
+  "datePublished": "2026-06-17"
 }
 
   </script><script>
