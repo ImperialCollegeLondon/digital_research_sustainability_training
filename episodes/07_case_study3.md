@@ -32,10 +32,12 @@ exercises: 10 # exercise time in minutes
 
 ## Introduction
 
-Hugh is a computational chemist in a research group whose work involves high fidelity
+![Hugh is a computational chemist in a research group whose work involves high fidelity
 simulations of the dynamic behaviour of atomistic systems. His work requires
 computational resources far beyond that of a single machine so he makes use of a number
-of High Performance Computing facilities.
+of High Performance Computing facilities. ](fig/case_study3_banner.jpg){alt="A large
+banner with multiple components showing Hugh working on his research including pictoral
+representations of molecules, data and a map of the UK."}
 
 Hugh is working on several different research questions that requires the use of
 different simulation software. Choice of which software to use is usually driven by
