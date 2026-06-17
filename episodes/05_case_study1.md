@@ -93,8 +93,8 @@ What data would she need to collect in each case?
 
 - Celia should check where her workflows are running. If using self-hosted runners it
   may be possible to get information about the hardware and utilisation. More likely
-  however in the case of GitHub hosted runners it will be difficult or impossible to
-  such information.
+  however in the case of GitHub hosted runners it will be difficult or impossible find
+  to such information.
 - One data point that is easy to collect is the total runtime of her workflows over a
   given period. Using assumptions about hardware and utilisation she could use this with
   the [Green Algorithms Calculator] but these values would be very approximate and would
@@ -104,10 +104,10 @@ What data would she need to collect in each case?
 
 ### LLM Use
 
-- The simplest method would be to [Hugging Face Ecologits calculator]. The key
+- The simplest method would be to use the [Hugging Face Ecologits calculator]. The key
   information to track here is which models are used and ideally the number of tokens
   generated during use. In practice, getting token counts is not straightforward so
-  tracking the number of queries and the length of the responses sufficient.
+  tracking the number of queries and the length of the responses would be sufficient.
 - One alternative might be to make some assumptions about the amount of compute required
   per response and the hardware used and plugging this into the [Green Algorithms
   Calculator].
@@ -122,9 +122,9 @@ What data would she need to collect in each case?
 - In order to make comparable estimates for both her local and the remote groups' usage
   Celia should try and use a consistent methodology for both.
 - She could measure the energy usage (using a power meter or [codecarbon]) from some
-  local runs use this as a basis for estimating remote runs (assuming they're running on
-  similar hardware).
-- Alternatively as she is likely to be making a lot of assumptions anyway she could use
+  local runs and use this as a basis for estimating remote runs (assuming they're
+  running on similar hardware).
+- Alternatively, as she is likely to be making a lot of assumptions anyway she could use
   the [Green Algorithms Calculator] to get ballpark estimates for local and remote
   usage. She will have to consider carefully what carbon intensity value(s) to use,
   assuming an average may make the most sense.
@@ -132,8 +132,8 @@ What data would she need to collect in each case?
   being used for both local and remote usage as well as information about how often the
   software is run and for how long. It should be relatively easy to get this information
   for local usage and she may be able to get information from some remote users.
-- Similarly for embedded emissions she could assume the local hardware to be
-  representative for remote usage or use some generic average values. Practically, as
+- Similarly, for embedded emissions she could assume the local hardware to be
+  representative of the remote usage or use some generic average values. Practically, as
   the software may be used on a variety of hardware, she could also treat embodied
   emissions as out of scope.
 
@@ -152,8 +152,9 @@ What data would she need to collect in each case?
 
 ## Estimating emissions (20 minutes)
 
-Using the information and methodolgies provided below produce an estimate for the carbon
-emissons for each of Celia's activities.
+Initially Celia decides to use some simple estimation methodologies with some readily
+available data. Using the information and methodolgies provided below produce an
+estimate for the carbon emissons for each of Celia's activities.
 
 ### Software Development
 
@@ -172,7 +173,7 @@ and decide how to deal with the mixed use of the laptop.**
 
 - Celia's workflows run on any push to a branch, when a pull request is opened and when
   a release is created.
-- Celia's workflows run on GitHub hosted runners.
+- The workflows run on GitHub hosted runners.
 - Looking over the last week, all of her workflows together have a runtime of around
   2940 seconds.
 - She adds [ECO CI] to her workflow and notes that the estimate for a workflow that runs
@@ -252,7 +253,7 @@ Celia's estimates for the emissions from different activities are as follows:
   provides an estimate of 569.61 gCO₂e per week.
 - To estimate the impact of other users of her software she could consider using this
   number as a reference although it might make for a pretty rough estimate. This would
-  give an estimate of` around 17 kgCO₂e per week of operational emissions.
+  give an estimate of around 17 kgCO₂e per week of operational emissions.
 - Celia decides to leave out the embodied component of the analysis as she doesn't know
   enough about what hardware is being used to run her code.
 
@@ -321,8 +322,8 @@ it too soon.
 ### Other
 
 Celia also integrates the [codecarbon] as an optional dependency in her code base so
-that it can report the carbon emissions when the code is run. This allows her more
-easily to track the emissions associated with the usage of her package.
+that it can report the carbon emissions when the code is run. This allows her to more
+easily track the emissions associated with the usage of her package.
 
 ::::::::::::::::::::::::::::::::::::::
 
