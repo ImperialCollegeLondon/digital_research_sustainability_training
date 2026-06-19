@@ -78,13 +78,12 @@ energy usage first as a proxy for carbon emissions.
 
 The power consumption of digital devices can be split into:
 
-- **idle consumption**: device is powered but not carrying out
-any particular operation
+- **idle consumption**: this accounts for the energy required when the device is powered
+but not carrying out any particular operation.
 
-- **usage-based consumption**: computational load placed is
-increased (components like
-CPUs, GPUs and memory will
-draw additional electricity -> cooling systems may have to work harder)
+- **usage-based consumption**: the energy consumed to perform a specific task. As computational
+workload increases, components like CPUs and GPUs, and memory draw higher levels of power,
+which may require energy systems to work harder to cool the system.
 
 <!-- markdownlint-disable-next-line line-length -->
 ![Factors that affect the operational emissions associated with a device.](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions including age, type, power management settings and peripherals.'}
