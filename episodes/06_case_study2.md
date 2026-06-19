@@ -20,12 +20,11 @@ exercises: 60
 
 - Estimate carbon emissions from data storage, LLM usage, and computational processing
   using appropriate methodologies.
-- Compare the carbon footprint of different storage technologies and LLM models across
-  project timescales.
+- Compare the carbon footprint of different storage technologies and LLM models.
 - Evaluate the relative contribution of different activities to total research emissions
   and identify priorities for intervention.
 - Design and implement emission reduction strategies including different storage
-strategies and appropriate LLM selection
+strategies and appropriate LLM selection.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -35,7 +34,7 @@ strategies and appropriate LLM selection
 data. While she is an expert in molecular biology, her computational and statistics
 background is limited. Due to the type and volume of data generated in the lab, she
 chose to write custom Python scripts to analyse her data. The project Emma is working on
-is scheduled to run for 5 years. ](fig/case_study2_banner.jpg){alt="A large banner
+is scheduled to run for 5 years.](fig/case_study2_banner.jpg){alt="A large banner
 comprising multiple scenes of Emma working in a research lab with pictoral
 representations of data storage formats, DNA and data analysis."}
 
@@ -50,22 +49,22 @@ identify ways to reduce these emissions.
 
 ### Data exploration (20 minutes)
 
-Emmas wants to learn more about each of the emission sources, focusing on
+Emma wants to learn more about each of the emission sources, focusing on
 the following areas of her digital work:
 
 1. Storing large amounts of scientific data
 1. Use of LLMs (online)
-1. Code optimisation
+1. Running data processing and analysis scripts
 
-For each of these areas, how could Celia estimate or measure the associated emissions?
+For each of these areas, how could Emma estimate or measure the associated emissions?
 What data would she need to collect in each case?
 
 :::::::::::::::: hint
 
 - Consider the different types of data storage and which ones are more suitable
-for Emma's data
+for Emma's data.
 - Think about Emma's potential data management plan. What would be a relistic data
-management flow Emma could adopt.
+management flow that Emma could adopt.
 
 :::::::::::::::::::::
 
@@ -76,28 +75,28 @@ management flow Emma could adopt.
 ### Data Storage
 
 - Emma should first review her data management plan. How long is she going to keep
-the data for, how many copies and how much data would she need for active analyses.
-- If Emma has particular storage devices in mind she could look for PCF
+the data for, how many copies and how much data would she need for active analysis.
+- If Emma has particular storage devices in mind, she could look for PCF
 reports to get the embodied emissions and possibly a usage estimate. Such data is
-less readily available for storage devices however. In the absence of PCF data Emma
-could used some of the emissions estimates from sources such as those covered in
+less readily available for storage devices, however. In the absence of PCF data, Emma
+could use some of the emissions estimates from sources such as those covered in
 episode 3. She will need to know the volume of data and the amount of time she'll
 need to store it for.
 
 ### Use of LLMs
 
-- She could track which model she uses, and how many queries she sends and the
+- She could track which model she uses, and how many queries she sends, and the
   approximate size of the replies for use with the Hugging Face Ecologits calculator.
 
-### Data Processing and Analyses
+### Data Processing and analysis
 
 - Looking for a PCF data sheet for her laptop will provide information
 about the embedded emissions. For the operational emissions she could choose between
 direct measurement with a power meter, use of a tool like codecarbon or estimation
-with the Green Algorithms Calculator. In the known context that operational emissions
+with the Green Algorithms Calculator. I**In the known context that operational emissions
 of laptops are low, it's probably easiest to use the lowest effort method of the
-Green Algorithms calculator. She can always follow up with a more accurate method
-later if the initial estimate seems significant. To do this she'll need an estimate
+Green Algorithms calculator**. She can always follow up with a more accurate method
+later, if the initial estimate seems significant. To do this, she'll need an estimate
 of the CPU utilisation of her laptop and its specifications.
 
 ::::::::::::::::::::::::::::::::::::::::
@@ -108,39 +107,23 @@ of the CPU utilisation of her laptop and its specifications.
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Estimating emissions (20 minutes)
+## Estimating Emissions (20 minutes)
 
 Using the information below about Emma's current workflow calculate an estimate
 of the carbon emissions associated with the Emma's digital research activities.
-
-Emma's set up:
-
-- Work laptop: modern and energy efficient laptop
-- Data storage: Her research will generate approx 3.5 Tb of raw data for the duration of
-  the project. There will also be additional processed data products that she will work
-  with regularly.
-
-Emma's current workflow:
-
-- She uses cloud-based LLMs to write her scripts for processing and analysing data.
-  This often requires many queries and iterations.
-- She keeps every version of her raw data on the HDDs, and rarely deletes old files.
-- After pre-processing the raw data, she stores a copy of the processed data on
-  different HDDs.
-- She runs her scripts on her laptop and scripts often take 6h to complete.
 
 ### Data Storage
 
 - Her research will generate approx 3.5 Tb of raw data for the duration of
   the project (5 years), which she will be storing on different HDDs.
-- There will also be additional 400 GB of processed data per year she will work with regularly.
-This adds up to 2 TB over the duration of the project.
+- There will also be additional 400 GB of processed data per year that she will work with
+ regularly. This adds up to 2 TB over the duration of the project.
 - The data must be retained for 10 years after the end of the project, meaning that
 the data must be stored for a total of 15 years.
 - Given that the lifespan of HDDs can reach 10 years in best case scenario, Emma will
 have to replace the HDDs at least once.
 
-**Use this [table](03_activities.md#storage-devices) to estimate the emissions for
+**Use this [table](03_activities.md#measuring-and-estimating-data-storage-emissions) to estimate the emissions for
 storing her data.**
 
 ### Use of LLMs
@@ -163,7 +146,7 @@ estimate the emissions associated with Emma's use of LLMs.**
 - Emma is using her modern laptop and looks up the specifications for her model to get
 more accurate emissions. She finds that her laptop has a Core i5-1145G7 processor, with
 4 CPU cores and 64 GB memory. Her analysis scripts are not parallelised so can only use
-up to 1 core. As she often leaves her scripts running overnight she's not sure exactly
+up to 1 core. As she often leaves her scripts running overnight, she's not sure exactly
 how long they take. For the next run she does she adds a command to record the total
 runtime which is 6 hours.
 
@@ -191,7 +174,7 @@ $$
 
 Storing the 9 TB data on HDDs will have associated carbon emissions
 approximately equal to **1,620 kgCO₂e** in combined embodied and operational emissions,
-based on the average values within the emissions ranges she identified in this [table](03_activities.md#storage-devices).
+based on the average values within the emissions ranges she identified in this [table](03_activities.md#measuring-and-estimating-data-storage-emissions).
 
 ### LLMs usage
 
@@ -217,14 +200,14 @@ course of the project, the total emissions would be **13.78 kgCo2e**.
 ## Taking Action
 
 Based on the calculations above, storing research data and using LLM's are the
-activities with the largest associated carbon emissions. At around 1,700 kgCO2e these
+activities with the largest associated carbon emissions. At around 1,700 kgCO2e, these
 activities account to a quarter of the emissions per-capita in the UK,according to the
 [International Energy
 Association](https://www.iea.org/countries/united-kingdom/emissions). While lower in
 comparison, the emissions linked to using LLMs to help write her code are not
 insignificant and are equivalent to charging a smartphone [nearly 7000
 times](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator#results). With
-this in mind, Emma begins developing an improved research workflow to reduce her digital
+this in mind, Emma wants to develop an improved research workflow to reduce her digital
 carbon footprint.
 
 ::::::::::::::::::::::::::: discussion
@@ -246,10 +229,9 @@ to keep her processed data on HDDs, as she needs easy and fast access for analys
 - Given that magnetic tape has negligible emissions when idle, we can assume that the
 total emissions from storing data on tape come from embodied emissions, estimated at
 ~0.07 kgCO₂e per TB. Keeping the two copies of raw data (7 TB) in the institution’s
-  LTO‑tape storage facilities would therefore generate 7.35 kgCO₂, while keeping the 2
-  GB of processed data on HDDs would generate 360 kgCO₂. Therefore, the total costs
-  associated with storing Emma's research data would be
-**367.35 kgCO₂e**.
+  LTO‑tape storage facilities would therefore generate 7.35 kgCO₂, while keeping the 2 GB
+   of processed data on HDDs would generate 360 kgCO₂. Therefore, the total costs
+  associated with storing Emma's research data would be **367.35 kgCO₂e**.
 
 ### Simpler LLM Model
 
@@ -278,14 +260,14 @@ electricity-related emissions of three average UK households.
 - Storing large amounts of research data can have significant environmental impacts.
 - Having a good data management plan and using appropriate storage medium can reduce
 the carbon emissions associated with storing data.
-- Not all tasks require the most advanced LLM model. Switching from a reasoning LLM model
- to a less powerful model for simple data processing and analyses scripts can also contribute
+- Not all tasks require the most advanced LLM model. Switching from a reasoning model
+ to a less powerful model for simple data processing and analysis scripts can also contribute
  to lowering carbon emission associated with digital research.
 - While Emma's improvements are substantial, they represent only one piece of a larger
 puzzle. For a life scientist, the total work-related emissions typically range from 4 to
 15 tCO2e annually ^2^. These numbers are driven by carbon intensive activities, such as
 international travel, laboratory heating, ventilation and AC systems, and the heavy use
-of chemical reagents and single-use equipment
+of chemical reagents and single-use equipment.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
