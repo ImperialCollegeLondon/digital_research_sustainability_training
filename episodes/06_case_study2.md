@@ -132,10 +132,6 @@ storing her data.**
 attention until now about which model she is using or how much she uses it. Checking
 now, the default model is GPT-5.4. She also keeps track of her usage during a session
 and finds that she sends 30 queries.
-- Emma can't find the estimates for the GPT-5.4 model so she uses the generic GPT-5 model
-estimate. She uses 30 as the number of queries but is not sure of the number of tokens
-that have been returned. She decides to use the largest response size (15000 tokens)
-with the understanding that this is an overestimate.
 
 **Use HuggingFace's [Ecologits
 calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator) tool to
@@ -151,12 +147,19 @@ how long they take. For the next run she does she adds a command to record the t
 runtime which is 6 hours.
 
 **Use the [Green-algorithms calculator](https://calculator.green-algorithms.org/)
-with her CPU model running for 6 hours with 1 core to estimate the emissions emitted by
-Emma's laptop**
+to estimate the emissions emitted by Emma's laptop**
 
 :::::::::::::::: hint
 
-- Hints come here
+- To estimate data storage, assume that the total 2 TB of processed data generated for
+ the whole duration of the project  start from the beginning of the project
+ (not 400 GB during first year, 800 GB during second year, etc.).
+- If estimates for the GPT-5.4 model are not available, you can use the generic GPT-5 model
+estimate. Emma uses 30 as the number of queries but is not sure of the number of tokens
+that have been returned. Use the largest response size (15000 tokens)
+with the understanding that this is an overestimate.
+- Use the [Green-algorithms calculator](https://calculator.green-algorithms.org/)
+with her CPU model running for 6 hours with 1 core.
 
 :::::::::::::::::::::
 
