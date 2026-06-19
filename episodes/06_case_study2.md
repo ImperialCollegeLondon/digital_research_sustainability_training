@@ -47,7 +47,7 @@ identify ways to reduce these emissions.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Data exploration (20 minutes)
+### Data Exploration (20 minutes)
 
 Emma wants to learn more about each of the emission sources, focusing on
 the following areas of her digital work:
@@ -88,7 +88,7 @@ need to store it for.
 - She could track which model she uses, and how many queries she sends, and the
   approximate size of the replies for use with the Hugging Face Ecologits calculator.
 
-### Data Processing and analysis
+### Data Processing and Analysis
 
 - Looking for a PCF data sheet for her laptop will provide information
 about the embedded emissions. For the operational emissions she could choose between
@@ -141,7 +141,7 @@ with the understanding that this is an overestimate.
 calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator) tool to
 estimate the emissions associated with Emma's use of LLMs.**
 
-### Running scripts
+### Running Scripts
 
 - Emma is using her modern laptop and looks up the specifications for her model to get
 more accurate emissions. She finds that her laptop has a Core i5-1145G7 processor, with
@@ -176,7 +176,7 @@ Storing the 9 TB data on HDDs will have associated carbon emissions
 approximately equal to **1,620 kgCO₂e** in combined embodied and operational emissions,
 based on the average values within the emissions ranges she identified in this [table](03_activities.md#measuring-and-estimating-data-storage-emissions).
 
-### LLMs usage
+### LLMs Usage
 
 Using HuggingFace's [Ecologits
 calculator](https://huggingface.co/spaces/genai-impact/ecologits-calculator) tool and the
@@ -186,7 +186,7 @@ over the 5 year course of the project that gives a total of **84 kgCO₂e**.
 
 Note that this estimate doesn't include emissions from model training.
 
-### Running scripts
+### Running Scripts
 
 Using the [Green-algorithms calculator](https://calculator.green-algorithms.org/) with
 her CPU model running for 6 hours with 1 core to find that the emissions emitted by her
@@ -212,7 +212,7 @@ carbon footprint.
 
 ::::::::::::::::::::::::::: discussion
 
-## Measures to reduce emissions (20 minutes)
+## Measures to Reduce Emissions (20 minutes)
 
 Emma identifies several ways in which she can improve her data storage and LLM usage.
 In your groups discuss any other measures you think could be implemented and what impact
