@@ -76,3 +76,14 @@ you all discovered. This could include topics like:
 - What were the main contributors to emissions from your scenario?
 - What were the key steps taken to reduce emissions?
 - Any other aspects of the respective research scenario that you think would be carbon intensive?
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Carbon emissions in digital research map to specific research roles and workflows,
+  meaning reduction strategies need to be tailored to context.
+- Identifying and quantifying emissions is the essential first step before designing
+  effective reduction measures.
+- Different research roles face distinct sustainability challenges; insights from one
+  context may still be transferable to others.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

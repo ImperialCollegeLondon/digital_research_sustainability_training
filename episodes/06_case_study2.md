@@ -282,3 +282,18 @@ of chemical reagents and single-use equipment.
 1. [Winter N,The paradox of the life sciences: How to address climate change in the lab: How to address climate change in the la. doi: 10.15252/embr.202256683](https://pmc.ncbi.nlm.nih.gov/articles/PMC9986813/)
 2. [Woo, N.H. A comparative study of AI and human programming on environmental
  sustainability. Sci Rep 15, 39182 (2025). https://doi.org/10.1038/s41598-025-24658-5](https://www.nature.com/articles/s41598-025-24658-5)
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Data storage is often the dominant source of carbon emissions for researchers working
+  with large datasets and long retention requirements.
+- Adopting a tiered storage strategy — using LTO tape for archival data and HDDs or SSDs
+  for actively accessed data — can reduce storage emissions by an order of magnitude.
+- Choosing a smaller, task-appropriate LLM model can reduce AI inference emissions
+  dramatically compared with using the largest available model.
+- Defining a data management plan before a project begins helps avoid unnecessary data
+  collection, replication, and long-term storage.
+- Contextualising digital emissions alongside other research activities such as lab
+  equipment and travel helps identify where reductions will have the greatest impact.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
