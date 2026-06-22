@@ -695,3 +695,22 @@ information is available about the model architecture.
 11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
 12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
 13. [Data centres: planning policy, sustainability and resilience](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- For consumer devices, embodied emissions typically outweigh operational emissions,
+  making extending device lifetime the most impactful sustainability action for personal
+  computing hardware.
+- Data centres are generally more carbon efficient than equivalent local computing
+  setups due to higher utilisation, better cooling efficiency, and shared infrastructure.
+- Choice of storage technology significantly affects carbon emissions; LTO tape is
+  preferable for cold or archival data, while SSDs suit frequently accessed data.
+- Research data management practices — such as deleting unused data, using compression,
+  and adopting tiered storage — can substantially reduce storage-related emissions.
+- Generative AI emissions scale with model size, query count, and response length;
+  selecting the smallest model appropriate to the task reduces unnecessary emissions.
+- Carbon-aware computing — shifting workloads in time or location to periods or regions
+  with lower carbon intensity — is an effective strategy for reducing operational
+  emissions from computational workloads.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

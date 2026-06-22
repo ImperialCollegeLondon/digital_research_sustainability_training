@@ -184,3 +184,19 @@ some ways to reduce them.
 - [The UK’s plans and progress to reach net zero by 2050](https://commonslibrary.parliament.uk/research-briefings/cbp-9888/)
 - [For a livable climate: Net-zero commitments must be backed by credible action](https://www.un.org/en/climatechange/net-zero-coalition)
 - [It’s time to decarbonise digital research](https://www.researchprofessionalnews.com/rr-news-uk-views-of-the-uk-2025-april-it-s-time-to-decarbonise-digital-research/)
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- ICT currently contributes around 4.1% of global carbon emissions, with projections
+  reaching 14% by 2040.
+- Digital research in the UK alone generates an estimated 75 kilotons of CO₂e per year,
+  split roughly equally between large-scale compute facilities and smaller devices.
+- Net zero goes further than carbon neutral by targeting all greenhouse gases and
+  requiring offsets that genuinely absorb emissions rather than merely compensating
+  elsewhere.
+- Mindful computing is a conscious approach to planning, running and managing digital
+  tasks to ensure scientific progress does not produce more emissions than necessary.
+- Researchers have a responsibility to consider the environmental impact of their digital
+  activities and take steps to reduce them.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

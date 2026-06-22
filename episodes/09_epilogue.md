@@ -68,3 +68,17 @@ work. Here are some questions to help you get started.
 - Can you categorise potential changes both in terms of effort and impact?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Digital research infrastructure is a growing contributor to global carbon emissions,
+  but individual researchers can take meaningful action to reduce their impact.
+- Measuring or estimating emissions is the critical first step before designing effective
+  reduction strategies.
+- Many emission reduction measures align with established best practices in software
+  engineering, data management, and research methodology, providing additional motivation
+  for their adoption.
+- Sustainable digital research requires ongoing monitoring and adaptation as workflows,
+  tools, and infrastructure evolve over time.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
