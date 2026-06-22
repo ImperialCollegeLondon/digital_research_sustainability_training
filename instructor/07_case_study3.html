@@ -425,8 +425,79 @@ throughput at all times. Workloads on these clusters are submitted to a
 queue and will start running at an unknown time. Almost all of his
 workloads run for at least 48 hours.</p>
 </section><section><h2 class="section-heading" id="collecting-information">Collecting Information<a class="anchor" aria-label="anchor" href="#collecting-information"></a></h2>
-<hr class="half-width"><p>Hugh starts by doing some background research about the two clusters
-he uses.</p>
+<hr class="half-width"><div id="data-exploration-20-minutes" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="data-exploration-20-minutes" class="callout-inner">
+<h3 class="callout-title">Data exploration (20 minutes)</h3>
+<div class="callout-content">
+<p>Hugh wants to estimate the emissions associated with his HPC usage.
+What methodologies could he use? What data would be useful to
+collect?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="section level4">
+<h4 id="operational-emissions">Operational Emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a></h4>
+<ul><li>As Hugh does not have direct access to the clusters, he’s likely
+restricted from making direct measurements. It may be possible to
+incorporate <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a>
+into his workflows but this may be challenging (e.g. the RAPL interface
+may not be accessible to users, multi-node jobs or shared-node jobs
+would need to be accounted for).</li>
+<li>An estimation methodology such as the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
+Calculator</a> should be fairly readily usable. In this case Hugh should
+collect as much detail as he can about his resource usage on the system
+and the hardware.</li>
+<li>Another method for estimation would be if Hugh is able to get power
+draw data for the cluster. This information may be available from the
+system administrators, most likely in an aggregated form. Combined with
+some data or assumptions about system utilisation and carbon intensity
+an estimate could be derived based on his resource usage.</li>
+<li>Some HPC system may also provide tooling that reports job power draw
+or even carbon emission estimates.</li>
+<li>A key value to include is the Power Utilisation Efficiency (PUE) of
+the system. In most cases this is not published but may be available on
+request.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="embodied-emissions">Embodied Emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions"></a></h4>
+<ul><li>For a known set of hardware Hugh would likely be able to look up PCF
+data sheets to get estimates of the embodied emissions.</li>
+<li>As an end-user Hugh is dependent on information provided by the
+service or which he can gather himself. Most HPC services publish
+information regarding the type and amount of CPUs, GPUs, memory, etc. It
+is rarer for services to provide a full inventory including the exact
+models of servers, networking infrastructure, storage devices, etc.,
+that would be required to calculate the embodied emissions of the
+service as a whole.</li>
+<li>Some services may publish an embodied carbon analysis.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
+<hr class="half-width"><div id="estimating-emissions-20-minutes" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="estimating-emissions-20-minutes" class="callout-inner">
+<h3 class="callout-title">Estimating Emissions (20 minutes)</h3>
+<div class="callout-content">
+<p>Hugh does some investigation and finds the below information:</p>
+<div class="section level4">
+<h4 id="general-background">General Background<a class="anchor" aria-label="anchor" href="#general-background"></a></h4>
 <p>DRAGONFLY is a cluster based in London. It doesn’t publish any
 sustainability information. The documentation pages provide some lists
 of the available hardware but these are fairly high level and don’t
@@ -438,111 +509,14 @@ power usage. Most usefully Hugh finds that the cluster provides a tool
 for users to estimate the carbon emissions of their workloads. This tool
 has been tested and calibrated for the cluster so should be fairly
 accurate.</p>
-<p>Hugh then considers each of the emissions sources in turn.</p>
-<div class="section level3">
-<h3 id="electricity-usage-from-hpc-workloads">Electricity usage from HPC workloads<a class="anchor" aria-label="anchor" href="#electricity-usage-from-hpc-workloads"></a></h3>
-<p>Hugh realises that carbon emissions associated with his HPC usage are
-directly related to his level of usage. Currently Hugh is fairly sure he
-uses LANCER the most but he doesn’t track exactly how much and what
-workloads he runs. Collecting this data will be an important first
-step.</p>
-<p>Even without detailed data Hugh is confident that his simulation
-workloads form more than 90% of his cluster usage. As the data analysis
-workflows also tend to be more diverse he decides to focus his initial
-efforts on his simulation workloads as he will get the most impact from
-improving those.</p>
-<p>Hugh also notes that most of his simulation workloads run for at
-least 48 hours and he has no control over when they start running. He
-therefore concludes that there is little scope to exploit demand
-shifting to reduce carbon intensity.</p>
 </div>
-<div class="section level3">
-<h3 id="embodied-emissions-from-hpc-facilities">Embodied Emissions from HPC facilities<a class="anchor" aria-label="anchor" href="#embodied-emissions-from-hpc-facilities"></a></h3>
-<p>Whilst the embodied emissions for the clusters are relevant to
-calculating the carbon impact of his work, Hugh notes that these are a
-sunk cost that he is unable to impact at this point. LANCER provides
-some data but DRAGONFLY doesn’t provide nearly enough information to
-make much headway. Hugh emails the admins of DRAGONFLY but they’re
-unable to provide him with more information. Based on this Hugh decides
-not to consider embodied emissions in his analysis.</p>
-</div>
-</section><section><h2 class="section-heading" id="analysis">Analysis<a class="anchor" aria-label="anchor" href="#analysis"></a></h2>
-<hr class="half-width"><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Delivery of the rest of this material is intended to go in two
-phases:</p>
-<ol style="list-style-type: decimal"><li><p>Attendees are expected to complete the “Estimating Emissions”
-challenge. This is best done in groups. After the group task, attendees
-can report back on what they’ve come up with.</p></li>
-<li><p>Then attendees can open the spoiler tag - “Hugh’s estimates”.
-This section provides the “canonical” outcome of Hugh’s emissions
-estimates and further develops the scenario so that reductions in
-emissions can be considered. It is recommended that the groups from
-above look through the section together and complete the embedded
-challenge.</p></li>
-</ol></div>
-</div>
-</div>
-</div>
-<div id="estimating-emissions" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="estimating-emissions" class="callout-inner">
-<h3 class="callout-title">Estimating Emissions</h3>
-<div class="callout-content">
-<p>Based on the scenario described above how could Hugh estimate the
-carbon emissions associated with his HPC workloads over a year? What
-additional data would he need to collect?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>Hugh needs two things.</p>
-<ol style="list-style-type: decimal"><li>An estimate of his resource usage over a year. It may be possible to
-reconstruct this from historical data or he may have to monitor his
-usage for a period of time and then extrapolate to annual usage from
-there. To simplify this he can focus on only his main simulation
-campaigns and exclude any data analysis workloads. Key data he’ll want
-to track includes CPU-hours and Gb-hours of memory usage.</li>
-<li>A method to estimate emissions from his usage. For LANCER this is
-straightforward using the tooling that’s supplied for the cluster.
-Making an estimate for DRAGONFLY is harder without equivalent tooling.
-There are several options. Hugh could attempt to use a model like the <a href="https://calculator.green-algorithms.org/" class="external-link">Green Algorithms
-Calculator</a> if he has sufficient information about the hardware used
-by DRAGONFLY. A simpler alternative would be to assume that emissions
-for a given set of resources are the same between DRAGONFLY and LANCER
-then extrapolate from LANCER emissions estimates to get equivalents for
-DRAGONFLY. In both cases the estimate for DRAGONFLY is likely to be much
-more approximate but is still useful to have.</li>
-</ol></div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh’s Estimates </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
-<p>For the next two weeks Hugh keeps track of the workloads that he runs
-on the different clusters. He tracks the total CPU-hours spent on
-different clusters and the different simulation codes used on each one.
-He also gets the total estimated emissions for LANCER using the provided
-cluster tooling.</p>
+<div class="section level4">
+<h4 id="hpc-workloads">HPC workloads<a class="anchor" aria-label="anchor" href="#hpc-workloads"></a></h4>
+<p>Hugh is confident that his simulation workflows form the vast
+majority of his HPC usage so he decides to focus on these. He tracks the
+total CPU-hours spent on different clusters and the different simulation
+codes used on each one. He also gets the total estimated emissions for
+LANCER using the provided cluster tooling.</p>
 <table class="table"><colgroup><col width="18%"><col width="18%"><col width="25%"><col width="18%"><col width="18%"></colgroup><thead><tr><th>Cluster</th>
 <th>Simulation Code</th>
 <th align="right">Total CPU-hours</th>
@@ -578,21 +552,26 @@ cluster tooling.</p>
 <td align="right">75,000</td>
 <td></td>
 <td>40</td>
-</tr></tbody></table><p>The total estimated emissions are 94 kgCO₂e from the two week period.
-Hugh also decides to estimate his emissions from DRAGONFLY by scaling
-the emissions of LANCER by the difference in CPU-hours used on both
-systems - he’s aware that LANCER and DRAGONFLY are quite different and
-so this value for DRAGONFLY is very approximate.</p>
-<div id="estimating-dragonfly-emissions" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+</tr></tbody></table><p>Whilst collecting the above data Hugh also notes that around 15,000
+CPU-hours were wasted on from some workloads on LANCER that he hadn’t
+setup properly and which had to be repeated.</p>
+<p><strong>By scaling the emissions estimates for LANCER by the relative
+resource usages estimate the emissions for each code on DRAGONFLY. Use
+the result to estimate Hugh’s annual emissions. Also estimate the
+emissions from the 15,000 wasted CPU-hours. What are the limitations of
+the estimates produced using this method and how could it be
+improved?</strong></p>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="estimating-dragonfly-emissions" class="callout-inner">
-<h3 class="callout-title">Estimating DRAGONFLY emissions</h3>
-<div class="callout-content">
-<p>Based on the above approach, estimate the emissions from DRAGONFLY
-for each of the simulation codes.</p>
+<div class="section level4">
+<h4 id="embodied-emissions-1">Embodied emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions-1"></a></h4>
+<p>Whilst the embodied emissions for the clusters are relevant to
+calculating the carbon impact of his work, Hugh notes that these are a
+sunk cost that he is unable to impact at this point. LANCER provides
+some data but DRAGONFLY doesn’t provide nearly enough information to
+make much headway. Hugh emails the admins of DRAGONFLY but they’re
+unable to provide him with more information. Based on this Hugh decides
+not to consider embodied emissions in his analysis.</p>
+</div>
 </div>
 </div>
 </div>
@@ -601,7 +580,7 @@ for each of the simulation codes.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Taking GROMINZ as an example:</p>
 <p><span class="math display">\[
@@ -649,14 +628,6 @@ Emissions_{DRAGONFLY} = 24 kgCO_2e
 <td></td>
 <td>40</td>
 </tr></tbody></table><p>This gives a total 144 kgCO₂e from the two week period.</p>
-</div>
-</div>
-</div>
-</div>
-<p>Whilst collecting the above data Hugh also notes that around 15,000
-CPU-hours were wasted on workloads that he hadn’t setup properly and
-which had to be repeated. He estimates this corresponds to around 8
-kgCO₂e.</p>
 <p>To better understand what this figure means Hugh, takes his total
 emissions figure from the two weeks and compares it with other emissions
 sources. He finds that 144 kgCO₂e is approximately equivalent to driving
@@ -665,70 +636,36 @@ for around 500 miles in a petrol fueled car<sup>1</sup>.</p>
 of 3.5 TCO₂e. He notes that this is close to the UK per-capita emissions
 for energy generation. This means the electricity demands of his work is
 nearly equivalent to those of whole second person.</p>
+<p>Deriving an estimate for the wasted emissions is fairly simple is it
+makes a quarter of his use of GROMINZ on LANCER - a total of 8
+kgCO₂e.</p>
+<p>The limitations of this methodology come from assumping that usage of
+a given set of CPU-hours on each system leads to the same amount of
+carbon emissions. In practice factors such as the PUE, carbon intensity,
+CPU model, etc. mean this is unlikely to be the case. The estimate could
+be improved if Hugh can get information like the PUE or relevant carbon
+intensity values for both clusters.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="taking-action">Taking Action<a class="anchor" aria-label="anchor" href="#taking-action"></a></h2>
-<hr class="half-width"><div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
-  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
-<div class="accordion-body">
-<p>Similarly to above, the below challenge can be tackled collectively
-and attendees can report back on their results.</p>
-<p>The following spoiler section then rounds out the scenario and
-provides a “canonical” outcome. Suggest that the below “outcomes”
-section is delivered to all attendees.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="planning-action" class="callout challenge">
+<hr class="half-width"><div id="measures-to-reduce-emissions-20-minutes" class="callout discussion">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="planning-action" class="callout-inner">
-<h3 class="callout-title">Planning Action</h3>
+<span class="callout-header">Discussion</span>
+<div id="measures-to-reduce-emissions-20-minutes" class="callout-inner">
+<h3 class="callout-title">Measures to Reduce Emissions (20 minutes)</h3>
 <div class="callout-content">
-<p>Based on the outcome of Hugh’s data collection and analysis consider
-the following:</p>
-<ul><li>Where would Hugh derive the most impact to reduce emissions?</li>
-<li>What steps could Hugh take to reduce the emissions associated with
-his work? These might be technical or changes to his work
-practices.</li>
-</ul></div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
-<div class="accordion-body">
-<p>For focussing his future actions and exploration:</p>
-<ul><li>Hugh spends the most CPU-hours on LANCER.</li>
-<li>Hugh spends the most CPU-hours using GROMINZ.</li>
-</ul><p>The 15,000 wasted CPU-hours are also a good focus as the associated
-emissions were non-productive.</p>
-<p>There are many steps Hugh could take to reduce emissions. Keep a
-record of the ideas you’ve had and compare them with those in the next
-section.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Hugh Takes Action </h3>
-</button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
-<div class="accordion-body">
+<p>Hugh takes his emissions estimates and comes up with some steps to
+help to reduce emissions.</p>
+<p><strong>In your groups discussion any other measures that Hugh could
+implement and what impact they might have. What steps could Hugh take to
+get better data to refine the emissions estimates he’s made so
+far?</strong></p>
+<div class="section level3">
+<h3 id="hugh-takes-action">Hugh Takes Action<a class="anchor" aria-label="anchor" href="#hugh-takes-action"></a></h3>
 <p>Based on the data gathered above Hugh observes:</p>
 <ul><li>He spends the most CPU-hours on LANCER.</li>
 <li>He spends the most CPU-hours using GROMINZ.</li>
@@ -741,6 +678,7 @@ directly there.</p>
 <p>In order to minimise his emissions Hugh realises he can both improve
 the efficiency of the simulations he performs and try to reduce the
 overall amount of simulation.</p>
+</div>
 <div class="section level3">
 <h3 id="reducing-simulation">Reducing Simulation<a class="anchor" aria-label="anchor" href="#reducing-simulation"></a></h3>
 <p>The 15,000 wasted CPU-hours of simulation are an obvious initial
@@ -792,7 +730,6 @@ he could have reduced his use of computational resources by 20% whilst
 only losing 10% speed. Hugh resolves to carry out this sort of
 benchmarking for all new projects he starts to identify a good trade-off
 between speed and efficiency.</p>
-</div>
 </div>
 </div>
 </div>
