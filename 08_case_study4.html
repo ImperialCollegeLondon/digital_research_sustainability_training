@@ -349,7 +349,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Study 4 - GPU Computing User</h1>
-        <p>Last updated on 2026-06-17 |
+        <p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/08_case_study4.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -556,6 +556,31 @@ very large for its stated purpose, Miguel adds L1 (Lasso) regularisation
 to reduce redundant activation, allowing many (now-unused) activation
 units to be removed from the model entirely, promoting a leaner and more
 power-efficient model in the process.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>GPU-based machine learning workloads are disproportionately carbon
+intensive and require careful planning to avoid costly and wasteful
+runs.</li>
+<li>Transfer learning from an existing model avoids training from
+scratch and can dramatically reduce training emissions when adapting a
+model to a related task.</li>
+<li>Estimating memory and compute requirements before submitting jobs
+prevents wasted cloud computation from under-provisioned or
+ill-configured runs.</li>
+<li>Techniques such as early stopping, epoch checkpointing, and reduced
+floating-point precision lower training resource usage with little
+impact on model accuracy.</li>
+<li>Model pruning and regularisation can shrink model size enough to
+enable training on local hardware, reducing reliance on energy-intensive
+cloud GPU resources.</li>
+</ul></div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -620,7 +645,7 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/08_case_study4.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/08_case_study4.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-06-17",
+  "dateModified": "2026-06-22",
   "datePublished": "2026-06-22"
 }
 
