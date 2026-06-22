@@ -61,7 +61,7 @@ unknown time. Almost all of his workloads run for at least 48 hours.
 
 ::::::::::::::::::::::::::::::: challenge
 
-### Data exploration (10 minutes)
+### Data exploration (20 minutes)
 
 Hugh wants to estimate the emissions associated with his HPC usage. What methodologies
 could he use? What data would be useful to collect?
@@ -111,7 +111,7 @@ could he use? What data would be useful to collect?
 
 :::::::::::::::::::::::::::::::::: challenge
 
-### Estimating Emissions
+### Estimating Emissions (20 minutes)
 
 Hugh does some investigation and finds the below information:
 
@@ -211,7 +211,7 @@ relevant carbon intensity values for both clusters.
 
 :::::::::::::::::::::::::::::::::: discussion
 
-## Measures to Reduce Emissions
+## Measures to Reduce Emissions (20 minutes)
 
 Hugh takes his emissions estimates and comes up with some steps to help to reduce emissions.
 
