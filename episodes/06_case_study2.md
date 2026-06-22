@@ -63,7 +63,7 @@ What data would she need to collect in each case?
 
 - Consider the different types of data storage and which ones are more suitable
 for Emma's data.
-- Think about Emma's potential data management plan. What would be a relistic data
+- Think about Emma's potential data management plan. What would be a realistic data
 management flow that Emma could adopt.
 
 :::::::::::::::::::::
@@ -114,8 +114,10 @@ of the carbon emissions associated with the Emma's digital research activities.
 
 ### Data Storage
 
-- Her research will generate approx 3.5 Tb of raw data for the duration of
-  the project (5 years), which she will be storing on different HDDs.
+- Her research will generate approx 3.5 TB of raw data for the duration of
+  the project (5 years).
+- She is planning to keep two copies of the raw data, which she will be storing on
+different HDDs.
 - There will also be additional 400 GB of processed data per year that she will work with
  regularly. This adds up to 2 TB over the duration of the project.
 - The data must be retained for 10 years after the end of the project, meaning that
@@ -123,8 +125,7 @@ the data must be stored for a total of 15 years.
 - Given that the lifespan of HDDs can reach 10 years in best case scenario, Emma will
 have to replace the HDDs at least once.
 
-**Use this [table](03_activities.md#measuring-and-estimating-data-storage-emissions) to estimate the emissions for
-storing her data.**
+**Use this [table](03_activities.md#measuring-and-estimating-data-storage-emissions) to estimate the emissions for storing her data on HDDs.**
 
 ### Use of LLMs
 
@@ -147,13 +148,13 @@ how long they take. For the next run she does she adds a command to record the t
 runtime which is 6 hours.
 
 **Use the [Green-algorithms calculator](https://calculator.green-algorithms.org/)
-to estimate the emissions emitted by Emma's laptop**
+to estimate the emissions emitted by Emma's laptop.**
 
 :::::::::::::::: hint
 
 - To estimate data storage, assume that the total 2 TB of processed data generated for
- the whole duration of the project  start from the beginning of the project
- (not 400 GB during first year, 800 GB during second year, etc.).
+ the whole duration of the project
+ (not 400 GB during the first year, 800 GB during the second year, etc.).
 - If estimates for the GPT-5.4 model are not available, you can use the generic GPT-5 model
 estimate. Emma uses 30 as the number of queries but is not sure of the number of tokens
 that have been returned. Use the largest response size (15000 tokens)
@@ -165,7 +166,8 @@ with her CPU model running for 6 hours with 1 core.
 
 ::::::::::::::::::::::: solution
 
-The estimated emissions associated with Emma's workflow are as follows:
+The estimated emissions associated with Emma's work, which she will be storing on different
+HDDs.flow are as follows:
 
 ### Data Storage
 
@@ -204,7 +206,8 @@ course of the project, the total emissions would be **13.78 kgCo2e**.
 
 Based on the calculations above, storing research data and using LLM's are the
 activities with the largest associated carbon emissions. At around 1,700 kgCO2e, these
-activities account to a quarter of the emissions per-capita in the UK,according to the
+activities account to around a third of the emissions per-capita in the UK,according to
+the
 [International Energy
 Association](https://www.iea.org/countries/united-kingdom/emissions). While lower in
 comparison, the emissions linked to using LLMs to help write her code are not
@@ -218,13 +221,13 @@ carbon footprint.
 ## Measures to Reduce Emissions (20 minutes)
 
 Emma identifies several ways in which she can improve her data storage and LLM usage.
-In your groups discuss any other measures you think could be implemented and what impact
+In your groups, discuss any other measures you think could be implemented and what impact
 they might have.
 
 ### Data Storage Changes
 
-- Emma has heard that her institution provides a tape-based cold storage options located
-in two different campuses and which are intended for data that is not accessed very often.
+- Emma has heard that her institution provides tape-based cold storage options located
+in two different campuses, and which are intended for data that is not accessed very often.
 She decides to keep the two copies of the raw data on the LTO-tape based storage
 provided by her institution, with each copy being stored at a different site. This
 ensures the data is safe in case something happens with one of the storages. She decides
