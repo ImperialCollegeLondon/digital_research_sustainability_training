@@ -163,3 +163,18 @@ Noting again that the model is very large for its stated purpose, Miguel adds L1
 regularisation to reduce redundant activation, allowing many (now-unused) activation
 units to be removed from the model entirely, promoting a leaner and more power-efficient
 model in the process.
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- GPU-based machine learning workloads are disproportionately carbon intensive and
+  require careful planning to avoid costly and wasteful runs.
+- Transfer learning from an existing model avoids training from scratch and can
+  dramatically reduce training emissions when adapting a model to a related task.
+- Estimating memory and compute requirements before submitting jobs prevents wasted
+  cloud computation from under-provisioned or ill-configured runs.
+- Techniques such as early stopping, epoch checkpointing, and reduced floating-point
+  precision lower training resource usage with little impact on model accuracy.
+- Model pruning and regularisation can shrink model size enough to enable training on
+  local hardware, reducing reliance on energy-intensive cloud GPU resources.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

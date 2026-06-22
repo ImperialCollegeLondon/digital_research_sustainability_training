@@ -352,3 +352,18 @@ functionality to DRAGONFLY.
    reported for an average car in 2025 by the [UK Government Conversion Factors for
    greenhouse gases
    dataset](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2025).
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Tracking actual resource usage across HPC facilities is essential before attempting
+  to measure or reduce associated emissions.
+- Wasted computation from failed or misconfigured jobs is a significant and avoidable
+  source of emissions; validating job inputs before submission reduces this waste.
+- Different HPC clusters vary in carbon efficiency; benchmarking workloads across
+  available facilities helps identify where to direct them for lowest impact.
+- Benchmarking parallel job resource allocation can reveal configurations that reduce
+  energy use with only a modest speed penalty.
+- Sharing findings on emissions and efficiency with colleagues and facility operators
+  multiplies the impact of individual actions across a research community.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
