@@ -37,14 +37,17 @@ devices up to the globe spanning network of the internet. In this section we'll 
 some of the different components of digital infrastructure and their relation to carbon
 emissions.
 
-<!-- markdownlint-disable-next-line line-length -->
-![Placeholder image - What components of digital infrastructure produce carbon emissions? (Image by Rae)](https://cdni.iconscout.com/illustration/premium/thumb/man-choosing-environment-over-carbon-emissions-illustration-svg-download-png-7237101.png){alt='Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself.'}
+![What is the relationship between research activities and carbon
+emissions?](fig/ep3_banner.jpg){alt='Person thinking on different aspects of digital
+infrastructure that produce carbon emissions, showing computers, storage devices, data
+centres and the research activity itself.'}
 
 ## Computers
 
-Computers have become an indispensable component of modern life as well as digital
+![Computers have become an indispensable component of modern life as well as digital
 research. These include everyday devices such as laptops, desktops or phones, as well as
-servers that are accessed remotely.
+servers that are accessed remotely. ](fig/ep3_laptop_operational_embodied.jpg){alt="An
+image of a laptop with it's constituent components spilling out underneath and "}
 
 Computers draw electricity during use and also produce considerable embodied emissions
 from production and transportation. Both embodied and operational emissions play a
@@ -67,6 +70,10 @@ fit for purpose.
 - Can you give it another useful purpose?
 - Can you donate it to charity (eg. see options in the [Device Donation Scheme]) to
   extend its useful life instead of trashing it (or recycling it)?
+
+![The full lifecycle of a laptop from manufacturing to
+reuse.](fig/ep3_laptop_lifecycle.jpg){alt="A depiction of the lifecycle of a laptop from
+its manufacture, transportation, usage, refurbishment and reusage."}
 
 :::::::::::::::::::::::::::::::::::::::::::::
 
