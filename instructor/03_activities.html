@@ -350,7 +350,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Digital research activities with sustainability issues</h1>
-        <p>Last updated on 2026-05-13 |
+        <p>Last updated on 2026-06-22 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -406,15 +406,14 @@ computing.</li>
 individual computers and devices up to the globe spanning network of the
 internet. In this section we’ll look at some of the different components
 of digital infrastructure and their relation to carbon emissions.</p>
-<!-- markdownlint-disable-next-line line-length -->
-<figure><img src="https://cdni.iconscout.com/illustration/premium/thumb/man-choosing-environment-over-carbon-emissions-illustration-svg-download-png-7237101.png" alt="Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself." class="figure mx-auto d-block"><div class="figcaption">Placeholder image - What components of digital
-infrastructure produce carbon emissions? (Image by Rae)</div>
+<figure><img src="../fig/ep3_banner.jpg" alt="Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself." class="figure mx-auto d-block"><div class="figcaption">What is the relationship between research
+activities and carbon emissions?</div>
 </figure></section><section><h2 class="section-heading" id="computers">Computers<a class="anchor" aria-label="anchor" href="#computers"></a></h2>
-<hr class="half-width"><p>Computers have become an indispensable component of modern life as
-well as digital research. These include everyday devices such as a
-laptop, desktops or phones as well as servers that are accessed
-remotely.</p>
-<p>Computers draw electricity during use and also produce considerable
+<hr class="half-width"><figure><img src="../fig/ep3_laptop_operational_embodied.jpg" alt="An image of a laptop with it's constituent components spilling out underneath and " class="figure mx-auto d-block"><div class="figcaption">Computers have become an indispensable component
+of modern life as well as digital research. These include everyday
+devices such as laptops, desktops or phones, as well as servers that are
+accessed remotely.</div>
+</figure><p>Computers draw electricity during use and also produce considerable
 embodied emissions from production and transportation. Both embodied and
 operational emissions play a significant role in the carbon footprint of
 computing devices, but how to estimate them and reduce them is very
@@ -425,8 +424,8 @@ different.</p>
 machine is in your hands: they only depend on the manufacturing and
 transport process. However, <strong>embodied carbon emissions per
 year</strong> are reduced the more years the machine is in use. Hence,
-the longer the lifetime of the machine, the lower their embodied carbon
-footprint per year.</p>
+<strong>the longer the lifetime of the machine, the lower their embodied
+carbon footprint per year</strong>.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -442,7 +441,9 @@ GPUs?</li>
 <li>Can you donate it to charity (eg. see options in the <a href="https://www.london.gov.uk/coronavirus/volunteer-and-donate/device-donation-scheme" class="external-link">Device
 Donation Scheme</a>) to extend its useful life instead of trashing it
 (or recycling it)?</li>
-</ul></div>
+</ul><figure><img src="../fig/ep3_laptop_lifecycle.jpg" alt="A depiction of the lifecycle of a laptop from its manufacture, transportation, usage, refurbishment and reusage." class="figure mx-auto d-block"><div class="figcaption">The full lifecycle of a laptop from
+manufacturing to reuse.</div>
+</figure></div>
 </div>
 </div>
 </div>
@@ -452,24 +453,17 @@ Donation Scheme</a>) to extend its useful life instead of trashing it
 performance, but also on <em>how</em>, <em>when</em> and <em>where</em>
 it is used. For this reason, it is useful to consider energy usage first
 as a proxy for carbon emissions.</p>
-<p>The power consumption of digital devices can be split into idle and
-usage-based consumption. Idle consumption is incurred when a device is
-powered but not carrying out any particular operation. Additional energy
-is consumed as the computational load placed on the device is increased.
-In particular, components like CPUs, GPUs and memory will draw
-additional electricity and cooling systems may have to work harder to
-remove excess heat.</p>
-<p>There are a number of factors that affect operational power
-usage:</p>
-<ul><li>Age: Modern computers have generally more advanced technology that
-makes them more energy-efficient than older ones.</li>
-<li>Type: Laptops are typically more energy efficient than
-desktops.</li>
-<li>Power management settings: That control when to go to sleep after a
-time of inactivity, or control the CPU frequency, etc.</li>
-<li>Peripherals: Especially, monitors, but also printers can also
-consume large amounts of energy.</li>
-</ul><div id="utilisation" class="callout">
+<p>The power consumption of digital devices can be split into:</p>
+<ul><li><p><strong>idle consumption</strong>: this accounts for the energy
+required when the device is powered but not carrying out any particular
+operation.</p></li>
+<li><p><strong>usage-based consumption</strong>: the energy consumed to
+perform a specific task. As computational workload increases, components
+like CPUs and GPUs, and memory draw higher levels of power, which may
+require energy systems to work harder to cool the system.</p></li>
+</ul><!-- markdownlint-disable-next-line line-length --><figure><img src="../fig/ep3_operational_emissions.png" alt="Factors that affect operational emissions including age, type, power management settings and peripherals." class="figure mx-auto d-block"><div class="figcaption">Factors that affect the operational emissions
+associated with a device.</div>
+</figure><div id="utilisation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -479,11 +473,11 @@ consume large amounts of energy.</li>
 <div class="callout-content">
 <p>The nature of both operational and embodied energy usage highlights
 the importance of utilisation in relation to computing hardware. The
-embodied emissions of a device are a fixed overhead, so the more
+embodied emissions of a device are a fixed overhead, so <strong>the more
 computational work that is carried out over the lifetime of a device the
-more efficiently that overhead has been invested. Similarly, as there is
-a minimum power draw associated with idle usage, as utilisation of a
-device increases the power draw per unit of computational work
+more efficiently that overhead has been invested</strong>. Similarly, as
+there is a minimum power draw associated with idle usage, as utilisation
+of a device increases the power draw per unit of computational work
 decreases.</p>
 </div>
 </div>
@@ -503,8 +497,8 @@ lifetime of these devices.</p>
 <p>For enterprise servers that have a much greater maximum operational
 power draw, the balance can vary due to a number of factors, not least
 the carbon intensity of the electricity used to power them and their
-utilisation. As the carbon intensity of electricity falls over time
-however embodied emissions are expected to increasingly dominate.</p>
+utilisation. However, as the carbon intensity of electricity falls over
+time, embodied emissions are expected to increasingly dominate.</p>
 </div>
 </div>
 </div>
@@ -514,8 +508,8 @@ however embodied emissions are expected to increasingly dominate.</p>
 <div class="section level4">
 <h4 id="embodied-emissions-1">Embodied Emissions<a class="anchor" aria-label="anchor" href="#embodied-emissions-1"></a></h4>
 <p>Finding the embodied emissions of a device relies on information
-provided by the manufacturer. The regulatory environment is evolving
-however increasingly there are legal requirements for manufacturers to
+provided by the manufacturer. The regulatory environment is evolving;
+however, increasingly, there are legal requirements for manufacturers to
 publish Product Carbon Footprint (PCF) data for their products.
 Information can be easily found by searching the internet for “PCF” and
 the manufacturer’s name.</p>
@@ -526,7 +520,7 @@ the manufacturer’s name.</p>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>We’ll see some example PCF sheets below however it’s important to
+<p>We’ll see some example PCF sheets below. However, it’s important to
 note that different manufacturers can use different methodologies and
 assumptions. This means it is not advised to directly compare PCF data
 between manufacturers.</p>
@@ -563,7 +557,11 @@ replacing the whole laptop?</li>
 </div>
 <div class="section level4">
 <h4 id="operational-emissions-1">Operational Emissions<a class="anchor" aria-label="anchor" href="#operational-emissions-1"></a></h4>
-<p>The most direct and accurate option to get the idle energy usage of a
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="../fig/ep3_carbon_estimations.png" alt="Ways to calculate carbon emissions." class="figure mx-auto d-block"><div class="figcaption">Ways to measure the operational carbon emissions
+associated with a device, including direct measurement and estimation
+methods.</div>
+</figure><p>The most direct and accurate option to get the idle energy usage of a
 consumer device is to use a plug in power meter. There are many models,
 but most will provide both the instantaneous power and the energy used
 over a period of time. This can be used both to ascertain the idle power
@@ -653,7 +651,7 @@ directly measure their power usage. Whilst some manufacturers do report
 sustainability data this is highly variable. In some cases storage
 device data may be included as a component of the PCF data for a
 complete system.</p>
-<p>Given the general paucity of data there have been some studies that
+<p>Given the general paucity of data, there have been some studies that
 attempt to estimate emissions from different storage media. We’ve
 summarised some useful estimates below:</p>
 <table class="table"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup><thead><tr><th align="left">Category</th>
@@ -678,11 +676,6 @@ available, it is generally considered that SSDs have a higher carbon
 debt per unit of storage than HDDs<sup>4</sup>. However, recent data
 suggests that the difference for enterprise-grade drives is shrinking,
 and new SSDs have only 2x the embodied carbon of comparable
-HDDs<sup>5</sup>. While the numbers vary depending on manufacturers and
-reporting available, it is generally considered that SSDs have a higher
-’carbon debt` per unit of storage than HDDs<sup>4</sup>. However, recent
-data suggests that the difference for enterprise-grade drives is
-shrinking, and new SSDs have only 2x the embodied carbon of comparable
 HDDs<sup>5</sup>.</p>
 <p>SSDs allow data to be accessed almost instantly and are typically
 10–100× faster than HDDs. LTO tapes offer the slowest access speeds, but
@@ -691,7 +684,7 @@ cost, low embodied emissions and great energy efficiency.</p>
 </div>
 </section><section><h2 class="section-heading" id="data-centres">Data Centres<a class="anchor" aria-label="anchor" href="#data-centres"></a></h2>
 <hr class="half-width"><p>Beyond personal computing devices like laptops and PC’s, much
-computing infrastructure is now accessed remotely. In this case the
+computing infrastructure is now accessed remotely. In this case, the
 computers are generally hosted in a data centre, a large industrial
 facility that can contain thousands of servers and the supporting
 infrastructure required to allow remote access.</p>
@@ -700,7 +693,9 @@ devices in a data centre are covered above. As purpose built facilities,
 data centres can host more specialised equipment and benefit from
 economies of scale. They also have additional emissions sources beyond
 the individual servers they house.</p>
-<p>Data centre embodied emissions:</p>
+<!-- markdownlint-disable-next-line line-length -->
+<figure><img src="../fig/ep3_datacenter.png" alt="Sources of embodied and operational carbon emissions for data centers" class="figure mx-auto d-block"><div class="figcaption">Data Centers Carbon Emissions Sources</div>
+</figure><p>Data centre embodied emissions:</p>
 <ul><li>
 <strong>data-centre construction</strong>: includes the concrete,
 steel, electrical infrastructure, etc.</li>
@@ -1027,13 +1022,15 @@ forecasts to minimise operational emissions.</li>
 <h3 id="research-data-management">Research Data Management<a class="anchor" aria-label="anchor" href="#research-data-management"></a></h3>
 <div class="section level4">
 <h4 id="storing-data">Storing Data<a class="anchor" aria-label="anchor" href="#storing-data"></a></h4>
-<p>Generally when presented with a choice between buying your own
-storage devices or using a storage service, it will be more sustainable
-to use the latter. That said, local storage has a number of advantages,
-including greater control over data, predictable access speeds, and the
-ability to power equipment down when not in use. Typically research
-organisations will provide dedicated storage services for research
-data.</p>
+<p>Shared storage services can often be more sustainable than dedicated
+storage hardware because they can have higher resource utilisation and
+benefit from economies of scale. However, the relative sustainability of
+each approach depends on factors such as utilisation, hardware
+efficiency, and the source of electricity used to power the
+infrastructure. Local storage has several advantages, including greater
+control over data, predictable access speeds, and the ability to power
+equipment down when not in use. Typically, research organisations will
+provide dedicated storage services for research data.</p>
 <div id="miniming-emissions-from-data-storage" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1077,12 +1074,13 @@ appropriate.</li>
 <div id="data-management-plans" class="callout-inner">
 <h3 class="callout-title">Data Management Plans</h3>
 <div class="callout-content">
-<p>The best time to think about how to manage you data is before you
-collect or generate it. This is the purpose of a Data Management Plan
-(DMP), a document that describes how you will handle your data during
-and after a research project. DMPs are often required by funding
-agencies and research institutions, but they are also a good practice to
-ensure that your data is well organised, documented and preserved.</p>
+<p><strong>The best time to think about how to manage you data is before
+you collect or generate it.</strong> This is the purpose of a Data
+Management Plan (DMP), a document that describes how you will handle
+your data during and after a research project. DMPs are often required
+by funding agencies and research institutions, but they are also a good
+practice to ensure that your data is well organised, documented and
+preserved.</p>
 <p>In addition to being a good scientific practice, DMPs can also help
 you to reduce the carbon footprint of your data. Tracking and monitoring
 your data in this manner can help you to identify (and where possible,
@@ -1112,21 +1110,21 @@ in detail.</p>
 <div class="section level4">
 <h4 id="code-hosting-and-continuous-integrationdeployment">Code Hosting and Continuous Integration/Deployment<a class="anchor" aria-label="anchor" href="#code-hosting-and-continuous-integrationdeployment"></a></h4>
 <p>The use of services such as GitHub and GitLab have become an
-indispensable component of modern software development. Notably these
+indispensable component of modern software development. Notably, these
 services provide access to compute resources to run Continuous
 Integration/Deployment (CI/CD) workflows. It’s common to run these
-workflows in a “matrix” configuration across variables such as operating
-system and software version which can lead to large parallel
+workflows in a “matrix” configuration across variables, such as
+operating system and software version, which can lead to large parallel
 computational workloads executing.</p>
 <p>CI/CD workflows are executed by servers acting as runners. Most
 services provide hosted runners for general use and support self-hosting
 a runner if you provide your own server. The latter case is amenable to
 the measurement and estimation methods discussed above. If using runners
-hosted by the service however, usually you will have no control or
+hosted by the service, however, you usually will have no control or
 visibility over where workflows are executed or the underlying hardware
 they use. Direct measurement of energy usage in this case is not
-possible and there is insufficient information to use approaches like
-the Green Algorithms Calculator. Instead <a href="https://github.com/green-coding-solutions/eco-ci-energy-estimation" class="external-link">Eco
+possible, and there is insufficient information to use approaches like
+the Green Algorithms Calculator. Instead, <a href="https://github.com/green-coding-solutions/eco-ci-energy-estimation" class="external-link">Eco
 CI</a> is a tool that has been developed to estimate the carbon
 emissions of CI/CD workflows. It supports GitHub and GitLab.</p>
 <p>To reduce emissions from CI/CD usage consider ways to reduce the
@@ -1272,8 +1270,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-05-13",
-  "datePublished": "2026-06-18"
+  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-22"
 }
 
   </script><script>
