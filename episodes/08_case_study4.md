@@ -27,14 +27,13 @@ exercises: 10 # exercise time in minutes
 
 ## Scenario
 
-Miguel is an [MLOps](https://en.wikipedia.org/wiki/MLOps) engineer embedded in an
-applied computational neuroscience department, whose applications make heavy use of
-heterogeneous compute hardware such as GPUs and neuromorphic processors. While the use
-of this hardware is crucial for demanding [single instruction multiple data (SIMD)](
-https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) tasks, he is mindful
-that his domain of work is often disproportionately carbon-intensive. The sheer size of
-the models, and the vast amounts of data used to train them, mean that any procedure he
-performs must be carefully planned in advance, as mistakes are costly.
+Miguel is an [MLOps] engineer embedded in an applied computational neuroscience
+department, whose applications make heavy use of heterogeneous compute hardware such as
+GPUs and neuromorphic processors. While the use of this hardware is crucial for
+demanding Single Instruction Multiple Data ([SIMD]) tasks, he is mindful that his domain
+of work is disproportionately carbon-intensive. The sheer size of the models, and the
+vast amounts of data used to train them, mean that any procedure he performs must be
+carefully planned in advance, as mistakes are costly.
 
 His primary responsibilities are:
 
@@ -52,82 +51,100 @@ quantities of real animal images, and is already quite competent at feline-based
 processing. It performed simple detection of cats in images, but the new model must
 produce bounding boxes.
 
-He realises that his workstation's GPU will not have enough memory to train the model
-with a reasonable batch size in its current form, so he will aim to offload the training
-job to a cloud GPU compute provider. Development and fine-tuning will still be possible
-using a very small batch size.
+Based on his experience preparing the previous model, he knows that his workstation's
+GPU will not have enough memory to train the similarly-sized derived model with a
+reasonable batch size in its current form. Like last time, he will aim to offload the
+training of the model to a cloud GPU compute provider, however local development and
+fine-tuning will still be possible using a very small batch size.
+
+[MLOps]: https://en.wikipedia.org/wiki/MLOps
+[SIMD]: https://en.wikipedia.org/wiki/Single_instruction,_multiple_data
 
 ## Collecting Information
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### How can Miguel determine the carbon footprint of this job?
+### Data Exploration (20 minutes)
 
-- What are the main sources of carbon emissions that Miguel can find estimates for?
-- What methods can be uses to estimate these emissions?
-- Where can Miguel find the data required for the estimations?
+Miguel's work consists of developing and fine-tuning the model on his local workstation,
+followed by training and deploying the model on cloud infrastructure. How might Miguel
+estimate the associated carbon emissions? What data will be required, and how might he
+find such data?
 
 ::::::::::::::::::::::::::::::: solution
 
-1. **Local development**: The power usage of his personal workstation can be measured
-   locally with hardware and software monitoring tools.
-1. **Cloud deployment**: Data from training the previous (similar) model may be used as
-   surrogate data for the new model. Some cloud providers offer power reporting for live
-   jobs, and local data may also be extrapolated. Various power benchmarks exist for
-   various representative models and datacentre hardware.
+There are various methods Miguel can build a picture of carbon emissions with, including
+real-time measurement, prediction tools and extrapolaring from known data.
+
+- Realtime measurement can be performed locally using either a physical meter measuring
+  power usage directly from the mains socket, or by wrapping code with power monitoring
+  software packages such as [Code Carbon]. Realtime measurement of cloud jobs may also
+  be possible, since many cloud providers offer infrastructure for querying live energy
+  usage of running jobs. If not, then data from a local run with a smaller batch size
+  may be extrapolated from.
+- Carbon data from training the previous model may be used as surrogate data for the
+  new model, given their near-identical architecture. If carbon data for the previous
+  run was not recorded, then predictive tools can be used to estimate it. For example,
+  the [Green Algorithms Calculator] may be used to estimate carbon data of a previous
+  job given its runtime, server location and compute requirements.
+
+[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
+[Code Carbon]: https://github.com/mlco2/codecarbon
 
 ::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::: spoiler
+## Analysis
 
-## Miguel Collects Information
+::::::::::::::::::::::::::::::::::::: challenge
 
-### Local Development
+### Estimating Emissions (20 minutes)
 
-Whilst his personal workstation's GPU is far from cutting-edge, it is by no means
-obsolete.
+Miguel computes a few simple estimates up-front to give a rough idea of the carbon
+footprint of a full training run. Using the following information, try to replicate the
+results of Miguel's estimations.
 
-TODO: monitoring hardware
+#### Local Run Extrapolation
 
-TODO: monitoring software
+TODO:
 
-TODO: extrapolate small run
+#### Data From Previous Runs
 
-### Cloud Deployment
-
-TODO: data from previous model
-
-TODO: job energy reporting from providers
-
-TODO: select provider using MLPerf Power
-
-:::::::::::::::::::::::::::::::::::::::
-
-## Collecting Information (OLD)
-
-For rough comparison, he approximates the environmental impact of retraining the model
-based on the impact of training the original model. He remembers that the previous job
-ran for approximately 72 hours, and used the Azure (Southern UK) datacentre with the
-following hardware:
+Given the similarity of the new model to the old one, data obtained during the training
+run of the previous model may be used as surrogate data for estimating the carbon usage
+of the newer model. He remembers that the previous job ran for approximately 72 hours,
+and used the Azure (Southern UK) datacentre with the following hardware:
 
 - $64$ GB of available host RAM
 - Eight virtual cores of an Intel Xeon Platinum 8260 CPU
-- One whole NVIDIA Tesla V100 GPU ($16$ GB memory variant)
+- One whole NVIDIA Tesla V100 GPU
 
-Using the [Green Algorithms Calculator](https://calculator.green-algorithms.org/), he
-estimates that $30.57$ kWh of energy was required to train the model, with a carbon
-footprint of $7.06$ kgCO2e.
+**Use the [Green Algorithms Calculator] to estimate the carbon footprint of training the
+new model using information obtained from training the similar previous model. You will
+need to select data version `v3.0` in the top right of the calculator page.**
 
-In his searches, he is able to find the hardware configuration for several
-candidates by looking in documentation and datasheets. He consults the
-[MLPerf Power](https://mlcommons.org/working-groups/benchmarks/power/) datasets of
-whole-system inference power usage, and finds the energy efficiency for representaive ML
-models $Samples/Joule = (Samples/second)/Watts$ for some of the candidate datacentres,
-helping him to choose a favourite.
+::::::::::::::::::::::::::::::: solution
 
-## Analysis
+Miguel's results for the two estimate methods are as follows.
+
+#### Local Run Extrapolation
+
+TODO:
+
+#### Data From Previous Runs
+
+Whilst Miguel does not have actual measurements for carbon emissions whilst training the
+older model, he has enough information to compute an estimate retroactively using, for
+instance, the [Green Energy Calculator]. Plugging in the runtime, hardware and location
+of the job into the calculator, it estimates that $30.55$ kWh of energy was required to
+train the model, with a carbon footprint of $7.06$ kgCO2e.
+
+::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+## Analysis (OLD)
 
 For the next step, Miguel begins to quantify the computational resources required to
 train the modified model. With bytes per value $b = 4$, the number of trainable
@@ -154,7 +171,7 @@ decision to use the SGD optimiser reduces the memory required to train the model
 $k = 0$ above, the prospect of earlier convergence using an alternative optimiser with
 $k > 0$ may make the memory increase overall worthwhile.
 
-## Taking Action
+## Taking Action (OLD)
 
 From his observations, Miguel formulates a plan. It is clear to him that it is entirely
 unnecessary to train a new model from scratch, given the prior model is already quite
@@ -175,9 +192,8 @@ The 32-bit floating-point numbers for activation state and gradients are switche
 
 Based on experience on similar jobs, Miguel expects at least a 15x increase in training
 speed on similar hardware. Plugging the new runtime estimate of 10 hours into the
-[Green Algorithms Calculator](https://calculator.green-algorithms.org/), his new
-estimated energy usage is $4.25$ kWh, with a carbon footprint of $0.98$ kgCO2e from
-these changes alone.
+[Green Algorithms Calculator], his new estimated energy usage is $4.24$ kWh, with a
+carbon footprint of $0.98$ kgCO2e from these changes alone.
 
 Miguel takes another look at the model's architecture, and notes that it is very large
 for its stated purpose, with many channels per convolutional layer, and very wide fully
@@ -222,3 +238,13 @@ ability to choose when a job is executed, meaning demmand shifting to off-peak t
 is no longer an option. In either case, Miguel's optimisations have had a huge effect
 on the model's carbon footprint, and have afforded him the *choice* of using either,
 depending on the circumstances.
+
+## TODO: FIT ME IN SOMEWHERE
+
+In his searches, he is able to find the hardware configuration for several candidates by
+looking in documentation and datasheets. He consults the [MLPerf Power] datasets of
+whole-system inference power usage, and finds the energy efficiency for representaive ML
+models $Samples/Joule = (Samples/second)/Watts$ for some of the candidate datacentres,
+helping him to choose a favourite.
+
+[MLPerf Power]: https://mlcommons.org/working-groups/benchmarks/power/
