@@ -59,7 +59,63 @@ unknown time. Almost all of his workloads run for at least 48 hours.
 
 ## Collecting Information
 
-Hugh starts by doing some background research about the two clusters he uses.
+::::::::::::::::::::::::::::::: challenge
+
+### Data exploration (20 minutes)
+
+Hugh wants to estimate the emissions associated with his HPC usage. What methodologies
+could he use? What data would be useful to collect?
+
+::::::::::::::::::::::::::: solution
+
+### Solution
+
+#### Operational Emissions
+
+- As Hugh does not have direct access to the clusters, he's likely restricted from
+  making direct measurements. It may be possible to incorporate [codecarbon] into his
+  workflows but this may be challenging (e.g. the RAPL interface may not be accessible
+  to users, multi-node jobs or shared-node jobs would need to be accounted for).
+- An estimation methodology such as the [Green Algorithms Calculator] should be fairly
+  readily usable. In this case Hugh should collect as much detail as he can about his
+  resource usage on the system and the hardware.
+- Another method for estimation would be if Hugh is able to get power draw data for the
+  cluster. This information may be available from the system administrators, most likely
+  in an aggregated form. Combined with some data or assumptions about system utilisation
+  and carbon intensity an estimate could be derived based on his resource usage.
+- Some HPC system may also provide tooling that reports job power draw or even carbon
+  emission estimates.
+- A key value to include is the Power Utilisation Efficiency (PUE) of the system. In
+  most cases this is not published but may be available on request.
+
+[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
+[codecarbon]: https://github.com/mlco2/codecarbon
+
+#### Embodied Emissions
+
+- For a known set of hardware Hugh would likely be able to look up PCF data sheets to
+  get estimates of the embodied emissions.
+- As an end-user Hugh is dependent on information provided by the service or which he
+  can gather himself. Most HPC services publish information regarding the type and
+  amount of CPUs, GPUs, memory, etc. It is rarer for services to provide a full
+  inventory including the exact models of servers, networking infrastructure, storage
+  devices, etc., that would be required to calculate the embodied emissions of the
+  service as a whole.
+- Some services may publish an embodied carbon analysis.
+
+::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::
+
+## Analysis
+
+:::::::::::::::::::::::::::::::::: challenge
+
+### Estimating Emissions (20 minutes)
+
+Hugh does some investigation and finds the below information:
+
+#### General Background
 
 DRAGONFLY is a cluster based in London. It doesn't publish any sustainability
 information. The documentation pages provide some lists of the available hardware but
@@ -71,92 +127,12 @@ emissions analysis as well as total power usage. Most usefully Hugh finds that t
 cluster provides a tool for users to estimate the carbon emissions of their workloads.
 This tool has been tested and calibrated for the cluster so should be fairly accurate.
 
-Hugh then considers each of the emissions sources in turn.
+#### HPC workloads
 
-### Electricity usage from HPC workloads
-
-Hugh realises that carbon emissions associated with his HPC usage are directly related
-to his level of usage. Currently Hugh is fairly sure he uses LANCER the most but he
-doesn't track exactly how much and what workloads he runs. Collecting this data will be
-an important first step.
-
-Even without detailed data Hugh is confident that his simulation workloads form more
-than 90% of his cluster usage. As the data analysis workflows also tend to be more
-diverse he decides to focus his initial efforts on his simulation workloads as he will
-get the most impact from improving those.
-
-Hugh also notes that most of his simulation workloads run for at least 48 hours and he
-has no control over when they start running. He therefore concludes that there is little
-scope to exploit demand shifting to reduce carbon intensity.
-
-### Embodied Emissions from HPC facilities
-
-Whilst the embodied emissions for the clusters are relevant to calculating the carbon
-impact of his work, Hugh notes that these are a sunk cost that he is unable to impact at
-this point. LANCER provides some data but DRAGONFLY doesn't provide nearly enough
-information to make much headway. Hugh emails the admins of DRAGONFLY but they're unable
-to provide him with more information. Based on this Hugh decides not to consider
-embodied emissions in his analysis.
-
-## Analysis
-
-::::::::::::::::::::::::::::::: instructor
-
-Delivery of the rest of this material is intended to go in two phases:
-
-1. Attendees are expected to complete the "Estimating Emissions" challenge. This is best
-   done in groups. After the group task, attendees can report back on what they've come
-   up with.
-
-1. Then attendees can open the spoiler tag - "Hugh's estimates". This section provides
-   the "canonical" outcome of Hugh's emissions estimates and further develops the
-   scenario so that reductions in emissions can be considered. It is recommended that
-   the groups from above look through the section together and complete the embedded
-   challenge.
-
-::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::: challenge
-
-### Estimating Emissions
-
-Based on the scenario described above how could Hugh estimate the carbon emissions
-associated with his HPC workloads over a year? What additional data would he need to
-collect?
-
-::::::::::::::::::::::::::::::: solution
-
-Hugh needs two things.
-
-1. An estimate of his resource usage over a year. It may be possible to reconstruct this
-   from historical data or he may have to monitor his usage for a period of time and
-   then extrapolate to annual usage from there. To simplify this he can focus on only
-   his main simulation campaigns and exclude any data analysis workloads. Key data he'll
-   want to track includes CPU-hours and Gb-hours of memory usage.
-1. A method to estimate emissions from his usage. For LANCER this is straightforward
-   using the tooling that's supplied for the cluster. Making an estimate for DRAGONFLY
-   is harder without equivalent tooling. There are several options. Hugh could attempt
-   to use a model like the [Green Algorithms Calculator] if he has sufficient
-   information about the hardware used by DRAGONFLY. A simpler alternative would be to
-   assume that emissions for a given set of resources are the same between DRAGONFLY and
-   LANCER then extrapolate from LANCER emissions estimates to get equivalents for
-   DRAGONFLY. In both cases the estimate for DRAGONFLY is likely to be much more
-   approximate but is still useful to have.
-
-[Green Algorithms Calculator]: https://calculator.green-algorithms.org/
-
-::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::: spoiler
-
-## Hugh's Estimates
-
-For the next two weeks Hugh keeps track of the workloads that he runs on the different
-clusters. He tracks the total CPU-hours spent on different clusters and the different
-simulation codes used on each one. He also gets the total estimated emissions for LANCER
-using the provided cluster tooling.
+Hugh is confident that his simulation workflows form the vast majority of his HPC usage
+so he decides to focus on these. He tracks the total CPU-hours spent on different
+clusters and the different simulation codes used on each one. He also gets the total
+estimated emissions for LANCER using the provided cluster tooling.
 
 | Cluster | Simulation Code | Total CPU-hours | Notes | Emissions (kgCO₂e) |
 | --- | --- | ---: | --- | --- |
@@ -167,17 +143,23 @@ using the provided cluster tooling.
 | | ORANGE | 40,000 | | 21 |
 | | LUMMPS | 75,000 | | 40 |
 
-The total estimated emissions are 94 kgCO₂e from the two week period. Hugh also decides
-to estimate his emissions from DRAGONFLY by scaling the emissions of LANCER by the
-difference in CPU-hours used on both systems - he's aware that LANCER and DRAGONFLY are
-quite different and so this value for DRAGONFLY is very approximate.
+Whilst collecting the above data Hugh also notes that around 15,000 CPU-hours were
+wasted on from some workloads on LANCER that he hadn't setup properly and which had to
+be repeated.
 
-:::::::::::::::::::::::::::::::::: challenge
+**By scaling the emissions estimates for LANCER by the relative resource usages estimate
+the emissions for each code on DRAGONFLY. Use the result to estimate Hugh's annual
+emissions. Also estimate the emissions from the 15,000 wasted CPU-hours. What are the
+limitations of the estimates produced using this method and how could it be improved?**
 
-## Estimating DRAGONFLY emissions
+#### Embodied emissions
 
-Based on the above approach, estimate the emissions from DRAGONFLY for each of the
-simulation codes.
+Whilst the embodied emissions for the clusters are relevant to calculating the carbon
+impact of his work, Hugh notes that these are a sunk cost that he is unable to impact at
+this point. LANCER provides some data but DRAGONFLY doesn't provide nearly enough
+information to make much headway. Hugh emails the admins of DRAGONFLY but they're unable
+to provide him with more information. Based on this Hugh decides not to consider
+embodied emissions in his analysis.
 
 :::::::::::::::::::::::::::::: solution
 
@@ -203,14 +185,6 @@ Applying this to the other simulation codes gives:
 
 This gives a total 144 kgCO₂e from the two week period.
 
-:::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::
-
-Whilst collecting the above data Hugh also notes that around 15,000 CPU-hours were wasted
-on workloads that he hadn't setup properly and which had to be repeated. He estimates
-this corresponds to around 8 kgCO₂e.
-
 To better understand what this figure means Hugh, takes his total emissions figure from
 the two weeks and compares it with other emissions sources. He finds that 144 kgCO₂e is
 approximately equivalent to driving for around 500 miles in a petrol fueled car^1^.
@@ -220,48 +194,30 @@ notes that this is close to the UK per-capita emissions for energy generation. T
 means the electricity demands of his work is nearly equivalent to those of whole second
 person.
 
+Deriving an estimate for the wasted emissions is fairly simple is it makes a quarter of
+his use of GROMINZ on LANCER - a total of 8 kgCO₂e.
+
+The limitations of this methodology come from assumping that usage of a given set of
+CPU-hours on each system leads to the same amount of carbon emissions. In practice
+factors such as the PUE, carbon intensity, CPU model, etc. mean this is unlikely to be
+the case. The estimate could be improved if Hugh can get information like the PUE or
+relevant carbon intensity values for both clusters.
+
+::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::
 
 ## Taking Action
 
-:::::::::::::::::::::::::::::::::: instructor
+:::::::::::::::::::::::::::::::::: discussion
 
-Similarly to above, the below challenge can be tackled collectively and attendees can
-report back on their results.
+## Measures to Reduce Emissions (20 minutes)
 
-The following spoiler section then rounds out the scenario and provides a "canonical"
-outcome. Suggest that the below "outcomes" section is delivered to all attendees.
+Hugh takes his emissions estimates and comes up with some steps to help to reduce emissions.
 
-:::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::: challenge
-
-## Planning Action
-
-Based on the outcome of Hugh's data collection and analysis consider the following:
-
-- Where would Hugh derive the most impact to reduce emissions?
-- What steps could Hugh take to reduce the emissions associated with his work? These
-  might be technical or changes to his work practices.
-
-:::::::::::::::::::::::::::::: solution
-
-For focussing his future actions and exploration:
-
-- Hugh spends the most CPU-hours on LANCER.
-- Hugh spends the most CPU-hours using GROMINZ.
-
-The 15,000 wasted CPU-hours are also a good focus as the associated emissions were
-non-productive.
-
-There are many steps Hugh could take to reduce emissions. Keep a record of the ideas
-you've had and compare them with those in the next section.
-
-:::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::: spoiler
+**In your groups discussion any other measures that Hugh could implement and what impact
+they might have. What steps could Hugh take to get better data to refine the emissions
+estimates he's made so far?**
 
 ### Hugh Takes Action
 
