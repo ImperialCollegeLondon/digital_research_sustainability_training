@@ -275,9 +275,11 @@ are negligible.
 ## Measures to reduce emissions (20 minutes)
 
 Celia identifies several ways she can improve the emissions associated with usage of her
-code base as mentioned below. In your groups discuss any other measures you think could
-be implemented and what impact they might have. What steps could Celia take to get
-better data to refine the emissions estimates she's made so far?
+code base as mentioned below.
+
+**In your groups discuss any other measures you think could be implemented and what
+impact they might have. What steps could Celia take to get better data to refine the
+emissions estimates she's made so far?**
 
 ### Code Optimisation
 
