@@ -81,30 +81,28 @@ its manufacture, transportation, usage, refurbishment and reusage."}
 
 The operational emissions of a device depend on its design and performance, but also on
 _how_, _when_ and _where_ it is used. For this reason, it is useful to consider
-energy usage first as a proxy for carbon emissions.
+energy usage as a proxy for carbon emissions.
 
 The power consumption of digital devices can be split into:
 
 - **idle consumption**: this accounts for the energy required when the device is powered
 but not carrying out any particular operation.
 
-- **usage-based consumption**: the energy consumed to perform a specific task. As computational
-workload increases, components like CPUs and GPUs, and memory draw higher levels of power,
-which may require energy systems to work harder to cool the system.
+- **usage-based consumption**: the energy consumed to perform a specific task. As
+  computational workload increases, components like CPUs and GPUs, and memory draw
+  higher levels of power, which may require energy systems to work harder to cool the
+  system.
 
 <!-- markdownlint-disable-next-line line-length -->
 ![Factors that affect the operational emissions associated with a device.](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions including age, type, power management settings and peripherals.'}
 
 :::::::::::::::::::::::::: callout
 
-### Utilisation
+### Utilisation, Utilisation, Utilisation
 
-The nature of both operational and embodied energy usage highlights the importance of
-utilisation in relation to computing hardware. The embodied emissions of a device are a
-fixed overhead, so **the more computational work that is carried out over the lifetime of
-a device the more efficiently that overhead has been invested**. Similarly, as there is
-a minimum power draw associated with idle usage, as utilisation of a device increases the
-power draw per unit of computational work decreases.
+Following from the above, sustainability in computing means having **the minimum amount
+of hardware, fully utilised doing useful work**. This ensures the "fixed" overheads of
+idle power and embodied emissions are minimised per unit of useful computational work.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -117,10 +115,9 @@ and phones) the embodied emissions are far in excess of operational ones. This
 emphasises the importance of maximising the lifetime of these devices.
 
 For enterprise servers that have a much greater maximum operational power draw, the
-balance can vary due to a number of factors, not least the carbon intensity of the
-electricity used to power them and their utilisation. However, as  the carbon intensity
-of electricity falls over time, embodied emissions are expected to increasingly
-dominate.
+balance can vary with factors like local carbon intensity and utilisation. As the carbon
+intensity of electricity is expected to fall over time however, embodied emissions will
+increasingly dominate.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -149,10 +146,8 @@ Here is the [HP EliteBook 840 G9 PCF Report]:
 
 [HP EliteBook 840 G9 PCF Report]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991
 
-If we exclude the `Use` section of the chart, which obviously depends on the usage and
-the location, as discussed in the [previous episode](02_carbon.md), the remaining,
-related to production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO₂e.
+If we exclude the `Use` section of the chart, the remaining, related to production and
+transportation, accounts for about ~80% of the estimated total, i.e. 160 kgCO₂e.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -174,51 +169,39 @@ out its embodied carbon emissions.
  and estimation methods.](fig/ep3_carbon_estimations.png){alt='Ways to
 calculate carbon emissions.'}
 
-The most direct and accurate option to get the idle energy usage of a consumer device is
-to use a plug in power meter. There are many models, but most will provide both the
-instantaneous power and the energy used over a period of time. This can be used both to
-ascertain the idle power draw of a system and to estimate the emissions of a running
-application by comparing to the baseline idle draw.
+Power draw can be measured via:
 
-If measuring the energy usage of the entire device is not possible, modern hardware
-often supports reporting the energy consumption of different components. This varies
-based on the hardware and operating system but we'll look at two common examples. RAPL
-(Running Average Power Limit) is a CPU feature which reports real time energy usage.
-Similarly nvidia-smi can report power consumption for NVIDIA GPUs.
-
-In practice, low level interfaces like RAPL and nvidia-smi are difficult to use
-directly. There are more user friendly interfaces that can abstract over the particular
-hardware in use on your system. In particular, [codecarbon] is a Python application that
-can be used to directly measure hardware power consumption during the runtime of an
-application.
+- **Plug-in power meter.** There are many models, but most will provide both the
+  instantaneous power and the energy used over a period of time. The obvious requirement
+  however is physical access to the power source.
+- **Hardware counters.** Modern hardware often supports reporting the power usage of
+  individual components. This varies based on the hardware but two common examples are
+  RAPL (Running Average Power Limit) for CPUs and `nvidia-smi` NVIDIA GPUs.
+- **[CodeCarbon]**. A Python application providing a more user friendly interface for
+  hardware counters.
 
 If it is impractical to make any direct measurements, there are also some methods to
-estimate power draw.
+estimate power draw:
 
-For idle power usage, one option is to check for an [ECO Declaration] for the
-equipment. For example, the [ECO declaration of the HP EliteBook 840 G9] indicates an
-idle energy consumption of 22.67 kWh/year. This declaration also includes useful
-information about the product, like which components can be replaced or upgrade. The ECO
-Declaration is a voluntary standard so not all manufacturers provide it or it may
-contain incomplete information.
-
-For estimating the power usage of a computational workload a useful resource is the
-[Green Algorithms Calculator]. This uses a simple model that combines information about
-the resource utilisation of a computational workload with details of the hardware it ran
-on.
+- **[ECO Declaration].** Provides manufacturer information about idle power usage. For
+  example, the [ECO declaration of the HP EliteBook 840 G9] indicates an idle energy
+  consumption of 22.67 kWh/year. This declaration also includes useful information about
+  the product, like which components can be replaced or upgrade. The ECO Declaration is
+  a voluntary standard so not all manufacturers provide it or it may contain incomplete
+  information.
+- **[Green Algorithms Calculator].** A simple model that combines information about the
+  resource utilisation of a computational workload with details of the hardware it ran
+  on.
 
 <!-- markdownlint-disable-next-line line-length -->
 ![Screenshot of the Green Algorithms Calculator](fig/green_algorithms_calculator_screenshot.png){alt="A screenshot of the Green Algorithms Calculator webpage showing an example calculation and the result carbon emissions."}
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-#### What is the idle energy usage of your computer?
+#### Trying Out the Green Algorithms Calculator
 
-Like in the previous exercise, try to find the ECO Declaration for your computer
-in the manufacturer's webpage.
-
-- What is the reported idle energy consumption?
-- How easy was it to find?
+Open the [Green Algorithms Calculator] and try to calculate the energy usage and carbon
+emissions of your computer running a task on 1 CPU-core for 12 hours.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
