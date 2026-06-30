@@ -80,8 +80,7 @@ real-time measurement, prediction tools and extrapolaring from known data.
   power usage directly from the mains socket, or by wrapping code with power monitoring
   software packages such as [Code Carbon]. Realtime measurement of cloud jobs may also
   be possible, since many cloud providers offer infrastructure for querying live energy
-  usage of running jobs. If not, then data from a local run with a smaller batch size
-  may be extrapolated from.
+  usage of running jobs.
 - Carbon data from training the previous model may be used as surrogate data for the
   new model, given their near-identical architecture. If carbon data for the previous
   run was not recorded, then predictive tools can be used to estimate it. For example,
@@ -105,11 +104,18 @@ Miguel computes a few simple estimates up-front to give a rough idea of the carb
 footprint of a full training run. Using the following information, try to replicate the
 results of Miguel's estimations.
 
-#### Local Run Extrapolation
+#### Local Development and Testing
 
-TODO:
+Miguel is unable to train the model at target batch size of $256$ on his workstation,
+but information from a smaller run might still be useful for estimating the carbon
+emissions of the larger run. On his workstation, he times how long it takes to complete
+a single training epoch, using $1\%$ of the training data, with a batch size of $32$.
+The elapsed time comes to $5.76$ hours.
 
-#### Data From Previous Runs
+**How might this information help in estimating emissions in the full run? Try forming
+an estimate for carbon emissions of the full run using this information alone.**
+
+#### Previous Training Runs
 
 Given the similarity of the new model to the old one, data obtained during the training
 run of the previous model may be used as surrogate data for estimating the carbon usage
@@ -121,18 +127,23 @@ and used the Azure (Southern UK) datacentre with the following hardware:
 - One whole NVIDIA Tesla V100 GPU
 
 **Use the [Green Algorithms Calculator] to estimate the carbon footprint of training the
-new model using information obtained from training the similar previous model. You will
-need to select data version `v3.0` in the top right of the calculator page.**
+new model using information obtained from training the similar previous model. For this
+exercise, select data version `v3.0` in the top right of the calculator page.**
 
 ::::::::::::::::::::::::::::::: solution
 
 Miguel's results for the two estimate methods are as follows.
 
-#### Local Run Extrapolation
+#### Local Development and Testing
 
-TODO:
+Miguel can use this information to get another rough estimate of the time required to
+completely train the model. Given that only $1\%$ of training data was used, the time
+required for $100\%$ of data would be about $576$ hours. Furthermore, given the batch
+size used in the test was $32$, eight times lower than the target batch size of $256$,
+the time required to train the full model with the final batch size will be around
+$576 / 8 = 72$ hours.
 
-#### Data From Previous Runs
+#### Previous Training Runs
 
 Whilst Miguel does not have actual measurements for carbon emissions whilst training the
 older model, he has enough information to compute an estimate retroactively using, for
@@ -144,7 +155,7 @@ train the model, with a carbon footprint of $7.06$ kgCO2e.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Analysis (OLD)
+## (OLD) Analysis
 
 For the next step, Miguel begins to quantify the computational resources required to
 train the modified model. With bytes per value $b = 4$, the number of trainable
@@ -171,7 +182,7 @@ decision to use the SGD optimiser reduces the memory required to train the model
 $k = 0$ above, the prospect of earlier convergence using an alternative optimiser with
 $k > 0$ may make the memory increase overall worthwhile.
 
-## Taking Action (OLD)
+## (OLD) Taking Action
 
 From his observations, Miguel formulates a plan. It is clear to him that it is entirely
 unnecessary to train a new model from scratch, given the prior model is already quite
@@ -239,7 +250,7 @@ is no longer an option. In either case, Miguel's optimisations have had a huge e
 on the model's carbon footprint, and have afforded him the *choice* of using either,
 depending on the circumstances.
 
-## TODO: FIT ME IN SOMEWHERE
+## (OLD) FIT ME IN SOMEWHERE
 
 In his searches, he is able to find the hardware configuration for several candidates by
 looking in documentation and datasheets. He consults the [MLPerf Power] datasets of
