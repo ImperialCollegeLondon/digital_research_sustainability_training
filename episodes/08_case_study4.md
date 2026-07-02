@@ -49,7 +49,9 @@ Miguel is tasked with deploying a new model to the cloud, based on the architect
 an existing model he deployed last year. The existing model was trained with vast
 quantities of real animal images, and is already quite competent at feline-based image
 processing. It performed simple detection of cats in images, but the new model must
-produce bounding boxes.
+produce bounding boxes. The previous training script was very crude, and simply passed
+the entire dataset through the model in batches of $256$, for exactly $100$ epochs of
+stochastic gradient descent (SGD), with no regularisation.
 
 Based on his experience preparing the previous model, he knows that his workstation's
 GPU will not have enough memory to train the similarly-sized derived model with a
@@ -155,12 +157,18 @@ train the model, with a carbon footprint of $7.06$ kgCO2e.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## (OLD) Analysis
+## Taking Action
 
-For the next step, Miguel begins to quantify the computational resources required to
-train the modified model. With bytes per value $b = 4$, the number of trainable
-parameters $P ≈ 26,000,000$, the batch size $M = 256$ and the number of activation state
-variables for all layers $N ≈ 11,000,000$:
+From his observations, Miguel formulates a plan. It is clear to him that it is entirely
+unnecessary to train a new model from scratch, given the prior model is already quite
+competent at processing cats. The existing model can readily be adapted by appending a
+new head for cat bounding-boxes, and transfer learning techniques can be utilised to
+further fine-tune the model to a reasonable accuracy.
+
+Miguel begins to quantify the computational resources required to train the revised
+model. With bytes per value $b = 4$, number of trainable parameters $P ≈ 26,000,000$,
+batch size $M = 256$ and number of activation state variables for all layers
+$N ≈ 11,000,000$:
 
 | Memory Type      | Formula             | Size (bytes)   |
 | ---------------- | ------------------- | -------------- |
@@ -171,24 +179,12 @@ variables for all layers $N ≈ 11,000,000$:
 
 An extra $20\% ≈ 2,294,400,000$ bytes overhead for internal ML framework usage is also
 included, totalling approximately $12.8$ GB. In general, there is an optimiser memory
-factor $k$, but plain stochastic gradient descent (SGD) has no internal state, hence
-$k = 0$ for now. With this estimation framework, he is able to know upfront roughly how
-much GPU memory the job will require, as a function of batch and layer size.
-
-Finally, Miguel notices that the training script of the base model was very crude, and
-simply passed through the entire dataset through the model, with a fixed batch size,
-for exactly 100 epochs of SGD. No regularisation schemes were used. Whilst the initial
-decision to use the SGD optimiser reduces the memory required to train the model, via
-$k = 0$ above, the prospect of earlier convergence using an alternative optimiser with
-$k > 0$ may make the memory increase overall worthwhile.
-
-## (OLD) Taking Action
-
-From his observations, Miguel formulates a plan. It is clear to him that it is entirely
-unnecessary to train a new model from scratch, given the prior model is already quite
-competent at processing cats. The existing model can readily be adapted by appending a
-new head for cat bounding-boxes, and transfer learning techniques can be utilised to
-further fine-tune the model to a reasonable accuracy.
+factor $k$, but plain SGD has no internal state, hence $k = 0$ for now. With this
+estimation framework, he is able to know upfront roughly how much GPU memory the job
+will require, as a function of batch and layer size. Whilst the SGD optimiser reduces
+the memory required to train the model, via $k = 0$ above, the prospect of earlier
+convergence using an alternative optimiser with $k > 0$ may make the memory increase
+overall worthwhile.
 
 He begins experimenting, appending the new bounding-box head and starting training,
 keeping the trainable parameters in the body fixed, and gradually relaxing them as
@@ -249,13 +245,3 @@ ability to choose when a job is executed, meaning demmand shifting to off-peak t
 is no longer an option. In either case, Miguel's optimisations have had a huge effect
 on the model's carbon footprint, and have afforded him the *choice* of using either,
 depending on the circumstances.
-
-## (OLD) FIT ME IN SOMEWHERE
-
-In his searches, he is able to find the hardware configuration for several candidates by
-looking in documentation and datasheets. He consults the [MLPerf Power] datasets of
-whole-system inference power usage, and finds the energy efficiency for representaive ML
-models $Samples/Joule = (Samples/second)/Watts$ for some of the candidate datacentres,
-helping him to choose a favourite.
-
-[MLPerf Power]: https://mlcommons.org/working-groups/benchmarks/power/
