@@ -170,12 +170,12 @@ model. With bytes per value $b = 4$, number of trainable parameters $P ≈ 26,00
 batch size $M = 256$ and number of activation state variables for all layers
 $N ≈ 11,000,000$:
 
-| Memory Type      | Formula             | Size (bytes)   |
-| ---------------- | ------------------- | -------------- |
-| Parameters       | $P \cdot b$         | 104,000,000    |
-| Gradients        | $P \cdot b$         | 104,000,000    |
-| Optimiser State  | $P \cdot k \cdot b$ | 0              |
-| Activation State | $M \cdot N \cdot b$ | 11,264,000,000 |
+| Memory Type      | Formula             | Size (bytes)     |
+| ---------------- | ------------------- | ---------------- |
+| Parameters       | $P \cdot b$         | $104,000,000$    |
+| Gradients        | $P \cdot b$         | $104,000,000$    |
+| Optimiser State  | $P \cdot k \cdot b$ | $0$              |
+| Activation State | $M \cdot N \cdot b$ | $11,264,000,000$ |
 
 An extra $20\% ≈ 2,294,400,000$ bytes overhead for internal ML framework usage is also
 included, totalling approximately $12.8$ GB. In general, there is an optimiser memory
@@ -218,12 +218,12 @@ estimates the memory requirements of this revised model, with the aim of maximis
 batch size to better-utilise the GPU. With new values $b_{16} = 2$, $b_{32} = 4$,
 $P ≈ 20,800,000$, $k = 2$, $M = 256$ and $N ≈ 8,800,000$:
 
-| Memory Type      | Formula                  | Size (bytes)   |
-| ---------------- | ------------------------ | -------------- |
-| Parameters       | $P \cdot b_{32}$         | 83,200,000     |
-| Gradients        | $P \cdot b_{16}$         | 41,600,000     |
-| Optimiser State  | $P \cdot k \cdot b_{32}$ | 166,400,000    |
-| Activation State | $M \cdot N \cdot b_{16}$ | 4,505,600,000  |
+| Memory Type      | Formula                  | Size (bytes)     |
+| ---------------- | ------------------------ | ---------------- |
+| Parameters       | $P \cdot b_{32}$         | $83,200,000$     |
+| Gradients        | $P \cdot b_{16}$         | $41,600,000$     |
+| Optimiser State  | $P \cdot k \cdot b_{32}$ | $166,400,000$    |
+| Activation State | $M \cdot N \cdot b_{16}$ | $4,505,600,000$  |
 
 and extra $20\% ≈ 959,360,000$ bytes overhead, totalling approximately $5.4$ GB only.
 Indeed, Miguel finds he can increase batch size even up to $M = 728$ before the $16$ GB
