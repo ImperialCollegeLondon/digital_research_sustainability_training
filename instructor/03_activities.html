@@ -350,7 +350,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Digital research activities with sustainability issues</h1>
-        <p>Last updated on 2026-06-23 |
+        <p>Last updated on 2026-07-16 |
 
         <a href="https://github.com/ImperialCollegeLondon/digital_research_sustainability_training/edit/main/episodes/03_activities.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -451,8 +451,8 @@ manufacturing to reuse.</div>
 <h3 id="operational-emissions">Operational emissions<a class="anchor" aria-label="anchor" href="#operational-emissions"></a></h3>
 <p>The operational emissions of a device depend on its design and
 performance, but also on <em>how</em>, <em>when</em> and <em>where</em>
-it is used. For this reason, it is useful to consider energy usage first
-as a proxy for carbon emissions.</p>
+it is used. For this reason, it is useful to consider energy usage as a
+proxy for carbon emissions.</p>
 <p>The power consumption of digital devices can be split into:</p>
 <ul><li><p><strong>idle consumption</strong>: this accounts for the energy
 required when the device is powered but not carrying out any particular
@@ -463,22 +463,19 @@ like CPUs and GPUs, and memory draw higher levels of power, which may
 require energy systems to work harder to cool the system.</p></li>
 </ul><!-- markdownlint-disable-next-line line-length --><figure><img src="../fig/ep3_operational_emissions.png" alt="Factors that affect operational emissions including age, type, power management settings and peripherals." class="figure mx-auto d-block"><div class="figcaption">Factors that affect the operational emissions
 associated with a device.</div>
-</figure><div id="utilisation" class="callout">
+</figure><div id="utilisation-utilisation-utilisation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="utilisation" class="callout-inner">
-<h3 class="callout-title">Utilisation</h3>
+<div id="utilisation-utilisation-utilisation" class="callout-inner">
+<h3 class="callout-title">Utilisation, Utilisation, Utilisation</h3>
 <div class="callout-content">
-<p>The nature of both operational and embodied energy usage highlights
-the importance of utilisation in relation to computing hardware. The
-embodied emissions of a device are a fixed overhead, so <strong>the more
-computational work that is carried out over the lifetime of a device the
-more efficiently that overhead has been invested</strong>. Similarly, as
-there is a minimum power draw associated with idle usage, as utilisation
-of a device increases the power draw per unit of computational work
-decreases.</p>
+<p>Following from the above, sustainability in computing means having
+<strong>the minimum amount of hardware, fully utilised doing useful
+work</strong>. This ensures the “fixed” overheads of idle power and
+embodied emissions are minimised per unit of useful computational
+work.</p>
 </div>
 </div>
 </div>
@@ -495,10 +492,10 @@ desktops, tablets and phones) the embodied emissions are far in excess
 of operational ones. This emphasises the importance of maximising the
 lifetime of these devices.</p>
 <p>For enterprise servers that have a much greater maximum operational
-power draw, the balance can vary due to a number of factors, not least
-the carbon intensity of the electricity used to power them and their
-utilisation. However, as the carbon intensity of electricity falls over
-time, embodied emissions are expected to increasingly dominate.</p>
+power draw, the balance can vary with factors like local carbon
+intensity and utilisation. As the carbon intensity of electricity is
+expected to fall over time however, embodied emissions will increasingly
+dominate.</p>
 </div>
 </div>
 </div>
@@ -532,10 +529,9 @@ EliteBook 840 G9 PCF Report</a>:</p>
 <!-- markdownlint-disable-next-line line-length -->
 <figure><img src="../fig/embodied_emissions_laptop.png" alt="Product Carbon Footprint report for HP EliteBook 840 G9." class="figure mx-auto d-block"><div class="figcaption">Product Carbon Footprint for HP EliteBook 840
 G9</div>
-</figure><p>If we exclude the <code>Use</code> section of the chart, which
-obviously depends on the usage and the location, as discussed in the <a href="02_carbon.html">previous episode</a>, the remaining, related to
-production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO₂e.</p>
+</figure><p>If we exclude the <code>Use</code> section of the chart, the
+remaining, related to production and transportation, accounts for about
+~80% of the estimated total, i.e. 160 kgCO₂e.</p>
 <div id="what-are-the-embodied-carbon-emissions-of-your-computer" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -561,55 +557,53 @@ replacing the whole laptop?</li>
 <figure><img src="../fig/ep3_carbon_estimations.png" alt="Ways to calculate carbon emissions." class="figure mx-auto d-block"><div class="figcaption">Ways to measure the operational carbon emissions
 associated with a device, including direct measurement and estimation
 methods.</div>
-</figure><p>The most direct and accurate option to get the idle energy usage of a
-consumer device is to use a plug in power meter. There are many models,
-but most will provide both the instantaneous power and the energy used
-over a period of time. This can be used both to ascertain the idle power
-draw of a system and to estimate the emissions of a running application
-by comparing to the baseline idle draw.</p>
-<p>If measuring the energy usage of the entire device is not possible,
-modern hardware often supports reporting the energy consumption of
-different components. This varies based on the hardware and operating
-system but we’ll look at two common examples. RAPL (Running Average
-Power Limit) is a CPU feature which reports real time energy usage.
-Similarly nvidia-smi can report power consumption for NVIDIA GPUs.</p>
-<p>In practice, low level interfaces like RAPL and nvidia-smi are
-difficult to use directly. There are more user friendly interfaces that
-can abstract over the particular hardware in use on your system. In
-particular, <a href="https://github.com/mlco2/codecarbon" class="external-link">codecarbon</a>
-is a Python application that can be used to directly measure hardware
-power consumption during the runtime of an application.</p>
-<p>If it is impractical to make any direct measurements, there are also
-some methods to estimate power draw.</p>
-<p>For idle power usage, one option is to check for an <a href="https://ecma-international.org/publications-and-standards/standards/ecma-370/" class="external-link">ECO
-Declaration</a> for the equipment. For example, the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&amp;search=HP%20EliteBook%20840%20G9" class="external-link">ECO
+</figure><p>Power draw can be measured via:</p>
+<ul><li>
+<strong>Plug-in power meter.</strong> There are many models, but
+most will provide both the instantaneous power and the energy used over
+a period of time. The obvious requirement however is physical access to
+the power source.</li>
+<li>
+<strong>Hardware counters.</strong> Modern hardware often supports
+reporting the power usage of individual components. This varies based on
+the hardware but two common examples are RAPL (Running Average Power
+Limit) for CPUs and <code>nvidia-smi</code> NVIDIA GPUs.</li>
+<li>
+<strong><a href="https://github.com/mlco2/codecarbon" class="external-link">CodeCarbon</a></strong>. A
+Python application providing a more user friendly interface for hardware
+counters.</li>
+</ul><p>If it is impractical to make any direct measurements, there are also
+some methods to estimate power draw:</p>
+<ul><li>
+<strong><a href="https://ecma-international.org/publications-and-standards/standards/ecma-370/" class="external-link">ECO
+Declaration</a>.</strong> Provides manufacturer information about idle
+power usage. For example, the <a href="https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08155359&amp;search=HP%20EliteBook%20840%20G9" class="external-link">ECO
 declaration of the HP EliteBook 840 G9</a> indicates an idle energy
 consumption of 22.67 kWh/year. This declaration also includes useful
 information about the product, like which components can be replaced or
 upgrade. The ECO Declaration is a voluntary standard so not all
-manufacturers provide it or it may contain incomplete information.</p>
-<p>For estimating the power usage of a computational workload a useful
-resource is the <a href="https://calculator.green-algorithms.org/" class="external-link">Green
-Algorithms Calculator</a>. This uses a simple model that combines
+manufacturers provide it or it may contain incomplete information.</li>
+<li>
+<strong><a href="https://calculator.green-algorithms.org/" class="external-link">Green
+Algorithms Calculator</a>.</strong> A simple model that combines
 information about the resource utilisation of a computational workload
-with details of the hardware it ran on.</p>
-<!-- markdownlint-disable-next-line line-length -->
-<figure><img src="../fig/green_algorithms_calculator_screenshot.png" alt="A screenshot of the Green Algorithms Calculator webpage showing an example calculation and the result carbon emissions." class="figure mx-auto d-block"><div class="figcaption">Screenshot of the Green Algorithms
+with details of the hardware it ran on.</li>
+</ul><!-- markdownlint-disable-next-line line-length --><figure><img src="../fig/green_algorithms_calculator_screenshot.png" alt="A screenshot of the Green Algorithms Calculator webpage showing an example calculation and the result carbon emissions." class="figure mx-auto d-block"><div class="figcaption">Screenshot of the Green Algorithms
 Calculator</div>
-</figure><div id="what-is-the-idle-energy-usage-of-your-computer" class="callout discussion">
+</figure><div id="trying-out-the-green-algorithms-calculator" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="what-is-the-idle-energy-usage-of-your-computer" class="callout-inner">
-<h3 class="callout-title">What is the idle energy usage of your
-computer?</h3>
+<div id="trying-out-the-green-algorithms-calculator" class="callout-inner">
+<h3 class="callout-title">Trying Out the Green Algorithms
+Calculator</h3>
 <div class="callout-content">
-<p>Like in the previous exercise, try to find the ECO Declaration for
-your computer in the manufacturer’s webpage.</p>
-<ul><li>What is the reported idle energy consumption?</li>
-<li>How easy was it to find?</li>
-</ul></div>
+<p>Open the <a href="https://calculator.green-algorithms.org/" class="external-link">Green
+Algorithms Calculator</a> and try to calculate the energy usage and
+carbon emissions of your computer running a task on 1 CPU-core for 12
+hours.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1300,8 +1294,8 @@ any links that you are not going to use.
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/instructor/03_activities.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-06-23",
-  "datePublished": "2026-07-14"
+  "dateModified": "2026-07-16",
+  "datePublished": "2026-07-16"
 }
 
   </script><script>
