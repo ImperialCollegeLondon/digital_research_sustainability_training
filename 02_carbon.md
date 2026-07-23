@@ -301,8 +301,10 @@ view of different emissions sources.
 
 [Greenhouse Gas Protocol]: https://ghgprotocol.org/
 
-<!-- markdownlint-disable-next-line line-length -->
-![PLACEHOLDER](fig/ghg_emissions_placeholder.webp){alt="Placeholder - GHG Emissions Types."}
+![ The different scopes of GHG emissions CC BY 4.0
+https://commons.wikimedia.org/w/index.php?curid=140748311
+](fig/ep1_carbon_accounting_scopes.png){alt="Depiction of carbon accounting using the
+WRI-Greenhouse Gas Protocol."}
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
