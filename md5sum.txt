@@ -15,5 +15,5 @@
 "episodes/09_epilogue.md" "846baee0046e2b80be674f079866514e" "site/built/09_epilogue.md" "2026-06-22"
 "instructors/instructor-notes.md" "4871b9b5f741f3056571289554d27815" "site/built/instructor-notes.md" "2026-01-14"
 "learners/reference.md" "376f0fef94781c05cf42a1ca28cf48ae" "site/built/reference.md" "2026-01-14"
-"learners/setup.md" "23b2dbbcb0ef430a1a9d62187e94b9d4" "site/built/setup.md" "2026-01-13"
+"learners/setup.md" "a2dc429642d11d9ea94e9516e8cd04da" "site/built/setup.md" "2026-07-23"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2026-01-14"
