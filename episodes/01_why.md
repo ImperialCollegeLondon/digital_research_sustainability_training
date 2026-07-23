@@ -34,8 +34,11 @@ Environmental sustainability refers to the need for human activity to be balance
 the long term health of the planet and availability of natural resources. There are many
 issues that can impact environmental sustainability:
 
-<!-- markdownlint-disable-next-line line-length -->
-![Placeholder image - Challenges of environmental sustainability](https://i.pinimg.com/736x/6c/f9/62/6cf962d6976c08ae2ba94f412e8d1d4c.jpg){alt="Picture showing some challenges of environmental sustainability, including greenhouse gas emissions, potable water usage, waste and pollution, and loss of biodiversity, among others"}
+![Challenges of environmental
+sustainability](fig/ep1_environmental_sustainability.png){alt="Picture
+showing some challenges of environmental sustainability, including greenhouse gas
+emissions, potable water usage, waste and pollution, and loss of biodiversity, among
+others"}
 
 The most pressing sustainability challenge facing the world is the emission of
 greenhouse gases driving the climate emergency. For this reason we will primarily focus
@@ -65,6 +68,9 @@ zero](https://commonslibrary.parliament.uk/research-briefings/cbp-9888/) by 2050
 ::::::::::::::::::::::::: callout
 
 ### Carbon neutral vs net zero
+
+![Carbon Neutral vs Net Zero](fig/ep1_net_zero_vs_carbon_neutral.png){alt="Cartoon
+representing the differences between the terms carbon neutral and net zero."}
 
 The terms **carbon neutral** and **net zero** are often used interchangeably, but they
 have different meanings. They both refer to removing harmful emissions from the
@@ -152,8 +158,9 @@ activity**, but a myriad small activities, practices, tools and processes that, 
 individually do not represent a big challenge, their sheer amount results in the above
 estimates.
 
-<!-- markdownlint-disable-next-line line-length -->
-![Placeholder image - Mindful computing and what it means for different people (use Rae's interpretation of the following paragraph)](https://img.freepik.com/premium-photo/mindful-computing-holographic-brain-integration_153608-14859.jpg){alt="TBC"}
+![Mindful computing and what it means for different
+people](fig/ep1_mindful_computing.png){alt="A researcher holding out here arms with
+various representations of the research process and consumed resources spread above."}
 
 As researchers, we have a responsibility to consider the environmental impact of our
 work and take steps to reduce it. This begins with **mindful computing**, a term which

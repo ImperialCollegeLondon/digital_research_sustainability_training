@@ -38,7 +38,7 @@ some of the different components of digital infrastructure and their relation to
 emissions.
 
 ![What is the relationship between research activities and carbon
-emissions?](fig/ep3_banner.jpg){alt='Person thinking on different aspects of digital
+emissions?](fig/ep3_banner.png){alt='Person thinking on different aspects of digital
 infrastructure that produce carbon emissions, showing computers, storage devices, data
 centres and the research activity itself.'}
 
@@ -72,7 +72,7 @@ fit for purpose.
   extend its useful life instead of trashing it (or recycling it)?
 
 ![The full lifecycle of a laptop from manufacturing to
-reuse.](fig/ep3_laptop_lifecycle.jpg){alt="A depiction of the lifecycle of a laptop from
+reuse.](fig/ep3_laptop_lifecycle.png){alt="A depiction of the lifecycle of a laptop from
 its manufacture, transportation, usage, refurbishment and reusage."}
 
 :::::::::::::::::::::::::::::::::::::::::::::
@@ -218,9 +218,6 @@ reliability. As modern research practices move toward open data and long-term st
 the embodied and operational emissions of storage becomes a significant component of
 digital research's environmental impact.
 
-<!-- markdownlint-disable-next-line line-length -->
-![History of digital storage media. Image from the blog post ["Data storage through history"]](https://www.anycloud.dk/wp-content/uploads/2023/07/2-1.png){alt='Timeline with the history of digital storage media showing: punchcards (1881), magnetic tape (1950), removable hard drives (1963), floppy discs (1971), CD-ROM (1983), SD Cards (1999), USB drives (2000) and cloud (2013).'}
-
 There are a few different storage mediums in common use:
 
 - **Solid-State Disk Drives (SSD)**: They use flash memory with no moving parts to store
@@ -262,8 +259,6 @@ SSDs allow data to be accessed almost instantly and are typically 10–100× fas
 HDDs. LTO tapes offer the slowest access speeds, but they remain the preferred option
 for storing cold data due to their low cost, low embodied emissions and great energy
 efficiency.
-
-["Data storage through history"]: https://www.anycloud.dk/anycloud/data-management/data-storage-thoughout-history/
 
 ## Data Centres
 
