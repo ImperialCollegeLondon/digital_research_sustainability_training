@@ -34,7 +34,7 @@ years ago, she developed and released a Python package (hosted on PyPI) with a n
 data analysis technique relevant to her research area. The package has been a big
 success and has been widely adopted. However, she has heard from some users that they
 are using it on increasingly large datasets that leads to demanding memory requirements
-and slow performance.](fig/case_study1_banner.jpg){alt="A large banner with multiple
+and slow performance.](fig/case_study1_banner.png){alt="A large banner with multiple
 components showing Celia working on her research with pictoral representations of code
 development, computing hardware and data collection."}
 

@@ -34,7 +34,7 @@ strategies and appropriate LLM selection.
 data. While she is an expert in molecular biology, her computational and statistics
 background is limited. Due to the type and volume of data generated in the lab, she
 chose to write custom Python scripts to analyse her data. The project Emma is working on
-is scheduled to run for 5 years.](fig/case_study2_banner.jpg){alt="A large banner
+is scheduled to run for 5 years.](fig/case_study2_banner.png){alt="A large banner
 comprising multiple scenes of Emma working in a research lab with pictoral
 representations of data storage formats, DNA and data analysis."}
 

@@ -46,7 +46,7 @@ centres and the research activity itself.'}
 
 ![Computers have become an indispensable component of modern life as well as digital
 research. These include everyday devices such as laptops, desktops or phones, as well as
-servers that are accessed remotely. ](fig/ep3_laptop_operational_embodied.jpg){alt="An
+servers that are accessed remotely.](fig/ep3_laptop_operational_embodied.png){alt="An
 image of a laptop with it's constituent components spilling out underneath and "}
 
 Computers draw electricity during use and also produce considerable embodied emissions
@@ -305,8 +305,12 @@ $$
 \mathbf{PUE} = \frac{\text{Total Facility Power}}{\text{IT Equipment Power}}
 $$
 
-<!-- markdownlint-disable-next-line line-length -->
-![Google Data Center PUE measurement boundaries](fig/pue-infographic.webp){alt="Google Data Center PUE measurement boundaries."}
+![Demonstration of how PUE relates to the division of power within an data center. CC BY
+4.0
+https://learn.greensoftware.foundation](https://learn.greensoftware.foundation/assets/images/05_power_usage-7db3832452ed7d68657f34f7d850c10a.png){alt="The
+image shows 15 kW of electrical power being transferred to a data center. The 15 kW is
+then divided with 5 kW going to Overheads/Cooling/etc and 10 kW going to servers. This
+gives a PUE of 1.5."}
 
 An average data centre has a PUE of around 1.59, meaning that for every 1 watt used to
 power computational resources, an additional 0.59 watts is spent on cooling and power
@@ -446,11 +450,6 @@ emissions of the former when considered collectively.
 
 ### Data Centre Expansion, Hyperscalers and AI
 
-![Data centers consume huge amounts of energy and water, which can be a risk for the
-environment. Image originally published at [The Seattle
-Times].](https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg){alt="Cartoon
-showing a datacenter as a monster demanding more power."}
-
 Increasingly, data centres are appearing in the media in a negative light due to their
 power and water consumption. Data centres consume around 2.5% of the UK's electricity
 and the annual consumption is expected to increase by 4 times by 2030^8^. In the U.S.,
@@ -473,7 +472,6 @@ that energy not reaching the facility. The companies frequently report 'market-b
 emissions, which are manipulated by the inclusion of Recs, but look out for the
 'location-based' emissions figure for a less misleading view of their carbon footprint.
 
-[The Seattle Times]: https://www.seattletimes.com/opinion/the-ai-energy-monster-is-coming-for-our-salmon-and-electricity/
 [guardian-data-centre-emissions]: https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech
 
 ### Measuring and Estimating Cloud Emissions
