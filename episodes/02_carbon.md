@@ -301,8 +301,10 @@ view of different emissions sources.
 
 [Greenhouse Gas Protocol]: https://ghgprotocol.org/
 
-<!-- markdownlint-disable-next-line line-length -->
-![PLACEHOLDER](fig/ghg_emissions_placeholder.webp){alt="Placeholder - GHG Emissions Types."}
+![ The different scopes of GHG emissions CC BY 4.0
+https://commons.wikimedia.org/w/index.php?curid=140748311
+](fig/ep1_carbon_accounting_scopes.png){alt="Depiction of carbon accounting using the
+WRI-Greenhouse Gas Protocol."}
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -378,3 +380,18 @@ References:
 [Green software practitioner course]: <https://learn.greensoftware.foundation/>
 3. [Kypraiou C, Varzakas T. Evolution and Evaluation of Ultra-Low Temperature Freezers: A Comprehensive Literature Review. Foods. 2025 Jun 28;14(13):2298. doi: 10.3390/foods14132298. PMID: 40647050; PMCID: PMC12248920.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12248920/)
 4. [Swamit Tannu and Prashant J. Nair. 2023. The Dirty Secret of SSDs: Embodied Carbon. SIGENERGY Energy Inform. Rev. 3, 3 (October 2023), 4–9](https://dl.acm.org/doi/10.1145/3630614.3630616)
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Carbon intensity of electricity varies throughout the day and across the year depending
+  on the energy mix, which is driven by demand, weather, and fuel costs.
+- Demand shifting — scheduling computationally intensive work during periods of low
+  carbon intensity — is a practical strategy to reduce operational emissions.
+- Embodied carbon covers emissions from the full lifecycle of a product including
+  manufacture, transport, and disposal, not just operational electricity use.
+- The GHG Protocol categorises emissions into Scope 1 (direct), Scope 2 (purchased
+  energy), and Scope 3 (value chain), providing a framework for comprehensive accounting.
+- Taking a broad view across all three scopes avoids underestimating the true carbon
+  footprint of digital research activities.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

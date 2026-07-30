@@ -31,13 +31,15 @@ exercises: 60 # exercise time in minutes
 
 ## Scenario
 
-Miguel is an [MLOps] engineer embedded in an applied computational neuroscience
+![Miguel is an [MLOps] engineer embedded in an applied computational neuroscience
 department, whose applications make heavy use of heterogeneous compute hardware such as
 GPUs and neuromorphic processors. While the use of this hardware is crucial for
-demanding Single Instruction Multiple Data ([SIMD]) tasks, he is mindful that his domain
-of work is disproportionately carbon-intensive. The sheer size of the models, and the
-vast amounts of data used to train them, mean that any procedure he performs must be
-carefully planned in advance, as mistakes are costly.
+demanding [SIMD] tasks, he is mindful that his domain of work is often
+disproportionately carbon-intensive. The sheer size of the models, and the vast amounts
+of data used to train them, mean that any procedure he performs must be carefully
+planned in advance, as mistakes are costly. ](fig/case_study4_banner.png){alt="A large
+banner with multiple components showing Miguel working on his research with pictoral
+representations of a machine learning model identifying images of cats."}
 
 His primary responsibilities are:
 

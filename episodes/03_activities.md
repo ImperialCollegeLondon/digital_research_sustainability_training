@@ -37,14 +37,17 @@ devices up to the globe spanning network of the internet. In this section we'll 
 some of the different components of digital infrastructure and their relation to carbon
 emissions.
 
-<!-- markdownlint-disable-next-line line-length -->
-![Placeholder image - What components of digital infrastructure produce carbon emissions? (Image by Rae)](https://cdni.iconscout.com/illustration/premium/thumb/man-choosing-environment-over-carbon-emissions-illustration-svg-download-png-7237101.png){alt='Person thinking on different aspects of digital infrastructure that produce carbon emissions, showing computers, storage devices, data centres and the research activity itself.'}
+![What is the relationship between research activities and carbon
+emissions?](fig/ep3_banner.png){alt='Person thinking on different aspects of digital
+infrastructure that produce carbon emissions, showing computers, storage devices, data
+centres and the research activity itself.'}
 
 ## Computers
 
-Computers have become an indispensable component of modern life as well as digital
-research. These include everyday devices such as a laptop, desktops or phones as well as
-servers that are accessed remotely.
+![Computers have become an indispensable component of modern life as well as digital
+research. These include everyday devices such as laptops, desktops or phones, as well as
+servers that are accessed remotely.](fig/ep3_laptop_operational_embodied.png){alt="An
+image of a laptop with it's constituent components spilling out underneath and "}
 
 Computers draw electricity during use and also produce considerable embodied emissions
 from production and transportation. Both embodied and operational emissions play a
@@ -55,8 +58,8 @@ and reduce them is very different.
 
 Embodied carbon emissions **do not change** once the machine is in your hands: they only
 depend on the manufacturing and transport process. However, **embodied carbon emissions
-per year** are reduced the more years the machine is in use. Hence, the longer the
-lifetime of the machine, the lower their embodied carbon footprint per year.
+per year** are reduced the more years the machine is in use. Hence, **the longer the
+lifetime of the machine, the lower their embodied carbon footprint per year**.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -68,41 +71,38 @@ fit for purpose.
 - Can you donate it to charity (eg. see options in the [Device Donation Scheme]) to
   extend its useful life instead of trashing it (or recycling it)?
 
+![The full lifecycle of a laptop from manufacturing to
+reuse.](fig/ep3_laptop_lifecycle.png){alt="A depiction of the lifecycle of a laptop from
+its manufacture, transportation, usage, refurbishment and reusage."}
+
 :::::::::::::::::::::::::::::::::::::::::::::
 
 ### Operational emissions
 
 The operational emissions of a device depend on its design and performance, but also on
 _how_, _when_ and _where_ it is used. For this reason, it is useful to consider
-energy usage first as a proxy for carbon emissions.
+energy usage as a proxy for carbon emissions.
 
-The power consumption of digital devices can be split into idle and usage-based
-consumption. Idle consumption is incurred when a device is powered but not carrying out
-any particular operation. Additional energy is consumed as the computational load placed
-on the device is increased. In particular, components like CPUs, GPUs and memory will
-draw additional electricity and cooling systems may have to work harder to remove excess
-heat.
+The power consumption of digital devices can be split into:
 
-There are a number of factors that affect operational power usage:
+- **idle consumption**: this accounts for the energy required when the device is powered
+but not carrying out any particular operation.
 
-- Age: Modern computers have generally more advanced technology that makes them more
-  energy-efficient than older ones.
-- Type: Laptops are typically more energy efficient than desktops.
-- Power management settings: That control when to go to sleep after a time of
-  inactivity, or control the CPU frequency, etc.
-- Peripherals: Especially, monitors, but also printers can also consume large amounts of
-  energy.
+- **usage-based consumption**: the energy consumed to perform a specific task. As
+  computational workload increases, components like CPUs and GPUs, and memory draw
+  higher levels of power, which may require energy systems to work harder to cool the
+  system.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Factors that affect the operational emissions associated with a device.](fig/ep3_operational_emissions.png){alt='Factors that affect operational emissions including age, type, power management settings and peripherals.'}
 
 :::::::::::::::::::::::::: callout
 
-### Utilisation
+### Utilisation, Utilisation, Utilisation
 
-The nature of both operational and embodied energy usage highlights the importance of
-utilisation in relation to computing hardware. The embodied emissions of a device are a
-fixed overhead, so the more computational work that is carried out over the lifetime of
-a device the more efficiently that overhead has been invested. Similarly, as there is a
-minimum power draw associated with idle usage, as utilisation of a device increases the
-power draw per unit of computational work decreases.
+Following from the above, sustainability in computing means having **the minimum amount
+of hardware, fully utilised doing useful work**. This ensures the "fixed" overheads of
+idle power and embodied emissions are minimised per unit of useful computational work.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -115,10 +115,9 @@ and phones) the embodied emissions are far in excess of operational ones. This
 emphasises the importance of maximising the lifetime of these devices.
 
 For enterprise servers that have a much greater maximum operational power draw, the
-balance can vary due to a number of factors, not least the carbon intensity of the
-electricity used to power them and their utilisation. As the carbon intensity of
-electricity falls over time however embodied emissions are expected to increasingly
-dominate.
+balance can vary with factors like local carbon intensity and utilisation. As the carbon
+intensity of electricity is expected to fall over time however, embodied emissions will
+increasingly dominate.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -127,14 +126,14 @@ dominate.
 #### Embodied Emissions
 
 Finding the embodied emissions of a device relies on information provided by the
-manufacturer. The regulatory environment is evolving however increasingly there are
+manufacturer. The regulatory environment is evolving; however, increasingly, there are
 legal requirements for manufacturers to publish Product Carbon Footprint (PCF) data for
 their products. Information can be easily found by searching the internet for "PCF" and
 the manufacturer's name.
 
 ::::::::::::::::::::: callout
 
-We'll see some example PCF sheets below however it's important to note that different
+We'll see some example PCF sheets below. However, it's important to note that different
 manufacturers can use different methodologies and assumptions. This means it is not
 advised to directly compare PCF data between manufacturers.
 
@@ -147,10 +146,8 @@ Here is the [HP EliteBook 840 G9 PCF Report]:
 
 [HP EliteBook 840 G9 PCF Report]: https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c08207991
 
-If we exclude the `Use` section of the chart, which obviously depends on the usage and
-the location, as discussed in the [previous episode](02_carbon.md), the remaining,
-related to production and transportation, accounts for about ~80% of the estimated
-total, i.e. 160 kgCO₂e.
+If we exclude the `Use` section of the chart, the remaining, related to production and
+transportation, accounts for about ~80% of the estimated total, i.e. 160 kgCO₂e.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -167,51 +164,44 @@ out its embodied carbon emissions.
 
 #### Operational Emissions
 
-The most direct and accurate option to get the idle energy usage of a consumer device is
-to use a plug in power meter. There are many models, but most will provide both the
-instantaneous power and the energy used over a period of time. This can be used both to
-ascertain the idle power draw of a system and to estimate the emissions of a running
-application by comparing to the baseline idle draw.
+<!-- markdownlint-disable-next-line line-length -->
+![Ways to measure the operational carbon emissions associated with a device, including direct measurement
+ and estimation methods.](fig/ep3_carbon_estimations.png){alt='Ways to
+calculate carbon emissions.'}
 
-If measuring the energy usage of the entire device is not possible, modern hardware
-often supports reporting the energy consumption of different components. This varies
-based on the hardware and operating system but we'll look at two common examples. RAPL
-(Running Average Power Limit) is a CPU feature which reports real time energy usage.
-Similarly nvidia-smi can report power consumption for NVIDIA GPUs.
+Power draw can be measured via:
 
-In practice, low level interfaces like RAPL and nvidia-smi are difficult to use
-directly. There are more user friendly interfaces that can abstract over the particular
-hardware in use on your system. In particular, [codecarbon] is a Python application that
-can be used to directly measure hardware power consumption during the runtime of an
-application.
+- **Plug-in power meter.** There are many models, but most will provide both the
+  instantaneous power and the energy used over a period of time. The obvious requirement
+  however is physical access to the power source.
+- **Hardware counters.** Modern hardware often supports reporting the power usage of
+  individual components. This varies based on the hardware but two common examples are
+  RAPL (Running Average Power Limit) for CPUs and `nvidia-smi` NVIDIA GPUs.
+- **[CodeCarbon]**. A Python application providing a more user friendly interface for
+  hardware counters.
 
 If it is impractical to make any direct measurements, there are also some methods to
-estimate power draw.
+estimate power draw:
 
-For idle power usage, one option is to check for an [ECO Declaration] for the
-equipment. For example, the [ECO declaration of the HP EliteBook 840 G9] indicates an
-idle energy consumption of 22.67 kWh/year. This declaration also includes useful
-information about the product, like which components can be replaced or upgrade. The ECO
-Declaration is a voluntary standard so not all manufacturers provide it or it may
-contain incomplete information.
-
-For estimating the power usage of a computational workload a useful resource is the
-[Green Algorithms Calculator]. This uses a simple model that combines information about
-the resource utilisation of a computational workload with details of the hardware it ran
-on.
+- **[ECO Declaration].** Provides manufacturer information about idle power usage. For
+  example, the [ECO declaration of the HP EliteBook 840 G9] indicates an idle energy
+  consumption of 22.67 kWh/year. This declaration also includes useful information about
+  the product, like which components can be replaced or upgrade. The ECO Declaration is
+  a voluntary standard so not all manufacturers provide it or it may contain incomplete
+  information.
+- **[Green Algorithms Calculator].** A simple model that combines information about the
+  resource utilisation of a computational workload with details of the hardware it ran
+  on.
 
 <!-- markdownlint-disable-next-line line-length -->
 ![Screenshot of the Green Algorithms Calculator](fig/green_algorithms_calculator_screenshot.png){alt="A screenshot of the Green Algorithms Calculator webpage showing an example calculation and the result carbon emissions."}
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-#### What is the idle energy usage of your computer?
+#### Trying Out the Green Algorithms Calculator
 
-Like in the previous exercise, try to find the ECO Declaration for your computer
-in the manufacturer's webpage.
-
-- What is the reported idle energy consumption?
-- How easy was it to find?
+Open the [Green Algorithms Calculator] and try to calculate the energy usage and carbon
+emissions of your computer running a task on 1 CPU-core for 12 hours.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -227,9 +217,6 @@ Research datasets are increasingly large and replicated across multiple systems 
 reliability. As modern research practices move toward open data and long-term storage,
 the embodied and operational emissions of storage becomes a significant component of
 digital research's environmental impact.
-
-<!-- markdownlint-disable-next-line line-length -->
-![History of digital storage media. Image from the blog post ["Data storage through history"]](https://www.anycloud.dk/wp-content/uploads/2023/07/2-1.png){alt='Timeline with the history of digital storage media showing: punchcards (1881), magnetic tape (1950), removable hard drives (1963), floppy discs (1971), CD-ROM (1983), SD Cards (1999), USB drives (2000) and cloud (2013).'}
 
 There are a few different storage mediums in common use:
 
@@ -252,7 +239,7 @@ can make it difficult to directly measure their power usage. Whilst some manufac
 do report sustainability data this is highly variable. In some cases storage device data
 may be included as a component of the PCF data for a complete system.
 
-Given the general paucity of data there have been some studies that attempt to estimate
+Given the general paucity of data, there have been some studies that attempt to estimate
 emissions from different storage media. We've summarised some useful estimates below:
 
 | Category | SSD | HDD | LTO tape |
@@ -267,22 +254,16 @@ While the numbers vary depending on manufacturers and reporting available, it is
 considered that SSDs have a higher carbon debt per unit of storage than HDDs^4^.
 However, recent data suggests that the difference for enterprise-grade drives is shrinking,
 and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
-While the numbers vary depending on manufacturers and reporting available, it is
-generally considered that SSDs have a higher 'carbon debt` per unit of storage than
-HDDs^4^. However, recent data suggests that the difference for enterprise-grade drives
-is shrinking, and new SSDs have only 2x the embodied carbon of comparable HDDs^5^.
 
 SSDs allow data to be accessed almost instantly and are typically 10–100× faster than
 HDDs. LTO tapes offer the slowest access speeds, but they remain the preferred option
 for storing cold data due to their low cost, low embodied emissions and great energy
 efficiency.
 
-["Data storage through history"]: https://www.anycloud.dk/anycloud/data-management/data-storage-thoughout-history/
-
 ## Data Centres
 
 Beyond personal computing devices like laptops and PC's, much computing infrastructure
-is now accessed remotely. In this case the computers are generally hosted in a data
+is now accessed remotely. In this case, the computers are generally hosted in a data
 centre, a large industrial facility that can contain thousands of servers and the
 supporting infrastructure required to allow remote access.
 
@@ -290,6 +271,10 @@ The carbon emissions associated with the computers and storage devices in a data
 are covered above. As purpose built facilities, data centres can host more specialised
 equipment and benefit from economies of scale. They also have additional emissions
 sources beyond the individual servers they house.
+
+<!-- markdownlint-disable-next-line line-length -->
+![Data Centers Carbon Emissions Sources](fig/ep3_datacenter.png){alt='Sources of embodied and operational
+carbon emissions for data centers'}
 
 Data centre embodied emissions:
 
@@ -320,8 +305,12 @@ $$
 \mathbf{PUE} = \frac{\text{Total Facility Power}}{\text{IT Equipment Power}}
 $$
 
-<!-- markdownlint-disable-next-line line-length -->
-![Google Data Center PUE measurement boundaries](fig/pue-infographic.webp){alt="Google Data Center PUE measurement boundaries."}
+![Demonstration of how PUE relates to the division of power within an data center. CC BY
+4.0
+https://learn.greensoftware.foundation](https://learn.greensoftware.foundation/assets/images/05_power_usage-7db3832452ed7d68657f34f7d850c10a.png){alt="The
+image shows 15 kW of electrical power being transferred to a data center. The 15 kW is
+then divided with 5 kW going to Overheads/Cooling/etc and 10 kW going to servers. This
+gives a PUE of 1.5."}
 
 An average data centre has a PUE of around 1.59, meaning that for every 1 watt used to
 power computational resources, an additional 0.59 watts is spent on cooling and power
@@ -461,11 +450,6 @@ emissions of the former when considered collectively.
 
 ### Data Centre Expansion, Hyperscalers and AI
 
-![Data centers consume huge amounts of energy and water, which can be a risk for the
-environment. Image originally published at [The Seattle
-Times].](https://images.seattletimes.com/wp-content/uploads/2025/11/Data-Centers-ONLINE.jpg){alt="Cartoon
-showing a datacenter as a monster demanding more power."}
-
 Increasingly, data centres are appearing in the media in a negative light due to their
 power and water consumption. Data centres consume around 2.5% of the UK's electricity
 and the annual consumption is expected to increase by 4 times by 2030^8^. In the U.S.,
@@ -488,7 +472,6 @@ that energy not reaching the facility. The companies frequently report 'market-b
 emissions, which are manipulated by the inclusion of Recs, but look out for the
 'location-based' emissions figure for a less misleading view of their carbon footprint.
 
-[The Seattle Times]: https://www.seattletimes.com/opinion/the-ai-energy-monster-is-coming-for-our-salmon-and-electricity/
 [guardian-data-centre-emissions]: https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech
 
 ### Measuring and Estimating Cloud Emissions
@@ -518,7 +501,7 @@ centre.
 
 ::::::::::::::::::::::::::: challenge
 
-## Miniming emissions from computation
+## Minimizing emissions from computation
 
 What are relevant considerations that can help to minimise the emissions associated with
 computational workloads?
@@ -558,15 +541,18 @@ computational workloads?
 
 #### Storing Data
 
-Generally when presented with a choice between buying your own storage devices or using
-a storage service, it will be more sustainable to use the latter. That said, local
-storage has a number of advantages, including greater control over data, predictable
-access speeds, and the ability to power equipment down when not in use. Typically
-research organisations will provide dedicated storage services for research data.
+Shared storage services can often be more sustainable than dedicated storage
+hardware because they can have higher resource utilisation and benefit from
+economies of scale. However, the relative sustainability of each approach
+depends on factors such as utilisation, hardware efficiency, and the source
+of electricity used to power the infrastructure. Local storage has several advantages,
+including greater control over data, predictable access speeds, and the ability to power
+equipment down when not in use. Typically, research organisations will provide
+dedicated storage services for research data.
 
 ::::::::::::::::::::::::::: challenge
 
-### Miniming emissions from data storage
+### Minimizing emissions from data storage
 
 What are relevant considerations that can help to minimise the emissions associated with
 data storage?
@@ -589,8 +575,8 @@ data storage?
 
 #### Data Management Plans
 
-The best time to think about how to manage you data is before you collect or generate
-it. This is the purpose of a Data Management Plan (DMP), a document that describes how
+**The best time to think about how to manage you data is before you collect or generate
+it.** This is the purpose of a Data Management Plan (DMP), a document that describes how
 you will handle your data during and after a research project. DMPs are often required
 by funding agencies and research institutions, but they are also a good practice to
 ensure that your data is well organised, documented and preserved.
@@ -622,18 +608,18 @@ so below we've chosen a few exemplars to look at in detail.
 #### Code Hosting and Continuous Integration/Deployment
 
 The use of services such as GitHub and GitLab have become an indispensable component of
-modern software development. Notably these services provide access to compute resources
+modern software development. Notably, these services provide access to compute resources
 to run Continuous Integration/Deployment (CI/CD) workflows. It's common to run these
-workflows in a "matrix" configuration across variables such as operating system and
-software version which can lead to large parallel computational workloads executing.
+workflows in a "matrix" configuration across variables, such as operating system and
+software version, which can lead to large parallel computational workloads executing.
 
 CI/CD workflows are executed by servers acting as runners. Most services provide hosted
 runners for general use and support self-hosting a runner if you provide your own
 server. The latter case is amenable to the measurement and estimation methods discussed
-above. If using runners hosted by the service however, usually you will have no control
+above. If using runners hosted by the service, however, you usually will have no control
 or visibility over where workflows are executed or the underlying hardware they use.
-Direct measurement of energy usage in this case is not possible and there is
-insufficient information to use approaches like the Green Algorithms Calculator. Instead
+Direct measurement of energy usage in this case is not possible, and there is
+insufficient information to use approaches like the Green Algorithms Calculator. Instead,
 [Eco CI] is a tool that has been developed to estimate the carbon emissions of CI/CD
 workflows. It supports GitHub and GitLab.
 
@@ -695,3 +681,22 @@ information is available about the model architecture.
 11. [IEA, Energy and AI, April 2025, p259](https://www.iea.org/reports/energy-and-ai)
 12. [Sustainable computing in science - EMBL-EBI](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)
 13. [Data centres: planning policy, sustainability and resilience](https://researchbriefings.files.parliament.uk/documents/CBP-10315/CBP-10315.pdf)
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- For consumer devices, embodied emissions typically outweigh operational emissions,
+  making extending device lifetime the most impactful sustainability action for personal
+  computing hardware.
+- Data centres are generally more carbon efficient than equivalent local computing
+  setups due to higher utilisation, better cooling efficiency, and shared infrastructure.
+- Choice of storage technology significantly affects carbon emissions; LTO tape is
+  preferable for cold or archival data, while SSDs suit frequently accessed data.
+- Research data management practices — such as deleting unused data, using compression,
+  and adopting tiered storage — can substantially reduce storage-related emissions.
+- Generative AI emissions scale with model size, query count, and response length;
+  selecting the smallest model appropriate to the task reduces unnecessary emissions.
+- Carbon-aware computing — shifting workloads in time or location to periods or regions
+  with lower carbon intensity — is an effective strategy for reducing operational
+  emissions from computational workloads.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
