@@ -527,21 +527,22 @@ research community.</li>
 </ul></section><section id="08_case_study4"><h2 class="section-heading"><a href="08_case_study4.html">Case Study 4 - GPU Computing User</a></h2>
 <hr class="half-width">
 <ul>
-<li>GPU-based machine learning workloads are disproportionately carbon
-intensive and require careful planning to avoid costly and wasteful
-runs.</li>
-<li>Transfer learning from an existing model avoids training from
-scratch and can dramatically reduce training emissions when adapting a
-model to a related task.</li>
-<li>Estimating memory and compute requirements before submitting jobs
-prevents wasted cloud computation from under-provisioned or
-ill-configured runs.</li>
-<li>Techniques such as early stopping, epoch checkpointing, and reduced
-floating-point precision lower training resource usage with little
-impact on model accuracy.</li>
-<li>Model pruning and regularisation can shrink model size enough to
-enable training on local hardware, reducing reliance on energy-intensive
-cloud GPU resources.</li>
+<li>Prior training run data and local benchmark timings can be combined
+to estimate emissions before committing to an expensive full training
+run.</li>
+<li>Naive ML training workflows often contain significant avoidable
+computation — training from scratch when transfer learning is possible
+is a common and costly example.</li>
+<li>ML-specific optimisations (transfer learning, early stopping, mixed
+precision, model pruning) can reduce both training time and GPU memory
+requirements, often by an order of magnitude.</li>
+<li>Maximising GPU utilisation through right-sized batch sizes improves
+energy efficiency; a partially-occupied GPU is disproportionately less
+efficient than a fully-occupied one.</li>
+<li>Cloud training offers lower operational carbon through data centre
+efficiency but removes the option to demand-shift; local training
+restores that flexibility at the cost of higher embodied emissions per
+unit of compute.</li>
 </ul></section><section id="09_epilogue"><h2 class="section-heading"><a href="09_epilogue.html">Summary</a></h2>
 <hr class="half-width">
 <ul>
@@ -606,8 +607,8 @@ time.</li>
   "url": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/key-points.html",
   "identifier": "https://ImperialCollegeLondon.github.io/digital_research_sustainability_training/key-points.html",
   "dateCreated": "2026-01-13",
-  "dateModified": "2026-07-29",
-  "datePublished": "2026-07-29"
+  "dateModified": "2026-07-30",
+  "datePublished": "2026-07-30"
 }
 
   </script><script>
