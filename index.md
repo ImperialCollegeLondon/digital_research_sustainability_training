@@ -63,8 +63,8 @@ More details: <https://www.software.ac.uk/GreenDiSC>
 
 Development of this training material has been supported by Research England Research
 Culture funding provided through Imperial College London. Main training content is
-[licensed](/LICENSE.html) under CC-BY 4.0. Illustrations by paraphrase.studio are licensed under
-CC-BY-NC-ND 4.0.
+[licensed](/LICENSE.html) under CC-BY 4.0. Illustrations by paraphrase.studio are
+licensed under CC-BY-NC-ND 4.0.
 
 This lesson is built with [The Carpentries Workbench][workbench].
 
