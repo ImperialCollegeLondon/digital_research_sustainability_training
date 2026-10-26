@@ -72,6 +72,9 @@ zero](https://commonslibrary.parliament.uk/research-briefings/cbp-9888/) by 2050
 ![Carbon Neutral vs Net Zero](fig/ep1_net_zero_vs_carbon_neutral.png){alt="Cartoon
 representing the differences between the terms carbon neutral and net zero."}
 
+<span style="float: right; font-size: 0.5rem; margin-top: -60px;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 The terms **carbon neutral** and **net zero** are often used interchangeably, but they
 have different meanings. They both refer to removing harmful emissions from the
 atmosphere, but the kind of emissions removed and the scale are different.
@@ -161,6 +164,9 @@ estimates.
 ![Mindful computing and what it means for different
 people](fig/ep1_mindful_computing.png){alt="A researcher holding out here arms with
 various representations of the research process and consumed resources spread above."}
+
+<span style="float: right; font-size: 0.5rem; margin-top: -60px;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
 
 As researchers, we have a responsibility to consider the environmental impact of our
 work and take steps to reduce it. This begins with **mindful computing**, a term which

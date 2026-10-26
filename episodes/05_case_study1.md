@@ -29,6 +29,9 @@ exercises: 60
 
 ## Scenario
 
+<span style="float: right; font-size: 0.5rem;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 ![Celia is a Research Software Engineer that works as part of a research group. Two
 years ago, she developed and released a Python package (hosted on PyPI) with a novel
 data analysis technique relevant to her research area. The package has been a big

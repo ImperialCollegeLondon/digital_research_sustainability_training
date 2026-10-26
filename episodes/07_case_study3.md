@@ -32,6 +32,9 @@ exercises: 10 # exercise time in minutes
 
 ## Introduction
 
+<span style="float: right; font-size: 0.5rem;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 ![Hugh is a computational chemist in a research group whose work involves high fidelity
 simulations of the dynamic behaviour of atomistic systems. His work requires
 computational resources far beyond that of a single machine so he makes use of a number
