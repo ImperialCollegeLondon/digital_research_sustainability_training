@@ -42,6 +42,9 @@ emissions?](fig/ep3_banner.png){alt='Person thinking on different aspects of dig
 infrastructure that produce carbon emissions, showing computers, storage devices, data
 centres and the research activity itself.'}
 
+<span style="float: left; font-size: 0.5rem; margin-top: -80px;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 ## Computers
 
 ![Computers have become an indispensable component of modern life as well as digital
@@ -74,6 +77,9 @@ fit for purpose.
 ![The full lifecycle of a laptop from manufacturing to
 reuse.](fig/ep3_laptop_lifecycle.png){alt="A depiction of the lifecycle of a laptop from
 its manufacture, transportation, usage, refurbishment and reusage."}
+
+<span style="float: right; font-size: 0.5rem; margin-top: -80px;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
 
 :::::::::::::::::::::::::::::::::::::::::::::
 

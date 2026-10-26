@@ -31,6 +31,9 @@ exercises: 60 # exercise time in minutes
 
 ## Scenario
 
+<span style="float: right; font-size: 0.5rem;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 ![Miguel is an [MLOps] engineer embedded in an applied computational neuroscience
 department, whose applications make heavy use of heterogeneous compute hardware such as
 GPUs and neuromorphic processors. While the use of this hardware is crucial for
