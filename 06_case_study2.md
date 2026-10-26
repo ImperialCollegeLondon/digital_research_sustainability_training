@@ -30,6 +30,9 @@ strategies and appropriate LLM selection.
 
 ## Scenario
 
+<span style="float: right; font-size: 0.5rem;">Illustration by
+paraphrase.studio ([CC-BY-NC-ND 4.0](/LICENSE.html))</span>
+
 ![Emma is a researcher in a biology lab and was tasked with analysing genomic sequencing
 data. While she is an expert in molecular biology, her computational and statistics
 background is limited. Due to the type and volume of data generated in the lab, she
